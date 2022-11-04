@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<?php include "comment.php";?>
+<html>
+  <head>
+    <title>A Portrait Of The Artist</title>
+    <?php include "meta.php";?>
+  </head>
+  <body>
+    <?php include "header.php";?>
+        <p><a href="Kentucky-11888-HE">She had always been poor.</a> She had never learned to read. She had never learned to write. She had worked on the farm with her parents every day since she was old enough to carry a bucket. Rising before daybreak to wash her face. Tugging on boots. Milking the goat. Scattering feed for the chickens. Gathering eggs. Feeding the horse. Brushing the horse. Shoveling manure. Hammering a plank onto the roof of the barn to patch a leak. Hauling water from the well. Lugging sloshing pails of water. Swatting away mosquitos. Stacking chopped wood. Biting out a sliver. Plowing. Scrambling up from the mud after slipping on a rock. Heaving bales of hay. Pitchforking a rattlesnake. Throwing stones to chase a weasel away from the coop. Wrapping a strip of wire around a post to fix some toppled fencing. Plucking burrs from the mane of the horse. Scrubbing the dirt and the blood and the snot and the manure from her hands before supper. Crawling back into bed exhausted. Whatever was necessary to survive. To have nourishment. To have shelter. Her parents had hoped to marry her off to ease the burden. She&rsquo;d never had a suitor. The only leisure time she&rsquo;d ever had was just that precious interval between supper and bed. While her parents sat in the twilight on the bench by the door to the house, drinking in silence, or erupting in cackles of laughter, or arguing with cries of anger, she would sit on the stump by the field, quietly making art. First just by drawing in the dirt with a stick, sometimes attempting to draw sights that she&rsquo;d seen on the farm, other times drawing fanciful creatures, other times drawing whimsical kingdoms, or other times simply drawing geometric patterns of shapes, and later progressing from drawing to painting, mixing charcoal with water to paint scenes onto strips of birch bark, dried corn husks, scraps of fabric from a moth-eaten coat, the rusted blade of a broken shovel, a ceramic shard from a shattered pot, pages from a magazine some traveler had dropped onto the road in passing, any suitable material that she could find. To protect the paintings from the elements, she kept the paintings in the ruins of the abandoned shack out by the oak trees beyond the field, carefully arranging each piece on the walls.</p>
+      <?php include "footer.php";?>
+  </body>
+</html>
