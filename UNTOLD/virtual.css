@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+html, body, div, span, p, a, em, i, b, s, u {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: "Source Code Pro", monospace;
+  font-weight: 300;
+  color: #000000;
+  background: #ffffff;
+  cursor: default;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.header {
+  font-size: 40px;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+.content {
+  width: 90%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.footer {
+  font-size: 16px;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 16px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 16px;
+  line-height: 24px;
+}
+
+.c {
+  text-align: center;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 400;
+  transition-duration: 0.2s;
+  cursor: default;
+}
+
+em, i {
+  font-style: italic;
+}
+
+b {
+  font-weight: 400;
+}
+
+s {
+  text-decoration: line-through;
+}
+
+u {
+  text-decoration: underline;
+}
+
+sm {
+  font-variant: small-caps;
+}
+
+hr {
+  border-color: #000000;
+  border-width: 1.5px;
+  border-style: solid;
+  background: #000000;
+  width: 90%;
+  max-width: 500px;
+}
+
+bar {
+  border-left: .1em solid #000000;
+}
+
+space {
+  border-left: .1em solid #ffffff;
+}
+
+.container {
+  min-width: 100%;
+  height: calc(100vh - 182px);
+  min-height: 3px;
+  background: #ffffff;
+}
+
+#cover {
+  background: #eeeeee;
+}
+
+@media only screen and (min-width: 555px) {
+
+.header {
+  font-size: 64px;
+}
+
+.content {
+  min-width: 500px;
+  max-width: 1200px;
+  width: 33.33%;
+}
+
+hr {
+  min-width: 500px;
+  max-width: 1200px;
+  width: 33.33%;
+}
+
+.container {
+  height: calc(100vh - 212px);
+  min-height: 3px;
+}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+body {
+ -webkit-text-size-adjust: none;
+}
+
+}
+
+@media (hover: hover) {
+
+a:hover {
+  opacity: 10%;
+}
+
+a.cover:hover {
+  opacity: 100%;
+}
+
+}
