@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-        <?php include "0.php";?> <?php include "4.php";?>
+        <?php include "0.php";?> and later that year the child was born, in the cab of a pickup truck in a traffic jam on the highway on the rainy autumn morning of November 6, 1985. If he&rsquo;d been a girl, his parents would have named him Megan, but instead his parents named him William.</p>
         <p>When he was one, he was sitting on a couch by a television when a clown with melting makeup appeared cackling on the screen.</p>
         <p>When he was two, he was sitting in a seat at a cineplex when a jester with jingling bells appeared weeping on the screen.</p>
         <p>When he was four, he was sitting in the audience at a theater when a magician burst into flames on the stage.</p>
