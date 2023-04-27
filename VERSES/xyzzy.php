@@ -13,11 +13,13 @@
     <?php include "header.php";?>
         <p class="c">CONTENTS</p>
         <p><a href="The-One-About-The-Drifter">The One About The Drifter</a></p>
+        <p><a href="The-One-About-The-Folk">The One About The Folk</a></p>
         <p><a href="The-One-About-The-Nomad">The One About The Nomad</a></p>
         <p><a href="The-One-About-The-Song">The One About The Song</a></p>
         <p><a href="The-One-About-The-Sonogram">The One About The Sonogram</a></p>
         <p><a href="The-One-About-The-Star">The One About The Star</a></p>
         <p><a href="The-One-About-The-Traveler">The One About The Traveler</a></p>
+        <p><a href="The-One-About-The-Wanderer">The One About The Wanderer</a></p>
       <?php include "footer.php";?>
   </body>
 </html>
