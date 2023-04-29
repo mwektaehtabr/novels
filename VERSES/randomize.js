@@ -1,5 +1,5 @@
 function randomize() {
-  var chapters = ["The-One-About-The-Drifter", "The-One-About-The-Jazz", "The-One-About-The-Nomad", "The-One-About-The-Rock", "The-One-About-The-Sonogram", "The-One-About-The-Song", "The-One-About-The-Star", "The-One-About-The-Traveler", "The-One-About-The-Wanderer"];
+  var chapters = ["The-One-About-The-Drifter", "The-One-About-The-Jazz", "The-One-About-The-Nomad", "The-One-About-The-Pop", "The-One-About-The-Rock", "The-One-About-The-Sonogram", "The-One-About-The-Song", "The-One-About-The-Star", "The-One-About-The-Traveler", "The-One-About-The-Wanderer"];
   var chapter = Math.floor(Math.random()*chapters.length);
   var url = "";
   var n = 0;

@@ -23,6 +23,9 @@ document.addEventListener("keydown", function(event) {
   }
   if (event.code == "ArrowRight") {
     history.forward();
+    if (window.location.host == "verses.pub") {
+     randomize();
+    }
   }
 });
 
