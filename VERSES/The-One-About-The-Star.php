@@ -8,10 +8,10 @@
   <body>
     <?php include "header.php";?>
         <?php include "0.php";?> and later that year the child was born, in the cab of a pickup truck in a traffic jam on the highway on the rainy autumn morning of November 6, 1985. If he&rsquo;d been a girl, his parents would have named him Megan, but instead his parents named him William.</p>
-        <p>When he was one, he was sitting on a couch by a television when a clown with melting makeup appeared cackling on the screen.</p>
-        <p>When he was two, he was sitting in a seat at a cineplex when a jester with jingling bells appeared weeping on the screen.</p>
-        <p>When he was four, he was sitting in the audience at a theater when a magician burst into flames on the stage.</p>
-        <p>When he was eight, a cosmetologist trimmed his hair in a style that his parents considered too short, and later that day he was sipping on a vanilla milkshake at a picnic table at an apple orchard when a stranger in a magenta suit approached his parents, smiling, waving, explaining that she was an agent scouting for a project that would be filming in the state later that summer.</p>
+        <p>When he was one he was sitting on a couch by a television when a clown with melting makeup appeared cackling on the screen.</p>
+        <p>When he was two he was sitting in a seat at a cineplex when a jester with jingling bells appeared weeping on the screen.</p>
+        <p>When he was four he was sitting in the audience at a theater when a magician burst into flames on the stage.</p>
+        <p>When he was eight a cosmetologist trimmed his hair in a style that his parents considered too short, and later that day he was sipping on a vanilla milkshake at a picnic table at an apple orchard when a stranger in a magenta suit approached his parents, smiling, waving, explaining that she was an agent scouting for a project that would be filming in the state later that summer.</p>
         <p>&ldquo;You have just the perfect vibe for the role,&rdquo; the agent said, gushing.</p>
         <p>Afterward, back at the house, sitting in the grass beneath the massive oak tree in the yard, his parents talked with him about the idea.</p>
         <p>&ldquo;Do you want to go,&rdquo; his mother said.</p> 
