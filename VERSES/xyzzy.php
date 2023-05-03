@@ -15,6 +15,7 @@
         <p><a href="The-One-About-The-Drifter">The One About The Drifter</a></p>
         <p><a href="The-One-About-The-Folk">The One About The Folk</a></p>
         <p><a href="The-One-About-The-Jazz">The One About The Jazz</a></p>
+        <p><a href="The-One-About-The-Metal">The One About The Metal</a></p>
         <p><a href="The-One-About-The-Nomad">The One About The Nomad</a></p>
         <p><a href="The-One-About-The-Pop">The One About The Pop</a></p>
         <p><a href="The-One-About-The-Rap">The One About The Rap</a></p>

@@ -3,6 +3,7 @@ function randomize() {
     "The-One-About-The-Drifter",
     "The-One-About-The-Folk",
     "The-One-About-The-Jazz",
+    "The-One-About-The-Metal",
     "The-One-About-The-Nomad",
     "The-One-About-The-Pop",
     "The-One-About-The-Rap",
