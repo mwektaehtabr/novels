@@ -10,6 +10,7 @@ function randomize() {
     "The-One-About-The-Sonogram",
     "The-One-About-The-Song",
     "The-One-About-The-Star",
+    "The-One-About-The-Trance",
     "The-One-About-The-Traveler",
     "The-One-About-The-Variations",
     "The-One-About-The-Wanderer"
