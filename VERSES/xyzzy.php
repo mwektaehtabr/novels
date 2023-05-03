@@ -22,7 +22,7 @@
         <p><a href="The-One-About-The-Song">The One About The Song</a></p>
         <p><a href="The-One-About-The-Sonogram">The One About The Sonogram</a></p>
         <p><a href="The-One-About-The-Star">The One About The Star</a></p>
-        <p><a href="The-One-About-The-Star">The One About The Trance</a></p>
+        <p><a href="The-One-About-The-Trance">The One About The Trance</a></p>
         <p><a href="The-One-About-The-Traveler">The One About The Traveler</a></p>
         <p><a href="The-One-About-The-Variations">The One About The Variations</a></p>
         <p><a href="The-One-About-The-Wanderer">The One About The Wanderer</a></p>
