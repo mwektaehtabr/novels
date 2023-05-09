@@ -1,5 +1,6 @@
 function randomize() {
   var chapters = [
+    "The-One-About-The-Contrapuntal",
     "The-One-About-The-Drifter",
     "The-One-About-The-Folk",
     "The-One-About-The-Jazz",
@@ -8,6 +9,7 @@ function randomize() {
     "The-One-About-The-Pop",
     "The-One-About-The-Rap",
     "The-One-About-The-Rock",
+    "The-One-About-The-Rondeau",
     "The-One-About-The-Sonogram",
     "The-One-About-The-Song",
     "The-One-About-The-Soul",
