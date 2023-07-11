@@ -1,0 +1,1 @@
+This novel is designed to be read in a terminal application.
