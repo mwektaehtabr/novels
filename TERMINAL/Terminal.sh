@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.07.01
+# Version 2023.07.11
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -80,10 +80,10 @@
     exchange "wouldnt" "would not"
     exchange "you" "u" "ya" "yall"
     exchange "oh" "afaic" "as far as im concerned" "ah" "aha" "ahah" "ahaha" "ahahah" "ahahaha" "ahahahah" "blah" "blegh" "btw" "bwahaha" "bwahahaha" "byahaha" "byahahaha" "by the way" "er" "for what its worth" "fwiw" "gah" "gyahaha" "gyahahaha" "ha" "hah" "haha" "hahah" "hahaha" "hahahah" "hahahaha" "heh" "hehe" "heheh" "hehehe" "heheheh" "hehehehe" "hm" "hmm" "hmmm" "hmmmm" "huh" "imho" "imo" "in my humble opinion" "in my opinion" "kyahaha" "kyahahaha" "lmao" "lmfao" "lol" "mm" "mmm" "mmmm" "mmmmm" "mwahaha" "mwahahaha" "oh my god" "omg" "rofl" "smh" "smdh" "ugh" "uh" "um" "wait" "well" "welp" "what the fuck" "wtf"
-    if [[ `wrote "me "` == true || `wrote "my "` == true || `wrote myself` == true || `wrote "i "` == true || `wrote "id "` == true || `wrote "ill "` == true || `wrote "im "` == true || `wrote personally` == true ]]; then
-     firstperson=true
+    if [[ `wrote "me "` == true || `wrote "my "` == true || `wrote myself` == true || `wrote "i "` == true || `wrote "id "` == true || `wrote "ill "` == true || `wrote "im "` == true ]]; then
+     pronouns=true
     else
-     firstperson=false
+     pronouns=false
     fi
     if [ `wrote mother` = true ]; then
      mother=$(($mother+1))
@@ -94,7 +94,10 @@
     if [ `wrote parents` = true ]; then
      parents=$(($parents+1))
     fi
-    beginning "anyway" "honestly" "exactly" "oh" "so" "just" "for some reason" "for whatever reason" "needless to say" "you know" "i guess" "i guess that" "i have to ask" "i imagine" "i imagine that" "i mean" "i mean that" "i need to ask" "i suppose" "i suppose that" "i suspect" "i suspect that" "i think" "i think that" "i was wondering" "i wonder" "im curious" "ive been wondering" "ive got to ask" "and" "but" "or" "like" "me" "a" "the"
+    beginning "anyway" "honestly" "exactly" "oh" "so" "just" "for some reason" "for whatever reason" "needless to say" "you know" "i guess" "i guess that" "i have to ask" "i imagine" "i imagine that" "i mean" "i mean that" "i need to ask" "i suppose" "i suppose that" "i suspect" "i suspect that" "i think" "i think that" "i was wondering" "i wonder" "im curious" "ive been wondering" "ive got to ask" "and" "but" "or" "a" "the"
+    if [ `wrote "like what" first` = false ]; then
+     beginning "like"
+    fi
     middle "anyway" "honestly" "exactly" "oh" "so" "just" "for some reason" "for whatever reason" "needless to say" "absolutely" "some" "very" "the fuck"
     ending "anyway" "honestly" "exactly" "oh" "so" "just" "for some reason" "for whatever reason" "needless to say" "or whatever" "or like whatever"
    fi
@@ -168,10 +171,6 @@
        - "goodbye."
        ;;
      esac
-     sleep $(($RANDOM%4+4))
-     stty echo
-     printf "\e[?25h"
-     clear
      exit
      ;;
     *)
@@ -185,6 +184,7 @@
  else
   echo -n "- $1"
   sleep $(($RANDOM%4+4))
+  echo
   stty echo
   printf "\e[?25h"
   clear
@@ -284,6 +284,12 @@ abracadabra () {
 
 process () {
  acknowledge=${acknowledgements[$(($RANDOM%${#acknowledgements[@]}))]}
+ plokta=""
+ for character in {0..32}; do
+  if [ $(($RANDOM%4)) -ne 0 ]; then
+   plokta+=${characters[$(($RANDOM%${#characters[@]}))]}
+  fi
+ done
  if [ `wrote areyouwearing first` = true ]; then
   ending "rightnow"
  fi
@@ -295,8 +301,10 @@ process () {
  exchange "vest" "waistcoat"
  exchange "shoes" "boots" "brogues" "clogs" "derbies" "flats" "flipflops" "heels" "kicks" "loafers" "moccasins" "oxfords" "pumps" "sandals" "slippers" "sneakers" "wingtips"
  exchange "areyou" "doyouidentifyas" "doyouconsideryourself" "wouldyouidentifyas" "wouldyouconsideryourself"
- exchange "attractive" "beautiful" "cute" "handsome" "hot" "pretty" "sexy"
- exchange "unattractive" "disgusting" "gross" "hideous" "repulsive" "revolting" "ugly"
+ if [ `wrote areyou first` = true ]; then
+  exchange "attractive" "beautiful" "cute" "handsome" "hot" "pretty" "sexy"
+  exchange "unattractive" "disgusting" "gross" "hideous" "repulsive" "revolting" "ugly"
+ fi
  for data in ${emotions[@]}; do
   exchange "emotional" $data
  done
@@ -320,14 +328,14 @@ process () {
  if [ `wrote tellmeaboutthe first` = true ]; then
   ending "thatyouredrinking" "thatyoureeating" "thatyourehaving" "thatyouhave"
  fi
- if [[ `wrote howsyour first` = true && `wrote hair` = false ]]; then
+ if [[ `wrote howsyour first` == true && `wrote hair` == false ]]; then
   exchange "howsthe" "howsyour"
  fi
  for data in ${cheeses[@]}; do
   exchange "cheese" $data
  done
- for data in ${cheeses[@]}; do
-  exchange "cheese" $data
+ for data in ${chocolates[@]}; do
+  exchange "chocolate" $data
  done
  for data in ${teas[@]}; do
   exchange "tea" $data
@@ -338,10 +346,14 @@ process () {
  for data in ${juices[@]}; do
   exchange "juice" "$data juice"
  done
- exchange "soda" "coke" "cola" "pop"
+ if [[ `wrote howsthe first` == true && `wrote popcorn` == false ]]; then
+  exchange "soda" "coke" "cola" "pop"
+ fi
  exchange "wine" "vino"
  exchange "thewine" "yourwine"
- exchange "absinthe" "ale" "amaretto" "armagnac" "beer" "bellini" "brandy" "campari" "cavas" "champagne" "chartreuse" "cognac" "cointreau" "cosmopolitan" "gimlet" "gin" "kir" "lager" "limoncello" "liqueur" "liquor" "manhattan" "margarita" "martini" "mead" "mezcal" "mimosa" "mojito" "negroni" "ouzo" "pisco" "prosecco" "pulque" "rum" "sake" "sangria" "sazerac" "schnapps" "screwdriver" "shochu" "sidecar" "soju" "stout" "tequila" "umeshu" "vermouth" "vodka" "whiskey" "whisky"
+ if [ `wrote drink` = true ]; then
+  exchange "absinthe" "ale" "amaretto" "armagnac" "beer" "bellini" "brandy" "campari" "cavas" "champagne" "chartreuse" "cognac" "cointreau" "cosmopolitan" "gimlet" "gin" "kir" "lager" "limoncello" "liqueur" "liquor" "manhattan" "margarita" "martini" "mead" "mezcal" "mimosa" "mojito" "negroni" "ouzo" "pisco" "prosecco" "pulque" "rum" "sake" "sangria" "sazerac" "schnapps" "screwdriver" "shochu" "sidecar" "soju" "stout" "tequila" "umeshu" "vermouth" "vodka" "whiskey" "whisky"
+ fi
  if [ `wrote absinthe` = true ]; then
   middle "bottleof" "canof" "cupof" "glassof" "mugof"
   exchange "absinthe" "aabsinthe"
@@ -351,8 +363,15 @@ process () {
  exchange "docoke" "snortcoke"
  exchange "docrack" "smokecrack"
  exchange "doopium" "smokeopium"
- exchange "acid" "ayahuasca" "cocaine" "coke" "crack" "crystal" "ecstasy" "heroin" "khat" "kratom" "lsd" "mescaline" "meth" "molly" "mushrooms" "opium" "peyote" "psilocybin" "shrooms"
- exchange "marijuana" "cannabis" "dope" "ganja" "grass" "hash" "hashish" "jive" "mj" "maryjane" "pot" "reefer" "weed"
+ exchange "doneacid" "droppedacid"
+ exchange "donecocaine" "snortedcocaine"
+ exchange "donecoke" "snortedcoke"
+ exchange "donecrack" "smokedcrack"
+ exchange "doneopium" "smokedopium"
+ if [ `wrote something` = false ]; then
+  exchange "acid" "ayahuasca" "cocaine" "coke" "crack" "crystal" "ecstasy" "heroin" "khat" "kratom" "lsd" "mescaline" "meth" "molly" "mushrooms" "opium" "peyote" "psilocybin" "shrooms"
+ fi
+ exchange "marijuana" "cannabis" "dope" "ganja" "grass" "hashish" "hash" "jive" "maryjane" "pot" "reefer" "weed"
  exchange "acigarette" "cigarettes"
  exchange "ajoint" "joints"
  exchange "breasts" "tits"
@@ -366,31 +385,36 @@ process () {
  if [ `wrote haveyou first` == true ]; then
   exchange "haveyou" "haveyouever"
   ending "before"
-  ending "anything"
+  exchange "somebody" "anybody"
+  exchange "something" "anything"
+  exchange "somewhere" "anywhere"
   exchange "beento" "goneto" "journeyedto" "traveledto" "visited"
   exchange "driven" "drove"
   exchange "jumped" "leaped" "leapt"
   exchange "ridden" "rode"
-  exchange "played" "playeda" "playedthe"
-  exchange "piano" "banjo" "bansuri" "bass" "bassoon" "buzuq" "cello" "chimes" "clarinet" "cornet" "cymbal" "cymbals" "didgeridoo" "drums" "dulcimer" "electricguitar" "electrickeyboard" "erhu" "flute" "guitar" "gong" "guqin" "guzheng" "hang" "harp" "keyboard" "koto" "lute" "oboe" "organ" "oud" "qanun" "sax" "saxophone" "shakuhachi" "shamisen" "sitar" "snare" "synth" "synthesizer" "tabla" "tambura" "tanpura" "trombone" "trumpet" "tuba" "viola" "violin"
-  exchange "car" "automobile" "cab" "camper" "campervan" "convertible" "coupe" "deliverytruck" "deliveryvan" "hatchback" "jeep" "limo" "limousine" "minivan" "motorhome" "pickup" "pickuptruck" "roadster" "sedan" "semi" "semitruck" "snowplow" "stationwagon" "taxi" "taxicab" "towtruck" "truck" "van"
-  exchange "motorcycle" "carriage" "dirtbike" "gocart" "golfcart" "rickshaw" "snowmobile"
-  exchange "motorboat" "airboat" "jetski" "pontoon" "powerboat" "speedboat" "vaporetto"
-  exchange "plane" "airplane" "seaplane"
-  exchange "rowboat" "canoe" "dinghy" "gondola" "kayak" "outrigger" "raft"
-  exchange "sailboat" "catamaran" "felucca" "dhow" "gulet" "junk" "yacht"
-  exchange "ship" "aircraftcarrier" "barge" "cargoship" "containership" "cruiseship" "ferry" "ferryboat" "freighter" "riverboat" "steamboat" "tugboat" "warship"
+  if [ `wrote been` == false ]; then
+   if [[ `wrote cabana` == false && `wrote cablecar` == false && `wrote savanna` == false && `wrote vandalized` == false ]]; then
+    exchange "car" "automobile" "campervan" "camper" "convertible" "coupe" "deliverytruck" "deliveryvan" "hatchback" "jeep" "limousine" "limo" "minivan" "motorhome" "pickuptruck" "pickup" "roadster" "sedan" "semitruck" "semi" "snowplow" "stationwagon" "taxicab" "taxi" "cab" "towtruck" "truck" "van"
+   fi
+   exchange "motorboat" "airboat" "jetski" "pontoon" "powerboat" "speedboat" "vaporetto"
+   exchange "motorcycle" "carriage" "dirtbike" "gocart" "golfcart" "rickshaw" "snowmobile"
+   exchange "plane" "airplane" "seaplane"
+   exchange "rowboat" "canoe" "dinghy" "gondola" "kayak" "outrigger" "raft"
+   exchange "sailboat" "catamaran" "felucca" "dhow" "gulet" "junk" "yacht"
+   exchange "ship" "aircraftcarrier" "barge" "cargoship" "containership" "cruiseship" "ferryboat" "ferry" "freighter" "riverboat" "steamboat" "tugboat" "warship"
+   exchange "train" "cablecar" "streetcar" "subway" "tram"
+  fi
   exchange "stolen" "hijacked"
   exchange "tractor" "bulldozer" "crane" "forklift"
-  exchange "train" "cablecar" "streetcar" "subway" "tram"
   exchange "shota" "fireda"
-  exchange "gun" "bow" "crossbow" "firearm" "handgun" "machinegun" "pistol" "revolver" "rifle" "shotgun" "sniperrifle"
-  exchange "somebody" "anybody"
-  exchange "something" "anything"
-  exchange "somewhere" "anywhere"
-  exchange "committedacrime" "committedarson" "committedbribery" "committeddefamation" "committedforgery" "committedgrandtheftauto" "committedpiracy" "engagedinespionage" "engagedinpiracy" "graffitied" "graffitiedsomething" "graffitiedaboat" "graffitiedaship" "graffitiedatractor" "hacked" "hackedsomebody" "hackedsomething" "impersonatedsomebody" "kickedsomebody" "lockpicked" "lockpickedsomething" "pickpocketed" "pickpocketedsomebody" "punched somebody" "robbedsomebody" "shoplifted" "shopliftedsomething" "stolen" "stolensomething" "stolenaboat" "stolenamotorboat" "stolenamotorcycle" "stolenarowboat" "stolenasailboat" "tackledsomebody" "trespassed" "trespassedsomewhere" "trespassedonaboat" "trespassedonaship" "vandalized" "vandalizedsomething"
-  exchange "inabed" "ataairport" "ataamusementpark" "ataarcade" "ataconcert" "ataconference" "atafestival" "atagolfcourse" "ataicerink" "atalake" "atalibrary" "ataminigolfcourse" "ataparty" "ataplayground" "atarave" "ataresort" "ataschool" "atashoppingmall" "atashow" "ataskatingrink" "ataskiresort" "atasupermarket" "atdawn" "atdaybreak" "atdusk" "atnightfall" "atsunrise" "atsunset" "attwilight" "behindadumpster" "byabeachfire" "byabonfire" "byacampfire" "byacreek" "byafirepit" "byafireplace" "byaglacier" "byalake" "byamesa" "byapond" "byariver" "byasaltlake" "byastream" "byavolcano" "duringacyclone" "duringadrought" "duringaduststorm" "duringaeclipse" "duringahailstorm" "duringahurricane" "duringaicestorm" "duringalightningstorm" "duringameteorshower" "duringamonsoon" "duringarainstorm" "duringasandstorm" "duringasnowstorm" "duringathunderstorm" "duringatyphoon" "duringawildfire" "duringawindstorm" "inaabandonedhouse" "inaairport" "inaalley" "inaapartment" "inaarcade" "inaarmchair" "inaattic" "inaauditorium" "inabakery" "inaballetstudio" "inaballroom" "inabank" "inabar" "inabarn" "inabaseballdugout" "inabathroom" "inabathtub" "inabay" "inabayou" "inabelltower" "inaboathouse" "inabodega" "inabog" "inabookshop" "inabookstore" "inaboulangerie" "inabrewpub" "inabrownstone" "inabungalow" "inabus" "inabusstation" "inacabana" "inacantina" "inacanyon" "inacar" "inacasino" "inacastle" "inacatacomb" "inacathedral" "inacave" "inacavern" "inacellar" "inacemetery" "inachair" "inachalet" "inachapel" "inachateau" "inachurch" "inacinema" "inaclocktower" "inacloset" "inaclub" "inacocktailbar" "inacocktaillounge" "inaconferencehall" "inaconveniencestore" "inaconvent" "inacourthouse" "inacourtroom" "inacourtyard" "inacove" "inacreek" "inadacha" "inadancestudio" "inadesert" "inadiningroom" "inadiscotheque" "inadivebar" "inadojo" "inadressingroom" "inaelevator" "inafactory" "inafarmhouse" "inaferriswheel" "inafield" "inafirestation" "inaforest" "inafromagerie" "inagallery" "inagarage" "inagarden" "inagasstation" "inaglade" "inagorge" "inagraveyard" "inagraystone" "inagreenhouse" "inagrotto" "inagurdwara" "inagym" "inagymnasium" "inahacienda" "inahammock" "inahanok" "inaheath" "inahospital" "inahostel" "inahotel" "inahotellobby" "inahotspring" "inahottub" "inahouse" "inahouseboat" "inahut" "inaicecave" "inaightclub" "inainn" "inaizakaya" "inajacuzzi" "inajungle" "inajunkyard" "inakitchen" "inalagoon" "inalake" "inalaundromat" "inalaundryroom" "inalecturehall" "inalibrary" "inalifeguardstation" "inalifeguardtower" "inalighthouse" "inaliquorstore" "inalivingroom" "inalockerroom" "inalodge" "inamandir" "inamanor" "inamanorhouse" "inamarina" "inamarsh" "inamausoleum" "inameadow" "inamonastery" "inamoor" "inamosque" "inamotel" "inamovietheater" "inamuseum" "inaoasis" "inaoffice" "inaonsen" "inaoperahouse" "inaorchard" "inapagoda" "inapalace" "inaparkinggarage" "inaparkinglot" "inapatisserie" "inapawnhouse" "inapenthouse" "inapetrolstation" "inapizzeria" "inaplain" "inaplane" "inaplayhouse" "inaplaza" "inapolicestation" "inapond" "inapool" "inaprairie" "inaprison" "inapub" "inaravine" "inaresort" "inarestroom" "inariad" "inariver" "inarowboat" "inaryokan" "inasaltflat" "inasauna" "inasavanna" "inaschool" "inashack" "inashanty" "inashed" "inashippingcontainer" "inashoppingmall" "inashower" "inashrine" "inaskilodge" "inaskyscraper" "inasleepingbag" "inastable" "inastadium" "inastairwell" "inastream" "inastudio" "inasubmarine" "inasunroom" "inasupermarket" "inaswamp" "inaswimmingpool" "inasynagogue" "inataiga" "inataproom" "inataqueria" "inatavern" "inatemple" "inatent" "inatheater" "inathermalspring" "inatownhouse" "inatractor" "inatrafficjam" "inatrain" "inatrainstation" "inatreehouse" "inatulou" "inatundra" "inauclearbunker" "inavalley" "inavineyard" "inawarehouse" "inawat" "inawaterbed" "inawaterfall" "inayogastudio" "inayurt" "inthebayou" "inthebleachers" "inthedesert" "inthedirt" "intheeverglades" "inthefog" "intheforest" "inthemoonlight" "inthemountains" "inthemud" "intheocean" "intheprairie" "intherain" "inthesand" "inthesavanna" "intheshower" "inthestarlight" "intheswamp" "inthetaiga" "inthetundra" "inthewilderness" "inthewoods" "onabalcony" "onabaseballfield" "onabasketballcourt" "onabeach" "onabed" "onabillboard" "onablanket" "onaboat" "onaboulder" "onabridge" "onabunkbed" "onabus" "onacatwalk" "onacliff" "onacouch" "onacounter" "onadancefloor" "onadeck" "onadivingboard" "onafarm" "onaferriswheel" "onafootballfield" "onafunicular" "onafuton" "onaglacier" "onagolfcourse" "onahill" "onaisland" "onamattress" "onamesa" "onaminigolfcourse" "onamonorail" "onamotorboat" "onamountain" "onapatio" "onaplane" "onaplayground" "onaporch" "onaranch" "onaroof" "onarug" "onasailboat" "onaship" "onaskilift" "onasoccerfield" "onasofa" "onastage" "onastaircase" "onasurfboard" "onatable" "onatenniscourt" "onatrain" "onatrainplatform" "onaveranda" "onawaterbed" "onawaterfall" "onawatertower" "onawrestlingmat" "ontatami" "onthetrain" "onvolcano" "underaaurora" "underabridge" "underawaterfall" "underthebleachers" "underthestars"
-  exchange "monarch" "royal" "emperor" "empress" "king" "queen" "prince" "princess"
+  exchange "gun" "crossbow" "bow" "firearm" "handgun" "machinegun" "pistol" "revolver" "shotgun" "sniperrifle" "rifle"
+  if [ `wrote played` = true ]; then
+   exchange "played" "playeda" "playedthe"
+   exchange "piano" "banjo" "bansuri" "bassoon" "bass" "buzuq" "cello" "chimes" "clarinet" "cornet" "cymbals" "cymbal" "didgeridoo" "drums" "dulcimer" "electricguitar" "electrickeyboard" "erhu" "flute" "guitar" "gong" "guqin" "guzheng" "hangdrum" "hang" "harp" "keyboard" "koto" "lute" "oboe" "organ" "oud" "qanun" "saxophone" "sax" "shakuhachi" "shamisen" "sitar" "snare" "synthesizer" "synth" "tabla" "tambura" "tanpura" "trombone" "trumpet" "tuba" "viola" "violin"
+  fi
+  exchange "committedacrime" "committedarson" "committedbribery" "committeddefamation" "committedforgery" "committedgrandtheftauto" "committedpiracy" "engagedinespionage" "engagedinpiracy" "graffitiedsomething" "graffitiedaboat" "graffitiedaship" "graffitiedatractor" "graffitied" "hackedsomebody" "hackedsomething" "hacked" "impersonatedsomebody" "kickedsomebody" "lockpickedsomething" "lockpicked" "pickpocketedsomebody" "pickpocketed" "punched somebody" "robbedsomebody" "shopliftedsomething" "shoplifted" "stolenaboat" "stolenamotorboat" "stolenamotorcycle" "stolenarowboat" "stolenasailboat" "stolensomething" "stolen" "tackledsomebody" "trespassedsomewhere" "trespassedonaboat" "trespassedonaship" "trespassed" "vandalizedsomething" "vandalized"
+  exchange "inabed" "ataairport" "ataamusementpark" "ataarcade" "ataconcert" "ataconference" "atafestival" "atagolfcourse" "ataicerink" "atalake" "atalibrary" "atamall" "ataminigolfcourse" "ataparty" "ataplayground" "atarave" "ataresort" "ataschool" "atashoppingmall" "atashow" "ataskatingrink" "ataskiresort" "atasupermarket" "atdawn" "atdaybreak" "atdusk" "atnightfall" "atsunrise" "atsunset" "attwilight" "behindadumpster" "byabeachfire" "byabonfire" "byacampfire" "byacreek" "byafirepit" "byafireplace" "byaglacier" "byalake" "byamesa" "byapond" "byariver" "byasaltlake" "byastream" "byavolcano" "duringacyclone" "duringadrought" "duringaduststorm" "duringaeclipse" "duringahailstorm" "duringahurricane" "duringaicestorm" "duringalightningstorm" "duringameteorshower" "duringamonsoon" "duringarainstorm" "duringasandstorm" "duringasnowstorm" "during a storm" "duringathunderstorm" "duringatyphoon" "duringawildfire" "duringawindstorm" "inaabandonedhouse" "inaairport" "inaalley" "inaapartment" "inaarcade" "inaarmchair" "inaattic" "inaauditorium" "inabakery" "inaballetstudio" "inaballroom" "inabank" "inabarn" "inabar" "inabaseballdugout" "inabathroom" "inabathtub" "inabayou" "inabay" "inabelltower" "inaboathouse" "inabodega" "inabog" "inabookshop" "inabookstore" "inaboulangerie" "inabrewpub" "inabrownstone" "inabungalow" "inabusstation" "inabus" "inacabana" "inacantina" "inacanyon" "inacar" "inacasino" "inacastle" "inacatacomb" "inacathedral" "inacavern" "inacave" "inacellar" "inacemetery" "inachair" "inachalet" "inachapel" "inachateau" "inachurch" "inacinema" "inaclocktower" "inacloset" "inaclub" "inacocktailbar" "inacocktaillounge" "inaconferencehall" "inaconveniencestore" "inaconvent" "inacourthouse" "inacourtroom" "inacourtyard" "inacove" "inacreek" "inadacha" "inadancestudio" "inadesert" "inadiningroom" "inadiscotheque" "inadivebar" "inadojo" "inadressingroom" "inaelevator" "inafactory" "inafarmhouse" "inaferriswheel" "inafield" "inafirestation" "inaforest" "inafromagerie" "inagallery" "inagarage" "inagarden" "inagasstation" "inaglade" "inagorge" "inagraveyard" "inagraystone" "inagreenhouse" "inagrotto" "inagurdwara" "inagymnasium" "inagym" "inahacienda" "inahammock" "inahanok" "inaheath" "inahospital" "inahostel" "inahotellobby" "inahotel" "inahotspring" "inahottub" "inahouseboat" "inahouse" "inahut" "inaicecave" "inaightclub" "inainn" "inaizakaya" "inajacuzzi" "inajungle" "inajunkyard" "inakitchen" "inalagoon" "inalake" "inalaundromat" "inalaundryroom" "inalecturehall" "inalibrary" "inalifeguardstation" "inalifeguardtower" "inalighthouse" "inaliquorstore" "inalivingroom" "inalockerroom" "inalodge" "inamall" "inamandir" "inamanorhouse" "inamanor" "inamarina" "inamarsh" "inamausoleum" "inameadow" "inamonastery" "inamoor" "inamosque" "inamotel" "inamovietheater" "inamuseum" "inaoasis" "inaoffice" "inaonsen" "inaoperahouse" "inaorchard" "inapagoda" "inapalace" "inaparkinggarage" "inaparkinglot" "inapatisserie" "inapawnhouse" "inapenthouse" "inapetrolstation" "inapizzeria" "inaplain" "inaplane" "inaplayhouse" "inaplaza" "inapolicestation" "inapond" "inapool" "inaprairie" "inaprison" "inapub" "inaravine" "inaresort" "inarestroom" "inariad" "inariver" "inarowboat" "inaryokan" "inasaltflat" "inasauna" "inasavanna" "inaschool" "inashack" "inashanty" "inashed" "inashippingcontainer" "inashoppingmall" "inashower" "inashrine" "inaskilodge" "inaskyscraper" "inasleepingbag" "inastable" "inastadium" "inastairwell" "inastream" "inastudio" "inasubmarine" "inasunroom" "inasupermarket" "inaswamp" "inaswimmingpool" "inasynagogue" "inataiga" "inataproom" "inataqueria" "inatavern" "inatemple" "inatent" "inatheater" "inathermalspring" "inatownhouse" "inatractor" "inatrafficjam" "inatrainstation" "inatrain" "inatreehouse" "inatulou" "inatundra" "inauclearbunker" "inavalley" "inavineyard" "inawarehouse" "inawaterbed" "inawaterfall" "inawat" "inayogastudio" "inayurt" "inthebayou" "inthebleachers" "inthedesert" "inthedirt" "intheeverglades" "inthefog" "intheforest" "inthemoonlight" "inthemountains" "inthemist" "inthemud" "intheocean" "intheprairie" "intherain" "inthesand" "inthesavanna" "intheshower" "inthestarlight" "intheswamp" "inthetaiga" "inthetundra" "inthewilderness" "inthewoods" "onabalcony" "onabaseballfield" "onabasketballcourt" "onabeach" "onabed" "onabillboard" "onablanket" "onaboat" "onaboulder" "onabridge" "onabunkbed" "onabus" "onacatwalk" "onacliff" "onacouch" "onacounter" "onadancefloor" "onadeck" "onadivingboard" "onafarm" "onaferriswheel" "onafootballfield" "onafunicular" "onafuton" "onaglacier" "onagolfcourse" "onahill" "onaisland" "onamattress" "onamesa" "onaminigolfcourse" "onamonorail" "onamotorboat" "onamountain" "onapatio" "onaplane" "onaplayground" "onaporch" "onaranch" "onaroof" "onarug" "onasailboat" "onaship" "onaskilift" "onasoccerfield" "onasofa" "onastage" "onastaircase" "onasurfboard" "onatable" "onatenniscourt" "onatrainplatform" "onatrain" "onaveranda" "onawaterbed" "onawaterfall" "onawatertower" "onawrestlingmat" "ontatami" "onthetrain" "underaaurora" "underabridge" "underawaterfall" "underthebleachers" "underthestars"
+  exchange "monarch" "royal" "emperor" "empress" "king" "queen" "princess" "prince"
   exchange "tasted" "licked" "swallowed"
  fi
  case $reader in
@@ -494,10 +518,10 @@ process () {
    ;;
   describehowyoulook|describewhatyoulooklike|tellmewhatyoulooklike|whatdoyoulooklike)
    - "an angular face, maybe even would be considered gaunt, with large dark brown eyes, a prominent nose, hollow cheeks, thin lips, a sharp jaw."
-   if [[ $(($RANDOM%8)) -eq 0 && `wrote what first` == false && `wrote where first` == false && `wrote when first` == false && `wrote how first` == false && `wrote tell first` == false && `wrote describe first` == false && $firstperson == false && $words -lt 8 ]]; then
+   if [[ $(($RANDOM%8)) -eq 0 && `wrote what first` == false && `wrote where first` == false && `wrote when first` == false && `wrote how first` == false && `wrote tell first` == false && `wrote describe first` == false && $pronouns == false && $words -lt 8 ]]; then
     - "some sunburn on the tip of my nose."
    fi
-   if [[ $look -eq 0 && `wrote what first` == false && `wrote where first` == false && `wrote when first` == false && `wrote how first` == false && `wrote tell first` == false && `wrote describe first` == false && $firstperson == false && $words -lt 8 ]]; then
+   if [[ $look -eq 0 && `wrote what first` == false && `wrote where first` == false && `wrote when first` == false && `wrote how first` == false && `wrote tell first` == false && `wrote describe first` == false && $pronouns == false && $words -lt 8 ]]; then
     - "what do you look like?"
     look=1
    fi
@@ -580,7 +604,7 @@ process () {
      *)
       ;;
     esac
-    if [[ $firstperson == false && $words -lt 8 ]]; then
+    if [[ $pronouns == false && $words -lt 8 ]]; then
      - "do you have any scars?"
     fi
     unset scar
@@ -590,7 +614,7 @@ process () {
   doyouhaveabirthmark|doyouhaveanybirthmarks|doyouhavebirthmarks)
    if [ $birthmark ]; then
     - "a blotch on my thigh."
-    if [[ $firstperson == false && $words -lt 8 ]]; then
+    if [[ $pronouns == false && $words -lt 8 ]]; then
      - "do you have any birthmarks?"
     fi
     unset birthmark
@@ -608,6 +632,9 @@ process () {
     exchange "named" "called"
     exchange "names" "legends" "mythologies"
     exchange "theconstellations" "yourconstellations" "anyoftheconstellations"
+    if [ `wrote name` = true ]; then
+     exchange "theconstellations" "them" "they"
+    fi
     case $reader in
      dotheconstellationshavenames|haveyouletsomebodynametheconstellations|haveyounamedtheconstellations|whataretheconstellationsnamed|whatarethenamesoftheconstellations)
       constellations=("on my neck there's a constellation of four freckles" "on my shoulder there's a constellation of four freckles" "on my bicep there's a constellation of four freckles" "on my elbow there's a constellation of four freckles" "on my arm there's a constellation of five freckles" "on my arm there's a constellation of six freckles" "on my arm there's a constellation of seven freckles" "on my neck there's a constellation of eight freckles" "on my shoulder there's a constellation of eight freckles" "on my bicep there's a constellation of eight freckles" "on my elbow there's a constellation of eight freckles" "on my arm there's a constellation of nine freckles")
@@ -636,13 +663,13 @@ process () {
      *)
       ;;
     esac
-    if [[ $firstperson == false && $words -lt 8 ]]; then
+    if [[ $pronouns == false && $words -lt 8 ]]; then
      - "do you have any freckles?"
     fi
     unset freckles
     process
    fi
-   ;;   
+   ;;
   doyouhaveacock|doyouhavetesticles)
    if [ $sex -lt 2 ]; then
     - "yes."
@@ -718,7 +745,7 @@ process () {
          ;;
        esac
        if [[ $(($RANDOM%2)) -eq 0 && `wrote joyce` == false ]]; then
-        - "on new year's day i walked to joyce's martello. sandycove. a frigid breeze. frost on the rooftops. frost on the cobblestones. swimmers were leaping from forty foot into the sea."
+        - "on new year's day i walked to joyce's martello. sandycove. a frigid breeze. frost on the rooftops. frost on the cobblestones. swimmers were leaping from the rocks into the sea."
        fi
        ;;
       *)
@@ -747,7 +774,7 @@ process () {
      - "american accent, michigan dialect, infused with bits of irish english and british english and caribbean english and hawaiian english and australian english and singaporean english and aotearoan english from years of wandering."
      ;;
    esac
-   if [[ $sound -eq 0 && `wrote what first` == false && `wrote where first` == false && `wrote when first` == false && `wrote how first` == false && `wrote tell first` == false && `wrote describe first` == false && $firstperson == false && $words -lt 8 ]]; then
+   if [[ $sound -eq 0 && `wrote what first` == false && `wrote where first` == false && `wrote when first` == false && `wrote how first` == false && `wrote tell first` == false && `wrote describe first` == false && $pronouns == false && $words -lt 8 ]]; then
     - "what do you sound like?"
     sound=1
    fi
@@ -764,7 +791,7 @@ process () {
    curiosity
    if [ $curious -ne 0 ]; then
     - "${scents[$(($RANDOM%${#scents[@]}))]}"
-    if [[ $smell -eq 0 && `wrote what first` == false && `wrote where first` == false && `wrote when first` == false && `wrote how first` == false && `wrote tell first` == false && `wrote describe first` == false && $firstperson == false && $words -lt 8 ]]; then
+    if [[ $smell -eq 0 && `wrote what first` == false && `wrote where first` == false && `wrote when first` == false && `wrote how first` == false && `wrote tell first` == false && `wrote describe first` == false && $pronouns == false && $words -lt 8 ]]; then
      - "what do you smell like?"
      smell=1
     fi
@@ -853,6 +880,7 @@ process () {
     *)
      ;;
     esac
+    process
    fi
    ;;
   whatcoloraretheboxers|whatcolorarethejoggers|whatcoloraretheleggings|whatcolorarethepants|whatcolorarethesweatpants|whatcolorarethesweats|whatcolorareyourboxers|whatcolorareyourjoggers|whatcolorareyourleggings|whatcolorareyourpants|whatcolorareyoursweatpants|whatcolorareyoursweats|whatcoloristhebathrobe|whatcoloristhehoodie|whatcoloristhekimono|whatcoloristherobe|whatcoloristheshirt|whatcoloristhesweatshirt|whatcoloristheswimsuit|whatcoloristhetee|whatcoloristhetshirt|whatcolorisyourbathrobe|whatcolorisyourhoodie|whatcolorisyourkimono|whatcolorisyourrobe|whatcolorisyourshirt|whatcolorisyoursweatshirt|whatcolorisyourswimsuit|whatcolorisyourtee|whatcolorisyourtshirt)
@@ -1007,12 +1035,9 @@ process () {
   areyouaai|areyouaartificialintelligence|areyouai|areyoualanguagelearningmodel|areyouallm|areyouartificialintelligence|howdidyoucreatethis|howdidyoumakethis|howdidyouwritethis|isthisaai|isthisaartificialintelligence|isthisalanguagelearningmodel|isthisallm)
    if [ $human ]; then
     - "i am a human being. none of this text was written by an algorithm. i want to emphasize that. none of this text is written by an algorithm. i typed every word that you're reading here."
+    unset human
     process
    fi
-   ;;
-  howdidyoumakethis)
-   - "typing."
-   process
    ;;
   areyouhackingme|didyouhackme|isthismalware|isthisprogrammalware|isthisprogramavirus|isthisprogramaworm|isthisavirus|isthisaworm)
    case $(($RANDOM%4)) in
@@ -1024,34 +1049,10 @@ process () {
      ;;
     *)
      - "all your base are belong to us."
-     ;;   
+     ;;
    esac
    process
    ;;
-  amiinthematrix|areweinthematrix|isthisthematrix|whatsthematrix)
-   if [ $wonderland -lt 3 ]; then
-    if [ $name ]; then
-     case $(($RANDOM%3)) in
-      0)
-       - "wake up, $name..."
-       ;;
-      1)
-       - "follow the white rabbit."
-       ;;
-      2)
-       - "knock, knock, $name."
-       ;;
-      *)
-       reader=0
-       ;;
-     esac
-    else
-     - "follow the white rabbit."
-    fi
-    wonderland=$(($wonderland+1))
-    process
-   fi
-   ;;   
   doyoubelieveinacreator|doyoubelieveinagod|doyoubelieveingod)
    if [ $creator ]; then
     - "there's a semi-infinite number of questions i'd like to ask the creator of this universe if the creator of this universe actually exists."
@@ -1066,17 +1067,6 @@ process () {
     unset creator
     process
    fi
-   ;;
-  doyoupray)
-   if [ $prayer ]; then
-    - "if i pray, then i pray to the possibility of a god. i'd never pray to any certainty of a god, if i pray."
-    unset prayer
-    process
-   fi
-   ;;
-  whatsaprayer|whatsprayer)
-   - "a conversation that sometimes feels one-sided."
-   process
    ;;
   doyoubelieveinhell)
    if [ $hell ]; then
@@ -1113,6 +1103,32 @@ process () {
     unset heaven
     process
    fi
+   ;;
+  doyoupray)
+   if [ $prayer ]; then
+    if [ $(($RANDOM%2)) -eq 0 ]; then
+     - "can art be grace?"
+    else
+     - "can art be worship?"
+    fi
+    unset prayer
+    process
+   fi
+   ;;
+  doyoumeditate)
+   if [ $meditate ]; then
+    if [ $(($RANDOM%2)) -eq 0 ]; then
+     - "is art a koan?"
+    else
+     - "is art a mantra?"
+    fi
+    unset meditate
+    process
+   fi
+   ;;
+  whatsameditation|whatsaprayer|whatsmeditation|whatsprayer)
+   - "a conversation that sometimes feels one-sided."
+   process
    ;;
   doyouhaveafavoritecolor|howaboutyourfavoritecolor|whataboutyourfavoritecolor|whatsyourfavoritecolor|yourfavoritecolor)
    if [ $color ]; then
@@ -1362,7 +1378,7 @@ process () {
    ;;
   howsthemala)
    - "spicy."
-   if [[ $firstperson == false && $words -lt 8 ]]; then
+   if [[ $pronouns == false && $words -lt 8 ]]; then
     - "${mala[$(($RANDOM%${#mala[@]}))]}."
    fi
    process
@@ -1495,6 +1511,7 @@ process () {
     sleep $(($RANDOM%64+16))
     - "hm."
     unset meditating
+    process
    fi
    ;;
   praywithme|wanttopray|wanttopraytogether|doyouwanttopray|doyouwanttopraywithme|doyouwanttopraytogether|iwanttopray|iwanttopraywithyou|iwanttopraytogether)
@@ -1507,6 +1524,7 @@ process () {
     sleep $(($RANDOM%64+16))
     - "hm."
     unset praying
+    process
    fi
    ;;
   doyouwanttodrinktea|doyouwanttodrinkteatogether|doyouwanttodrinkteawithme|drinkteawithme|iwanttodrinktea|iwanttodrinkteatogether|iwanttodrinkteawithyou|wanttodrinktea|wanttodrinkteatogether)
@@ -1547,7 +1565,7 @@ process () {
    ;;
   doyouwanttodrinkwine|doyouwanttodrinkwinetogether|doyouwanttodrinkwinewithme|doyouwanttodrinksomething|doyouwanttodrinksomethingtogether|doyouwanttodrinksomethingwithme|drinkwinewithme|drinksomethingwithme|iwanttodrinkwine|iwanttodrinkwinetogether|iwanttodrinkwinewithyou|iwanttodrinksomething|iwanttodrinksomethingtogether|iwanttodrinksomethingwithyou|wanttodrinkwine|wanttodrinkwinetogether|wanttodrinksomething|wanttodrinksomethingtogether)
    if [ $wine -eq 0 ]; then
-    if [ $(($RANDOM%2)) eq 0 ]; then
+    if [ $(($RANDOM%2)) -eq 0 ]; then
      - "$acknowledge, i'll pour a glass of wine so we can drink together."
     else
      - "$acknowledge, i'll pour a glass of wine."
@@ -1558,7 +1576,7 @@ process () {
   doyouwanttodrinkabsinthe|doyouwanttodrinkabsinthetogether|doyouwanttodrinkabsinthewithme|drinkabsinthewithme|iwanttodrinkabsinthe|iwanttodrinkabsinthetogether|iwanttodrinkabsinthewithyou|wanttodrinkabsinthe|wanttodrinkabsinthetogether)
    if [ $wine -eq 0 ]; then
     - "i have a bottle of wine."
-    if [ $(($RANDOM%2)) eq 0 ]; then
+    if [ $(($RANDOM%2)) -eq 0 ]; then
      - "let's drink something together."
     fi
     - "i'll pour a glass of wine."
@@ -1650,7 +1668,7 @@ process () {
    if [ $smoking ]; then
     - "you want to smoke some tobacco or some marijuana?"
     beginning "iwanttosmoke" "wanttosmoke" "some"
-    exchange "marijuana" "cannabis" "dope" "ganja" "grass" "hash" "hashish" "jive" "mj" "maryjane" "pot" "reefer" "weed"
+    exchange "marijuana" "cannabis" "dope" "ganja" "grass" "hashish" "hash" "jive" "maryjane" "pot" "reefer" "weed"
     case $reader in
      tobacco)
       smoke tobacco
@@ -1730,11 +1748,11 @@ process () {
     unset treasure
     process
    fi
-   ;;   
+   ;;
   itsmybirthday|todayismybirthday|todaysmybirthday)
    if [ $birthday -eq 0 ]; then
     - "happy birthday."
-    if [[ $firstperson == false && `wrote year` == false && `wrote old` == false && `wrote turn` == false && `wrote now` == false && $(($RANDOM%4)) -eq 0 ]]; then
+    if [[ $pronouns == false && `wrote year` == false && `wrote old` == false && `wrote turn` == false && `wrote now` == false && $(($RANDOM%4)) -eq 0 ]]; then
      - "how old are you now?"
     fi
     if [[ $(($RANDOM%2)) -eq 0 ]]; then
@@ -1757,12 +1775,47 @@ process () {
     process
    fi
    ;;
+  plokta)
+   - "$plokta"
+   process
+   ;;     
+  dontrepeatyourself)
+   if [ $stylist ]; then
+    - "we enjoy typing."
+    unset stylist
+    process
+   fi
+   ;;
   chunkybacon|ilikebaconchunky|ilikechunkybacon|iliketoeatchunkybacon|ipreferbaconchunky|ipreferchunkybacon|iprefertoeatchunkybacon|isitchunkybacon|maybesomechunkybacon|somechunkybacon)
    if [ $poignant ]; then
     - "_why?"
     unset poignant
    fi
-   ;; 
+   ;;
+  amiinthematrix|areweinthematrix|isthisthematrix|whatsthematrix)
+   if [ $wonderland -lt 3 ]; then
+    if [ $name ]; then
+     case $(($RANDOM%3)) in
+      0)
+       - "wake up, $name..."
+       ;;
+      1)
+       - "follow the white rabbit."
+       ;;
+      2)
+       - "knock, knock, $name."
+       ;;
+      *)
+       reader=0
+       ;;
+     esac
+    else
+     - "follow the white rabbit."
+    fi
+    wonderland=$(($wonderland+1))
+    process
+   fi
+   ;;   
   thereisnospoon)
    if [ $oracle ]; then
     if [ $(($RANDOM%2)) -eq 0 ]; then
@@ -1784,7 +1837,7 @@ process () {
     unset zig
     process
    fi
-   ;;
+   ;;  
   imissyou)
    - "i'm still here."
    process
@@ -2395,13 +2448,13 @@ advent () {
   sleep 4
   printf "\033[64A\033[0K\e[0J"
   clear
-  sleep $(($RANDOM%8+1))
+  sleep 8
  fi
 }
 
-unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character cheese cheeses chocolate chocolates chowder clothing coffee coffees color count countdown creator criminal curious curry data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini firstperson flirting fluids freckles fucking gelato genitals genres ghosts glimpsed glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language leaves libertine linguistics look loved loves macarons madeira madness mala marijuana meal meals meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller sweat syrah tastes tattoos tea teas telepathy terminal tobacco toffee touches treasure underarm underfoot vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
+unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing coffee coffees color count countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini pronouns flirting fluids freckles gelato genres ghosts glimpsed glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language leaves libertine linguistics look loved loves macarons madeira madness magicword mala marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller stylist sweat syrah tastes tattoos tea teas telepathy terminal tobacco toffee touches treasure underarm underfoot vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
 
-for data in age attractive banquet barista birthday birthmark cheese chocolate coffee color countdown curious creator criminal dessert destiny drinking eating fascism fashion fate father feast flirting freckles fucking ghosts hacker hanami heaven hell horoscopes human hypnotism identity juice kanji karma libertine linguistics look loved loves madness marijuana meal mind monarch mother muse oracle parents piazzas piercings pirate poignant popcorn prayer premonitions psychics scar scorpion seaworthy secret self sex sky smell smoking soda sound spaceship spacetime sweat tattoos tea tobacco treasure underarm underfoot vibing water whiskers wine wonderland word zig; do declare $data=0; done
+declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,ghosts,hacker,hanami,heaven,hell,horoscopes,human,hypnotism,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,psychics,scar,scorpion,seaworthy,secret,self,sex,sky,smell,smoking,soda,sound,spaceship,spacetime,stylist,sweat,tattoos,tea,tobacco,treasure,underarm,underfoot,vibing,water,whiskers,wine,wonderland,word,zig}=0
 
 shell=#
 
@@ -2415,7 +2468,7 @@ selves=("a consciousness refracted across spacetime like a ray of light beamed t
 
 feelings=("abstract" "absurdist" "ahistorical" "algebraic" "allegorical" "anomalous" "apocalyptic" "atmospheric" "atomic" "auroral" "baroque" "boolean" "bozzetto" "brutalist" "carbonized" "celestial" "cellular" "choreographed" "clockwise" "collaborative" "comical" "contradictory" "cosmic" "counterclockwise" "counterfactual" "crystallized" "cubist" "cybernetic" "deco" "diagrammed" "divine" "dystopian" "electric" "encrypted" "entangled" "ephemeral" "expressionist" "extinct" "futurist" "galactic" "genetic" "geometric" "glitchy" "gothic" "graffitied" "gravitational" "holographic" "hybrid" "hyperborean" "hypothetical" "impressionist" "improbable" "infinite" "infrared" "inkblotted" "interlinked" "iridescent" "juxtaposed" "kaleidoscopic" "kintsugi" "linear" "literal" "luminist" "lunar" "magnetic" "mandala" "maquette" "marginaliaed" "mathematic" "melodic" "metaphorical" "meteorological" "monochrome" "monophonic" "mosaic" "multidimensional" "mystical" "mythical" "neological" "noir" "nonlinear" "nuclear" "occult" "opalescent" "orbital" "orchestrated" "organic" "paranormal" "pearlescent" "phosphorescent" "pixelated" "planetary" "pointillist" "polychrome" "polygonal" "polyphonic" "programmable" "psychedelic" "quantum" "radioactive" "randomized" "realist" "remixed" "rococo" "romanticist" "sepia" "serialized" "socratic" "solar" "spatial" "spectral" "subliminal" "supernovaed" "surrealist" "symbolist" "synthetic" "syzygy" "temporal" "theoretical" "thermodynamic" "tragic" "transcendental" "ultraviolet" "universal" "utopian" "variable" "virtual" "wormholed")
 
-emotions=("affectionate" "afraid" "aggressive" "alarmed" "amazed" "amused" "angry" "annoyed" "anxious" "apathetic" "apprehensive" "ashamed" "astonished" "astounded" "awed" "awkward" "baffled" "bewildered" "bitter" "calm" "captivated" "cheerful" "comfortable" "concerned" "confrontational" "confused" "contemplative" "content" "cruel" "crushed" "curious" "cursed" "cynical" "defeated" "defiant" "delighted" "depressed" "desperate" "determined" "disappointed" "discouraged" "disgusted" "distracted" "distraught" "distressed" "doomed" "dread" "dumbfounded" "ecstatic" "embarrassed" "emotional" "encouraged" "enraged" "entertained" "envious" "euphoric" "excited" "fascinated" "frightened" "frustrated" "furious" "gloomy" "grateful" "happy" "helpless" "hopeful" "hopeless" "horrified" "hostile" "humiliated" "indecisive" "indifferent" "infuriated" "intrigued" "introspective" "irate" "irritated" "jealous" "kind" "lonely" "loving" "mesmerized" "mischievous" "miserable" "moody" "mystified" "nervous" "nostalgic" "optimistic" "paranoid" "peaceful" "pensive" "perplexed" "playful" "pleased" "proud" "puzzled" "quarrelsome" "reckless" "relaxed" "relieved" "restless" "sad" "satisfied" "scared" "shocked" "skeptical" "smug" "somber" "startled" "stressed" "stunned" "surprised" "suspicious" "tense" "terrified" "thankful" "thoughtful" "thrilled" "timid" "tranquil" "triumphant" "uncertain" "uncomfortable" "upset" "victorious" "wistful" "worried")
+emotions=("affectionate" "afraid" "aggressive" "alarmed" "amazed" "amused" "angry" "annoyed" "anxious" "apathetic" "apprehensive" "argumentative" "ashamed" "astonished" "astounded" "awed" "awkward" "baffled" "bewildered" "bitter" "calm" "captivated" "cheerful" "comfortable" "concerned" "confrontational" "confused" "contemplative" "content" "cruel" "crushed" "curious" "cursed" "cynical" "defeated" "defiant" "delighted" "depressed" "desperate" "determined" "disappointed" "discouraged" "disgusted" "distracted" "distraught" "distressed" "doomed" "dread" "dumbfounded" "ecstatic" "embarrassed" "emotional" "encouraged" "enraged" "entertained" "envious" "euphoric" "excited" "fascinated" "frightened" "frustrated" "furious" "gloomy" "grateful" "happy" "helpless" "hopeful" "hopeless" "horrified" "hostile" "humiliated" "indecisive" "indifferent" "infuriated" "intrigued" "introspective" "irritated" "jealous" "kind" "lonely" "loving" "mesmerized" "mischievous" "miserable" "moody" "mystified" "nervous" "nostalgic" "optimistic" "paranoid" "peaceful" "pensive" "perplexed" "playful" "pleased" "proud" "puzzled" "quarrelsome" "reckless" "relaxed" "relieved" "restless" "sad" "satisfied" "scared" "shocked" "skeptical" "smug" "somber" "startled" "stressed" "stunned" "surprised" "suspicious" "tense" "terrified" "thankful" "thoughtful" "thrilled" "timid" "tranquil" "triumphant" "uncertain" "uncomfortable" "upset" "victorious" "wistful" "worried")
 
 hair=("a buzzcut" "a crewcut" "wild dark hair twisted into a topknot" "wild dark hair trimmed in an undercut" "wild dark tangled hair with bangs that hang in the eyes")
 
@@ -2525,6 +2578,8 @@ muscat=("hazelnut" "cashew" "mandarin" "honey")
 
 acknowledgements=("alright" "okay")
 
+characters=("0" "1" "2" "3" "4" "5" "6" "7" "8" "9" "a" "b" "c" "d" "e" "f" "g" "h" "i" "j" "k" "l" "m" "n" "o" "p" "q" "r" "s" "t" "u" "v" "w" "x" "y" "z")
+
 year=$(date "+%Y")
 
 month=$(date "+%-m")
@@ -2537,30 +2592,30 @@ magicword=`abracadabra`
 
 stty -echo
 printf "\e[?25l"
-for number in {0..63}; do
+for number in {0..7}; do
  clear
 done
 sleep $(($RANDOM%4+4))
-for character in T E R M I N A L; do echo -n $character; sleep 0.2; done
-sleep 4
+for character in T E R M I N A L; do echo -n $character; sleep 0.1; done
+sleep $(($RANDOM%4+4))
 if [ $USER ]; then
  name=`echo $USER | tr "[:upper:]" "[:lower:]" | tr -d "[:punct:]" | tr -d "[:blank:]"`
  if [ $name ]; then
   echo
   echo
-  for character in m w e k t a e h t a b r; do echo -n $character; sleep 0.2; done
+  for character in m w e k t a e h t a b r; do echo -n $character; sleep 0.1; done
   echo -n " "
-  sleep 0.2
-  for character in a n d; do echo -n $character; sleep 0.2; done
+  sleep 0.1
+  for character in a n d; do echo -n $character; sleep 0.1; done
   echo -n " "
-  sleep 0.2
+  sleep 0.1
   character=0
   while [ $character -lt ${#name} ]; do
    echo -n ${name:$character:1}
-   sleep 0.2
+   sleep 0.1
    character=$(($character+1))
   done
-  sleep 8
+  sleep $(($RANDOM%4+4))
  fi
 fi
 clear
@@ -2785,12 +2840,12 @@ glimpse
 if [[ $drinking != "0" && $(($RANDOM%16)) -eq 0 ]]; then
  - "fuck, i just spilled the $drinking."
 fi
-if [[ `wrote conversation` = false && `wrote shape` = false && `wrote factors` = false && `wrote environment` = false && $words -lt 16 ]]; then
+if [[ `wrote conversation` == false && `wrote shape` == false && `wrote factors` == false && `wrote environment` == false && $words -lt 16 ]]; then
  - "i wonder how much that you and i can actually control the shape of this conversation when the conversation is being constantly interrupted and redirected by so many chance factors in the environment at random moments."
  process
 fi
 - "the first conversation i ever had on a computer was on aol. iming, back in the dialup age. grand total, i must have had hundreds if not thousands of conversations on aim. then in the broadband age, dming. myspace, deviantart, xanga, tumblr, reddit, facebook, twitter, snapchat. talking with strangers on irc."
-if [ $fucking ]; then
+if [ $cybersex ]; then
  - "have you ever had cybersex?"
  case $reader in
   no|never)
@@ -3075,7 +3130,7 @@ glimpse
 glimpse
 glimpse
 - "we're almost out of time."
-if [[ $(($RANDOM%2)) -eq 0 && `wrote meteors` = false ]]; then
+if [[ $(($RANDOM%2)) -eq 0 && `wrote meteors` == false ]]; then
  - "meteors in the sky."
 fi
 - "this may be the last conversation i ever have."
