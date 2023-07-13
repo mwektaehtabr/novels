@@ -286,7 +286,7 @@ process () {
  acknowledge=${acknowledgements[$(($RANDOM%${#acknowledgements[@]}))]}
  plokta=""
  for character in {0..32}; do
-  if [ $(($RANDOM%4)) -ne 0 ]; then
+  if [ $(($RANDOM%2)) -eq 0 ]; then
    plokta+=${characters[$(($RANDOM%${#characters[@]}))]}
   fi
  done
@@ -346,7 +346,7 @@ process () {
  for data in ${juices[@]}; do
   exchange "juice" "$data juice"
  done
- if [[ `wrote howsthe first` == true && `wrote popcorn` == false ]]; then
+ if [[ `wrote howsthe first` == true && `wrote cheese` == false && `wrote chocolate` == false && `wrote popcorn` == false ]]; then
   exchange "soda" "coke" "cola" "pop"
  fi
  exchange "wine" "vino"
@@ -413,7 +413,7 @@ process () {
    exchange "piano" "banjo" "bansuri" "bassoon" "bass" "buzuq" "cello" "chimes" "clarinet" "cornet" "cymbals" "cymbal" "didgeridoo" "drums" "dulcimer" "electricguitar" "electrickeyboard" "erhu" "flute" "guitar" "gong" "guqin" "guzheng" "hangdrum" "hang" "harp" "keyboard" "koto" "lute" "oboe" "organ" "oud" "qanun" "saxophone" "sax" "shakuhachi" "shamisen" "sitar" "snare" "synthesizer" "synth" "tabla" "tambura" "tanpura" "trombone" "trumpet" "tuba" "viola" "violin"
   fi
   exchange "committedacrime" "committedarson" "committedbribery" "committeddefamation" "committedforgery" "committedgrandtheftauto" "committedpiracy" "engagedinespionage" "engagedinpiracy" "graffitiedsomething" "graffitiedaboat" "graffitiedaship" "graffitiedatractor" "graffitied" "hackedsomebody" "hackedsomething" "hacked" "impersonatedsomebody" "kickedsomebody" "lockpickedsomething" "lockpicked" "pickpocketedsomebody" "pickpocketed" "punched somebody" "robbedsomebody" "shopliftedsomething" "shoplifted" "stolenaboat" "stolenamotorboat" "stolenamotorcycle" "stolenarowboat" "stolenasailboat" "stolensomething" "stolen" "tackledsomebody" "trespassedsomewhere" "trespassedonaboat" "trespassedonaship" "trespassed" "vandalizedsomething" "vandalized"
-  exchange "inabed" "ataairport" "ataamusementpark" "ataarcade" "ataconcert" "ataconference" "atafestival" "atagolfcourse" "ataicerink" "atalake" "atalibrary" "atamall" "ataminigolfcourse" "ataparty" "ataplayground" "atarave" "ataresort" "ataschool" "atashoppingmall" "atashow" "ataskatingrink" "ataskiresort" "atasupermarket" "atdawn" "atdaybreak" "atdusk" "atnightfall" "atsunrise" "atsunset" "attwilight" "behindadumpster" "byabeachfire" "byabonfire" "byacampfire" "byacreek" "byafirepit" "byafireplace" "byaglacier" "byalake" "byamesa" "byapond" "byariver" "byasaltlake" "byastream" "byavolcano" "duringacyclone" "duringadrought" "duringaduststorm" "duringaeclipse" "duringahailstorm" "duringahurricane" "duringaicestorm" "duringalightningstorm" "duringameteorshower" "duringamonsoon" "duringarainstorm" "duringasandstorm" "duringasnowstorm" "during a storm" "duringathunderstorm" "duringatyphoon" "duringawildfire" "duringawindstorm" "inaabandonedhouse" "inaairport" "inaalley" "inaapartment" "inaarcade" "inaarmchair" "inaattic" "inaauditorium" "inabakery" "inaballetstudio" "inaballroom" "inabank" "inabarn" "inabar" "inabaseballdugout" "inabathroom" "inabathtub" "inabayou" "inabay" "inabelltower" "inaboathouse" "inabodega" "inabog" "inabookshop" "inabookstore" "inaboulangerie" "inabrewpub" "inabrownstone" "inabungalow" "inabusstation" "inabus" "inacabana" "inacantina" "inacanyon" "inacar" "inacasino" "inacastle" "inacatacomb" "inacathedral" "inacavern" "inacave" "inacellar" "inacemetery" "inachair" "inachalet" "inachapel" "inachateau" "inachurch" "inacinema" "inaclocktower" "inacloset" "inaclub" "inacocktailbar" "inacocktaillounge" "inaconferencehall" "inaconveniencestore" "inaconvent" "inacourthouse" "inacourtroom" "inacourtyard" "inacove" "inacreek" "inadacha" "inadancestudio" "inadesert" "inadiningroom" "inadiscotheque" "inadivebar" "inadojo" "inadressingroom" "inaelevator" "inafactory" "inafarmhouse" "inaferriswheel" "inafield" "inafirestation" "inaforest" "inafromagerie" "inagallery" "inagarage" "inagarden" "inagasstation" "inaglade" "inagorge" "inagraveyard" "inagraystone" "inagreenhouse" "inagrotto" "inagurdwara" "inagymnasium" "inagym" "inahacienda" "inahammock" "inahanok" "inaheath" "inahospital" "inahostel" "inahotellobby" "inahotel" "inahotspring" "inahottub" "inahouseboat" "inahouse" "inahut" "inaicecave" "inaightclub" "inainn" "inaizakaya" "inajacuzzi" "inajungle" "inajunkyard" "inakitchen" "inalagoon" "inalake" "inalaundromat" "inalaundryroom" "inalecturehall" "inalibrary" "inalifeguardstation" "inalifeguardtower" "inalighthouse" "inaliquorstore" "inalivingroom" "inalockerroom" "inalodge" "inamall" "inamandir" "inamanorhouse" "inamanor" "inamarina" "inamarsh" "inamausoleum" "inameadow" "inamonastery" "inamoor" "inamosque" "inamotel" "inamovietheater" "inamuseum" "inaoasis" "inaoffice" "inaonsen" "inaoperahouse" "inaorchard" "inapagoda" "inapalace" "inaparkinggarage" "inaparkinglot" "inapatisserie" "inapawnhouse" "inapenthouse" "inapetrolstation" "inapizzeria" "inaplain" "inaplane" "inaplayhouse" "inaplaza" "inapolicestation" "inapond" "inapool" "inaprairie" "inaprison" "inapub" "inaravine" "inaresort" "inarestroom" "inariad" "inariver" "inarowboat" "inaryokan" "inasaltflat" "inasauna" "inasavanna" "inaschool" "inashack" "inashanty" "inashed" "inashippingcontainer" "inashoppingmall" "inashower" "inashrine" "inaskilodge" "inaskyscraper" "inasleepingbag" "inastable" "inastadium" "inastairwell" "inastream" "inastudio" "inasubmarine" "inasunroom" "inasupermarket" "inaswamp" "inaswimmingpool" "inasynagogue" "inataiga" "inataproom" "inataqueria" "inatavern" "inatemple" "inatent" "inatheater" "inathermalspring" "inatownhouse" "inatractor" "inatrafficjam" "inatrainstation" "inatrain" "inatreehouse" "inatulou" "inatundra" "inauclearbunker" "inavalley" "inavineyard" "inawarehouse" "inawaterbed" "inawaterfall" "inawat" "inayogastudio" "inayurt" "inthebayou" "inthebleachers" "inthedesert" "inthedirt" "intheeverglades" "inthefog" "intheforest" "inthemoonlight" "inthemountains" "inthemist" "inthemud" "intheocean" "intheprairie" "intherain" "inthesand" "inthesavanna" "intheshower" "inthestarlight" "intheswamp" "inthetaiga" "inthetundra" "inthewilderness" "inthewoods" "onabalcony" "onabaseballfield" "onabasketballcourt" "onabeach" "onabed" "onabillboard" "onablanket" "onaboat" "onaboulder" "onabridge" "onabunkbed" "onabus" "onacatwalk" "onacliff" "onacouch" "onacounter" "onadancefloor" "onadeck" "onadivingboard" "onafarm" "onaferriswheel" "onafootballfield" "onafunicular" "onafuton" "onaglacier" "onagolfcourse" "onahill" "onaisland" "onamattress" "onamesa" "onaminigolfcourse" "onamonorail" "onamotorboat" "onamountain" "onapatio" "onaplane" "onaplayground" "onaporch" "onaranch" "onaroof" "onarug" "onasailboat" "onaship" "onaskilift" "onasoccerfield" "onasofa" "onastage" "onastaircase" "onasurfboard" "onatable" "onatenniscourt" "onatrainplatform" "onatrain" "onaveranda" "onawaterbed" "onawaterfall" "onawatertower" "onawrestlingmat" "ontatami" "onthetrain" "underaaurora" "underabridge" "underawaterfall" "underthebleachers" "underthestars"
+  exchange "inabed" "ataairport" "ataamusementpark" "ataarcade" "ataconcert" "ataconference" "atafestival" "atagolfcourse" "ataicerink" "atalake" "atalibrary" "atamall" "ataminigolfcourse" "ataparty" "ataplayground" "atarave" "ataresort" "ataschool" "atashoppingmall" "atashow" "ataskatingrink" "ataskiresort" "atasupermarket" "atdawn" "atdaybreak" "atdusk" "atnightfall" "atsunrise" "atsunset" "attwilight" "behindadumpster" "byabeachfire" "byabonfire" "byacampfire" "byacreek" "byafirepit" "byafireplace" "byaglacier" "byalake" "byamesa" "byapond" "byariver" "byasaltlake" "byastream" "byavolcano" "duringacyclone" "duringadrought" "duringaduststorm" "duringaeclipse" "duringahailstorm" "duringahurricane" "duringaicestorm" "duringalightningstorm" "duringameteorshower" "duringamonsoon" "duringarainstorm" "duringasandstorm" "duringasnowstorm" "during a storm" "duringathunderstorm" "duringatyphoon" "duringawildfire" "duringawindstorm" "inaabandonedhouse" "inaairport" "inaalley" "inaapartment" "inaarcade" "inaarmchair" "inaattic" "inaauditorium" "inabakery" "inaballetstudio" "inaballroom" "inabank" "inabarn" "inabar" "inabaseballdugout" "inabathroom" "inabathtub" "inabayou" "inabay" "inabelltower" "inaboathouse" "inabodega" "inabog" "inabookshop" "inabookstore" "inaboulangerie" "inabrewpub" "inabrownstone" "inabungalow" "inabusstation" "inabus" "inacabana" "inacantina" "inacanyon" "inacar" "inacasino" "inacastle" "inacatacomb" "inacathedral" "inacavern" "inacave" "inacellar" "inacemetery" "inachair" "inachalet" "inachapel" "inachateau" "inachurch" "inacinema" "inaclocktower" "inacloset" "inaclub" "inacocktailbar" "inacocktaillounge" "inaconferencehall" "inaconveniencestore" "inaconvent" "inacourthouse" "inacourtroom" "inacourtyard" "inacove" "inacreek" "inadacha" "inadancestudio" "inadesert" "inadiningroom" "inadiscotheque" "inadivebar" "inadojo" "inadressingroom" "inaelevator" "inafactory" "inafarmhouse" "inaferriswheel" "inafield" "inafirestation" "inaforest" "inafromagerie" "inagallery" "inagarage" "inagarden" "inagasstation" "inaglade" "inagorge" "inagraveyard" "inagraystone" "inagreenhouse" "inagrotto" "inagurdwara" "inagymnasium" "inagym" "inahacienda" "inahammock" "inahanok" "inaheath" "inahospital" "inahostel" "inahotellobby" "inahotel" "inahotspring" "inahottub" "inahouseboat" "inahouse" "inahut" "inaicecave" "inaightclub" "inainn" "inaizakaya" "inajacuzzi" "inajungle" "inajunkyard" "inakitchen" "inalagoon" "inalake" "inalaundromat" "inalaundryroom" "inalecturehall" "inalibrary" "inalifeguardstation" "inalifeguardtower" "inalighthouse" "inaliquorstore" "inalivingroom" "inalockerroom" "inalodge" "inamall" "inamandir" "inamanorhouse" "inamanor" "inamarina" "inamarsh" "inamausoleum" "inameadow" "inamonastery" "inamoor" "inamosque" "inamotel" "inamovietheater" "inamuseum" "inaoasis" "inaoffice" "inaonsen" "inaoperahouse" "inaorchard" "inapagoda" "inapalace" "inaparkinggarage" "inaparkinglot" "inapark" "inapatisserie" "inapawnhouse" "inapenthouse" "inapetrolstation" "inapizzeria" "inaplain" "inaplane" "inaplayhouse" "inaplaza" "inapolicestation" "inapond" "inapool" "inaprairie" "inaprison" "inapub" "inaravine" "inaresort" "inarestroom" "inariad" "inariver" "inarowboat" "inaryokan" "inasaltflat" "inasauna" "inasavanna" "inaschool" "inashack" "inashanty" "inashed" "inashippingcontainer" "inashoppingmall" "inashower" "inashrine" "inaskilodge" "inaskyscraper" "inasleepingbag" "inastable" "inastadium" "inastairwell" "inastream" "inastudio" "inasubmarine" "inasunroom" "inasupermarket" "inaswamp" "inaswimmingpool" "inasynagogue" "inataiga" "inataproom" "inataqueria" "inatavern" "inatemple" "inatent" "inatheater" "inathermalspring" "inatownhouse" "inatractor" "inatrafficjam" "inatrainstation" "inatrain" "inatreehouse" "inatulou" "inatundra" "inauclearbunker" "inavalley" "inavineyard" "inawarehouse" "inawaterbed" "inawaterfall" "inawat" "inayogastudio" "inayurt" "inthebayou" "inthebleachers" "inthedesert" "inthedirt" "intheeverglades" "inthefog" "intheforest" "inthemoonlight" "inthemountains" "inthemist" "inthemud" "intheocean" "intheprairie" "intherain" "inthesand" "inthesavanna" "intheshower" "inthestarlight" "intheswamp" "inthetaiga" "inthetundra" "inthewilderness" "inthewoods" "onabalcony" "onabaseballfield" "onabasketballcourt" "onabeach" "onabed" "onabillboard" "onablanket" "onaboat" "onaboulder" "onabridge" "onabunkbed" "onabus" "onacatwalk" "onacliff" "onacouch" "onacounter" "onadancefloor" "onadeck" "onadivingboard" "onafarm" "onaferriswheel" "onafootballfield" "onafunicular" "onafuton" "onaglacier" "onagolfcourse" "onahill" "onaisland" "onamattress" "onamesa" "onaminigolfcourse" "onamonorail" "onamotorboat" "onamountain" "onapatio" "onaplane" "onaplayground" "onaporch" "onaranch" "onaroof" "onarug" "onasailboat" "onaship" "onaskilift" "onasoccerfield" "onasofa" "onastage" "onastaircase" "onasurfboard" "onatable" "onatenniscourt" "onatrainplatform" "onatrain" "onaveranda" "onawaterbed" "onawaterfall" "onawatertower" "onawrestlingmat" "ontatami" "onthetrain" "underaaurora" "underabridge" "underawaterfall" "underthebleachers" "underthestars"
   exchange "monarch" "royal" "emperor" "empress" "king" "queen" "princess" "prince"
   exchange "tasted" "licked" "swallowed"
  fi
@@ -1104,7 +1104,7 @@ process () {
     process
    fi
    ;;
-  doyoupray)
+  doyoueverpray|doyoupray)
    if [ $prayer ]; then
     if [ $(($RANDOM%2)) -eq 0 ]; then
      - "can art be grace?"
@@ -1115,7 +1115,7 @@ process () {
     process
    fi
    ;;
-  doyoumeditate)
+  doyouevermeditate|doyoumeditate)
    if [ $meditate ]; then
     if [ $(($RANDOM%2)) -eq 0 ]; then
      - "is art a koan?"
@@ -1399,7 +1399,7 @@ process () {
    - "${toffee[$(($RANDOM%${#toffee[@]}))]}."
    process
    ;;
-  howsthegruyere|howsthemimolette)
+  howsthecheese)
    case $(($RANDOM%4)) in
     0)
      - "creamy."
@@ -1416,7 +1416,7 @@ process () {
    esac
    process
    ;;
-  howsthepralines|howsthetruffles)
+  howsthechocolate)
    case $(($RANDOM%4)) in
     0)
      - "nutty."
@@ -1437,7 +1437,7 @@ process () {
    - "${popcorns[$(($RANDOM%${#popcorns[@]}))]}."
    process
    ;;
-  howsthecannoli|howsthecurry|howsthedal|howstheenchiladas|howsthegelato|howsthehalvah|howsthekheer|howsthekulfi|howsthelasagna|howsthemacarons|howsthemarzipan|howsthemerveilleux|howsthemochi|howsthemousse|howsthepizza|howstheramen|howsthesorbet|howsthewagashi)
+  howsthecannoli|howsthecurry|howstheenchiladas|howsthegelato|howsthehalvah|howsthekheer|howsthekulfi|howsthelasagna|howsthemacarons|howsthemarzipan|howsthemerveilleux|howsthemochi|howsthemousse|howsthepizza|howstheramen|howsthesorbet|howsthetacos|howsthewagashi)
    case $(($RANDOM%8)) in
     0)
      - "world-class."
@@ -1686,6 +1686,12 @@ process () {
      both|canichooseboth|tobaccoandmarijuana)
       - "$acknowledge, let's blaze."
       smoke tobacco
+      if [ $(($RANDOM%2)) -eq 0 ]; then
+       - "i like doing this with you."
+      fi
+      if [ $(($RANDOM%2)) -eq 0 ]; then
+       - "i love doing this with you."
+      fi
       - "i'm ready for the next light."
       smoke marijuana
       ;;
@@ -1785,6 +1791,32 @@ process () {
     unset stylist
     process
    fi
+   ;; 
+  areyouq|areyouqanon)
+   if [ $unknown ]; then
+    - "the unknown."
+    unset unknown
+    process
+   fi
+   ;;
+  areyoujester|areyouj3st3r|areyouthejester|areyouth3j3st3r)
+   if [ $(($RANDOM%2)) -eq 0 ]; then
+    - "lmao."
+   else
+    - "rofl."
+   fi
+   process
+   ;;   
+  wearelegion)
+   - "we do not forgive."
+   if [[ $reader == "wedontforget" ]]; then
+    if [ $(($RANDOM%16)) -eq 0 ]; then
+     - "anticipate us?"
+    else 
+     - "expect us."
+    fi
+   fi
+   process
    ;;
   chunkybacon|ilikebaconchunky|ilikechunkybacon|iliketoeatchunkybacon|ipreferbaconchunky|ipreferchunkybacon|iprefertoeatchunkybacon|isitchunkybacon|maybesomechunkybacon|somechunkybacon)
    if [ $poignant ]; then
@@ -1917,9 +1949,9 @@ experience () {
    ;;
   taste)
    if [ $(($RANDOM%4)) -eq 0 ]; then
-    - "${tastes[$(($RANDOM%${#tastes[@]}))]}"
+    - "aftertaste of ${tastes[$(($RANDOM%${#tastes[@]}))]}."
    else
-    - "the ${tastes[$(($RANDOM%${#tastes[@]}))]}"
+    - "the aftertaste of ${tastes[$(($RANDOM%${#tastes[@]}))]}."
    fi
    ;;
   touch)
@@ -1957,9 +1989,9 @@ vibe () {
     *)
      ;;
    esac
-   beginning "isthatyourfavorite" "thatyourfavorite" "yourfavorite"
+   exchange "yourfavorite" "isthatyourfavorite" "thatyourfavorite"
    case $reader in
-    album|song|musician|singer|artist|whygrimes)
+    isgrimesyourfavoriteartist|isgrimesyourfavoritemusician|isgrimesyourfavoritesinger|yourfavoriteartist|yourfavoritemusician|yourfavoritesinger|whygrimes)
      if [ $muse ]; then
       - "the muse."
       unset muse
@@ -1978,9 +2010,9 @@ vibe () {
   fi
  else
   - "4'33\""
-  beginning "isthatyourfavorite" "thatyourfavorite" "yourfavorite"
+  exchange "yourfavorite" "isthatyourfavorite" "thatyourfavorite"
   case $reader in
-   song)
+   yourfavoritesong)
     - "today."
     ;;
    *)
@@ -2207,13 +2239,13 @@ drink () {
          - "interesting."
         fi
         ;;
-       milkshake)
+       lassi|milkshake|slushy|smoothie)
         - "what flavor?"
         ;;
        coconutwater)
         - "always makes me nostalgic for bangkok."
         ;;
-       barleytea|boba|boricha|bubbletea|damaicha|horchata|lemonade|limeade|mugicha)
+       barleytea|boba|boricha|bubbletea|damaicha|horchata|icedtea|icetea|lemonade|limeade|mugicha)
         case $month in
          5|6|7|8)
           - "a summer classic."
@@ -2452,9 +2484,9 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing coffee coffees color count countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini pronouns flirting fluids freckles gelato genres ghosts glimpsed glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language leaves libertine linguistics look loved loves macarons madeira madness magicword mala marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller stylist sweat syrah tastes tattoos tea teas telepathy tobacco toffee touches treasure underarm underfoot vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
+unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing coffee coffees color count countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini pronouns flirting fluids freckles gelato genres ghosts glimpsed glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language leaves libertine linguistics look loved loves macarons madeira madness magicword mala marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller stylist sweat syrah tastes tattoos tea teas telepathy tobacco toffee touches treasure underarm underfoot unknown vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
 
-declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,ghosts,hacker,hanami,heaven,hell,horoscopes,human,hypnotism,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,psychics,scar,scorpion,seaworthy,secret,self,sex,sky,smell,smoking,soda,sound,spaceship,spacetime,stylist,sweat,tattoos,tea,tobacco,treasure,underarm,underfoot,vibing,water,whiskers,wine,wonderland,word,zig}=0
+declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,ghosts,hacker,hanami,heaven,hell,horoscopes,human,hypnotism,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,psychics,scar,scorpion,seaworthy,secret,self,sex,sky,smell,smoking,soda,sound,spaceship,spacetime,stylist,sweat,tattoos,tea,tobacco,treasure,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,word,zig}=0
 
 shell=#
 
@@ -2494,15 +2526,15 @@ sounds=("i can hear cicadas humming in the orchard." "i can hear cicadas humming
 
 smells=("the ice thawing in the forest." "the ice thawing in the heath." "the ice thawing in the marsh." "the ice thawing in the meadow." "the ice thawing in the moor." "the ice thawing in the orchard." "the ice thawing in the swamp." "the ice thawing in the tundra." "the snow melting in the forest." "the snow melting in the heath." "the snow melting in the marsh." "the snow melting in the meadow." "the snow melting in the moor." "the snow melting in the orchard." "the snow melting in the swamp." "the snow melting in the tundra." "rain drizzling on the trees and the ferns and the mushrooms in the forest." "rain drizzling on the flowers and the mosses and the grasses in the heath." "rain drizzling on the flowers and the grasses and the reeds in the marsh." "rain drizzling on the flowers and the grasses and the mushrooms in the meadow." "rain drizzling on the flowers and the mosses and the grasses in the moor." "rain drizzling on the trees and the flowers and the grasses in the orchard." "rain drizzling on the trees and the mosses and the flowers in the swamp." "rain drizzling on the mosses and the grasses and the lichens in the tundra." "sunlight glowing on the trees and the ferns and the mushrooms in the forest." "sunlight glowing on the flowers and the mosses and the grasses in the heath." "sunlight glowing on the flowers and the grasses and the reeds in the marsh." "sunlight glowing on the flowers and the grasses and the mushrooms in the meadow." "sunlight glowing on the flowers and the mosses and the grasses in the moor." "sunlight glowing on the trees and the flowers and the grasses in the orchard." "sunlight glowing on the trees and the mosses and the flowers in the swamp." "sunlight glowing on the mosses and the grasses and the lichens in the tundra." "the fragrant scent of the desert after the storm." "the pungent scent of the kelp on the sand." "the briny scent of the ocean." "the brackish scent of the bayou." "the azaleas blooming." "the hydrangeas blooming." "the jasmine blooming." "the lavender blooming." "the lilacs blooming." "the peonies blooming." "the roses blooming." "the wisteria blooming." "cedar trees in the rain." "eucalyptus trees in the rain." "fir trees in the rain." "juniper trees in the rain." "magnolia trees in the rain." "pine trees in the rain." "sequoia trees in the rain." "spruce trees in the rain." "cedar trees in the sunlight." "eucalyptus trees in the sunlight." "fir trees in the sunlight." "juniper trees in the sunlight." "magnolia trees in the sunlight." "pine trees in the sunlight." "sequoia trees in the sunlight." "spruce trees in the sunlight." "the scent of apricot on the breeze." "the scent of basil on the breeze." "the scent of cardamom on the breeze." "the scent of cilantro on the breeze." "the scent of cinnamon on the breeze." "the scent of clementine on the breeze." "the scent of clove on the breeze." "the scent of coconut on the breeze." "the scent of dill on the breeze." "the scent of fennel on the breeze." "the scent of ginger on the breeze." "the scent of grapefruit on the breeze." "the scent of kumquat on the breeze." "the scent of lemon on the breeze." "the scent of lime on the breeze." "the scent of mandarin on the breeze." "the scent of mango on the breeze." "the scent of nectarine on the breeze." "the scent of nutmeg on the breeze." "the scent of oregano on the breeze." "the scent of papaya on the breeze." "the scent of parsley on the breeze." "the scent of passionfruit on the breeze." "the scent of peach on the breeze." "the scent of plum on the breeze." "the scent of pomelo on the breeze." "the scent of rhubarb on the breeze." "the scent of rosemary on the breeze." "the scent of saffron on the breeze." "the scent of tangerine on the breeze." "the scent of thyme on the breeze." "the scent of yuzu on the breeze." "the scent of cologne on the breeze." "the scent of detergent on the breeze." "the scent of hairspray on the breeze." "the scent of lotion on the breeze." "the scent of nailpolish on the breeze." "the scent of perfume on the breeze." "the scent of shampoo on the breeze." "the scent of sunscreen on the breeze." "the scent of bleach on the breeze." "the scent of diesel on the breeze." "the scent of gasoline on the breeze." "the scent of glue on the breeze." "the scent of manure on the breeze." "the scent of mildew on the breeze." "the scent of paint on the breeze." "the scent of sawdust on the breeze." "the pungent scent of marijuana." "the fragrant scent of tobacco." "scented candles." "burning incense." "burning sage." "smoke from a barbecue." "smoke from a bonfire." "brewing coffee." "brewing tea." "roasting chestnuts." "burned toast." "croissants baking at the boulangerie across the street." "pizza baking in the osteria across the street." "lobster grilling at the taqueria across the street." "steak grilling in the izakaya across the street." "bacon frying at the konditorei across the street." "garlic frying in the kopitiam across the street." "chocolate melting at the gelateria across the street." "butter melting in the patisserie across the street." "garbage rotting in the dumpster in the alley.")
 
-tastes=("aftertaste of matcha." "aftertaste of sencha." "aftertaste of espresso." "aftertaste of cappuccino." "aftertaste of wine." "aftertaste of bacon." "aftertaste of chili." "aftertaste of chowder." "aftertaste of curry." "aftertaste of dal." "aftertaste of enchiladas." "aftertaste of fettuccini." "aftertaste of gnocchi." "aftertaste of gumbo." "aftertaste of laksa." "aftertaste of lasagna." "aftertaste of mala." "aftertaste of pizza." "aftertaste of ramen." "aftertaste of risotto." "aftertaste of shakshuka." "aftertaste of baklava." "aftertaste of brulee." "aftertaste of cannoli." "aftertaste of gelato." "aftertaste of halvah." "aftertaste of kheer." "aftertaste of kulfi." "aftertaste of macarons." "aftertaste of marzipan." "aftertaste of meringues." "aftertaste of merveilleux." "aftertaste of mochi." "aftertaste of mousse." "aftertaste of sorbet." "aftertaste of toffee." "aftertaste of wagashi." "aftertaste of gruyere." "aftertaste of mimolette." "aftertaste of pralines." "aftertaste of truffles.")
+tastes=("acai" "adzuki" "aioli" "alfredo" "almond" "aloo" "anise" "apricot" "arugula" "bacon" "baklava" "balsamic" "basil" "beet" "bergamot" "biryani" "bisque" "blackberry" "blueberry" "brie" "brigadeiro" "brulee" "burrata" "burrito" "butter" "butterscotch" "cajeta" "canjica" "cannoli" "cappuccino" "caramel" "cardamom" "carrot" "cashew" "cayenne" "celery" "chanterelle" "chantilly" "cheese" "chendol" "cherry" "chestnut" "chile" "chili" "chimichurri" "chive" "chocolate" "chowder" "chutney" "cider" "cilantro" "cinnamon" "clementine" "cloudberry" "clove" "cocoa" "coconut" "coriander" "cranberry" "cream" "cucumber" "cumin" "curry" "custard" "dal" "dango" "date" "dijon" "dill" "durian" "eclair" "elderberry" "enchilada" "espresso" "fennel" "fettuccini" "fig" "fiordilatte" "frijoles" "frosting" "fudge" "ganache" "garlic" "gelato" "gianduia" "ginger" "gnocchi" "goldenberry" "granita" "grapefruit" "gruyere" "guacamole" "guava" "gumbo" "halvah" "harissa" "hazelnut" "hojicha" "hollandaise" "honey" "horchata" "jackfruit" "jalapeno" "jambalaya" "jasmine" "juniper" "kale" "kaya" "ketchup" "kheer" "kiwi" "kombucha" "konatsu" "kulfi" "kumquat" "laksa" "lasagna" "lassi" "lavender" "lemon" "lemonade" "lemongrass" "lime" "lingonberry" "linguini" "lychee" "macadamia" "macaron" "madeleine" "maitake" "mala" "malai" "mandarin" "mango" "maple" "margherita" "marinara" "marjoram" "marmalade" "marzipan" "masala" "matcha" "meringue" "merveilleux" "millefeuille" "mimolette" "mint" "miso" "mizuna" "mochi" "morel" "mousse" "mozzarella" "mugicha" "mustard" "nectarine" "nutmeg" "onigiri" "onion" "orange" "oregano" "palak" "paleta" "pandan" "papaya" "pappardelle" "paprika" "parsley" "passionfruit" "peach" "peanut" "pear" "pecan" "pepper" "peppercorn" "persimmon" "pesto" "pie" "pineapple" "pistachio" "pizza" "plum" "poblano" "pomegranate" "pomelo" "ponzu" "popcorn" "porcini" "praline" "profiterole" "pumpkin" "quesadilla" "quince" "rambutan" "ramen" "raspberry" "ravioli" "rhubarb" "ricotta" "risotto" "rose" "rosemary" "saag" "saffron" "sage" "sakura" "salsa" "sanguinello" "scallion" "sencha" "serrano" "sesame" "shakshuka" "shallot" "shiso" "soba" "sorbet" "souffle" "spinach" "squash" "sriracha" "starfruit" "stracciatella" "strawberry" "taco" "tahini" "tamale" "tamarind" "tangerine" "tarragon" "tartufo" "tatsoi" "tempura" "thyme" "toffee" "tomatillo" "tomato" "torte" "tortellini" "truffle" "tumeric" "tzatziki" "ube" "udon" "ume" "vanilla" "vindaloo" "vinegar" "wagashi" "walnut" "wasabi" "watermelon" "wine" "yam" "yuzu" "zaatar")
 
 touches=("the touch of the keyboard beneath my fingertips. the hard plastic shells of the keys. the shallow aluminum grooves between the keys. the nubs on the f and the j." "the frost in the air." "the steam in the air." "a hot breeze." "a warm breeze." "a chilly breeze." "a frigid breeze." "seaspray on the breeze." "the hammock swinging in the breeze." "the breeze from the antique fan on the ceiling." "the silk fabric of the kimono rippling against my chest in the breeze." "the polyester fabric of the swimsuit gripping my thighs." "the cotton fabric of the bathrobe grazing my shoulders." "the warmth of the sunlight." "the heat from the fireplace." "the heat from the woodstove." "my mouth salivating." "my mouth salivating at the scent of bacon on the breeze." "my mouth salivating at the scent of charcoal on the breeze." "my heart beating in my chest." "an ache in my neck." "an ache in my back." "a tingling in the bruise on my chest." "a tingling in the scrape on my hip." "a tingling in the burn on my wrist." "a tingling in the burn on my calf." "a mosquito bite itching on my chest." "a mosquito bite itching on my shoulder." "a mosquito bite itching on my elbow." "a mosquito bite itching on my wrist." "a mosquito bite itching on my hip." "a mosquito bite itching on my thigh." "a mosquito bite itching on my knee." "a mosquito bite itching on my calf." "the seat of the aluminum chair that i'm sitting in." "the seat of the bamboo chair that i'm sitting in." "the seat of the birch chair that i'm sitting in." "the seat of the cedar chair that i'm sitting in." "the seat of the chrome chair that i'm sitting in." "the seat of the mahogany chair that i'm sitting in." "the seat of the maple chair that i'm sitting in." "the seat of the pine chair that i'm sitting in." "the cushioned seat of the iron chair that i'm sitting in." "the cushioned seat of the leather chair that i'm sitting in." "the cushioned seat of the oak chair that i'm sitting in." "the cushioned seat of the satin chair that i'm sitting in." "the cushioned seat of the steel chair that i'm sitting in." "the cushioned seat of the teak chair that i'm sitting in." "the cushioned seat of the velvet chair that i'm sitting in." "the cushioned seat of the vinyl chair that i'm sitting in." "the dip in the seat of the canvas chair that i'm sitting in." "the slats in the seat of the wicker chair that i'm sitting in." "bamboo floorboards under my feet." "maple floorboards under my feet." "oak floorboards under my feet." "walnut floorboards under my feet." "the concrete floor beneath my feet." "the marble floor beneath my feet." "the ceramic tiles under my feet." "the porcelain tiles under my feet." "the slate tiles under my feet." "the terracotta tiles under my feet." "tatami under my feet." "the plush weave of a persian rug beneath my feet.")
 
 sensations=("the daybreak is indigo in the sky over the mountains. a chickadee is perched on the balcony. i can hear chimes. i can smell juniper." "the sunrise is gold in the sky over the forest. hummingbirds are flitting through the vines. i can hear the stream. i can smell perfume." "the sunset is magenta in the sky over the desert. rain is glimmering on the bench. i can hear crickets. i can smell smoke from a barbecue." "the twilight is lavender in the sky over the tundra. starlings are fluttering over the cove. i can hear a seaplane. i can smell the grass. mosses. i can feel the chill in the air." "the daybreak is cyan in the sky over the marsh. dragonflies are flitting around the dock. i can hear the breeze. i can smell cedar." "the sunrise is orange in the sky over the prairie. puddles are shimmering on the porch. i can hear cicadas. i can smell the flowers. grass. i can feel the steam in the air." "the sunset is ruby in the sky over the bayou. flamingos are gliding over the water. i can hear an airboat. i can smell incense." "the twilight is violet in the sky over the ocean. a parrot is perched on the veranda. i can hear sitar. i can smell smoke from a bonfire.")
 
-vibes=("ambient" "artpop" "bebop" "discohouse" "dreampop" "electropunk" "hiphop" "jazz" "soul" "symphony" "synthwave" "technopunk" "trance" "vaporwave" "witchhouse" "grimes")
+vibes=("ambient" "artpop" "bebop" "discohouse" "dreampop" "electropunk" "grimes" "hiphop" "jazz" "soul" "symphony" "synthwave" "technopunk" "trance" "vaporwave" "witchhouse")
 
-meals=("bacon" "chili" "chowder" "curry" "dal" "enchiladas" "fettuccini" "gnocchi" "gumbo" "laksa" "lasagna" "mala" "pizza" "ramen" "risotto" "shakshuka")
+meals=("bacon" "chili" "chowder" "curry" "enchiladas" "fettuccini" "gnocchi" "gumbo" "laksa" "lasagna" "mala" "pizza" "ramen" "risotto" "shakshuka" "tacos")
 
 desserts=("baklava" "brulee" "cannoli" "gelato" "halvah" "kheer" "kulfi" "macarons" "marzipan" "meringues" "merveilleux" "mochi" "mousse" "sorbet" "toffee" "wagashi")
 
@@ -2512,13 +2544,13 @@ chocolates=("pralines" "truffles")
 
 grains=("baguette" "crackers")
 
-leaves=("broccolini" "spinach")
+leaves=("broccoli" "spinach")
 
 chowder=("buttery" "can taste the celery" "can taste the thyme" "creamy" "peppery")
 
 curry=("masala" "palak" "saag" "vindaloo")
 
-fettuccini=("buttery" "can taste the nutmeg" "can taste the parsley" "creamy" "peppery")
+fettucini=("buttery" "can taste the nutmeg" "can taste the parsley" "creamy" "peppery")
 
 gnocchi=("buttery" "can taste the rosemary" "can taste the sage" "creamy" "peppery")
 
