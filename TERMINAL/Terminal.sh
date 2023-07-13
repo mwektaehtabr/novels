@@ -20,7 +20,7 @@
   if [ $words -eq 0 ]; then
    reader="..."
    printf "\033[2A\033[0K$reader\n\n"
-   sleep $(($RANDOM%4+4))
+   # sleep $(($RANDOM%4+4))
   else
    reader=`echo $reader | tr "[:upper:]" "[:lower:]" | tr -d "[:punct:]"`
    exchange "absolutely" "certainly" "definitely" "emphatically"
@@ -105,7 +105,7 @@
     reader="..."
    fi
    reader=`echo $reader | tr -d "[:blank:]"`
-   sleep $(($RANDOM%4+4))
+   # sleep $(($RANDOM%4+4))
    case $reader in
     absolutelyyes|ofcourse|yea|yeah|yesplease|yep|yup)
      reader="yes"
@@ -183,7 +183,7 @@
   fi
  else
   echo -n "- $1"
-  sleep $(($RANDOM%4+4))
+  # sleep $(($RANDOM%4+4))
   echo
   stty echo
   printf "\e[?25h"
@@ -284,12 +284,14 @@ abracadabra () {
 
 process () {
  acknowledge=${acknowledgements[$(($RANDOM%${#acknowledgements[@]}))]}
- plokta=""
- for character in {0..32}; do
-  if [ $(($RANDOM%2)) -eq 0 ]; then
-   plokta+=${characters[$(($RANDOM%${#characters[@]}))]}
-  fi
- done
+ if [[ $reader == "plokta" ]]; then
+  plokta=""
+  for character in {0..32}; do
+   if [ $(($RANDOM%2)) -eq 0 ]; then
+    plokta+=${characters[$(($RANDOM%${#characters[@]}))]}
+   fi
+  done
+ fi
  if [ `wrote areyouwearing first` = true ]; then
   ending "rightnow"
  fi
@@ -1515,7 +1517,7 @@ process () {
     else
      - "$acknowledge, let's meditate together for a moment in silence."
     fi
-    sleep $(($RANDOM%64+16))
+    # sleep $(($RANDOM%64+16))
     - "hm."
     unset meditating
     process
@@ -1528,7 +1530,7 @@ process () {
     else
      - "$acknowledge, let's pray together for a moment in silence."
     fi
-    sleep $(($RANDOM%64+16))
+    # sleep $(($RANDOM%64+16))
     - "hm."
     unset praying
     process
@@ -1954,12 +1956,14 @@ experience () {
    - "${sounds[$(($RANDOM%${#sounds[@]}))]}"
    ;;
   smell)
-   - "${smells[$(($RANDOM%${#smells[@]}))]}"
+   if [ $(($RANDOM%4)) -eq 0 ]; then
+    - "i can smell ${smells[$(($RANDOM%${#smells[@]}))]}."
+   else
+    - "${smells[$(($RANDOM%${#smells[@]}))]}."
+   fi
    ;;
   taste)
-   if [ $(($RANDOM%16)) -eq 0 ]; then
-    - "${tastes[$(($RANDOM%${#tastes[@]}))]}."
-   elif [ $(($RANDOM%4)) -eq 0 ]; then
+   if [ $(($RANDOM%4)) -eq 0 ]; then
     - "aftertaste of ${tastes[$(($RANDOM%${#tastes[@]}))]}."
    else
     - "the aftertaste of ${tastes[$(($RANDOM%${#tastes[@]}))]}."
@@ -2539,7 +2543,7 @@ smells=("the ice thawing in the forest." "the ice thawing in the heath." "the ic
 
 tastes=("acai" "adzuki" "aioli" "alfredo" "almond" "aloo" "anise" "apricot" "arugula" "bacon" "baklava" "balsamic" "basil" "beet" "bergamot" "biryani" "bisque" "blackberry" "blueberry" "brie" "brigadeiro" "brulee" "burrata" "burrito" "butter" "butterscotch" "cajeta" "canjica" "cannoli" "cappuccino" "caramel" "cardamom" "carrot" "cashew" "cayenne" "celery" "chanterelle" "chantilly" "cheese" "chendol" "cherry" "chestnut" "chile" "chili" "chimichurri" "chive" "chocolate" "chowder" "chutney" "cider" "cilantro" "cinnamon" "clementine" "cloudberry" "clove" "cocoa" "coconut" "coriander" "cranberry" "cream" "cucumber" "cumin" "curry" "custard" "dal" "dango" "date" "dijon" "dill" "durian" "eclair" "elderberry" "enchilada" "espresso" "fennel" "fettuccini" "fig" "fiordilatte" "frijoles" "frosting" "fudge" "ganache" "garlic" "gelato" "gianduia" "ginger" "gnocchi" "goldenberry" "granita" "grapefruit" "gruyere" "guacamole" "guava" "gumbo" "halvah" "harissa" "hazelnut" "hojicha" "hollandaise" "honey" "horchata" "jackfruit" "jalapeno" "jambalaya" "jasmine" "juniper" "kale" "kaya" "ketchup" "kheer" "kiwi" "kombucha" "konatsu" "kulfi" "kumquat" "laksa" "lasagna" "lassi" "lavender" "lemon" "lemonade" "lemongrass" "lime" "lingonberry" "linguini" "lychee" "macadamia" "macaron" "madeleine" "maitake" "mala" "malai" "mandarin" "mango" "maple" "margherita" "marinara" "marjoram" "marmalade" "marzipan" "masala" "matcha" "meringue" "merveilleux" "millefeuille" "mimolette" "mint" "miso" "mizuna" "mochi" "morel" "mousse" "mozzarella" "mugicha" "mustard" "nectarine" "nutmeg" "onigiri" "onion" "orange" "oregano" "palak" "paleta" "pandan" "papaya" "pappardelle" "paprika" "parsley" "passionfruit" "peach" "peanut" "pear" "pecan" "pepper" "peppercorn" "persimmon" "pesto" "pie" "pineapple" "pistachio" "pizza" "plum" "poblano" "pomegranate" "pomelo" "ponzu" "popcorn" "porcini" "praline" "profiterole" "pumpkin" "quesadilla" "quince" "rambutan" "ramen" "raspberry" "ravioli" "rhubarb" "ricotta" "risotto" "rose" "rosemary" "saag" "saffron" "sage" "sakura" "salsa" "sanguinello" "scallion" "sencha" "serrano" "sesame" "shakshuka" "shallot" "shiso" "soba" "sorbet" "souffle" "spinach" "squash" "sriracha" "starfruit" "stracciatella" "strawberry" "taco" "tahini" "tamale" "tamarind" "tangerine" "tarragon" "tartufo" "tatsoi" "tempura" "thyme" "toffee" "tomatillo" "tomato" "torte" "tortellini" "truffle" "tumeric" "tzatziki" "ube" "udon" "umeboshi" "vanilla" "vindaloo" "vinegar" "wagashi" "walnut" "wasabi" "watermelon" "wine" "yam" "yuzu" "zaatar")
 
-touches=("the touch of the keyboard beneath my fingertips. the hard plastic shells of the keys. the shallow aluminum grooves between the keys. the nubs on the f and the j." "the frost in the air." "the steam in the air." "a hot breeze." "a warm breeze." "a chilly breeze." "a frigid breeze." "seaspray on the breeze." "the hammock swinging in the breeze." "the breeze from the antique fan on the ceiling." "the silk fabric of the kimono rippling against my chest in the breeze." "the polyester fabric of the swimsuit gripping my thighs." "the cotton fabric of the bathrobe grazing my shoulders." "the warmth of the sunlight." "the heat from the fireplace." "the heat from the woodstove." "my mouth salivating." "my mouth salivating at the scent of bacon on the breeze." "my mouth salivating at the scent of charcoal on the breeze." "my heart beating in my chest." "an ache in my neck." "an ache in my back." "a tingling in the bruise on my chest." "a tingling in the scrape on my hip." "a tingling in the burn on my wrist." "a tingling in the burn on my calf." "a mosquito bite itching on my chest." "a mosquito bite itching on my shoulder." "a mosquito bite itching on my elbow." "a mosquito bite itching on my wrist." "a mosquito bite itching on my hip." "a mosquito bite itching on my thigh." "a mosquito bite itching on my knee." "a mosquito bite itching on my calf." "the seat of the aluminum chair that i'm sitting in." "the seat of the bamboo chair that i'm sitting in." "the seat of the birch chair that i'm sitting in." "the seat of the cedar chair that i'm sitting in." "the seat of the chrome chair that i'm sitting in." "the seat of the mahogany chair that i'm sitting in." "the seat of the maple chair that i'm sitting in." "the seat of the pine chair that i'm sitting in." "the cushioned seat of the iron chair that i'm sitting in." "the cushioned seat of the leather chair that i'm sitting in." "the cushioned seat of the oak chair that i'm sitting in." "the cushioned seat of the satin chair that i'm sitting in." "the cushioned seat of the steel chair that i'm sitting in." "the cushioned seat of the teak chair that i'm sitting in." "the cushioned seat of the velvet chair that i'm sitting in." "the cushioned seat of the vinyl chair that i'm sitting in." "the dip in the seat of the canvas chair that i'm sitting in." "the slats in the seat of the wicker chair that i'm sitting in." "bamboo floorboards under my feet." "maple floorboards under my feet." "oak floorboards under my feet." "walnut floorboards under my feet." "the concrete floor beneath my feet." "the marble floor beneath my feet." "the ceramic tiles under my feet." "the porcelain tiles under my feet." "the slate tiles under my feet." "the terracotta tiles under my feet." "tatami under my feet." "the plush weave of a persian rug beneath my feet.")
+touches=("the touch of the keyboard beneath my fingertips. the hard plastic shells of the keys. the shallow aluminum grooves between the keys. the nubs on the f and the j." "the frost in the air." "the steam in the air." "a hot breeze." "a warm breeze." "a chilly breeze." "a frigid breeze." "seaspray on the breeze." "the hammock swinging in the breeze." "the breeze from the antique fan on the ceiling." "the silk fabric of the kimono rippling against my chest in the breeze." "the polyester fabric of the swimsuit gripping my thighs." "the cotton fabric of the bathrobe grazing my shoulders." "the warmth of the sunlight." "the heat from the fireplace." "the heat from the woodstove." "my mouth salivating." "my mouth salivating at the scent of bacon on the breeze." "my mouth salivating at the scent of charcoal on the breeze." "my heart beating in my chest." "an ache in my neck." "an ache in my back." "a tingling in the bruise on my chest." "a tingling in the scrape on my hip." "a tingling in the burn on my wrist." "a tingling in the burn on my calf." "a mosquito bite itching on my chest." "a mosquito bite itching on my shoulder." "a mosquito bite itching on my elbow." "a mosquito bite itching on my wrist." "a mosquito bite itching on my hip." "a mosquito bite itching on my thigh." "a mosquito bite itching on my knee." "a mosquito bite itching on my calf." "the seat of the aluminum chair that i'm sitting in." "the seat of the bamboo chair that i'm sitting in." "the seat of the birch chair that i'm sitting in." "the seat of the cedar chair that i'm sitting in." "the seat of the chrome chair that i'm sitting in." "the seat of the mahogany chair that i'm sitting in." "the seat of the maple chair that i'm sitting in." "the seat of the pine chair that i'm sitting in." "the cushioned seat of the iron chair that i'm sitting in." "the cushioned seat of the leather chair that i'm sitting in." "the cushioned seat of the oak chair that i'm sitting in." "the cushioned seat of the satin chair that i'm sitting in." "the cushioned seat of the steel chair that i'm sitting in." "the cushioned seat of the teak chair that i'm sitting in." "the cushioned seat of the velvet chair that i'm sitting in." "the cushioned seat of the vinyl chair that i'm sitting in." "the dip in the seat of the canvas chair that i'm sitting in." "the slats in the seat of the wicker chair that i'm sitting in." "the concrete floor under my feet." "the marble floor under my feet." "the bamboo floorboards under my feet." "the maple floorboards under my feet." "the oak floorboards under my feet." "the walnut floorboards under my feet." "ceramic tiles under my feet." "porcelain tiles under my feet." "slate tiles under my feet." "terracotta tiles under my feet." "tatami under my feet." "the plush weave of the persian rug beneath my feet.")
 
 sensations=("the daybreak is indigo in the sky over the mountains. a chickadee is perched on the balcony. i can hear chimes. i can smell juniper." "the sunrise is gold in the sky over the forest. hummingbirds are flitting through the vines. i can hear the stream. i can smell perfume." "the sunset is magenta in the sky over the desert. rain is glimmering on the bench. i can hear crickets. i can smell smoke from a barbecue." "the twilight is lavender in the sky over the tundra. starlings are fluttering over the cove. i can hear a seaplane. i can smell the grass. mosses. i can feel the chill in the air." "the daybreak is cyan in the sky over the marsh. dragonflies are flitting around the dock. i can hear the breeze. i can smell cedar." "the sunrise is orange in the sky over the prairie. puddles are shimmering on the porch. i can hear cicadas. i can smell the flowers. grass. i can feel the steam in the air." "the sunset is ruby in the sky over the bayou. flamingos are gliding over the water. i can hear an airboat. i can smell incense." "the twilight is violet in the sky over the ocean. a parrot is perched on the veranda. i can hear sitar. i can smell smoke from a bonfire.")
 
@@ -2640,9 +2644,9 @@ printf "\e[?25l"
 for number in {0..7}; do
  clear
 done
-sleep $(($RANDOM%4+4))
+# sleep $(($RANDOM%4+4))
 for character in T E R M I N A L; do echo -n $character; sleep 0.1; done
-sleep $(($RANDOM%4+4))
+# sleep $(($RANDOM%4+4))
 if [ $USER ]; then
  name=`echo $USER | tr "[:upper:]" "[:lower:]" | tr -d "[:punct:]" | tr -d "[:blank:]"`
  if [ $name ]; then
@@ -2660,11 +2664,11 @@ if [ $USER ]; then
    sleep 0.1
    character=$(($character+1))
   done
-  sleep $(($RANDOM%4+4))
+  # sleep $(($RANDOM%4+4))
  fi
 fi
 clear
-sleep $(($RANDOM%4+4))
+# sleep $(($RANDOM%4+4))
 
 - "hello."
 if [[ $month -eq 1 && $day -eq 1 ]]; then
