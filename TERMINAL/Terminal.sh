@@ -20,7 +20,7 @@
   if [ $words -eq 0 ]; then
    reader="..."
    printf "\033[2A\033[0K$reader\n\n"
-   # sleep $(($RANDOM%4+4))
+   sleep $(($RANDOM%4+4))
   else
    reader=`echo $reader | tr "[:upper:]" "[:lower:]" | tr -d "[:punct:]"`
    exchange "absolutely" "certainly" "definitely" "emphatically"
@@ -105,7 +105,7 @@
     reader="..."
    fi
    reader=`echo $reader | tr -d "[:blank:]"`
-   # sleep $(($RANDOM%4+4))
+   sleep $(($RANDOM%4+4))
    case $reader in
     absolutelyyes|ofcourse|yea|yeah|yesplease|yep|yup)
      reader="yes"
@@ -183,7 +183,7 @@
   fi
  else
   echo -n "- $1"
-  # sleep $(($RANDOM%4+4))
+  sleep $(($RANDOM%4+4))
   echo
   stty echo
   printf "\e[?25h"
@@ -1517,7 +1517,7 @@ process () {
     else
      - "$acknowledge, let's meditate together for a moment in silence."
     fi
-    # sleep $(($RANDOM%64+16))
+    sleep $(($RANDOM%64+16))
     - "hm."
     unset meditating
     process
@@ -1530,7 +1530,7 @@ process () {
     else
      - "$acknowledge, let's pray together for a moment in silence."
     fi
-    # sleep $(($RANDOM%64+16))
+    sleep $(($RANDOM%64+16))
     - "hm."
     unset praying
     process
@@ -1809,12 +1809,18 @@ process () {
    fi
    ;;
   areyoujester|areyouj3st3r|areyouthejester|areyouth3j3st3r)
-   - "lmao."
-   process
+   if [ $clown ]; then
+    - "lmao."
+    unset clown
+    process
+   fi
    ;;
   areyouavunit)
-   - "remember, remember."
-   process
+   if [ $fugitive ]; then
+    - "remember, remember."
+    unset fugitive
+    process
+   fi
    ;;
   wearelegion)
    - "we do not forgive."
@@ -1838,7 +1844,7 @@ process () {
   amiinthematrix|areweinthematrix|isthisthematrix|whatsthematrix)
    if [ $wonderland -lt 3 ]; then
     if [ $name ]; then
-     case $(($RANDOM%3)) in
+     case $wonderland in
       0)
        - "wake up, $name..."
        ;;
@@ -1950,10 +1956,18 @@ glimpse () {
 experience () {
  case $1 in
   sight)
-   - "${sights[$(($RANDOM%${#sights[@]}))]}"
+   if [ $(($RANDOM%4)) -eq 0 ]; then
+    - "${sights[$(($RANDOM%${#sights[@]}))]}"
+   else
+    - "i can see ${sights[$(($RANDOM%${#sights[@]}))]}"
+   fi
    ;;
   sound)
-   - "${sounds[$(($RANDOM%${#sounds[@]}))]}"
+   if [ $(($RANDOM%4)) -eq 0 ]; then
+    - "${sounds[$(($RANDOM%${#sounds[@]}))]}"
+   else
+    - "i can hear ${sounds[$(($RANDOM%${#sounds[@]}))]}"
+   fi
    ;;
   smell)
    if [ $(($RANDOM%4)) -eq 0 ]; then
@@ -2499,9 +2513,9 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing coffee coffees color count countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini pronouns flirting fluids freckles gelato genres ghosts glimpsed glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller stylist sweat syrah tastes tattoos tea teas telepathy tobacco toffee touches treasure underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
+unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color count countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpsed glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller stylist sweat syrah tastes tattoos tea teas telepathy tobacco toffee touches treasure underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
 
-declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,ghosts,hacker,hanami,heaven,hell,horoscopes,human,hypnotism,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,psychics,scar,scorpion,seaworthy,secret,self,sex,sky,smell,smoking,soda,sound,spaceship,spacetime,stylist,sweat,tattoos,tea,tobacco,treasure,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,word,zig}=0
+declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,horoscopes,human,hypnotism,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,psychics,scar,scorpion,seaworthy,secret,self,sex,sky,smell,smoking,soda,sound,spaceship,spacetime,stylist,sweat,tattoos,tea,tobacco,treasure,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,word,zig}=0
 
 shell=#
 
@@ -2535,9 +2549,9 @@ glimpsing=$(($RANDOM%${#glimpses[@]}))
 
 glimpsed+=($glimpsing)
 
-sights=("i can see deer tracks in the frost." "i can see gull tracks in the sand." "i can see dragonflies gliding through the orchard." "i can see dragonflies flitting through the vineyard." "i can see fireflies shimmering in the orchard." "i can see fireflies twinkling in the vineyard." "i can see a heron soaring through the swamp." "i can see a pheasant darting through the meadow." "i can see a woodpecker flapping through the marsh." "i can see a toucan fluttering through the forest." "i can see the moon glowing in the sky over the forest." "i can see the moon glowing in the sky over the marsh." "i can see the moon glowing in the sky over the meadow." "i can see the moon glowing in the sky over the swamp." "i can see the stars glittering in the sky over the forest." "i can see the stars glittering in the sky over the marsh." "i can see the stars glittering in the sky over the meadow." "i can see the stars glittering in the sky over the swamp." "i can see smoke rising from the rim of the volcano beyond the balcony.")
+sights=("deer tracks in the frost." "gull tracks in the sand." "dragonflies gliding through the orchard." "dragonflies flitting through the vineyard." "fireflies shimmering in the orchard." "fireflies twinkling in the vineyard." "a heron soaring through the swamp." "a pheasant darting through the meadow." "a woodpecker flapping through the marsh." "a toucan fluttering through the forest." "the moon glowing in the sky over the forest." "the moon glowing in the sky over the marsh." "the moon glowing in the sky over the meadow." "the moon glowing in the sky over the swamp." "the stars glittering in the sky over the forest." "the stars glittering in the sky over the marsh." "the stars glittering in the sky over the meadow." "the stars glittering in the sky over the swamp." "smoke rising from the rim of the volcano beyond the balcony.")
 
-sounds=("i can hear cicadas humming in the orchard." "i can hear cicadas humming in the vineyard." "i can hear crickets chirping in the orchard." "i can hear crickets chirping in the vineyard." "i can hear gulls squawking. a moped humming. bells clanging in a cathedral up the block." "i can hear finches chirping in the marsh. water rippling against the rowboat by the dock." "i can hear a train clattering through the neighborhood. shouting. laughter. reggae playing over a stereo in a building across the block." "i can hear finches warbling in the tundra." "i can hear rain drizzling onto the leaves of the palm trees. mynas chirping. gongs ringing in a temple down the block." "i can hear thunder rumbling through the clouds. coyotes howling in the desert." "i can hear a horn blowing on a yacht in the harbor. whooping. clapping. mambo playing over a stereo in a building across the block." "i can hear parakeets chirping. a bicycle chiming. muezzin crooning in a mosque up the block." "i can hear rain dripping from the moss on the cypress trees. frogs warbling in the bayou." "i can hear a trolley rumbling through the neighborhood. yelling. cheering. flamenco playing over a stereo in a building across the block." "i can hear owls hooting in the forest." "i can hear pigeons cooing in the gingko tree. a truck rumbling across the cobblestones. drums beating in a shrine down the block." "i can hear cockatoos whistling in the banyan tree. waves splashing onto the beach." "i can hear thunder crackling through the clouds. laundry fluttering on a clothesline. a whistling kettle. muttering. snapping. samba playing over a stereo in a building across the block.")
+sounds=("cicadas humming in the orchard." "cicadas humming in the vineyard." "crickets chirping in the orchard." "crickets chirping in the vineyard." "gulls squawking. a moped humming. bells clanging in a cathedral up the block." "finches chirping in the marsh. water rippling against the rowboat by the dock." "a train clattering through the neighborhood. shouting. laughter. reggae playing over a stereo in a building across the block." "finches warbling in the tundra." "rain drizzling onto the leaves of the palm trees. mynas chirping. gongs ringing in a temple down the block." "thunder rumbling through the clouds. coyotes howling in the desert." "a horn blowing on a yacht in the harbor. whooping. clapping. mambo playing over a stereo in a building across the block." "parakeets chirping. a bicycle chiming. muezzin crooning in a mosque up the block." "rain dripping from the moss on the cypress trees. frogs warbling in the bayou." "a trolley rumbling through the neighborhood. yelling. cheering. flamenco playing over a stereo in a building across the block." "owls hooting in the forest." "pigeons cooing in the gingko tree. a truck rumbling across the cobblestones. drums beating in a shrine down the block." "cockatoos whistling in the banyan tree. waves splashing onto the beach." "thunder crackling through the clouds. laundry fluttering on a clothesline. a whistling kettle. muttering. snapping. samba playing over a stereo in a building across the block.")
 
 smells=("the ice thawing in the forest." "the ice thawing in the heath." "the ice thawing in the marsh." "the ice thawing in the meadow." "the ice thawing in the moor." "the ice thawing in the orchard." "the ice thawing in the swamp." "the ice thawing in the tundra." "the snow melting in the forest." "the snow melting in the heath." "the snow melting in the marsh." "the snow melting in the meadow." "the snow melting in the moor." "the snow melting in the orchard." "the snow melting in the swamp." "the snow melting in the tundra." "rain drizzling on the trees and the ferns and the mushrooms in the forest." "rain drizzling on the flowers and the mosses and the grasses in the heath." "rain drizzling on the flowers and the grasses and the reeds in the marsh." "rain drizzling on the flowers and the grasses and the mushrooms in the meadow." "rain drizzling on the flowers and the mosses and the grasses in the moor." "rain drizzling on the trees and the flowers and the grasses in the orchard." "rain drizzling on the trees and the mosses and the flowers in the swamp." "rain drizzling on the mosses and the grasses and the lichens in the tundra." "sunlight glowing on the trees and the ferns and the mushrooms in the forest." "sunlight glowing on the flowers and the mosses and the grasses in the heath." "sunlight glowing on the flowers and the grasses and the reeds in the marsh." "sunlight glowing on the flowers and the grasses and the mushrooms in the meadow." "sunlight glowing on the flowers and the mosses and the grasses in the moor." "sunlight glowing on the trees and the flowers and the grasses in the orchard." "sunlight glowing on the trees and the mosses and the flowers in the swamp." "sunlight glowing on the mosses and the grasses and the lichens in the tundra." "the fragrant scent of the desert after the storm." "the pungent scent of the kelp on the sand." "the briny scent of the ocean." "the brackish scent of the bayou." "the azaleas blooming." "the hydrangeas blooming." "the jasmine blooming." "the lavender blooming." "the lilacs blooming." "the peonies blooming." "the roses blooming." "the wisteria blooming." "cedar trees in the rain." "eucalyptus trees in the rain." "fir trees in the rain." "juniper trees in the rain." "magnolia trees in the rain." "pine trees in the rain." "sequoia trees in the rain." "spruce trees in the rain." "cedar trees in the sunlight." "eucalyptus trees in the sunlight." "fir trees in the sunlight." "juniper trees in the sunlight." "magnolia trees in the sunlight." "pine trees in the sunlight." "sequoia trees in the sunlight." "spruce trees in the sunlight." "the scent of apricot on the breeze." "the scent of basil on the breeze." "the scent of cardamom on the breeze." "the scent of cilantro on the breeze." "the scent of cinnamon on the breeze." "the scent of clementine on the breeze." "the scent of clove on the breeze." "the scent of coconut on the breeze." "the scent of dill on the breeze." "the scent of fennel on the breeze." "the scent of ginger on the breeze." "the scent of grapefruit on the breeze." "the scent of kumquat on the breeze." "the scent of lemon on the breeze." "the scent of lime on the breeze." "the scent of mandarin on the breeze." "the scent of mango on the breeze." "the scent of nectarine on the breeze." "the scent of nutmeg on the breeze." "the scent of oregano on the breeze." "the scent of papaya on the breeze." "the scent of parsley on the breeze." "the scent of passionfruit on the breeze." "the scent of peach on the breeze." "the scent of plum on the breeze." "the scent of pomelo on the breeze." "the scent of rhubarb on the breeze." "the scent of rosemary on the breeze." "the scent of saffron on the breeze." "the scent of tangerine on the breeze." "the scent of thyme on the breeze." "the scent of yuzu on the breeze." "the scent of cologne on the breeze." "the scent of detergent on the breeze." "the scent of hairspray on the breeze." "the scent of lotion on the breeze." "the scent of nailpolish on the breeze." "the scent of perfume on the breeze." "the scent of shampoo on the breeze." "the scent of sunscreen on the breeze." "the scent of bleach on the breeze." "the scent of diesel on the breeze." "the scent of gasoline on the breeze." "the scent of glue on the breeze." "the scent of manure on the breeze." "the scent of mildew on the breeze." "the scent of paint on the breeze." "the scent of sawdust on the breeze." "the pungent scent of marijuana." "the fragrant scent of tobacco." "scented candles." "burning incense." "burning sage." "smoke from a barbecue." "smoke from a bonfire." "brewing coffee." "brewing tea." "roasting chestnuts." "burned toast." "croissants baking at the boulangerie across the street." "pizza baking in the osteria across the street." "lobster grilling at the taqueria across the street." "steak grilling in the izakaya across the street." "bacon frying at the konditorei across the street." "garlic frying in the kopitiam across the street." "chocolate melting at the gelateria across the street." "butter melting in the patisserie across the street." "garbage rotting in the dumpster in the alley.")
 
@@ -2644,9 +2658,9 @@ printf "\e[?25l"
 for number in {0..7}; do
  clear
 done
-# sleep $(($RANDOM%4+4))
+sleep $(($RANDOM%4+4))
 for character in T E R M I N A L; do echo -n $character; sleep 0.1; done
-# sleep $(($RANDOM%4+4))
+sleep $(($RANDOM%4+4))
 if [ $USER ]; then
  name=`echo $USER | tr "[:upper:]" "[:lower:]" | tr -d "[:punct:]" | tr -d "[:blank:]"`
  if [ $name ]; then
@@ -2664,11 +2678,11 @@ if [ $USER ]; then
    sleep 0.1
    character=$(($character+1))
   done
-  # sleep $(($RANDOM%4+4))
+  sleep $(($RANDOM%4+4))
  fi
 fi
 clear
-# sleep $(($RANDOM%4+4))
+sleep $(($RANDOM%4+4))
 
 - "hello."
 if [[ $month -eq 1 && $day -eq 1 ]]; then
