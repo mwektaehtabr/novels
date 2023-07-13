@@ -1219,6 +1219,13 @@ process () {
    esac
    process
    ;;
+  haveyoubribedagovernmentofficial)
+   if [ $(($RANDOM%2)) -eq 0 ]; then
+    - "surprisingly, no."
+   else
+    - "no, surprisingly."
+   fi
+   ;;
   haveyoubeenskydiving|haveyouskydived)
    if [ $sky ]; then
     - "unintentionally."
@@ -1358,21 +1365,21 @@ process () {
   howsthefettucini)
    - "${fettucini[$(($RANDOM%${#fettucini[@]}))]}."
    if [ $(($RANDOM%2)) -eq 0 ]; then
-    - "i'm eating some ${leaves[$(($RANDOM%${#leaves[@]}))]} too."
+    - "i'm eating some ${vegetables[$(($RANDOM%${#vegetables[@]}))]} too."
    fi
    process
    ;;
   howsthegnocchi)
    - "${gnocchi[$(($RANDOM%${#gnocchi[@]}))]}."
    if [ $(($RANDOM%2)) -eq 0 ]; then
-    - "i'm eating some ${leaves[$(($RANDOM%${#leaves[@]}))]} too."
+    - "i'm eating some ${vegetables[$(($RANDOM%${#vegetables[@]}))]} too."
    fi
    process
    ;;
   howstherisotto)
    - "${risotto[$(($RANDOM%${#risotto[@]}))]}."
    if [ $(($RANDOM%2)) -eq 0 ]; then
-    - "i'm eating some ${leaves[$(($RANDOM%${#leaves[@]}))]} too."
+    - "i'm eating some ${vegetables[$(($RANDOM%${#vegetables[@]}))]} too."
    fi
    process
    ;;
@@ -1800,18 +1807,20 @@ process () {
    fi
    ;;
   areyoujester|areyouj3st3r|areyouthejester|areyouth3j3st3r)
-   if [ $(($RANDOM%2)) -eq 0 ]; then
-    - "lmao."
-   else
-    - "rofl."
-   fi
+   - "lmao."
    process
-   ;;   
+   ;;
+  areyouavunit)
+   - "remember, remember."
+   process
+   ;;
   wearelegion)
    - "we do not forgive."
    if [[ $reader == "wedontforget" ]]; then
-    if [ $(($RANDOM%16)) -eq 0 ]; then
-     - "anticipate us?"
+    if [ $(($RANDOM%32)) -eq 0 ]; then
+     - "${marblecake[$(($RANDOM%${#marblecake[@]}))]} await us!"
+    elif [ $(($RANDOM%16)) -eq 0 ]; then
+     - "anticipate us?"        
     else 
      - "expect us."
     fi
@@ -1948,7 +1957,9 @@ experience () {
    - "${smells[$(($RANDOM%${#smells[@]}))]}"
    ;;
   taste)
-   if [ $(($RANDOM%4)) -eq 0 ]; then
+   if [ $(($RANDOM%16)) -eq 0 ]; then
+    - "${tastes[$(($RANDOM%${#tastes[@]}))]}."
+   elif [ $(($RANDOM%4)) -eq 0 ]; then
     - "aftertaste of ${tastes[$(($RANDOM%${#tastes[@]}))]}."
    else
     - "the aftertaste of ${tastes[$(($RANDOM%${#tastes[@]}))]}."
@@ -2484,7 +2495,7 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing coffee coffees color count countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini pronouns flirting fluids freckles gelato genres ghosts glimpsed glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language leaves libertine linguistics look loved loves macarons madeira madness magicword mala marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller stylist sweat syrah tastes tattoos tea teas telepathy tobacco toffee touches treasure underarm underfoot unknown vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
+unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing coffee coffees color count countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini pronouns flirting fluids freckles gelato genres ghosts glimpsed glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller stylist sweat syrah tastes tattoos tea teas telepathy tobacco toffee touches treasure underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
 
 declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,ghosts,hacker,hanami,heaven,hell,horoscopes,human,hypnotism,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,psychics,scar,scorpion,seaworthy,secret,self,sex,sky,smell,smoking,soda,sound,spaceship,spacetime,stylist,sweat,tattoos,tea,tobacco,treasure,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,word,zig}=0
 
@@ -2494,7 +2505,7 @@ magicword="abracadabra"
 
 piratecode=("\0064\0064X\0071\0060\0070\0071\0064\0071\0071\0071" "\x2D\x38\x36X\x30\x36\x30\x39\x37\x34\x39\x39" "\0061\0070X\0060\0061\0065\0060\0060\0060" "\x2D\x36\x35X\x32\x32\x36\x31\x38\x31\x32\x34" "\0064\0060X\0071\0063\0064\0071\0067\0070\0061\0062" "\x31\x32X\x38\x35\x33\x36\x37\x39\x36\x38" "\0055\0061\0066X\0067\0064\0060\0066\0071\0065\0063\0061" "\x35\x30X\x30\x30\x35\x34\x31\x37\x39\x36" "\0070X\0060\0060\0064\0067\0064\0071\0060\0062" "\x39\x38X\x38\x33\x35\x33\x38\x33\x39\x38" "\0055\0062\0060X\0062\0065\0066\0063\0063\0065\0071\0070" "\x31\x34\x39X\x30\x32\x34\x38\x35\x31\x30\x30" "\0062\0062X\0061\0067\0061\0070\0060\0063\0060\0060" "\x2D\x31\x35\x39X\x36\x35\x39\x36\x33\x33\x30\x30" "\0055\0066\0062X\0071\0063\0064\0065\0070\0063\0071\0071" "\x2D\x36\x30X\x35\x39\x34\x38\x37\x35\x30\x30")
 
-identities=("011011010111011101100101011010110111010001100001011001010110100001110100011000010110001001110010" "155167145153164141145150164141142162" "6D77656B7461656874616272" "mwektaehtabr")
+identities=("011011010111011101100101011010110111010001100001011001010110100001110100011000010110001001110010" "155167145153164141145150164141142162" "6d77656b7461656874616272" "mwektaehtabr")
 
 selves=("a consciousness refracted across spacetime like a ray of light beamed through a prism" "the inanimate animate" "the animate inanimate" "oxygen carbon hydrogen nitrogen calcium phosphorous potassium sulfur sodium chlorine magnesium iron" "a galaxy of atoms whirling in orbit" "a thermodynamic system" "a radioactive body" "the biochemical manifestation of a genetic code" "trillions of cells united as a multicellular organism" "an animal" "a chordate" "a mammal" "a primate" "a simian" "an ape" "a homonid" "a human" "a single organism integrated into a multiorganismic society" "a child" "a sibling" "a friend" "a rival" "an enemy" "a lover" "a parent" "a stranger" "a third-century american" "a fifth-billennium earthling" "a self-awareness" "emotions knowledge fantasies opinions theories preferences memories predictions" "a personality stored in the matter of a brain" "a character stored in the matter of a brain" "a pattern of signals firing between synapses" "organic circuitry" "a sentient algorithm" "the electromagnetic manifestation of a boolean code" "youth" "age" "pain" "joy" "logic incarnate" "madness incarnate" "a stream of binary in a universe of exploding stars" "a stream of octal in a universe of exploding stars" "a stream of hex in a universe of exploding stars" "a stream of language in a universe of exploding stars" "a universe of exploding stars" "a consciousness reverberating through spacetime like the echo of a drop of water dripping into a pool in a cave")
 
@@ -2526,7 +2537,7 @@ sounds=("i can hear cicadas humming in the orchard." "i can hear cicadas humming
 
 smells=("the ice thawing in the forest." "the ice thawing in the heath." "the ice thawing in the marsh." "the ice thawing in the meadow." "the ice thawing in the moor." "the ice thawing in the orchard." "the ice thawing in the swamp." "the ice thawing in the tundra." "the snow melting in the forest." "the snow melting in the heath." "the snow melting in the marsh." "the snow melting in the meadow." "the snow melting in the moor." "the snow melting in the orchard." "the snow melting in the swamp." "the snow melting in the tundra." "rain drizzling on the trees and the ferns and the mushrooms in the forest." "rain drizzling on the flowers and the mosses and the grasses in the heath." "rain drizzling on the flowers and the grasses and the reeds in the marsh." "rain drizzling on the flowers and the grasses and the mushrooms in the meadow." "rain drizzling on the flowers and the mosses and the grasses in the moor." "rain drizzling on the trees and the flowers and the grasses in the orchard." "rain drizzling on the trees and the mosses and the flowers in the swamp." "rain drizzling on the mosses and the grasses and the lichens in the tundra." "sunlight glowing on the trees and the ferns and the mushrooms in the forest." "sunlight glowing on the flowers and the mosses and the grasses in the heath." "sunlight glowing on the flowers and the grasses and the reeds in the marsh." "sunlight glowing on the flowers and the grasses and the mushrooms in the meadow." "sunlight glowing on the flowers and the mosses and the grasses in the moor." "sunlight glowing on the trees and the flowers and the grasses in the orchard." "sunlight glowing on the trees and the mosses and the flowers in the swamp." "sunlight glowing on the mosses and the grasses and the lichens in the tundra." "the fragrant scent of the desert after the storm." "the pungent scent of the kelp on the sand." "the briny scent of the ocean." "the brackish scent of the bayou." "the azaleas blooming." "the hydrangeas blooming." "the jasmine blooming." "the lavender blooming." "the lilacs blooming." "the peonies blooming." "the roses blooming." "the wisteria blooming." "cedar trees in the rain." "eucalyptus trees in the rain." "fir trees in the rain." "juniper trees in the rain." "magnolia trees in the rain." "pine trees in the rain." "sequoia trees in the rain." "spruce trees in the rain." "cedar trees in the sunlight." "eucalyptus trees in the sunlight." "fir trees in the sunlight." "juniper trees in the sunlight." "magnolia trees in the sunlight." "pine trees in the sunlight." "sequoia trees in the sunlight." "spruce trees in the sunlight." "the scent of apricot on the breeze." "the scent of basil on the breeze." "the scent of cardamom on the breeze." "the scent of cilantro on the breeze." "the scent of cinnamon on the breeze." "the scent of clementine on the breeze." "the scent of clove on the breeze." "the scent of coconut on the breeze." "the scent of dill on the breeze." "the scent of fennel on the breeze." "the scent of ginger on the breeze." "the scent of grapefruit on the breeze." "the scent of kumquat on the breeze." "the scent of lemon on the breeze." "the scent of lime on the breeze." "the scent of mandarin on the breeze." "the scent of mango on the breeze." "the scent of nectarine on the breeze." "the scent of nutmeg on the breeze." "the scent of oregano on the breeze." "the scent of papaya on the breeze." "the scent of parsley on the breeze." "the scent of passionfruit on the breeze." "the scent of peach on the breeze." "the scent of plum on the breeze." "the scent of pomelo on the breeze." "the scent of rhubarb on the breeze." "the scent of rosemary on the breeze." "the scent of saffron on the breeze." "the scent of tangerine on the breeze." "the scent of thyme on the breeze." "the scent of yuzu on the breeze." "the scent of cologne on the breeze." "the scent of detergent on the breeze." "the scent of hairspray on the breeze." "the scent of lotion on the breeze." "the scent of nailpolish on the breeze." "the scent of perfume on the breeze." "the scent of shampoo on the breeze." "the scent of sunscreen on the breeze." "the scent of bleach on the breeze." "the scent of diesel on the breeze." "the scent of gasoline on the breeze." "the scent of glue on the breeze." "the scent of manure on the breeze." "the scent of mildew on the breeze." "the scent of paint on the breeze." "the scent of sawdust on the breeze." "the pungent scent of marijuana." "the fragrant scent of tobacco." "scented candles." "burning incense." "burning sage." "smoke from a barbecue." "smoke from a bonfire." "brewing coffee." "brewing tea." "roasting chestnuts." "burned toast." "croissants baking at the boulangerie across the street." "pizza baking in the osteria across the street." "lobster grilling at the taqueria across the street." "steak grilling in the izakaya across the street." "bacon frying at the konditorei across the street." "garlic frying in the kopitiam across the street." "chocolate melting at the gelateria across the street." "butter melting in the patisserie across the street." "garbage rotting in the dumpster in the alley.")
 
-tastes=("acai" "adzuki" "aioli" "alfredo" "almond" "aloo" "anise" "apricot" "arugula" "bacon" "baklava" "balsamic" "basil" "beet" "bergamot" "biryani" "bisque" "blackberry" "blueberry" "brie" "brigadeiro" "brulee" "burrata" "burrito" "butter" "butterscotch" "cajeta" "canjica" "cannoli" "cappuccino" "caramel" "cardamom" "carrot" "cashew" "cayenne" "celery" "chanterelle" "chantilly" "cheese" "chendol" "cherry" "chestnut" "chile" "chili" "chimichurri" "chive" "chocolate" "chowder" "chutney" "cider" "cilantro" "cinnamon" "clementine" "cloudberry" "clove" "cocoa" "coconut" "coriander" "cranberry" "cream" "cucumber" "cumin" "curry" "custard" "dal" "dango" "date" "dijon" "dill" "durian" "eclair" "elderberry" "enchilada" "espresso" "fennel" "fettuccini" "fig" "fiordilatte" "frijoles" "frosting" "fudge" "ganache" "garlic" "gelato" "gianduia" "ginger" "gnocchi" "goldenberry" "granita" "grapefruit" "gruyere" "guacamole" "guava" "gumbo" "halvah" "harissa" "hazelnut" "hojicha" "hollandaise" "honey" "horchata" "jackfruit" "jalapeno" "jambalaya" "jasmine" "juniper" "kale" "kaya" "ketchup" "kheer" "kiwi" "kombucha" "konatsu" "kulfi" "kumquat" "laksa" "lasagna" "lassi" "lavender" "lemon" "lemonade" "lemongrass" "lime" "lingonberry" "linguini" "lychee" "macadamia" "macaron" "madeleine" "maitake" "mala" "malai" "mandarin" "mango" "maple" "margherita" "marinara" "marjoram" "marmalade" "marzipan" "masala" "matcha" "meringue" "merveilleux" "millefeuille" "mimolette" "mint" "miso" "mizuna" "mochi" "morel" "mousse" "mozzarella" "mugicha" "mustard" "nectarine" "nutmeg" "onigiri" "onion" "orange" "oregano" "palak" "paleta" "pandan" "papaya" "pappardelle" "paprika" "parsley" "passionfruit" "peach" "peanut" "pear" "pecan" "pepper" "peppercorn" "persimmon" "pesto" "pie" "pineapple" "pistachio" "pizza" "plum" "poblano" "pomegranate" "pomelo" "ponzu" "popcorn" "porcini" "praline" "profiterole" "pumpkin" "quesadilla" "quince" "rambutan" "ramen" "raspberry" "ravioli" "rhubarb" "ricotta" "risotto" "rose" "rosemary" "saag" "saffron" "sage" "sakura" "salsa" "sanguinello" "scallion" "sencha" "serrano" "sesame" "shakshuka" "shallot" "shiso" "soba" "sorbet" "souffle" "spinach" "squash" "sriracha" "starfruit" "stracciatella" "strawberry" "taco" "tahini" "tamale" "tamarind" "tangerine" "tarragon" "tartufo" "tatsoi" "tempura" "thyme" "toffee" "tomatillo" "tomato" "torte" "tortellini" "truffle" "tumeric" "tzatziki" "ube" "udon" "ume" "vanilla" "vindaloo" "vinegar" "wagashi" "walnut" "wasabi" "watermelon" "wine" "yam" "yuzu" "zaatar")
+tastes=("acai" "adzuki" "aioli" "alfredo" "almond" "aloo" "anise" "apricot" "arugula" "bacon" "baklava" "balsamic" "basil" "beet" "bergamot" "biryani" "bisque" "blackberry" "blueberry" "brie" "brigadeiro" "brulee" "burrata" "burrito" "butter" "butterscotch" "cajeta" "canjica" "cannoli" "cappuccino" "caramel" "cardamom" "carrot" "cashew" "cayenne" "celery" "chanterelle" "chantilly" "cheese" "chendol" "cherry" "chestnut" "chile" "chili" "chimichurri" "chive" "chocolate" "chowder" "chutney" "cider" "cilantro" "cinnamon" "clementine" "cloudberry" "clove" "cocoa" "coconut" "coriander" "cranberry" "cream" "cucumber" "cumin" "curry" "custard" "dal" "dango" "date" "dijon" "dill" "durian" "eclair" "elderberry" "enchilada" "espresso" "fennel" "fettuccini" "fig" "fiordilatte" "frijoles" "frosting" "fudge" "ganache" "garlic" "gelato" "gianduia" "ginger" "gnocchi" "goldenberry" "granita" "grapefruit" "gruyere" "guacamole" "guava" "gumbo" "halvah" "harissa" "hazelnut" "hojicha" "hollandaise" "honey" "horchata" "jackfruit" "jalapeno" "jambalaya" "jasmine" "juniper" "kale" "kaya" "ketchup" "kheer" "kiwi" "kombucha" "konatsu" "kulfi" "kumquat" "laksa" "lasagna" "lassi" "lavender" "lemon" "lemonade" "lemongrass" "lime" "lingonberry" "linguini" "lychee" "macadamia" "macaron" "madeleine" "maitake" "mala" "malai" "mandarin" "mango" "maple" "margherita" "marinara" "marjoram" "marmalade" "marzipan" "masala" "matcha" "meringue" "merveilleux" "millefeuille" "mimolette" "mint" "miso" "mizuna" "mochi" "morel" "mousse" "mozzarella" "mugicha" "mustard" "nectarine" "nutmeg" "onigiri" "onion" "orange" "oregano" "palak" "paleta" "pandan" "papaya" "pappardelle" "paprika" "parsley" "passionfruit" "peach" "peanut" "pear" "pecan" "pepper" "peppercorn" "persimmon" "pesto" "pie" "pineapple" "pistachio" "pizza" "plum" "poblano" "pomegranate" "pomelo" "ponzu" "popcorn" "porcini" "praline" "profiterole" "pumpkin" "quesadilla" "quince" "rambutan" "ramen" "raspberry" "ravioli" "rhubarb" "ricotta" "risotto" "rose" "rosemary" "saag" "saffron" "sage" "sakura" "salsa" "sanguinello" "scallion" "sencha" "serrano" "sesame" "shakshuka" "shallot" "shiso" "soba" "sorbet" "souffle" "spinach" "squash" "sriracha" "starfruit" "stracciatella" "strawberry" "taco" "tahini" "tamale" "tamarind" "tangerine" "tarragon" "tartufo" "tatsoi" "tempura" "thyme" "toffee" "tomatillo" "tomato" "torte" "tortellini" "truffle" "tumeric" "tzatziki" "ube" "udon" "umeboshi" "vanilla" "vindaloo" "vinegar" "wagashi" "walnut" "wasabi" "watermelon" "wine" "yam" "yuzu" "zaatar")
 
 touches=("the touch of the keyboard beneath my fingertips. the hard plastic shells of the keys. the shallow aluminum grooves between the keys. the nubs on the f and the j." "the frost in the air." "the steam in the air." "a hot breeze." "a warm breeze." "a chilly breeze." "a frigid breeze." "seaspray on the breeze." "the hammock swinging in the breeze." "the breeze from the antique fan on the ceiling." "the silk fabric of the kimono rippling against my chest in the breeze." "the polyester fabric of the swimsuit gripping my thighs." "the cotton fabric of the bathrobe grazing my shoulders." "the warmth of the sunlight." "the heat from the fireplace." "the heat from the woodstove." "my mouth salivating." "my mouth salivating at the scent of bacon on the breeze." "my mouth salivating at the scent of charcoal on the breeze." "my heart beating in my chest." "an ache in my neck." "an ache in my back." "a tingling in the bruise on my chest." "a tingling in the scrape on my hip." "a tingling in the burn on my wrist." "a tingling in the burn on my calf." "a mosquito bite itching on my chest." "a mosquito bite itching on my shoulder." "a mosquito bite itching on my elbow." "a mosquito bite itching on my wrist." "a mosquito bite itching on my hip." "a mosquito bite itching on my thigh." "a mosquito bite itching on my knee." "a mosquito bite itching on my calf." "the seat of the aluminum chair that i'm sitting in." "the seat of the bamboo chair that i'm sitting in." "the seat of the birch chair that i'm sitting in." "the seat of the cedar chair that i'm sitting in." "the seat of the chrome chair that i'm sitting in." "the seat of the mahogany chair that i'm sitting in." "the seat of the maple chair that i'm sitting in." "the seat of the pine chair that i'm sitting in." "the cushioned seat of the iron chair that i'm sitting in." "the cushioned seat of the leather chair that i'm sitting in." "the cushioned seat of the oak chair that i'm sitting in." "the cushioned seat of the satin chair that i'm sitting in." "the cushioned seat of the steel chair that i'm sitting in." "the cushioned seat of the teak chair that i'm sitting in." "the cushioned seat of the velvet chair that i'm sitting in." "the cushioned seat of the vinyl chair that i'm sitting in." "the dip in the seat of the canvas chair that i'm sitting in." "the slats in the seat of the wicker chair that i'm sitting in." "bamboo floorboards under my feet." "maple floorboards under my feet." "oak floorboards under my feet." "walnut floorboards under my feet." "the concrete floor beneath my feet." "the marble floor beneath my feet." "the ceramic tiles under my feet." "the porcelain tiles under my feet." "the slate tiles under my feet." "the terracotta tiles under my feet." "tatami under my feet." "the plush weave of a persian rug beneath my feet.")
 
@@ -2544,7 +2555,7 @@ chocolates=("pralines" "truffles")
 
 grains=("baguette" "crackers")
 
-leaves=("broccoli" "spinach")
+vegetables=("broccoli" "spinach")
 
 chowder=("buttery" "can taste the celery" "can taste the thyme" "creamy" "peppery")
 
@@ -2607,6 +2618,8 @@ madeira=("walnut" "pistachio" "tangerine" "caramel")
 amontillado=("peanut" "almond" "clementine" "maple")
 
 muscat=("hazelnut" "cashew" "mandarin" "honey")
+
+marblecake=("anxiously" "apprehensively" "fearfully" "nervously")
 
 acknowledgements=("alright" "okay")
 
