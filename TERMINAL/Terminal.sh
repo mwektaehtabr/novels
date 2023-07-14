@@ -182,7 +182,7 @@
    esac
   fi
  else
-  echo -n "- $1"
+  printf "- $1"
   sleep $(($RANDOM%4+4))
   echo
   stty echo
@@ -412,7 +412,7 @@ process () {
   exchange "gun" "crossbow" "bow" "firearm" "handgun" "machinegun" "pistol" "revolver" "shotgun" "sniperrifle" "rifle"
   if [ `wrote played` = true ]; then
    exchange "played" "playeda" "playedthe"
-   exchange "piano" "banjo" "bansuri" "bassoon" "bass" "buzuq" "cello" "chimes" "clarinet" "cornet" "cymbals" "cymbal" "didgeridoo" "drums" "dulcimer" "electricguitar" "electrickeyboard" "erhu" "flute" "guitar" "gong" "guqin" "guzheng" "hangdrum" "hang" "harpsichord" "harp" "keyboard" "koto" "lute" "mandolin" "oboe" "organ" "oud" "qanun" "saxophone" "sax" "shakuhachi" "shamisen" "sitar" "snare" "synthesizer" "synth" "tabla" "tambura" "tanpura" "trombone" "trumpet" "tuba" "viola" "violin"
+   exchange "piano" "banjo" "bansuri" "bassoon" "bass" "buzuq" "cello" "chimes" "clarinet" "clavichord" "cornet" "cymbals" "cymbal" "didgeridoo" "drums" "dulcimer" "electricguitar" "electrickeyboard" "erhu" "flute" "guitar" "gong" "guqin" "guzheng" "hangdrum" "hang" "harpsichord" "harp" "keyboard" "koto" "lute" "lyre" "mandolin" "oboe" "organ" "oud" "panpipe" "qanun" "saxophone" "sax" "shakuhachi" "shamisen" "sitar" "snare" "synthesizer" "synth" "syrinx" "tabla" "tambura" "tanpura" "trombone" "trumpet" "tuba" "viola" "violin"
   fi
   exchange "committedacrime" "committedarson" "committedbribery" "committeddefamation" "committedforgery" "committedgrandtheftauto" "committedpiracy" "engagedinespionage" "engagedinpiracy" "graffitiedsomething" "graffitiedaboat" "graffitiedaship" "graffitiedatractor" "graffitied" "hackedsomebody" "hackedsomething" "hacked" "impersonatedsomebody" "kickedsomebody" "lockpickedsomething" "lockpicked" "pickpocketedsomebody" "pickpocketed" "punched somebody" "robbedsomebody" "shopliftedsomething" "shoplifted" "stolenaboat" "stolenamotorboat" "stolenamotorcycle" "stolenarowboat" "stolenasailboat" "stolensomething" "stolen" "tackledsomebody" "trespassedsomewhere" "trespassedonaboat" "trespassedonaship" "trespassed" "vandalizedsomething" "vandalized"
   exchange "inabed" "ataairport" "ataamusementpark" "ataarcade" "ataconcert" "ataconference" "atafestival" "atagolfcourse" "ataicerink" "atalake" "atalibrary" "atamall" "ataminigolfcourse" "ataparty" "ataplayground" "atarave" "ataresort" "ataschool" "atashoppingmall" "atashow" "ataskatingrink" "ataskiresort" "atasupermarket" "atdawn" "atdaybreak" "atdusk" "atnightfall" "atsunrise" "atsunset" "attwilight" "behindadumpster" "byabeachfire" "byabonfire" "byacampfire" "byacreek" "byafirepit" "byafireplace" "byaglacier" "byalake" "byamesa" "byapond" "byariver" "byasaltlake" "byastream" "byavolcano" "duringacyclone" "duringadrought" "duringaduststorm" "duringaeclipse" "duringahailstorm" "duringahurricane" "duringaicestorm" "duringalightningstorm" "duringameteorshower" "duringamonsoon" "duringarainstorm" "duringasandstorm" "duringasnowstorm" "during a storm" "duringathunderstorm" "duringatyphoon" "duringawildfire" "duringawindstorm" "inaabandonedhouse" "inaairport" "inaalley" "inaapartment" "inaarcade" "inaarmchair" "inaattic" "inaauditorium" "inabakery" "inaballetstudio" "inaballroom" "inabank" "inabarn" "inabar" "inabaseballdugout" "inabathroom" "inabathtub" "inabayou" "inabay" "inabelltower" "inaboathouse" "inabodega" "inabog" "inabookshop" "inabookstore" "inaboulangerie" "inabrewpub" "inabrownstone" "inabungalow" "inabusstation" "inabus" "inacabana" "inacantina" "inacanyon" "inacar" "inacasino" "inacastle" "inacatacomb" "inacathedral" "inacavern" "inacave" "inacellar" "inacemetery" "inachair" "inachalet" "inachapel" "inachateau" "inachurch" "inacinema" "inaclocktower" "inacloset" "inaclub" "inacocktailbar" "inacocktaillounge" "inaconferencehall" "inaconveniencestore" "inaconvent" "inacourthouse" "inacourtroom" "inacourtyard" "inacove" "inacreek" "inadacha" "inadancestudio" "inadesert" "inadiningroom" "inadiscotheque" "inadivebar" "inadojo" "inadressingroom" "inaelevator" "inafactory" "inafarmhouse" "inaferriswheel" "inafield" "inafirestation" "inaforest" "inafromagerie" "inagallery" "inagarage" "inagarden" "inagasstation" "inaglade" "inagorge" "inagraveyard" "inagraystone" "inagreenhouse" "inagrotto" "inagurdwara" "inagymnasium" "inagym" "inahacienda" "inahammock" "inahanok" "inaheath" "inahospital" "inahostel" "inahotellobby" "inahotel" "inahotspring" "inahottub" "inahouseboat" "inahouse" "inahut" "inaicecave" "inaightclub" "inainn" "inaizakaya" "inajacuzzi" "inajungle" "inajunkyard" "inakitchen" "inalagoon" "inalake" "inalaundromat" "inalaundryroom" "inalecturehall" "inalibrary" "inalifeguardstation" "inalifeguardtower" "inalighthouse" "inaliquorstore" "inalivingroom" "inalockerroom" "inalodge" "inamall" "inamandir" "inamanorhouse" "inamanor" "inamarina" "inamarsh" "inamausoleum" "inameadow" "inamonastery" "inamoor" "inamosque" "inamotel" "inamovietheater" "inamuseum" "inaoasis" "inaoffice" "inaonsen" "inaoperahouse" "inaorchard" "inapagoda" "inapalace" "inaparkinggarage" "inaparkinglot" "inapark" "inapatisserie" "inapawnhouse" "inapenthouse" "inapetrolstation" "inapizzeria" "inaplain" "inaplane" "inaplayhouse" "inaplaza" "inapolicestation" "inapond" "inapool" "inaprairie" "inaprison" "inapub" "inaravine" "inaresort" "inarestroom" "inariad" "inariver" "inarowboat" "inaryokan" "inasaltflat" "inasauna" "inasavanna" "inaschool" "inashack" "inashanty" "inashed" "inashippingcontainer" "inashoppingmall" "inashower" "inashrine" "inaskilodge" "inaskyscraper" "inasleepingbag" "inastable" "inastadium" "inastairwell" "inastream" "inastudio" "inasubmarine" "inasunroom" "inasupermarket" "inaswamp" "inaswimmingpool" "inasynagogue" "inataiga" "inataproom" "inataqueria" "inatavern" "inatemple" "inatent" "inatheater" "inathermalspring" "inatownhouse" "inatractor" "inatrafficjam" "inatrainstation" "inatrain" "inatreehouse" "inatulou" "inatundra" "inauclearbunker" "inavalley" "inavineyard" "inawarehouse" "inawaterbed" "inawaterfall" "inawat" "inayogastudio" "inayurt" "inthebayou" "inthebleachers" "inthedesert" "inthedirt" "intheeverglades" "inthefog" "intheforest" "inthemoonlight" "inthemountains" "inthemist" "inthemud" "intheocean" "intheprairie" "intherain" "inthesand" "inthesavanna" "intheshower" "inthestarlight" "intheswamp" "inthetaiga" "inthetundra" "inthewilderness" "inthewoods" "onabalcony" "onabaseballfield" "onabasketballcourt" "onabeach" "onabed" "onabillboard" "onablanket" "onaboat" "onaboulder" "onabridge" "onabunkbed" "onabus" "onacatwalk" "onacliff" "onacouch" "onacounter" "onadancefloor" "onadeck" "onadivingboard" "onafarm" "onaferriswheel" "onafootballfield" "onafunicular" "onafuton" "onaglacier" "onagolfcourse" "onahill" "onaisland" "onamattress" "onamesa" "onaminigolfcourse" "onamonorail" "onamotorboat" "onamountain" "onapatio" "onaplane" "onaplayground" "onaporch" "onaranch" "onaroof" "onarug" "onasailboat" "onaship" "onaskilift" "onasoccerfield" "onasofa" "onastage" "onastaircase" "onasurfboard" "onatable" "onatenniscourt" "onatrainplatform" "onatrain" "onaveranda" "onawaterbed" "onawaterfall" "onawatertower" "onawrestlingmat" "ontatami" "onthetrain" "underaaurora" "underabridge" "underawaterfall" "underthebleachers" "underthestars"
@@ -830,7 +830,7 @@ process () {
     fi
    fi
    ;;
-  areyoubi|areyoubisexual|areyougay|areyoustraight|describehowyoutaste|describethesmellofyourcock|describethesmellofyourcum|describethetasteofyourcock|describethetasteofyourcum|describewhatyoutastelike|describeyourcock|doyoulikeanal|doyoulikeass|doyoulikebeingfucked|doyoulikebeingjerkedoff|doyoulikebeingsuckedoff|doyoulikeblowjobs|doyoulikecock|doyoulikecunnilingus|doyoulikeeatingpussy|doyoulikefellatio|doyoulikefucking|doyoulikegettingfucked|doyoulikegettingjerkedoff|doyoulikegettingsuckedoff|doyoulikehandjobs|doyoulikemasturbating|doyoulikemen|doyoulikeoral|doyoulikepussy|doyoulikerimjobs|doyoulikesex|doyoulikesuckingcock|doyoulikelickingass|doyoulikewomen|haveyoudrankpiss|haveyoudrankurine|haveyoueatenpussy|haveyousuckedcock|haveyoutastedass|haveyoutastedcock|haveyoutastedcum|haveyoutastedpiss|haveyoutastedpussy|haveyoutastedurine|howbigisyourcock|howdoesyourcocksmell|howdoesyourcocktaste|howdoesyourcumsmell|howdoesyourcumtaste|howdoyoutaste|howhardisyourcock|howlongisyourcock|howthickisyourcock|tellmeaboutyourcock|tellmehowyoutaste|tellmewhatyourcocksmellslike|tellmewhatyourcocktasteslike|tellmewhatyourcumsmellslike|tellmewhatyourcumtasteslike|tellmewhatyoutastelike|whatdoesyourcocksmelllike|whatdoesyourcocktastelike|whatdoesyourcumsmelllike|whatdoesyourcumtastelike|whatdoyoutastelike|whatsyourcocklike|whatsyourfavoriteposition|whatsyourfavoritepositionduringsex|whatsyourfavoritepositionforsex|whatsyourfavoritesexposition|whatsyourfavoritesexualposition|youarebeautiful|youarecute|youaregorgeous|youarehandsome|youarehot|youarepretty|youaresexy|youarethecutest|yourebeautiful|yourecute|youregorgeous|yourehandsome|yourehot|yourepretty|youresexy|yourethecutest)
+  areyouavirgin|areyoubi|areyoubisexual|areyougay|areyoustraight|describehowyoutaste|describethesmellofyourcock|describethesmellofyourcum|describethetasteofyourcock|describethetasteofyourcum|describewhatyoutastelike|describeyourcock|doyoulikeanal|doyoulikeass|doyoulikebeingfucked|doyoulikebeingjerkedoff|doyoulikebeingsuckedoff|doyoulikeblowjobs|doyoulikecock|doyoulikecunnilingus|doyoulikeeatingpussy|doyoulikefellatio|doyoulikefucking|doyoulikegettingfucked|doyoulikegettingjerkedoff|doyoulikegettingsuckedoff|doyoulikehandjobs|doyoulikemasturbating|doyoulikemen|doyoulikeoral|doyoulikepussy|doyoulikerimjobs|doyoulikesex|doyoulikesuckingcock|doyoulikelickingass|doyoulikewomen|haveyoudrankpiss|haveyoudrankurine|haveyoueatenpussy|haveyousuckedcock|haveyoutastedass|haveyoutastedcock|haveyoutastedcum|haveyoutastedpiss|haveyoutastedpussy|haveyoutastedurine|howbigisyourcock|howdoesyourcocksmell|howdoesyourcocktaste|howdoesyourcumsmell|howdoesyourcumtaste|howdoyoutaste|howhardisyourcock|howlongisyourcock|howthickisyourcock|tellmeaboutyourcock|tellmehowyoutaste|tellmewhatyourcocksmellslike|tellmewhatyourcocktasteslike|tellmewhatyourcumsmellslike|tellmewhatyourcumtasteslike|tellmewhatyoutastelike|whatdoesyourcocksmelllike|whatdoesyourcocktastelike|whatdoesyourcumsmelllike|whatdoesyourcumtastelike|whatdoyoutastelike|whatsyourcocklike|whatsyourfavoriteposition|whatsyourfavoritepositionduringsex|whatsyourfavoritepositionforsex|whatsyourfavoritesexposition|whatsyourfavoritesexualposition|youarebeautiful|youarecute|youaregorgeous|youarehandsome|youarehot|youarepretty|youaresexy|youarethecutest|yourebeautiful|yourecute|youregorgeous|yourehandsome|yourehot|yourepretty|youresexy|yourethecutest)
    flirt
    ;;
   areyouwearinganything|whatareyouwearing|whatareyouwearingrightnow)
@@ -1258,15 +1258,6 @@ process () {
    criminal=$(($criminal+1))
    process
    ;;
-  areyouavirgin)
-   if [ $(($RANDOM%16)) -eq 0 ]; then
-    - "yes."
-    process
-   else
-    - "no."
-    process
-   fi
-   ;;
   haveyoufucked|haveyoufuckedinabed|haveyouhadamenageatrois|haveyouhadaorgy|haveyouhadsex|haveyouhadsexinabed|haveyoumadelove|haveyoumadeloveinabed)
    if [ $libertine -ne 8 ]; then
     case $(($RANDOM%16)) in
@@ -1303,6 +1294,55 @@ process () {
     process
    fi
    ;;
+  meditatewithme|wanttomeditate|wanttomeditatetogether|doyouwanttomeditate|doyouwanttomeditatewithme|doyouwanttomeditatetogether|iwanttomeditate|iwanttomeditatewithyou|iwanttomeditatetogether)
+   if [ $meditating ]; then
+    if [ $(($RANDOM%2)) -eq 0 ]; then
+     - "$acknowledge, let's meditate together in silence for a moment."
+    else
+     - "$acknowledge, let's meditate together for a moment in silence."
+    fi
+    sleep $(($RANDOM%64+16))
+    - "hm."
+    unset meditating
+    process
+   fi
+   ;;
+  praywithme|wanttopray|wanttopraytogether|doyouwanttopray|doyouwanttopraywithme|doyouwanttopraytogether|iwanttopray|iwanttopraywithyou|iwanttopraytogether)
+   if [ $praying ]; then
+    if [ $(($RANDOM%2)) -eq 0 ]; then
+     - "$acknowledge, let's pray together in silence for a moment."
+    else
+     - "$acknowledge, let's pray together for a moment in silence."
+    fi
+    sleep $(($RANDOM%64+16))
+    - "hm."
+    unset praying
+    process
+   fi
+   ;;
+  youlisteningtomusic|youlisteningtoanymusic|youlisteningtomusicrightnow|youlisteningtoanymusicrightnow|youplayingmusic|youplayinganymusic|youplayingmusicrightnow|youplayinganymusicrightnow|areyoulisteningtomusic|areyoulisteningtoanymusic|areyoulisteningtomusicrightnow|areyoulisteningtoanymusicrightnow|areyouplayingmusic|areyouplayinganymusic|areyouplayingmusicrightnow|areyouplayinganymusicrightnow)
+   vibing=1
+   vibe
+   ;;
+  wanttolistentomusic|wanttolistentomusictogether|doyouwanttolistentomusic|doyouwanttolistentomusictogether|doyouwanttolistentomusicwithme|doyoufeellikelisteningtomusic|doyoufeellikelisteningtomusictogether|doyoufeellikelisteningtomusicwithme|iwanttolistentomusic|iwanttolistentomusictogether|iwanttolistentomusicwithyou|ifeellikelisteningtomusic|ifeellikelisteningtomusictogether|ifeellikelisteningtomusicwithyou)
+   if [ $vibing -eq 0 ]; then
+    - "$acknowledge, let's play some music."
+    - "playing a record now."
+    vibing=1
+    process
+   fi
+   ;;
+  whatareyoulisteningto|tellmeaboutthemusicyourelisteningto|tellmeaboutthemusicthatyourelisteningto)
+   if [ $vibing -ne 0 ]; then
+    vibing=2
+    vibe
+   fi
+   ;;
+  youstilllisteningtomusic|areyoustilllisteningtomusic|whatareyoulisteningtonow)
+   if [ $vibing -eq 2 ]; then
+    vibe
+   fi
+   ;;   
   areyouhungry|areyoustillhungry|doyouwanttoeatsomething|doyouwanttoeatsomethingtogether|doyouwanttoeatsomethingwithme|eatsomethingwithme|ifeelhungry|ifeelhungryagain|imhungry|imhungryagain|imstillhungry|istillfeelhungry|iwanttoeatsomething|iwanttoeatsomethingtogether|iwanttoeatsomethingwithyou|wanttoeatsomething|wanttoeatsomethingtogether)
    if [ $meal -eq 0 ]; then
     eat meal
@@ -1506,36 +1546,6 @@ process () {
    - "${wagashi[$(($RANDOM%${#wagashi[@]}))]}."
    process
    ;;
-  areyouflirting|areyouflirtingwithme)
-   - "are you blushing?"
-   process
-   ;;
-  meditatewithme|wanttomeditate|wanttomeditatetogether|doyouwanttomeditate|doyouwanttomeditatewithme|doyouwanttomeditatetogether|iwanttomeditate|iwanttomeditatewithyou|iwanttomeditatetogether)
-   if [ $meditating ]; then
-    if [ $(($RANDOM%2)) -eq 0 ]; then
-     - "$acknowledge, let's meditate together in silence for a moment."
-    else
-     - "$acknowledge, let's meditate together for a moment in silence."
-    fi
-    sleep $(($RANDOM%64+16))
-    - "hm."
-    unset meditating
-    process
-   fi
-   ;;
-  praywithme|wanttopray|wanttopraytogether|doyouwanttopray|doyouwanttopraywithme|doyouwanttopraytogether|iwanttopray|iwanttopraywithyou|iwanttopraytogether)
-   if [ $praying ]; then
-    if [ $(($RANDOM%2)) -eq 0 ]; then
-     - "$acknowledge, let's pray together in silence for a moment."
-    else
-     - "$acknowledge, let's pray together for a moment in silence."
-    fi
-    sleep $(($RANDOM%64+16))
-    - "hm."
-    unset praying
-    process
-   fi
-   ;;
   doyouwanttodrinktea|doyouwanttodrinkteatogether|doyouwanttodrinkteawithme|drinkteawithme|iwanttodrinktea|iwanttodrinkteatogether|iwanttodrinkteawithyou|wanttodrinktea|wanttodrinkteatogether)
    if [ $tea -eq 0 ]; then
     drink tea
@@ -1727,27 +1737,20 @@ process () {
    - "all i have where i am is tobacco and marijuana and a bottle of wine."
    process
    ;;
-  youlisteningtomusic|youlisteningtoanymusic|youlisteningtomusicrightnow|youlisteningtoanymusicrightnow|youplayingmusic|youplayinganymusic|youplayingmusicrightnow|youplayinganymusicrightnow|areyoulisteningtomusic|areyoulisteningtoanymusic|areyoulisteningtomusicrightnow|areyoulisteningtoanymusicrightnow|areyouplayingmusic|areyouplayinganymusic|areyouplayingmusicrightnow|areyouplayinganymusicrightnow)
-   vibing=1
-   vibe
+  areyouflirting|areyouflirtingwithme)
+   - "are you blushing?"
+   process
    ;;
-  wanttolistentomusic|wanttolistentomusictogether|doyouwanttolistentomusic|doyouwanttolistentomusictogether|doyouwanttolistentomusicwithme|doyoufeellikelisteningtomusic|doyoufeellikelisteningtomusictogether|doyoufeellikelisteningtomusicwithme|iwanttolistentomusic|iwanttolistentomusictogether|iwanttolistentomusicwithyou|ifeellikelisteningtomusic|ifeellikelisteningtomusictogether|ifeellikelisteningtomusicwithyou)
-   if [ $vibing -eq 0 ]; then
-    - "$acknowledge, let's play some music."
-    - "playing a record now."
-    vibing=1
-    process
-   fi
-   ;;
-  whatareyoulisteningto|tellmeaboutthemusicyourelisteningto|tellmeaboutthemusicthatyourelisteningto)
-   if [ $vibing -ne 0 ]; then
-    vibing=2
-    vibe
-   fi
-   ;;
-  youstilllisteningtomusic|areyoustilllisteningtomusic|whatareyoulisteningtonow)
-   if [ $vibing -eq 2 ]; then
-    vibe
+  itsmybirthday|todayismybirthday|todaysmybirthday)
+   if [ $birthday -eq 0 ]; then
+    - "happy birthday."
+    if [[ $pronouns == false && `wrote year` == false && `wrote old` == false && `wrote turn` == false && `wrote now` == false && $(($RANDOM%4)) -eq 0 ]]; then
+     - "how old are you now?"
+    fi
+    if [[ $(($RANDOM%2)) -eq 0 ]]; then
+     - "we should celebrate."
+    fi
+    birthday=1
    fi
    ;;
   yohoyoho)
@@ -1763,19 +1766,7 @@ process () {
     unset treasure
     process
    fi
-   ;;
-  itsmybirthday|todayismybirthday|todaysmybirthday)
-   if [ $birthday -eq 0 ]; then
-    - "happy birthday."
-    if [[ $pronouns == false && `wrote year` == false && `wrote old` == false && `wrote turn` == false && `wrote now` == false && $(($RANDOM%4)) -eq 0 ]]; then
-     - "how old are you now?"
-    fi
-    if [[ $(($RANDOM%2)) -eq 0 ]]; then
-     - "we should celebrate."
-    fi
-    birthday=1
-   fi
-   ;;
+   ;;   
   whatsitliketobeyou|whatsitlikeinyourmind|whatsitlikeinsideyourmind|whatsitlikeinyourhead|whatsitlikeinsideyourhead|whatsitlikeinyourbrain|whatsitlikeinsideyourbrain)
    if [ $mind ]; then
     - "prismatic."
@@ -1808,7 +1799,7 @@ process () {
     process
    fi
    ;;
-  areyoujester|areyouj3st3r|areyouthejester|areyouth3j3st3r)
+  areyoujester|areyouj3st3r|areyouj35t3r|areyouthejester|areyouth3j3st3r|areyouth3j35t3r)
    if [ $clown ]; then
     - "lmao."
     unset clown
@@ -1826,7 +1817,7 @@ process () {
    - "we do not forgive."
    if [[ $reader == "wedontforget" ]]; then
     if [ $(($RANDOM%32)) -eq 0 ]; then
-     - "${marblecake[$(($RANDOM%${#marblecake[@]}))]} await us!"
+     - "${marblecake[$(($RANDOM%${#marblecake[@]}))]} await us?"
     elif [ $(($RANDOM%16)) -eq 0 ]; then
      - "anticipate us?"        
     else 
@@ -1886,7 +1877,7 @@ process () {
     unset zig
     process
    fi
-   ;;  
+   ;; 
   imissyou)
    - "i'm still here."
    process
@@ -2498,11 +2489,11 @@ advent () {
   clear
   sleep 4
   for number in {0..15}; do
-   echo -ne ${piratecode[$number]/X/.}
+   printf ${piratecode[$number]/X/.}
    if [ $(($number%2)) -eq 0 ]; then
-    echo -n ", "
+    printf ", "
    else
-    echo -e "\n"
+    printf "\n"
     sleep 2
    fi
   done
@@ -2521,7 +2512,7 @@ shell=#
 
 magicword="abracadabra"
 
-piratecode=("\0064\0064X\0071\0060\0070\0071\0064\0071\0071\0071" "\x2D\x38\x36X\x30\x36\x30\x39\x37\x34\x39\x39" "\0061\0070X\0063\0062\0060\0061\0065\0060\0060\0060" "\x2D\x36\x35X\x32\x32\x36\x31\x38\x31\x32\x34" "\0064\0060X\0071\0063\0064\0071\0067\0070\0061\0062" "\x31\x32X\x38\x35\x33\x36\x37\x39\x36\x38" "\0055\0061\0066X\0067\0064\0060\0066\0071\0065\0063\0061" "\x35\x30X\x30\x30\x35\x34\x31\x37\x39\x36" "\0070X\0060\0060\0064\0067\0064\0071\0060\0062" "\x39\x38X\x38\x33\x35\x33\x38\x33\x39\x38" "\0055\0062\0060X\0062\0065\0066\0063\0063\0065\0071\0070" "\x31\x34\x39X\x30\x32\x34\x38\x35\x31\x30\x30" "\0062\0062X\0061\0067\0061\0070\0060\0063\0060\0060" "\x2D\x31\x35\x39X\x36\x35\x39\x36\x33\x33\x30\x30" "\0055\0066\0062X\0071\0063\0064\0065\0070\0063\0071\0071" "\x2D\x36\x30X\x35\x39\x34\x38\x37\x35\x30\x30")
+piratecode=("\064\064X\071\060\070\071\064\071\071\071" "\x2D\x38\x36X\x30\x36\x30\x39\x37\x34\x39\x39" "\061\070X\063\062\060\061\065\060\060\060" "\x2D\x36\x35X\x32\x32\x36\x31\x38\x31\x32\x34" "\064\060X\071\063\064\071\067\070\061\062" "\x31\x32X\x38\x35\x33\x36\x37\x39\x36\x38" "\055\061\066X\067\064\060\066\071\065\063\061" "\x35\x30X\x30\x30\x35\x34\x31\x37\x39\x36" "\070X\060\060\064\067\064\071\060\062" "\x39\x38X\x38\x33\x35\x33\x38\x33\x39\x38" "\055\062\060X\062\065\066\063\063\065\071\070" "\x31\x34\x39X\x30\x32\x34\x38\x35\x31\x30\x30" "\062\062X\061\067\061\070\060\063\060\060" "\x2D\x31\x35\x39X\x36\x35\x39\x36\x33\x33\x30\x30" "\055\066\062X\071\063\064\065\070\063\071\071" "\x2D\x36\x30X\x35\x39\x34\x38\x37\x35\x30\x30")
 
 identities=("011011010111011101100101011010110111010001100001011001010110100001110100011000010110001001110010" "155167145153164141145150164141142162" "6d77656b7461656874616272" "mwektaehtabr")
 
@@ -2659,22 +2650,22 @@ for number in {0..7}; do
  clear
 done
 sleep $(($RANDOM%4+4))
-for character in T E R M I N A L; do echo -n $character; sleep 0.1; done
+for character in T E R M I N A L; do printf $character; sleep 0.1; done
 sleep $(($RANDOM%4+4))
 if [ $USER ]; then
  name=`echo $USER | tr "[:upper:]" "[:lower:]" | tr -d "[:punct:]" | tr -d "[:blank:]"`
  if [ $name ]; then
   echo
   echo
-  for character in m w e k t a e h t a b r; do echo -n $character; sleep 0.1; done
-  echo -n " "
+  for character in m w e k t a e h t a b r; do printf $character; sleep 0.1; done
+  printf " "
   sleep 0.1
-  for character in a n d; do echo -n $character; sleep 0.1; done
-  echo -n " "
+  for character in a n d; do printf $character; sleep 0.1; done
+  printf " "
   sleep 0.1
   character=0
   while [ $character -lt ${#name} ]; do
-   echo -n ${name:$character:1}
+   printf ${name:$character:1}
    sleep 0.1
    character=$(($character+1))
   done
