@@ -1962,6 +1962,7 @@ glimpse () {
  if [ $(($RANDOM%4)) -eq 0 ]; then
   glimpsing=$(($RANDOM%${#glimpses[@]}+$indexing))
   echoes "${glimpses[$glimpsing]}"
+  glimpsing=$(($glimpsing-$indexing))
   glimpses=( "${glimpses[@]:0:$glimpsing}" "${glimpses[@]:$(($glimpsing+1))}" )
  fi
 }
