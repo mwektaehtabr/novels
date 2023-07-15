@@ -144,7 +144,7 @@ echoes () {
      case $reader in
       ciao)
        if [ $(($RANDOM%4)) -eq 0 ]; then
-        echoes "vale\!"
+        echoes "vale!"
        elif [ $(($RANDOM%2)) -eq 0 ]; then
         echoes "ciao."
        else
@@ -155,7 +155,7 @@ echoes () {
        if [ $(($RANDOM%4)) -eq 0 ]; then
         echoes "ciao."
        elif [ $(($RANDOM%2)) -eq 0 ]; then
-        echoes "vale\!"
+        echoes "vale!"
        else
         echoes "goodbye."
        fi
@@ -164,7 +164,7 @@ echoes () {
        if [ $(($RANDOM%8)) -eq 0 ]; then
         echoes "see you space samurai..."
        elif [ $(($RANDOM%4)) -eq 0 ]; then
-        echoes "see you cowgirl, someday, somewhere\!"
+        echoes "see you cowgirl, someday, somewhere!"
        elif [ $(($RANDOM%2)) -eq 0 ]; then
         echoes "to be continued."
        else
@@ -1961,8 +1961,8 @@ curiosity () {
 glimpse () {
  if [ $(($RANDOM%4)) -eq 0 ]; then
   glimpsing=$(($RANDOM%${#glimpses[@]}+$indexing))
-  glimpsed+=($glimpsing)
-  echoes "${glimpses[$(($glimpsing))]}"
+  echoes "${glimpses[$glimpsing]}"
+  glimpses=( "${glimpses[@]:0:$glimpsing}" "${glimpses[@]:$(($glimpsing+1))}" )
  fi
 }
 
@@ -2528,15 +2528,11 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpsed glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity indexing initialize juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller stylist sweat syrah tastes tattoos tea teas telepathy tobacco toffee touches treasure underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
+unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sights sky smell smells smoking soda songs sorbet sound sounds spaceship spacetime stories story storyteller stylist sweat syrah tastes tattoos tea teas telepathy tobacco toffee touches treasure underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland word words year zig
 
 declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,horoscopes,human,hypnotism,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,psychics,scar,scorpion,seaworthy,secret,self,sex,sky,smell,smoking,soda,sound,spaceship,spacetime,stylist,sweat,tattoos,tea,tobacco,treasure,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,word,zig}=0
 
 shell=#
-
-initialize=(@)
-
-indexing=${#initialize[1]}
 
 magicword="abracadabra"
 
@@ -2561,12 +2557,6 @@ songs=("the unanswered question." "have you got it yet?" "4'33\"")
 numbers=("today, probably zero." "today, probably one." "i." "infinity." "/dev/random.")
 
 glimpses=("there's a rainbow shimmering in the sky." "a cloudburst of rain just dropped across the harbor." "a cloudburst of rain just dropped across the tundra." "sunbeams are shining through the clouds onto the field." "sunbeams are shining through the clouds onto the lagoon." "sunbeams are shining through the clouds onto the meadow." "sunbeams are shining through the clouds onto the ocean." "sunbeams are shining through the clouds onto the orchard." "sunbeams are shining through the clouds onto the pasture." "sunbeams are shining through the clouds onto the tundra." "sunbeams are shining through the clouds onto the vineyard." "the beach is orange in the glow of the sunrise." "the beach is crimson in the glow of the sunset." "the ocean is magenta in the glow of the sunrise." "the ocean is tangerine in the glow of the sunset." "sunshine is glittering on the tidepools on the beach." "sunlight is shimmering on the dew in the orchard." "sunlight is sparkling on the dew in the vineyard." "dew is glittering in the tundra." "moonlight is shimmering on the ocean." "starlight is sparkling on the ocean." "the moon is glowing in the sky over the lagoon." "the moon is glowing in the sky over the orchard." "the moon is glowing in the sky over the tundra." "the moon is glowing in the sky over the vineyard." "the stars are glittering in the sky over the lagoon." "the stars are glittering in the sky over the orchard." "the stars are glittering in the sky over the tundra." "the stars are glittering in the sky over the vineyard." "lightning is flickering through the clouds in the sky over the forest." "lightning is flickering through the clouds in the sky over the meadow." "lightning is flickering through the clouds in the sky over the ocean." "lightning is flickering through the clouds in the sky over the tundra." "thunder is rumbling through the clouds in the sky over the forest." "thunder is rumbling through the clouds in the sky over the meadow." "thunder is rumbling through the clouds in the sky over the ocean." "thunder is rumbling through the clouds in the sky over the tundra." "hail is bouncing off the roof of the arcade across the street." "hail is bouncing off the roof of the cantina across the street." "hail is bouncing off the roof of the discotheque across the street." "hail is bouncing off the roof of the temple across the street." "ripples of fog are blowing across the heath." "ripples of mist are blowing across the moor." "rain is drizzling on the beach." "rain is drizzling in the forest." "rain is drizzling in the marsh." "rain is drizzling in the meadow." "puddles of rainwater are shimmering on the beach." "puddles of rainwater are shimmering in the desert." "puddles of rainwater are shimmering in the forest." "puddles of rainwater are shimmering in the tundra." "snow is falling on the beach." "snow is falling in the forest." "snow is falling in the meadow." "snow is falling in the swamp." "ice is gleaming on the beach." "ice is gleaming in the desert." "ice is gleaming in the forest." "ice is gleaming in the meadow." "sleet is glittering in the moor." "sleet is glittering in the heath." "snowdrifts are shimmering in the field." "snowdrifts are shimmering in the pasture." "icicles are sparkling in the orchard." "icicles are sparkling in the vineyard." "seaweed is rippling in the river." "grass is rippling in the meadow with the breeze." "the grass in the savanna is gold in the glow of the dawn." "the grass in the prairie is ruby in the glow of the dusk." "wisps of seeds are blowing from the dandelions in the meadow." "dandelions are flowering in the forest behind the cabin." "thistles are flowering in the forest behind the cottage." "lilypads are flowering in the marsh beyond the window." "milkweed is flowering in the swamp beyond the window." "wisteria is flowering on the balcony of the hotel." "hydrangeas are flowering in the garden across the street." "there's lavender flowering in the meadow." "there's jasmine flowering in the meadow." "roses are blooming in the courtyard below the window." "lilacs are blooming in the plaza below the window." "goldenrods are blooming in the field." "marigolds are blooming in the pasture." "raindrops are sparkling on the daisies in the meadow." "raindrops are sparkling on the azaleas in the garden." "raindrops are sparkling on the peonies in the garden." "flowers are blooming on the cactuses behind the trailer." "the bamboo behind the mansion is rippling with the breeze." "raindrops are sparkling on the ferns in the forest." "sunlight is glowing on the ferns in the forest." "steam is rising from the ferns in the forest." "the cattails by the dock are rippling in the breeze." "the sagebrush behind the hotel is rippling in the breeze." "puddles of rainwater are shimmering around the agave in the desert." "the ivy on the greenhouse is fluttering in the breeze." "the ivy on the barn behind the farmhouse is fluttering in the breeze." "the ivy on the shed behind the townhouse is fluttering in the breeze." "the ivy hanging from the roof of the cafe across the street is fluttering in the breeze." "ripples of pollen are blowing down from the cedar trees beyond the window." "fluffy seeds are blowing down from the cottonwood trees beyond the window." "flowers are blooming on the cherry trees beyond the window." "blossoms are tumbling from the cherry trees beyond the window." "flowers are blooming on the jacaranda tree beyond the window." "flowers are blooming on the magnolia tree beyond the window." "leaves are tumbling from the aspen trees in the forest." "leaves are tumbling from the birch trees across the lake." "leaves are tumbling from the maple trees across the creek." "leaves are tumbling from the oak trees in the meadow." "the baobab trees are pink in the glow of the twilight in the savanna." "the gingko tree is violet in the glow of the twilight beyond the window." "the kapok tree is indigo in the glow of the twilight beyond the window." "the yucca trees are amber in the glow of the twilight in the desert." "raindrops are dripping from the banyan tree behind the villa." "raindrops are dripping from the leaves of the beech trees." "raindrops are dripping from the leaves of the elm trees." "raindrops are dripping from the moss hanging from the cypress trees in the bayou." "puddles of rainwater are shimmering around the mesquite trees behind the mansion." "puddles of rainwater are shimmering around the sycamore trees behind the cottage." "fog is drifting through the hemlock trees." "fog is drifting through the sequoia trees." "mist is blowing through the juniper trees." "mist is blowing through the ponderosa trees." "snow is flurrying through the larch trees." "snow is flurrying through the pine trees." "ice is sparkling on the fir trees." "ice is sparkling on the spruce trees." "the ash tree in the prairie is fluttering with a breeze." "the leaves of the eucalyptus trees are fluttering in the breeze." "the palm trees on the beach are rippling in the wind." "the willow trees along the stream are rippling in the wind." "cicadas are humming in the courtyard below the window." "crickets are chirping in the plaza below the window." "dragonflies are flitting through the bazaar across the street." "fireflies are twinkling in the shrine across the street." "a ladybug is crawling across the windowsill." "a caterpillar is crawling across the windowsill." "an ant is crawling across the windowsill." "butterflies are fluttering around the clothesline." "moths are fluttering around the streetlight." "sunlight is glimmering on a cloud of gnats in the meadow." "a grasshopper is jumping through the sagebrush in the desert." "a bumblebee is flying around the milkweeds in the swamp." "a honeybee is flying around the lilypads in the marsh." "hornets are buzzing around the branches of an oak tree." "wasps are buzzing around the branches of a maple tree." "a mosquito is flying around the puddles of rainwater on the porch." "a starling is chirping in the windowsill." "a robin is hopping across the windowsill." "a pelican just flew past the patio." "a parrot just flew past the balcony." "a cockatoo just flapped through the eucalyptus trees in the forest." "a lorikeet just fluttered past the magnolia tree." "a parakeet just fluttered past the jacaranda tree." "a macaw is squawking on the roof of the taqueria across the street." "a myna is chirping on the awning of the kopitiam across the street." "a toucan is perched on the roof of the gelateria across the street." "a hornbill is perched on the awning of the patisserie across the street." "hummingbirds are flitting through the mangroves." "a peacock is wandering past the kapok tree." "a pheasant is drifting past the gingko tree." "there's a tropicbird flapping across the cove." "there's a penguin waddling through the boulders on the beach." "camels are roaming through the dunes." "sheep are drifting through the hills beyond the window." "llamas are wandering through the mountains beyond the window." "yaks are grazing in the meadow beneath the cliffs." "a goat is drifting through the acacia trees in the desert." "a deer just wandered through the birch trees behind the mansion." "a moose just drifted through the spruce trees behind the cottage." "a fox is trotting through the wildflowers in the field." "a rabbit is nibbling at some clover in the pasture." "a kangaroo just hopped through the eucalyptus trees on the beach." "a baboon is wandering through the palm trees on the beach." "a seal just swam through the sandbars in the cove." "a walrus just swam through the icebergs in the cove." "dolphins are jumping from the water in the ocean." "a manatee just swam past the dock." "there's a bear padding through the ferns in the forest." "there's a chameleon perched on the balcony." "there's an iguana perched on the patio." "a gecko just darted past the cabana." "a lizard is basking in the sunlight on the terrace." "a turtle is basking in the sunlight on the beach." "a snake is basking in the sunlight by a stump." "a crocodile is basking in the sunlight on a log." "an alligator is floating in the lagoon." "a frog just hopped past the farmhouse." "a salamander just crawled onto the windowsill." "a snail is crawling across the veranda." "sunlight is sparkling on the mussels on the rocks." "a crab is scuttling across the beach." "sunlight is shimmering on the barnacles on the rocks." "there's a spider spinning a web on the balcony." "there's a starfish clinging to a rock in the tidepools on the beach.")
-
-glimpsed=()
-
-glimpsing=$(($RANDOM%${#glimpses[@]}+$indexing))
-
-glimpsed+=($glimpsing)
 
 sights=("deer tracks in the frost." "gull tracks in the sand." "dragonflies gliding through the orchard." "dragonflies flitting through the vineyard." "fireflies shimmering in the orchard." "fireflies twinkling in the vineyard." "a heron soaring through the swamp." "a pheasant darting through the meadow." "a woodpecker flapping through the marsh." "a toucan fluttering through the forest." "the moon glowing in the sky over the forest." "the moon glowing in the sky over the marsh." "the moon glowing in the sky over the meadow." "the moon glowing in the sky over the swamp." "the stars glittering in the sky over the forest." "the stars glittering in the sky over the marsh." "the stars glittering in the sky over the meadow." "the stars glittering in the sky over the swamp." "smoke rising from the rim of the volcano beyond the balcony.")
 
@@ -2670,6 +2660,10 @@ day=$(date "+%-d")
 
 hour=$(date "+%H")
 
+initialize=(@)
+
+indexing=${#initialize[1]}
+
 magicword=`abracadabra`
 
 stty -echo
@@ -2704,11 +2698,6 @@ clear
 sleep $(($RANDOM%4+4))
 
 echoes "hello."
-
-#
-process
-#
-
 if [ $month -eq 1 ] && [ $day -eq 1 ]; then
  echoes "happy new year."
 elif [ $month -eq 12 ] && [ $day -eq 31 ]; then
@@ -2724,11 +2713,6 @@ elif [ $(($RANDOM%8)) -eq 0 ]; then
  echoes "god, what a time to be alive."
 fi
 echoes "what's the weather like where you are?"
-
-#
-process
-#
-
 unset meteorology
 meteorology=("cloudy here." "foggy here." "icy here." "misty here." "rainy here." "snowy here." "sunny here." "windy here." "hot here. rain is drizzling in the swamp." "hot here. sunshine is sparkling on the waves beyond the window." "warm here. mist is blowing through the forest." "warm here. sunshine is shimmering on the raindrops in the window." "humid here. dew is glittering in the meadow." "humid here. sunshine is shimmering on the puddles beyond the window." "chilly here. fog is drifting across the beach." "chilly here. sunshine is shimmering on the frost in the window." "cold here. ice is gleaming in the marsh." "cold here. sunshine is sparkling on the snowdrifts beyond the window." "freezing here. snow is falling in the desert." "freezing here. sunshine is sparkling on the icicles in the window." "daybreak here. cicadas are humming in the swamp." "daybreak here. dragonflies are gliding across the marsh." "daybreak here. still some stars in the sky." "daybreak here. the moon is glowing in the sky." "dawn here. cicadas are buzzing in the forest." "dawn here. dragonflies are flitting through the meadow." "dawn here. still some stars in the sky." "dawn here. the moon is glowing in the sky." "sunrise here. a hummingbird is flitting through the desert." "sunrise here. a parrot is chirping on the beach." "sunrise here. still some stars in the sky." "sunrise here. the moon is glowing in the sky." "sunset here. a finch is warbling in the tundra." "sunset here. a pelican is gliding across the lagoon." "sunset here. already some stars in the sky." "sunset here. the moon is glowing in the sky." "twilight here. already some stars in the sky." "twilight here. crickets are chirping in the meadow." "twilight here. fireflies are shimmering in the forest." "twilight here. the moon is glowing in the sky." "dusk here. already some stars in the sky." "dusk here. crickets are warbling in the marsh." "dusk here. fireflies are twinkling in the swamp." "dusk here. the moon is glowing in the sky." "night here. stars are glittering in the sky over the desert." "night here. stars are glittering in the sky over the hills." "night here. the moon is glowing in the sky over the beach." "night here. the moon is glowing in the sky over the mountains.")
 echoes "${meteorology[$(($RANDOM%${#meteorology[@]}+$indexing))]}"
