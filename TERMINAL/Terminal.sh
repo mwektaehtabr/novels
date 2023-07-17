@@ -19,7 +19,7 @@ echoes () {
   words=$(echo $reader | wc -w)
   if [ $words -eq 0 ]; then
    reader="..."
-   printf "\033[2A\033[0K$reader\n\n"
+   printf "\e[2A\e[0K$reader\n\n"
    sleep $(($RANDOM%4+4))
   else
    reader=$(echo $reader | tr "[:upper:]" "[:lower:]" | tr -d "[:punct:]")
@@ -191,7 +191,7 @@ echoes () {
   stty echo
   printf "\e[?25h"
   clear
-  printf "\33c\e[3J"
+  printf "\ec\e[3J"
  fi
 }
 
@@ -2555,7 +2555,7 @@ advent () {
    fi
   done
   sleep 4
-  printf "\033[64A\033[0K\e[0J"
+  printf "\e[64A\e[0K\e[0J"
   clear
   sleep 8
  fi
@@ -2703,7 +2703,7 @@ stty -echo
 for number in {0..7}; do
  clear
 done
-printf "\33c\e[3J\e[?25l"
+printf "\ec\e[3J\e[?25l"
 sleep $(($RANDOM%4+4))
 for character in T E R M I N A L; do printf $character; sleep 0.1; done
 sleep $(($RANDOM%4+4))
@@ -2728,7 +2728,7 @@ if [ $USER ]; then
  fi
 fi
 clear
-printf "\33c\e[3J\e[?25l"
+printf "\ec\e[3J\e[?25l"
 sleep $(($RANDOM%4+4))
 
 echoes "hello."
