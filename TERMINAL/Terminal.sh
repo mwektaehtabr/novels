@@ -2022,7 +2022,7 @@ experience () {
    ;;
   touch)
    prior=$touched
-   if [ $(($RANDOM%8)) -eq 0 ] && [ "$prior" != "${touches[0]}"]; then
+   if [ $(($RANDOM%8)) -eq 0 ] && [ "$prior" != "${touches[0]}" ]; then
     echoes "${touches[0]}"
    else
     while [ "$prior" = "$touched" ]; do
