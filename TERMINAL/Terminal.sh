@@ -298,7 +298,7 @@ ending () {
    *)
     reader=${reader/%$language}
     ;;
-  esac 
+  esac
  done
 }
 
@@ -428,7 +428,7 @@ process () {
    exchange "rowboat" "canoe" "dinghy" "gondola" "kayak" "outrigger" "raft"
    exchange "sailboat" "catamaran" "felucca" "dhow" "gulet" "junk" "yacht"
    exchange "ship" "aircraftcarrier" "barge" "cargoship" "containership" "cruiseship" "ferryboat" "ferry" "freighter" "riverboat" "steamboat" "tugboat" "warship"
-   exchange "train" "cablecar" "streetcar" "subway" "tram"
+   exchange "train" "cablecar" "streetcar" "subway" "tram" "trolley"
   fi
   exchange "stolen" "hijacked"
   exchange "tractor" "bulldozer" "crane" "forklift"
@@ -1366,7 +1366,7 @@ process () {
    if [ $vibing -eq 2 ]; then
     vibe
    fi
-   ;;   
+   ;;
   areyouhungry|areyoustillhungry|doyouwanttoeatsomething|doyouwanttoeatsomethingtogether|doyouwanttoeatsomethingwithme|eatsomethingwithme|ifeelhungry|ifeelhungryagain|imhungry|imhungryagain|imstillhungry|istillfeelhungry|iwanttoeatsomething|iwanttoeatsomethingtogether|iwanttoeatsomethingwithyou|wanttoeatsomething|wanttoeatsomethingtogether)
    if [ $meal -eq 0 ]; then
     eat meal
@@ -1790,7 +1790,7 @@ process () {
     unset quest
     process
    fi
-   ;;   
+   ;;
   whatsitliketobeyou|whatsitlikeinyourmind|whatsitlikeinsideyourmind|whatsitlikeinyourhead|whatsitlikeinsideyourhead|whatsitlikeinyourbrain|whatsitlikeinsideyourbrain)
    if [ $mind ]; then
     echoes "prismatic."
@@ -1808,14 +1808,14 @@ process () {
   plokta)
    echoes "$plokta"
    process
-   ;;   
+   ;;
   securitythroughobscurity)
    if [ $opsec ]; then
     echoes "the enemy knows the system."
     unset opsec
     process
    fi
-   ;;     
+   ;;
   dontrepeatyourself)
    if [ $xerox ]; then
     echoes "we enjoy typing."
@@ -1850,8 +1850,8 @@ process () {
     if [ $(($RANDOM%32)) -eq 0 ]; then
      echoes "${marblecake[$(($RANDOM%${#marblecake[@]}+$indexing))]} await us?"
     elif [ $(($RANDOM%16)) -eq 0 ]; then
-     echoes "anticipate us?"        
-    else 
+     echoes "anticipate us?"
+    else
      echoes "expect us."
     fi
    fi
@@ -1886,7 +1886,7 @@ process () {
     wonderland=$(($wonderland+1))
     process
    fi
-   ;;   
+   ;;
   thereisnospoon)
    if [ $oracle ]; then
     if [ $(($RANDOM%2)) -eq 0 ]; then
@@ -1908,7 +1908,7 @@ process () {
     unset zig
     process
    fi
-   ;; 
+   ;;
   imissyou)
    echoes "i'm still here."
    process
@@ -2035,7 +2035,7 @@ experience () {
    prior=$sensed
    while [ "$prior" = "$sensed" ]; do
     sensed=${sensations[$(($RANDOM%${#sensations[@]}+$indexing))]}
-   done  
+   done
    echoes "$sensed"
    ;;
   *)
