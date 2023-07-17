@@ -191,6 +191,7 @@ echoes () {
   stty echo
   printf "\e[?25h"
   clear
+  printf "\33c\e[3J"
  fi
 }
 
@@ -2699,10 +2700,10 @@ indexing=${#initialize[1]}
 magicword=`abracadabra`
 
 stty -echo
-printf "\e[?25l"
 for number in {0..7}; do
  clear
 done
+printf "\33c\e[3J\e[?25l"
 sleep $(($RANDOM%4+4))
 for character in T E R M I N A L; do printf $character; sleep 0.1; done
 sleep $(($RANDOM%4+4))
@@ -2727,6 +2728,7 @@ if [ $USER ]; then
  fi
 fi
 clear
+printf "\33c\e[3J\e[?25l"
 sleep $(($RANDOM%4+4))
 
 echoes "hello."
