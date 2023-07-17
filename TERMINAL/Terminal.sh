@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.07.16
+# Version 2023.07.17
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -2022,8 +2022,8 @@ experience () {
    ;;
   touch)
    prior=$touched
-   if [ $(($RANDOM%8)) -eq 0 ] && [ "$prior" != "${touches[0]}" ]; then
-    echoes "${touches[0]}"
+   if [ $(($RANDOM%8)) -eq 0 ] && [ "$prior" != "${touches[$((0+$indexing))]}" ]; then
+    echoes "${touches[$((0+$indexing))]}"
    else
     while [ "$prior" = "$touched" ]; do
      touched=${touches[$(($RANDOM%${#touches[@]}+$indexing))]}
