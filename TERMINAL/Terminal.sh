@@ -1176,11 +1176,12 @@ process () {
    process
    ;;
   doyouhaveafavoriteword|howaboutyourfavoriteword|whataboutyourfavoriteword|whatsyourfavoriteword|yourfavoriteword)
-   if [ $word ]; then
+   if [ $(($RANDOM%4)) -eq 0 ]; then
+    echoes "codex."
+   else
     echoes "code."
-    unset word
-    process
-   fi
+   fi 
+   process
    ;;
   doyouhaveafavoritemusician|doyouhaveafavoritepainter|doyouhaveafavoritepainting|doyouhaveafavoritesculptor|doyouhaveafavoritesculpture|doyouhaveafavoritesinger|howaboutyourfavoritepainting|howaboutyourfavoritesculpture|whataboutyourfavoritepainting|whataboutyourfavoritesculpture|whatsyourfavoritepainting|whatsyourfavoritesculpture|whosyourfavoritemusician|whosyourfavoritepainter|whosyourfavoritesculptor|whosyourfavoritesinger|yourfavoritepainting|yourfavoritesculpture)
    case $(($RANDOM%3)) in
@@ -2564,9 +2565,9 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers opsec oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics quest reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky smell smelled smells smoking soda song songs sorbet sound sounded sounds spaceship spacetime stories story storyteller slist sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland word words xerox year zig
+unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers opsec oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics quest reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky smell smelled smells smoking soda song songs sorbet sound sounded sounds spaceship spacetime stories story storyteller slist sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland words xerox year zig
 
-declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,sighted,sky,smell,smelled,smoking,soda,song,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,word,xerox,zig}=0
+declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,sighted,sky,smell,smelled,smoking,soda,song,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,xerox,zig}=0
 
 shell=#
 
