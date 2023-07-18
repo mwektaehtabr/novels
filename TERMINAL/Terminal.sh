@@ -193,11 +193,6 @@ echoes () {
  fi
 }
 
-blank () {
- clear
- printf "\ec\e[3J\e[?25l"
-}
-
 wrote () {
  if [ $2 ]; then
   case $reader in
@@ -2529,6 +2524,11 @@ flirt () {
    ;;
  esac
  process
+}
+
+blank () {
+ clear
+ printf "\ec\e[3J\e[?25l"
 }
 
 advent () {
