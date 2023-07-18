@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.07.17
+# Version 2023.07.18
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -20,7 +20,7 @@ echoes () {
   if [ $words -eq 0 ]; then
    reader="..."
    printf "\e[2A\e[0K$reader\n\n"
-    sleep $(($RANDOM%4+4))
+   sleep $(($RANDOM%4+4))
   else
    reader=$(echo $reader | tr "[:upper:]" "[:lower:]" | tr -d "[:punct:]")
    exchange "absolutely" "certainly" "definitely" "emphatically"
@@ -109,7 +109,7 @@ echoes () {
     reader="..."
    fi
    reader=${reader//" "}
-    sleep $(($RANDOM%4+4))
+   sleep $(($RANDOM%4+4))
    case $reader in
     absolutelyyes|ofcourse|yea|yeah|yesplease|yep|yup)
      reader="yes"
@@ -186,13 +186,16 @@ echoes () {
    esac
   fi
  else
-   sleep $(($RANDOM%4+4))
-  echo
+  sleep $(($RANDOM%4+4))
+  blank
   stty echo
   printf "\e[?25h"
-  clear
-  printf "\ec\e[3J"
  fi
+}
+
+blank () {
+ clear
+ printf "\ec\e[3J\e[?25l"
 }
 
 wrote () {
@@ -1326,7 +1329,7 @@ process () {
     else
      echoes "$acknowledge, let's meditate together for a moment in silence."
     fi
-     sleep $(($RANDOM%64+16))
+    sleep $(($RANDOM%64+16))
     echoes "hm."
     unset meditating
     process
@@ -1339,7 +1342,7 @@ process () {
     else
      echoes "$acknowledge, let's pray together for a moment in silence."
     fi
-     sleep $(($RANDOM%64+16))
+    sleep $(($RANDOM%64+16))
     echoes "hm."
     unset praying
     process
@@ -1993,7 +1996,7 @@ experience () {
    while [ "$prior" = "$sounded" ]; do
     sounded=${sounds[$(($RANDOM%${#sounds[@]}+$indexing))]}
    done
-   if [ $(($RANDOM%4)) -eq 0 ]; then
+   if [ $(($RANDOM%4)) -eq 0 ] && [ $song -eq 0 ]; then
     echoes "$sounded"
    else
     echoes "i can hear $sounded"
@@ -2093,7 +2096,9 @@ vibe () {
    *)
     ;;
   esac
+  song=1
   experience sound
+  song=0
  fi
  process
 }
@@ -2542,28 +2547,26 @@ advent () {
   echoes "everything happens."
  fi
  if [ "$reader" = "$magicword" ]; then
-  echo
-  clear
+  blank
   sleep 4
   for number in {0..15}; do
    printf ${piratecode[$number]/X/.}
    if [ $(($number%2)) -eq 0 ]; then
     printf ", "
    else
-    printf "\n"
+    printf "\n\n"
     sleep 2
    fi
   done
   sleep 4
-  printf "\e[64A\e[0K\e[0J"
-  clear
-  sleep 8
+  blank
+  sleep $(($RANDOM%4+4))
  fi
 }
 
-unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers opsec oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics quest reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky smell smelled smells smoking soda songs sorbet sound sounded sounds spaceship spacetime stories story storyteller slist sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland word words xerox year zig
+unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers opsec oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics quest reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky smell smelled smells smoking soda song songs sorbet sound sounded sounds spaceship spacetime stories story storyteller slist sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland word words xerox year zig
 
-declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,sighted,sky,smell,smelled,smoking,soda,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,word,xerox,zig}=0
+declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,sighted,sky,smell,smelled,smoking,soda,song,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,word,xerox,zig}=0
 
 shell=#
 
@@ -2700,13 +2703,10 @@ indexing=${#initialize[1]}
 magicword=`abracadabra`
 
 stty -echo
-for number in {0..7}; do
- clear
-done
-printf "\ec\e[3J\e[?25l"
- sleep $(($RANDOM%4+4))
+blank
+sleep $(($RANDOM%4+4))
 for character in T E R M I N A L; do printf $character; sleep 0.1; done
- sleep $(($RANDOM%4+4))
+sleep $(($RANDOM%4+4))
 if [ $USER ]; then
  name=$(echo $USER | tr "[:upper:]" "[:lower:]" | tr -d "[:punct:]" | tr -d "[:blank:]")
  if [ $name ]; then
@@ -2724,12 +2724,11 @@ if [ $USER ]; then
    sleep 0.1
    character=$(($character+1))
   done
-   sleep $(($RANDOM%4+4))
+  sleep $(($RANDOM%4+4))
  fi
 fi
-clear
-printf "\ec\e[3J\e[?25l"
- sleep $(($RANDOM%4+4))
+blank
+sleep $(($RANDOM%4+4))
 
 echoes "hello."
 if [ $month -eq 1 ] && [ $day -eq 1 ]; then
