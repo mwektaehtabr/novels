@@ -1971,7 +1971,7 @@ curiosity () {
 }
 
 glimpse () {
- if [ $(($RANDOM%4)) -eq 0 ]; then
+ if [ $(($RANDOM%4)) -eq 0 ] && [ ${#glimpses[@]} -gt 0 ]; then
   glimpsing=$(($RANDOM%${#glimpses[@]}+$indexing))
   echoes "${glimpses[$glimpsing]}"
   glimpsing=$(($glimpsing-$indexing))
