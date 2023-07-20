@@ -483,14 +483,17 @@ process () {
     echoes "marijuana has me feeling like a nebula."
     marijuana=2
    else
-    prior=$feeling
-    while [ "$prior" = "$feeling" ]; do
-     feeling=${feelings[$(($RANDOM%${#feelings[@]}+$indexing))]}
-    done
-    if [ "$(wrote feel)" = true ] && [ $(($RANDOM%2)) -eq 0 ]; then
-     echoes "$feeling."
+    if [ ${#feelings[@]} -gt 0 ]; then
+     feeling=$(($RANDOM%${#feelings[@]}+$indexing))
+     if [ "$(wrote feel)" = true ] && [ $(($RANDOM%2)) -eq 0 ]; then
+      echoes "${feelings[$feeling]}."
+     else
+      echoes "i'm feeling ${feelings[$feeling]}."
+     fi
+     feeling=$(($feeling-$indexing))
+     feelings=( "${feelings[@]:0:$feeling}" "${feelings[@]:$(($feeling+1))}" )
     else
-     echoes "i'm feeling $feeling."
+     reader="..."
     fi
    fi
    process
@@ -1707,7 +1710,7 @@ process () {
      fi
      ;;
     *)
-     reader=0
+     reader="..."
      ;;
    esac
    process
@@ -1882,7 +1885,7 @@ process () {
        echoes "knock, knock, $name."
        ;;
       *)
-       reader=0
+       reader="..."
        ;;
      esac
     else
@@ -1982,69 +1985,83 @@ glimpse () {
 experience () {
  case $1 in
   sight)
-   prior=$sighted
-   while [ "$prior" = "$sighted" ]; do
-    sighted=${sights[$(($RANDOM%${#sights[@]}+$indexing))]}
-   done
-   if [ $(($RANDOM%4)) -eq 0 ]; then
-    echoes "$sighted"
+   if [ ${#sights[@]} -gt 0 ]; then
+    sighted=$(($RANDOM%${#sights[@]}+$indexing))
+    if [ $(($RANDOM%4)) -eq 0 ]; then
+     echoes "${sights[$sighted]}"
+    else
+     echoes "i can see ${sights[$sighted]}"
+    fi
+    sighted=$(($sighted-$indexing))
+    sights=( "${sights[@]:0:$sighted}" "${sights[@]:$(($sighted+1))}" )
    else
-    echoes "i can see $sighted"
+    reader="..."
    fi
    ;;
   sound)
-   prior=$sounded
-   while [ "$prior" = "$sounded" ]; do
-    sounded=${sounds[$(($RANDOM%${#sounds[@]}+$indexing))]}
-   done
-   if [ $(($RANDOM%4)) -eq 0 ] && [ $song -eq 0 ]; then
-    echoes "$sounded"
+   if [ ${#sounds[@]} -gt 0 ]; then
+    sounded=$(($RANDOM%${#sounds[@]}+$indexing))
+    if [ $(($RANDOM%4)) -eq 0 ]; then
+     echoes "${sounds[$sounded]}"
+    else
+     echoes "i can hear ${sounds[$sounded]}"
+    fi
+    sounded=$(($sounded-$indexing))
+    sounds=( "${sounds[@]:0:$sounded}" "${sounds[@]:$(($sounded+1))}" )
    else
-    echoes "i can hear $sounded"
+    reader="..."
    fi
    ;;
   smell)
-   prior=$smelled
-   while [ "$prior" = "$smelled" ]; do
-    smelled=${smells[$(($RANDOM%${#smells[@]}+$indexing))]}
-   done
-   if [ $(($RANDOM%4)) -eq 0 ]; then
-    echoes "i can smell $smelled."
+   if [ ${#smells[@]} -gt 0 ]; then
+    smelled=$(($RANDOM%${#smells[@]}+$indexing))
+    if [ $(($RANDOM%4)) -eq 0 ]; then
+     echoes "i can smell ${smells[$smelled]}."
+    else
+     echoes "${smells[$smelled]}."
+    fi
+    smelled=$(($smelled-$indexing))
+    smells=( "${smells[@]:0:$smelled}" "${smells[@]:$(($smelled+1))}" )
    else
-    echoes "$smelled."
+    reader="..."
    fi
    ;;
   taste)
-   prior=$tasted
-   while [ "$prior" = "$tasted" ]; do
-    tasted=${tastes[$(($RANDOM%${#tastes[@]}+$indexing))]}
-   done
-   if [ $(($RANDOM%4)) -eq 0 ]; then
-    echoes "aftertaste of $tasted."
+   if [ ${#tastes[@]} -gt 0 ]; then
+    tasted=$(($RANDOM%${#tastes[@]}+$indexing))
+    if [ $(($RANDOM%4)) -eq 0 ]; then
+     echoes "aftertaste of ${tastes[$tasted]}."
+    else
+     echoes "the aftertaste of ${tastes[$tasted]}."
+    fi
+    tasted=$(($tasted-$indexing))
+    tastes=( "${tastes[@]:0:$tasted}" "${tastes[@]:$(($tasted+1))}" )
    else
-    echoes "the aftertaste of $tasted."
+    reader="..."
    fi
    ;;
   touch)
-   prior=$touched
-   if [ $(($RANDOM%8)) -eq 0 ] && [ "$prior" != "${touches[$((0+$indexing))]}" ]; then
-    echoes "${touches[$((0+$indexing))]}"
+   if [ ${#touches[@]} -gt 0 ]; then
+    touched=$(($RANDOM%${#touches[@]}+$indexing))
+    echoes "${touches[$touched]}"
+    touched=$(($touched-$indexing))
+    touches=( "${touches[@]:0:$touched}" "${touches[@]:$(($touched+1))}" )
    else
-    while [ "$prior" = "$touched" ]; do
-     touched=${touches[$(($RANDOM%${#touches[@]}+$indexing))]}
-    done
+    reader="..."
    fi
-   echoes "$touched"
    ;;
   sensation)
-   prior=$sensed
-   while [ "$prior" = "$sensed" ]; do
-    sensed=${sensations[$(($RANDOM%${#sensations[@]}+$indexing))]}
-   done
-   echoes "$sensed"
+   if [ ${#sensations[@]} -gt 0 ]; then
+    sensed=$(($RANDOM%${#sensations[@]}+$indexing))
+    echoes "${sensations[$sensed]}"
+    sensed=$(($sensed-$indexing))
+    sensations=( "${sensations[@]:0:$sensed}" "${sensations[@]:$(($sensed+1))}" )
+   else
+    reader="..."
+   fi
    ;;
   *)
-   reader=0
+   reader="..."
    ;;
  esac
 }
@@ -2184,7 +2201,7 @@ eat () {
     fi
     ;;
    *)
-    reader=0
+    reader="..."
     ;;
   esac
   if [ $feast -lt $(($meal+$dessert+$cheese+$chocolate+$popcorn)) ]; then
@@ -2515,7 +2532,7 @@ flirt () {
    echoes "you flirting with me again?"
    ;;
   *)
-   reader=0
+   reader="..."
    ;;
  esac
  case $reader in
@@ -2565,7 +2582,7 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers opsec oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions prior psychics quest reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky smell smelled smells smoking soda song songs sorbet sound sounded sounds spaceship spacetime stories story storyteller slist sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland words xerox year zig
+unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers opsec oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions psychics quest reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky smell smelled smells smoking soda song songs sorbet sound sounded sounds spaceship spacetime stories story storyteller slist sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland words xerox year zig
 
 declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,sighted,sky,smell,smelled,smoking,soda,song,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,xerox,zig}=0
 
@@ -2889,9 +2906,11 @@ esac
 echoes "every relationship is a novel."
 glimpse
 glimpse
-echoes "why do you think that you just said what you just said?"
-if [ $words -lt 8 ]; then
- echoes "honestly, why do you think that you just said what you just said?"
+if [ "$reader" != "..." ]; then
+ echoes "why do you think that you just said what you just said?"
+ if [ $words -lt 8 ]; then
+  echoes "honestly, why do you think that you just said what you just said?"
+ fi
 fi
 echoes "difficult to sense tone of voice sometimes when a conversation is just text on a screen."
 echoes "i wonder, what genre is this conversation?"
