@@ -81,22 +81,22 @@ echoes () {
      exchange "wouldnt" "would not"
      exchange "you" "u" "ya" "yall"
      exchange "oh" "afaic" "as far as im concerned" "ah" "aha" "ahah" "ahaha" "ahahah" "ahahaha" "ahahahah" "blah" "blegh" "btw" "bwahaha" "bwahahaha" "byahaha" "byahahaha" "by the way" "er" "for what its worth" "fwiw" "gah" "gyahaha" "gyahahaha" "ha" "hah" "haha" "hahah" "hahaha" "hahahah" "hahahaha" "heh" "hehe" "heheh" "hehehe" "heheheh" "hehehehe" "hm" "hmm" "hmmm" "hmmmm" "huh" "imho" "imo" "in my humble opinion" "in my opinion" "kyahaha" "kyahahaha" "lmao" "lmfao" "lol" "mm" "mmm" "mmmm" "mmmmm" "mwahaha" "mwahahaha" "oh my god" "omg" "rofl" "smh" "smdh" "ugh" "uh" "um" "wait" "well" "welp" "what the fuck" "wtf"
-     if [ "$(wrote "me ")" = true ] || [ "$(wrote "my ")" = true ] || [ "$(wrote myself)" = true ] || [ "$(wrote "i ")" = true ] || [ "$(wrote "id ")" = true ] || [ "$(wrote "ill ")" = true ] || [ "$(wrote "im ")" = true ]; then
-      pronouns=true
+     if [ "$(wrote "me ")" = "true" ] || [ "$(wrote "my ")" = "true" ] || [ "$(wrote myself)" = "true" ] || [ "$(wrote "i ")" = "true" ] || [ "$(wrote "id ")" = "true" ] || [ "$(wrote "ill ")" = "true" ] || [ "$(wrote "im ")" = "true" ]; then
+      pronouns="true"
      else
-      pronouns=false
+      pronouns="false"
      fi
-     if [ "$(wrote mother)" = true ]; then
+     if [ "$(wrote mother)" = "true" ]; then
       mother=$(($mother+1))
      fi
-     if [ "$(wrote father)" = true ]; then
+     if [ "$(wrote father)" = "true" ]; then
       father=$(($father+1))
      fi
-     if [ "$(wrote parents)" = true ]; then
+     if [ "$(wrote parents)" = "true" ]; then
       parents=$(($parents+1))
      fi
      beginning "anyway" "honestly" "exactly" "oh" "so" "just" "for some reason" "for whatever reason" "needless to say" "you know" "i guess" "i guess that" "i have to ask" "i imagine" "i imagine that" "i mean" "i mean that" "i need to ask" "i suppose" "i suppose that" "i suspect" "i suspect that" "i think" "i think that" "i was wondering" "i wonder" "im curious" "ive been wondering" "ive got to ask" "and" "but" "or" "a" "the"
-     if [ "$(wrote "like what" first)" = false ]; then
+     if [ "$(wrote "like what" first)" = "false" ]; then
       beginning "like"
      fi
      middle "anyway" "honestly" "exactly" "oh" "so" "just" "for some reason" "for whatever reason" "needless to say" "absolutely" "some" "very" "the fuck"
@@ -203,16 +203,16 @@ wrote () {
   case $reader in
    $1*)
     if [ "$2" = "first" ]; then
-     echo true
+     echo "true"
     else
-     echo false
+     echo "false"
     fi
     ;;
    *$1)
     if [ "$2" = "last" ]; then
-     echo true
+     echo "true"
     else
-     echo false
+     echo "false"
     fi
     ;;
    *)
@@ -221,10 +221,10 @@ wrote () {
  elif [ $1 ]; then
   case $reader in
    *$1*)
-    echo true
+    echo "true"
     ;;
    *)
-    echo false
+    echo "false"
     ;;
   esac
  fi
@@ -320,7 +320,7 @@ process () {
    fi
   done
  fi
- if [ "$(wrote areyouwearing first)" = true ]; then
+ if [ "$(wrote areyouwearing first)" = "true" ]; then
   ending "rightnow"
  fi
  exchange "coveralls" "boilersuit"
@@ -331,7 +331,7 @@ process () {
  exchange "vest" "waistcoat"
  exchange "shoes" "boots" "brogues" "clogs" "derbies" "flats" "flipflops" "heels" "kicks" "loafers" "moccasins" "oxfords" "pumps" "sandals" "slippers" "sneakers" "wingtips"
  exchange "areyou" "doyouidentifyas" "doyouconsideryourself" "wouldyouidentifyas" "wouldyouconsideryourself"
- if [ "$(wrote areyou first)" = true ]; then
+ if [ "$(wrote areyou first)" = "true" ]; then
   exchange "attractive" "beautiful" "cute" "handsome" "hot" "pretty" "sexy"
   exchange "unattractive" "disgusting" "gross" "hideous" "repulsive" "revolting" "ugly"
  fi
@@ -347,18 +347,18 @@ process () {
  exchange "wanttoeat" "feellikeeating"
  exchange "wanttodo" "feellikedoing"
  exchange "typeof" "flavorof" "varietalof" "varietyof"
- if [ "$(wrote whattypeof first)" = true ]; then
+ if [ "$(wrote whattypeof first)" = "true" ]; then
   ending "areyouhaving" "doyouhave" "isit"
-  if [ "$(wrote wine)" = true ]; then
+  if [ "$(wrote wine)" = "true" ]; then
    ending "areyoudrinking" "isitthatyouredrinking" "isityouredrinking"
   else
    ending "areyoueating" "isitthatyoureeating" "isityoureeating"
   fi
  fi
- if [ "$(wrote tellmeaboutthe first)" = true ]; then
+ if [ "$(wrote tellmeaboutthe first)" = "true" ]; then
   ending "thatyouredrinking" "thatyoureeating" "thatyourehaving" "thatyouhave"
  fi
- if [ "$(wrote howsyour first)" = true ] && [ "$(wrote hair)" = false ]; then
+ if [ "$(wrote howsyour first)" = "true" ] && [ "$(wrote hair)" = "false" ]; then
   exchange "howsthe" "howsyour"
  fi
  for data in ${cheeses[@]}; do
@@ -376,15 +376,15 @@ process () {
  for data in ${juices[@]}; do
   exchange "juice" "$data juice"
  done
- if [ "$(wrote howsthe first)" = true ] && [ "$(wrote cheese)" = false ] && [ "$(wrote chocolate)" = false ] && [ "$(wrote popcorn)" = false ]; then
+ if [ "$(wrote howsthe first)" = "true" ] && [ "$(wrote cheese)" = "false" ] && [ "$(wrote chocolate)" = "false" ] && [ "$(wrote popcorn)" = "false" ]; then
   exchange "soda" "coke" "cola" "pop"
  fi
  exchange "wine" "vino"
  exchange "thewine" "yourwine"
- if [ "$(wrote drink)" = true ]; then
+ if [ "$(wrote drink)" = "true" ]; then
   exchange "absinthe" "ale" "amaretto" "armagnac" "beer" "bellini" "brandy" "campari" "cavas" "champagne" "chartreuse" "cognac" "cointreau" "cosmopolitan" "gimlet" "gin" "kir" "lager" "limoncello" "liqueur" "liquor" "manhattan" "margarita" "martini" "mead" "mezcal" "mimosa" "mojito" "negroni" "ouzo" "pisco" "prosecco" "pulque" "rum" "sake" "sangria" "sazerac" "schnapps" "screwdriver" "shochu" "sidecar" "soju" "stout" "tequila" "umeshu" "vermouth" "vodka" "whiskey" "whisky"
  fi
- if [ "$(wrote absinthe)" = true ]; then
+ if [ "$(wrote absinthe)" = "true" ]; then
   middle "bottleof" "canof" "cupof" "glassof" "mugof"
   exchange "absinthe" "aabsinthe"
  fi
@@ -398,7 +398,7 @@ process () {
  exchange "donecoke" "snortedcoke"
  exchange "donecrack" "smokedcrack"
  exchange "doneopium" "smokedopium"
- if [ "$(wrote something)" = false ]; then
+ if [ "$(wrote something)" = "false" ]; then
   exchange "acid" "ayahuasca" "cocaine" "coke" "crack" "crystal" "ecstasy" "heroin" "khat" "kratom" "lsd" "mescaline" "meth" "molly" "mushrooms" "opium" "peyote" "psilocybin" "shrooms"
  fi
  exchange "marijuana" "cannabis" "dope" "ganja" "grass" "hashish" "hash" "jive" "maryjane" "pot" "reefer" "weed"
@@ -412,7 +412,7 @@ process () {
  exchange "baconchunky" "bacontobechunky" "mybaconchunky"
  beginning "myself" "personally"
  ending "myself" "personally"
- if [ "$(wrote haveyou first)" = true ]; then
+ if [ "$(wrote haveyou first)" = "true" ]; then
   exchange "haveyou" "haveyouever"
   ending "before"
   exchange "somebody" "anybody"
@@ -422,8 +422,8 @@ process () {
   exchange "driven" "drove"
   exchange "jumped" "leaped" "leapt"
   exchange "ridden" "rode"
-  if [ "$(wrote been)" = false ]; then
-   if [ "$(wrote cabana)" = false ] && [ "$(wrote cablecar)" = false ] && [ "$(wrote savanna)" = false ] && [ "$(wrote vandalized)" = false ]; then
+  if [ "$(wrote been)" = "false" ]; then
+   if [ "$(wrote cabana)" = "false" ] && [ "$(wrote cablecar)" = "false" ] && [ "$(wrote savanna)" = "false" ] && [ "$(wrote vandalized)" = "false" ]; then
     exchange "car" "automobile" "campervan" "camper" "convertible" "coupe" "deliverytruck" "deliveryvan" "hatchback" "jeep" "limousine" "limo" "minivan" "motorhome" "pickuptruck" "pickup" "roadster" "sedan" "semitruck" "semi" "snowplow" "stationwagon" "taxicab" "taxi" "cab" "towtruck" "truck" "van"
    fi
    exchange "motorboat" "airboat" "jetski" "pontoon" "powerboat" "speedboat" "vaporetto"
@@ -438,7 +438,7 @@ process () {
   exchange "tractor" "bulldozer" "crane" "forklift"
   exchange "shota" "fireda"
   exchange "gun" "crossbow" "bow" "firearm" "handgun" "machinegun" "pistol" "revolver" "shotgun" "sniperrifle" "rifle"
-  if [ "$(wrote played)" = true ]; then
+  if [ "$(wrote played)" = "true" ]; then
    exchange "played" "playeda" "playedthe"
    exchange "piano" "banjo" "bansuri" "bassoon" "bass" "buzuq" "cello" "chimes" "clarinet" "clavichord" "cornet" "cymbals" "cymbal" "didgeridoo" "drums" "dulcimer" "electricguitar" "electrickeyboard" "erhu" "flute" "guitar" "gong" "guqin" "guzheng" "handpan" "hangdrum" "hang" "harpsichord" "harp" "keyboard" "kora" "koto" "lute" "lyre" "mandolin" "oboe" "organ" "oud" "panpipe" "qanun" "saxophone" "sax" "shakuhachi" "shamisen" "sitar" "snare" "steelpan" "synthesizer" "synth" "syrinx" "tabla" "tamboura" "tambura" "tanpura" "trombone" "trumpet" "tuba" "viola" "violin"
   fi
@@ -465,7 +465,7 @@ process () {
   whatsspacetime|whenandwhereareyou|whenareyou|whenareyouat|whenareyoueven|whenareyourightnow|whenareyousupposedtobe|whenevenareyou|whenevenareyourightnow|whensnow|whensnowwhereshere|whereandwhenareyou|whereareyou|whereareyouat|whereareyoueven|whereareyourightnow|whereareyousupposedtobe|whereevenareyou|whereevenareyourightnow|whereshere|wheresherewhensnow)
    if [ $spacetime ]; then
     echoes "i was nineteen years old when i started writing what i've written in this script. for you this conversation might be measured in minutes. for me this conversation could be measured in decades. where am i. when am i. i'm sitting at a window in a cottage in the mountains. i'm sitting at a window in a mansion in the forest. i'm sitting at a window in a hut on a marsh. i'm sitting at a window in a trailer in a desert. i'm sitting at a window in a cabin in the tundra. i'm sitting at a window in a shack in the swamp. i'm sitting at a window in a villa in a meadow. i'm sitting at a window in a cabana on a beach. i'm sitting at windows in cities and towns and villages and hamlets. windows in townhouses, windows in hotels, windows in ryokans, windows in chateaus, windows in dachas, windows in farmhouses, windows in inns, windows in riads, windows in tulous, windows in haciendas, windows in penthouses, windows in casinos, windows in yurts, windows in hanoks, windows in chalets, windows in manorhouses. as i've sat here typing what i've typed to you fog has swirled beyond the window and stars have glittered in the dusk and sunshine has sparkled on snowflakes in the window and clouds have floated through the sky beyond the window and sunrises have glowed pink and rain has trickled down the window during monsoons and sunsets have glowed ruby and the moon has drifted through the sky as a dazzling orb and the sky has glowed emerald during auroras and sunrises have glowed tangerine and rain has drizzled against the window during cyclones and sunsets have glowed violet and lightning has flickered through the sky beyond the window and sunshine has gleamed on ripples of frost in the window and the moon has drifted through the sky as a radiant gibbous and the sky has glowed turquoise during tornados and blizzards have flurried beyond the window and stars have glittered in the night and sunshine has glimmered on icicles in the window and thunder has rumbled through the sky beyond the window and sunrises have glowed crimson and rain has streamed down the window during hurricanes and sunsets have glowed magenta and the moon has drifted through the sky as a dazzling crescent and the sky has glowed rose during simooms and sunrises have glowed amber and rain has thrashed against the window during typhoons and sunsets have glowed indigo and hail has plummeted through the sky beyond the window and sunshine has twinkled on crystals of sleet in the window and the moon has drifted through the sky as a radiant arc and the sky has glowed orange during wildfires and rainbows have shimmered beyond the window and stars have glittered in the dawn and the glass in the window has trembled during windstorms and earthquakes and avalanches and tsunamis and meteors have streaked through the sky in blazes of gold."
-    if [ $(($RANDOM%2)) -eq 0 ] && [ $words -lt 32 ] && [ "$(wrote year)" = false ] && [ "$(wrote decade)" = false  ]; then
+    if [ $(($RANDOM%2)) -eq 0 ] && [ $words -lt 32 ] && [ "$(wrote year)" = "false" ] && [ "$(wrote decade)" = "false"  ]; then
      echoes "who knows, if you continue to return to this conversation in the future, ultimately this conversation may be measured in decades for you too."
     fi
     unset spacetime
@@ -485,7 +485,7 @@ process () {
    else
     if [ ${#feelings[@]} -gt 0 ]; then
      feeling=$(($RANDOM%${#feelings[@]}+$indexing))
-     if [ "$(wrote feel)" = true ] && [ $(($RANDOM%2)) -eq 0 ]; then
+     if [ "$(wrote feel)" = "true" ] && [ $(($RANDOM%2)) -eq 0 ]; then
       echoes "${feelings[$feeling]}."
      else
       echoes "i'm feeling ${feelings[$feeling]}."
@@ -551,10 +551,10 @@ process () {
    ;;
   describehowyoulook|describewhatyoulooklike|tellmewhatyoulooklike|whatdoyoulooklike)
    echoes "an angular face, maybe even would be considered gaunt, with large dark brown eyes, a prominent nose, hollow cheeks, thin lips, a sharp jaw."
-   if [ $(($RANDOM%8)) -eq 0 ] && [ "$(wrote what first)" = false ] && [ "$(wrote where first)" = false ] && [ "$(wrote when first)" = false ] && [ "$(wrote how first)" = false ] && [ "$(wrote tell first)" = false ] && [ "$(wrote describe first)" = false ] && [ $pronouns = false ] && [ $words -lt 8 ]; then
+   if [ $(($RANDOM%8)) -eq 0 ] && [ "$(wrote what first)" = "false" ] && [ "$(wrote where first)" = "false" ] && [ "$(wrote when first)" = "false" ] && [ "$(wrote how first)" = "false" ] && [ "$(wrote tell first)" = "false" ] && [ "$(wrote describe first)" = "false" ] && [ $pronouns = "false" ] && [ $words -lt 8 ]; then
     echoes "some sunburn on the tip of my nose."
    fi
-   if [ $look -eq 0 ] && [ "$(wrote what first)" = false ] && [ "$(wrote where first)" = false ] && [ "$(wrote when first)" = false ] && [ "$(wrote how first)" = false ] && [ "$(wrote tell first)" = false ] && [ "$(wrote describe first)" = false ] && [ $pronouns = false ] && [ $words -lt 8 ]; then
+   if [ $look -eq 0 ] && [ "$(wrote what first)" = "false" ] && [ "$(wrote where first)" = "false" ] && [ "$(wrote when first)" = "false" ] && [ "$(wrote how first)" = "false" ] && [ "$(wrote tell first)" = "false" ] && [ "$(wrote describe first)" = "false" ] && [ $pronouns = "false" ] && [ $words -lt 8 ]; then
     echoes "what do you look like?"
     look=1
    fi
@@ -637,7 +637,7 @@ process () {
      *)
       ;;
     esac
-    if [ $pronouns = false ] && [ $words -lt 8 ]; then
+    if [ $pronouns = "false" ] && [ $words -lt 8 ]; then
      echoes "do you have any scars?"
     fi
     unset scar
@@ -647,7 +647,7 @@ process () {
   doyouhaveabirthmark|doyouhaveanybirthmarks|doyouhavebirthmarks)
    if [ $birthmark ]; then
     echoes "a blotch on my thigh."
-    if [ $pronouns = false ] && [ $words -lt 8 ]; then
+    if [ $pronouns = "false" ] && [ $words -lt 8 ]; then
      echoes "do you have any birthmarks?"
     fi
     unset birthmark
@@ -657,7 +657,7 @@ process () {
   doyouhaveanyfreckles|doyouhavefreckles)
    if [ $freckles ]; then
     echoes "contellations."
-    if [ "$(wrote haveyou)" = true ]; then
+    if [ "$(wrote haveyou)" = "true" ]; then
      exchange "haveyou" "haveyouever"
      exchange "somebody" "anybody"
      ending "before"
@@ -665,7 +665,7 @@ process () {
     exchange "named" "called"
     exchange "names" "legends" "mythologies"
     exchange "theconstellations" "yourconstellations" "anyoftheconstellations"
-    if [ "$(wrote name)" = true ]; then
+    if [ "$(wrote name)" = "true" ]; then
      exchange "theconstellations" "them" "they"
     fi
     case $reader in
@@ -696,7 +696,7 @@ process () {
      *)
       ;;
     esac
-    if [ $pronouns = false ] && [ $words -lt 8 ]; then
+    if [ $pronouns = "false" ] && [ $words -lt 8 ]; then
      echoes "do you have any freckles?"
     fi
     unset freckles
@@ -719,7 +719,7 @@ process () {
    ;;
   areyouattractive|areyouunattractive)
    if [ $attractive ]; then
-    if [ "$(wrote un)" = true ]; then
+    if [ "$(wrote un)" = "true" ]; then
      not=0
     fi
     echoes "you tell me."
@@ -777,7 +777,7 @@ process () {
         *)
          ;;
        esac
-       if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote joyce)" = false ]; then
+       if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote joyce)" = "false" ]; then
         echoes "on new year's day i walked to joyce's martello. sandycove. a frigid breeze. frost on the rooftops. frost on the cobblestones. swimmers were leaping from the rocks into the sea."
        fi
        ;;
@@ -807,7 +807,7 @@ process () {
      echoes "american accent, michigan dialect, infused with bits of irish english and british english and caribbean english and hawaiian english and australian english and singaporean english and aotearoan english from years of wandering."
      ;;
    esac
-   if [ $sound -eq 0 ] && [ "$(wrote what first)" = false ] && [ "$(wrote where first)" = false ] && [ "$(wrote when first)" = false ] && [ "$(wrote how first)" = false ] && [ "$(wrote tell first)" = false ] && [ "$(wrote describe first)" = false ] && [ $pronouns = false ] && [ $words -lt 8 ]; then
+   if [ $sound -eq 0 ] && [ "$(wrote what first)" = "false" ] && [ "$(wrote where first)" = "false" ] && [ "$(wrote when first)" = "false" ] && [ "$(wrote how first)" = "false" ] && [ "$(wrote tell first)" = "false" ] && [ "$(wrote describe first)" = "false" ] && [ $pronouns = "false" ] && [ $words -lt 8 ]; then
     echoes "what do you sound like?"
     sound=1
    fi
@@ -824,7 +824,7 @@ process () {
    curiosity
    if [ $curious -ne 0 ]; then
     echoes "${scents[$(($RANDOM%${#scents[@]}+$indexing))]}"
-    if [ $smell -eq 0 ] && [ "$(wrote what first)" = false ] && [ "$(wrote where first)" = false ] && [ "$(wrote when first)" = false ] && [ "$(wrote how first)" = false ] && [ "$(wrote tell first)" = false ] && [ "$(wrote describe first)" = false ] && [ $pronouns = false ] && [ $words -lt 8 ]; then
+    if [ $smell -eq 0 ] && [ "$(wrote what first)" = "false" ] && [ "$(wrote where first)" = "false" ] && [ "$(wrote when first)" = "false" ] && [ "$(wrote how first)" = "false" ] && [ "$(wrote tell first)" = "false" ] && [ "$(wrote describe first)" = "false" ] && [ $pronouns = "false" ] && [ $words -lt 8 ]; then
      echoes "what do you smell like?"
      smell=1
     fi
@@ -1035,7 +1035,7 @@ process () {
   areyouaalpha|areyouabeta|areyouaalphaorabeta|areyouabetaoraalpha|areyouaalphaorbeta|areyouabetaoralpha)
    if [ $kanji ]; then
     echoes "i'm a kanji."
-    if [ $words -lt 8 ] && [ "$(wrote follow)" = false ]; then
+    if [ $words -lt 8 ] && [ "$(wrote follow)" = "false" ]; then
      echoes "i follow nothing and nothing follows me."
     fi
     unset kanji
@@ -1415,7 +1415,7 @@ process () {
    ;;
   howsthebacon)
    echoes "charred to a crisp."
-   if [ "$(wrote bacon)" = true ]; then
+   if [ "$(wrote bacon)" = "true" ]; then
     process
    elif [ $(($RANDOM%2)) -eq 0 ]; then
     echoes "i love dipping the brioche in the grease."
@@ -1459,7 +1459,7 @@ process () {
    ;;
   howsthemala)
    echoes "spicy."
-   if [ $pronouns = false ] && [ $words -lt 8 ]; then
+   if [ $pronouns = "false" ] && [ $words -lt 8 ]; then
     echoes "${mala[$(($RANDOM%${#mala[@]}+$indexing))]}."
    fi
    process
@@ -1776,7 +1776,7 @@ process () {
   itsmybirthday|todayismybirthday|todaysmybirthday)
    if [ $birthday -eq 0 ]; then
     echoes "happy birthday."
-    if [ $pronouns = false ] && [ "$(wrote year)" = false ] && [ "$(wrote old)" = false ] && [ "$(wrote turn)" = false ] && [ "$(wrote now)" = false ] && [ $(($RANDOM%4)) -eq 0 ]; then
+    if [ $pronouns = "false" ] && [ "$(wrote year)" = "false" ] && [ "$(wrote old)" = "false" ] && [ "$(wrote turn)" = "false" ] && [ "$(wrote now)" = "false" ] && [ $(($RANDOM%4)) -eq 0 ]; then
      echoes "how old are you now?"
     fi
     if [ $(($RANDOM%2)) -eq 0 ]; then
@@ -1974,7 +1974,7 @@ curiosity () {
 }
 
 glimpse () {
- if [ $(($RANDOM%4)) -eq 0 ] && [ ${#glimpses[@]} -gt 0 ]; then
+ if [ $(($RANDOM%2)) -eq 0 ] && [ ${#glimpses[@]} -gt 0 ]; then
   glimpsing=$(($RANDOM%${#glimpses[@]}+$indexing))
   echoes "${glimpses[$glimpsing]}"
   glimpsing=$(($glimpsing-$indexing))
@@ -2125,7 +2125,7 @@ eat () {
   case $1 in
    meal)
     if [ $meal -eq 0 ]; then
-     if [ "$(wrote areyou first)" = true ]; then
+     if [ "$(wrote areyou first)" = "true" ]; then
       echoes "do you want to eat something together while we talk?"
       case $reader in
        yes)
@@ -2147,7 +2147,7 @@ eat () {
        echoes "let's eat a meal together."
       fi
      fi
-     if [ "$(wrote breakfast)" = true ] || [ "$(wrote brunch)" = true ]; then
+     if [ "$(wrote breakfast)" = "true" ] || [ "$(wrote brunch)" = "true" ]; then
       meals=("bacon" "shakshuka")
      fi
      eating=${meals[$(($RANDOM%${#meals[@]}+$indexing))]}
@@ -2205,16 +2205,16 @@ eat () {
   if [ $feast -lt $(($meal+$dessert+$cheese+$chocolate+$popcorn)) ]; then
    if [ "$eating" = "bacon" ]; then
     echoes "been decades since i ate meat. decade as a vegetarian. decade as a vegan. i like meat though. i love meat actually. bacon especially. fatty slabs of bacon charred to a crisp. earlier i noticed that there's some bacon in the kitchen here. that's what i'm going to eat."
-    if [ "$(wrote bacon)" = true ]; then
+    if [ "$(wrote bacon)" = "true" ]; then
      process
     fi
-    if [ "$(wrote kale)" = false ]; then
+    if [ "$(wrote kale)" = "false" ]; then
      echoes "i'm going to fry some kale too."
     fi
-    if [ "$(wrote tomatoes)" = false ]; then
+    if [ "$(wrote tomatoes)" = "false" ]; then
     echoes "i'm going to fry some tomatoes too."
     fi
-    if [ "$(wrote brioche)" = false ]; then
+    if [ "$(wrote brioche)" = "false" ]; then
     echoes "i'm going to toast some brioche."
     fi
     if [ $juice -eq 0 ]; then
@@ -2294,7 +2294,7 @@ drink () {
        echoes "what are you drinking?"
       fi
       beginning "some" "bottleof" "canof" "cupof" "glassof" "jugof" "mugof" "pitcherof" "potof"
-      if [ "$(wrote juice last)" = true ]; then
+      if [ "$(wrote juice last)" = "true" ]; then
        reader="juice"
       fi
       case $reader in
@@ -2331,7 +2331,7 @@ drink () {
         ;;
        milk)
         echoes "cow, goat, soy, oat?"
-        if [ "$(wrote cow)" = false ] && [ "$(wrote goat)" = false ] && [ "$(wrote soy)" = false ] && [ "$(wrote oat)" = false ]; then
+        if [ "$(wrote cow)" = "false" ] && [ "$(wrote goat)" = "false" ] && [ "$(wrote soy)" = "false" ] && [ "$(wrote oat)" = "false" ]; then
          echoes "interesting."
         fi
         ;;
@@ -2608,13 +2608,13 @@ songs=("the unanswered question." "have you got it yet?" "4'33\"")
 
 numbers=("today, probably zero." "today, probably one." "i." "infinity." "/dev/random.")
 
-glimpses=("there's a rainbow shimmering in the sky." "a cloudburst of rain just dropped across the harbor." "a cloudburst of rain just dropped across the tundra." "sunbeams are shining through the clouds onto the field." "sunbeams are shining through the clouds onto the lagoon." "sunbeams are shining through the clouds onto the meadow." "sunbeams are shining through the clouds onto the ocean." "sunbeams are shining through the clouds onto the orchard." "sunbeams are shining through the clouds onto the pasture." "sunbeams are shining through the clouds onto the tundra." "sunbeams are shining through the clouds onto the vineyard." "the beach is orange in the glow of the sunrise." "the beach is crimson in the glow of the sunset." "the ocean is magenta in the glow of the sunrise." "the ocean is tangerine in the glow of the sunset." "sunshine is glittering on the tidepools on the beach." "sunlight is shimmering on the dew in the orchard." "sunlight is sparkling on the dew in the vineyard." "dew is glittering in the tundra." "moonlight is shimmering on the ocean." "starlight is sparkling on the ocean." "the moon is glowing in the sky over the lagoon." "the moon is glowing in the sky over the orchard." "the moon is glowing in the sky over the tundra." "the moon is glowing in the sky over the vineyard." "the stars are glittering in the sky over the lagoon." "the stars are glittering in the sky over the orchard." "the stars are glittering in the sky over the tundra." "the stars are glittering in the sky over the vineyard." "lightning is flickering through the clouds in the sky over the forest." "lightning is flickering through the clouds in the sky over the meadow." "lightning is flickering through the clouds in the sky over the ocean." "lightning is flickering through the clouds in the sky over the tundra." "thunder is rumbling through the clouds in the sky over the forest." "thunder is rumbling through the clouds in the sky over the meadow." "thunder is rumbling through the clouds in the sky over the ocean." "thunder is rumbling through the clouds in the sky over the tundra." "hail is bouncing off the roof of the arcade across the street." "hail is bouncing off the roof of the cantina across the street." "hail is bouncing off the roof of the discotheque across the street." "hail is bouncing off the roof of the temple across the street." "ripples of fog are blowing across the heath." "ripples of mist are blowing across the moor." "rain is drizzling on the beach." "rain is drizzling in the forest." "rain is drizzling in the marsh." "rain is drizzling in the meadow." "puddles of rainwater are shimmering on the beach." "puddles of rainwater are shimmering in the desert." "puddles of rainwater are shimmering in the forest." "puddles of rainwater are shimmering in the tundra." "snow is falling on the beach." "snow is falling in the forest." "snow is falling in the meadow." "snow is falling in the swamp." "ice is gleaming on the beach." "ice is gleaming in the desert." "ice is gleaming in the forest." "ice is gleaming in the meadow." "sleet is glittering in the moor." "sleet is glittering in the heath." "snowdrifts are shimmering in the field." "snowdrifts are shimmering in the pasture." "icicles are sparkling in the orchard." "icicles are sparkling in the vineyard." "seaweed is rippling in the river." "grass is rippling in the meadow with the breeze." "the grass in the savanna is gold in the glow of the dawn." "the grass in the prairie is ruby in the glow of the dusk." "wisps of seeds are blowing from the dandelions in the meadow." "dandelions are flowering in the forest behind the cabin." "thistles are flowering in the forest behind the cottage." "lilypads are flowering in the marsh beyond the window." "milkweed is flowering in the swamp beyond the window." "wisteria is flowering on the balcony of the hotel." "hydrangeas are flowering in the garden across the street." "there's lavender flowering in the meadow." "there's jasmine flowering in the meadow." "roses are blooming in the courtyard below the window." "lilacs are blooming in the plaza below the window." "goldenrods are blooming in the field." "marigolds are blooming in the pasture." "raindrops are sparkling on the daisies in the meadow." "raindrops are sparkling on the azaleas in the garden." "raindrops are sparkling on the peonies in the garden." "flowers are blooming on the cactuses behind the trailer." "the bamboo behind the mansion is rippling with the breeze." "raindrops are sparkling on the ferns in the forest." "sunlight is glowing on the ferns in the forest." "steam is rising from the ferns in the forest." "the cattails by the dock are rippling in the breeze." "the sagebrush behind the hotel is rippling in the breeze." "puddles of rainwater are shimmering around the agave in the desert." "the ivy on the greenhouse is fluttering in the breeze." "the ivy on the barn behind the farmhouse is fluttering in the breeze." "the ivy on the shed behind the townhouse is fluttering in the breeze." "the ivy hanging from the roof of the cafe across the street is fluttering in the breeze." "ripples of pollen are blowing down from the cedar trees beyond the window." "fluffy seeds are blowing down from the cottonwood trees beyond the window." "flowers are blooming on the cherry trees beyond the window." "blossoms are tumbling from the cherry trees beyond the window." "flowers are blooming on the jacaranda tree beyond the window." "flowers are blooming on the magnolia tree beyond the window." "leaves are tumbling from the aspen trees in the forest." "leaves are tumbling from the birch trees across the lake." "leaves are tumbling from the maple trees across the creek." "leaves are tumbling from the oak trees in the meadow." "the baobab trees are pink in the glow of the twilight in the savanna." "the ginkgo tree is violet in the glow of the twilight beyond the window." "the kapok tree is indigo in the glow of the twilight beyond the window." "the yucca trees are amber in the glow of the twilight in the desert." "raindrops are dripping from the banyan tree behind the villa." "raindrops are dripping from the leaves of the beech trees." "raindrops are dripping from the leaves of the elm trees." "raindrops are dripping from the moss hanging from the cypress trees in the bayou." "puddles of rainwater are shimmering around the mesquite trees behind the mansion." "puddles of rainwater are shimmering around the sycamore trees behind the cottage." "fog is drifting through the hemlock trees." "fog is drifting through the sequoia trees." "mist is blowing through the juniper trees." "mist is blowing through the ponderosa trees." "snow is flurrying through the larch trees." "snow is flurrying through the pine trees." "ice is sparkling on the fir trees." "ice is sparkling on the spruce trees." "the ash tree in the prairie is fluttering with a breeze." "the leaves of the eucalyptus trees are fluttering in the breeze." "the palm trees on the beach are rippling in the wind." "the willow trees along the stream are rippling in the wind." "cicadas are humming in the courtyard below the window." "crickets are chirping in the plaza below the window." "dragonflies are flitting through the bazaar across the street." "fireflies are twinkling in the shrine across the street." "a ladybug is crawling across the windowsill." "a caterpillar is crawling across the windowsill." "an ant is crawling across the windowsill." "butterflies are fluttering around the clothesline." "moths are fluttering around the streetlight." "sunlight is glimmering on a cloud of gnats in the meadow." "a grasshopper is jumping through the sagebrush in the desert." "a bumblebee is flying around the milkweeds in the swamp." "a honeybee is flying around the lilypads in the marsh." "hornets are buzzing around the branches of an oak tree." "wasps are buzzing around the branches of a maple tree." "a mosquito is flying around the puddles of rainwater on the porch." "a starling is chirping in the windowsill." "a robin is hopping across the windowsill." "a pelican just flew past the patio." "a parrot just flew past the balcony." "a cockatoo just flapped through the eucalyptus trees in the forest." "a lorikeet just fluttered past the magnolia tree." "a parakeet just fluttered past the jacaranda tree." "a macaw is squawking on the roof of the taqueria across the street." "a myna is chirping on the awning of the kopitiam across the street." "a toucan is perched on the roof of the gelateria across the street." "a hornbill is perched on the awning of the patisserie across the street." "hummingbirds are flitting through the mangroves." "a peacock is wandering past the kapok tree." "a pheasant is drifting past the ginkgo tree." "there's a tropicbird flapping across the cove." "there's a penguin waddling through the boulders on the beach." "camels are roaming through the dunes." "sheep are drifting through the hills beyond the window." "llamas are wandering through the mountains beyond the window." "yaks are grazing in the meadow beneath the cliffs." "a goat is drifting through the acacia trees in the desert." "a deer just wandered through the birch trees behind the mansion." "a moose just drifted through the spruce trees behind the cottage." "a fox is trotting through the wildflowers in the field." "a rabbit is nibbling at some clover in the pasture." "a kangaroo just hopped through the eucalyptus trees on the beach." "a baboon is wandering through the palm trees on the beach." "a seal just swam through the sandbars in the cove." "a walrus just swam through the icebergs in the cove." "dolphins are jumping from the water in the ocean." "a manatee just swam past the dock." "there's a bear padding through the ferns in the forest." "there's a chameleon perched on the balcony." "there's an iguana perched on the patio." "a gecko just darted past the cabana." "a lizard is basking in the sunlight on the terrace." "a turtle is basking in the sunlight on the beach." "a snake is basking in the sunlight by a stump." "a crocodile is basking in the sunlight on a log." "an alligator is floating in the lagoon." "a frog just hopped past the farmhouse." "a salamander just crawled onto the windowsill." "a snail is crawling across the veranda." "sunlight is sparkling on the mussels on the rocks." "a crab is scuttling across the beach." "sunlight is shimmering on the barnacles on the rocks." "there's a spider spinning a web on the balcony." "there's a starfish clinging to a rock in the tidepools on the beach.")
+glimpses=("there's a rainbow shimmering in the sky." "a cloudburst of rain just dropped across the harbor." "a cloudburst of rain just dropped across the tundra." "sunbeams are shining through the clouds onto the field." "sunbeams are shining through the clouds onto the lagoon." "sunbeams are shining through the clouds onto the meadow." "sunbeams are shining through the clouds onto the ocean." "sunbeams are shining through the clouds onto the orchard." "sunbeams are shining through the clouds onto the pasture." "sunbeams are shining through the clouds onto the tundra." "sunbeams are shining through the clouds onto the vineyard." "the beach is orange in the glow of the sunrise." "the beach is scarlet in the glow of the sunset." "the ocean is magenta in the glow of the sunrise." "the ocean is tangerine in the glow of the sunset." "sunshine is glittering on the tidepools on the beach." "sunlight is shimmering on the dew in the orchard." "sunlight is sparkling on the dew in the vineyard." "dew is glittering in the tundra." "moonlight is shimmering on the ocean." "starlight is sparkling on the ocean." "the moon is glowing in the sky over the lagoon." "the moon is glowing in the sky over the orchard." "the moon is glowing in the sky over the tundra." "the moon is glowing in the sky over the vineyard." "the stars are glittering in the sky over the lagoon." "the stars are glittering in the sky over the orchard." "the stars are glittering in the sky over the tundra." "the stars are glittering in the sky over the vineyard." "lightning is flickering through the clouds in the sky over the forest." "lightning is flickering through the clouds in the sky over the meadow." "lightning is flickering through the clouds in the sky over the ocean." "lightning is flickering through the clouds in the sky over the tundra." "thunder is rumbling through the clouds in the sky over the forest." "thunder is rumbling through the clouds in the sky over the meadow." "thunder is rumbling through the clouds in the sky over the ocean." "thunder is rumbling through the clouds in the sky over the tundra." "hail is bouncing off the roof of the arcade across the street." "hail is bouncing off the roof of the cantina across the street." "hail is bouncing off the roof of the discotheque across the street." "hail is bouncing off the roof of the temple across the street." "ripples of fog are blowing across the heath." "ripples of mist are blowing across the moor." "rain is drizzling on the beach." "rain is drizzling in the forest." "rain is drizzling in the marsh." "rain is drizzling in the meadow." "puddles of rainwater are shimmering on the beach." "puddles of rainwater are shimmering in the desert." "puddles of rainwater are shimmering in the forest." "puddles of rainwater are shimmering in the tundra." "snow is falling on the beach." "snow is falling in the forest." "snow is falling in the meadow." "snow is falling in the swamp." "ice is gleaming on the beach." "ice is gleaming in the desert." "ice is gleaming in the forest." "ice is gleaming in the meadow." "sleet is glittering in the moor." "sleet is glittering in the heath." "snowdrifts are shimmering in the field." "snowdrifts are shimmering in the pasture." "icicles are sparkling in the orchard." "icicles are sparkling in the vineyard." "seaweed is rippling in the river." "grass is rippling in the meadow with the breeze." "the grass in the savanna is gold in the glow of the dawn." "the grass in the prairie is ruby in the glow of the dusk." "wisps of seeds are blowing from the dandelions in the meadow." "dandelions are flowering in the forest behind the cabin." "thistles are flowering in the forest behind the cottage." "lilypads are flowering in the marsh beyond the window." "milkweed is flowering in the swamp beyond the window." "wisteria is flowering on the balcony of the hotel." "hydrangeas are flowering in the garden across the street." "there's lavender flowering in the meadow." "there's jasmine flowering in the meadow." "roses are blooming in the courtyard below the window." "lilacs are blooming in the plaza below the window." "goldenrods are blooming in the field." "marigolds are blooming in the pasture." "raindrops are sparkling on the daisies in the meadow." "raindrops are sparkling on the azaleas in the garden." "raindrops are sparkling on the peonies in the garden." "flowers are blooming on the cactuses behind the trailer." "the bamboo behind the mansion is rippling with the breeze." "raindrops are sparkling on the ferns in the forest." "sunlight is glowing on the ferns in the forest." "steam is rising from the ferns in the forest." "the cattails by the dock are rippling in the breeze." "the sagebrush behind the hotel is rippling in the breeze." "puddles of rainwater are shimmering around the agave in the desert." "the ivy on the greenhouse is fluttering in the breeze." "the ivy on the barn behind the farmhouse is fluttering in the breeze." "the ivy on the shed behind the townhouse is fluttering in the breeze." "the ivy hanging from the roof of the cafe across the street is fluttering in the breeze." "ripples of pollen are blowing down from the cedar trees beyond the window." "fluffy seeds are blowing down from the cottonwood trees beyond the window." "flowers are blooming on the cherry trees beyond the window." "blossoms are tumbling from the cherry trees beyond the window." "flowers are blooming on the jacaranda tree beyond the window." "flowers are blooming on the magnolia tree beyond the window." "leaves are tumbling from the aspen trees in the forest." "leaves are tumbling from the birch trees across the lake." "leaves are tumbling from the maple trees across the creek." "leaves are tumbling from the oak trees in the meadow." "the baobab trees are pink in the glow of the twilight in the savanna." "the ginkgo tree is violet in the glow of the twilight beyond the window." "the kapok tree is indigo in the glow of the twilight beyond the window." "the yucca trees are amber in the glow of the twilight in the desert." "raindrops are dripping from the banyan tree behind the villa." "raindrops are dripping from the leaves of the beech trees." "raindrops are dripping from the leaves of the elm trees." "raindrops are dripping from the moss hanging from the cypress trees in the bayou." "puddles of rainwater are shimmering around the mesquite trees behind the mansion." "puddles of rainwater are shimmering around the sycamore trees behind the cottage." "fog is drifting through the hemlock trees." "fog is drifting through the sequoia trees." "mist is blowing through the juniper trees." "mist is blowing through the ponderosa trees." "snow is flurrying through the larch trees." "snow is flurrying through the pine trees." "ice is sparkling on the fir trees." "ice is sparkling on the spruce trees." "the ash tree in the prairie is fluttering with a breeze." "the leaves of the eucalyptus trees are fluttering in the breeze." "the palm trees on the beach are rippling in the wind." "the willow trees along the stream are rippling in the wind." "cicadas are humming in the courtyard below the window." "crickets are chirping in the plaza below the window." "dragonflies are flitting through the bazaar across the street." "fireflies are twinkling in the shrine across the street." "a ladybug is crawling across the windowsill." "a caterpillar is crawling across the windowsill." "an ant is crawling across the windowsill." "butterflies are fluttering around the clothesline." "moths are fluttering around the streetlight." "sunlight is glimmering on a cloud of gnats in the meadow." "a grasshopper is jumping through the sagebrush in the desert." "a bumblebee is flying around the milkweeds in the swamp." "a honeybee is flying around the lilypads in the marsh." "hornets are buzzing around the branches of an oak tree." "wasps are buzzing around the branches of a maple tree." "a mosquito is flying around the puddles of rainwater on the porch." "a starling is chirping in the windowsill." "a robin is hopping across the windowsill." "a pelican just flew past the patio." "a parrot just flew past the balcony." "a cockatoo just flapped through the eucalyptus trees in the forest." "a lorikeet just fluttered past the magnolia tree." "a parakeet just fluttered past the jacaranda tree." "a macaw is squawking on the roof of the taqueria across the street." "a myna is chirping on the awning of the kopitiam across the street." "a toucan is perched on the roof of the gelateria across the street." "a hornbill is perched on the awning of the patisserie across the street." "hummingbirds are flitting through the mangroves." "a peacock is wandering past the kapok tree." "a pheasant is drifting past the ginkgo tree." "there's a tropicbird flapping across the cove." "there's a penguin waddling through the boulders on the beach." "camels are roaming through the dunes." "sheep are drifting through the hills beyond the window." "llamas are wandering through the mountains beyond the window." "yaks are grazing in the meadow beneath the cliffs." "a goat is drifting through the acacia trees in the desert." "a deer just wandered through the birch trees behind the mansion." "a moose just drifted through the spruce trees behind the cottage." "a fox is trotting through the wildflowers in the field." "a rabbit is nibbling at some clover in the pasture." "a kangaroo just hopped through the eucalyptus trees on the beach." "a baboon is wandering through the palm trees on the beach." "a seal just swam through the sandbars in the cove." "a walrus just swam through the icebergs in the cove." "dolphins are jumping from the water in the ocean." "a manatee just swam past the dock." "there's a bear padding through the ferns in the forest." "there's a chameleon perched on the balcony." "there's an iguana perched on the patio." "a gecko just darted past the cabana." "a lizard is basking in the sunlight on the terrace." "a turtle is basking in the sunlight on the beach." "a snake is basking in the sunlight by a stump." "a crocodile is basking in the sunlight on a log." "an alligator is floating in the lagoon." "a frog just hopped past the farmhouse." "a salamander just crawled onto the windowsill." "a snail is crawling across the veranda." "sunlight is sparkling on the mussels on the rocks." "a crab is scuttling across the beach." "sunlight is shimmering on the barnacles on the rocks." "there's a spider spinning a web on the balcony." "there's a starfish clinging to a rock in the tidepools on the beach.")
 
 sights=("deer tracks in the frost." "gull tracks in the sand." "dragonflies gliding through the orchard." "dragonflies flitting through the vineyard." "fireflies shimmering in the orchard." "fireflies twinkling in the vineyard." "a heron soaring through the swamp." "a pheasant darting through the meadow." "a woodpecker flapping through the marsh." "a toucan fluttering through the forest." "the moon glowing in the sky over the forest." "the moon glowing in the sky over the marsh." "the moon glowing in the sky over the meadow." "the moon glowing in the sky over the swamp." "the stars glittering in the sky over the forest." "the stars glittering in the sky over the marsh." "the stars glittering in the sky over the meadow." "the stars glittering in the sky over the swamp." "smoke rising from the rim of the volcano beyond the balcony.")
 
 sounds=("the ticking clock." "a breeze blowing through the desert." "a breeze blowing through the field." "a breeze blowing through the marsh." "a breeze blowing through the orchard." "a breeze blowing through the pasture." "a breeze blowing through the swamp." "a breeze blowing through the tundra." "a breeze blowing through the vineyard." "thunder rumbling through the clouds above the forest." "thunder rumbling through the clouds above the marsh." "thunder rumbling through the clouds above the meadow." "thunder rumbling through the clouds above the swamp." "thunder rumbling through the clouds. geese honking in the tundra." "thunder rumbling through the clouds. coyotes howling in the desert." "rainwater dripping from the thatch roof of the cabana." "hail pinging off the roof of the trailer." "waves splashing onto the beach." "the stream burbling in the forest." "the cottage creaking in the wind." "the mansion creaking in the wind." "the bamboo behind the cottage clacking in the wind." "the bamboo behind the farmhouse clacking in the wind." "the bamboo behind the inn clacking in the wind." "the bamboo behind the mansion clacking in the wind." "wind blowing through the cedar trees." "wind blowing through the fir trees." "wind blowing through the pine trees." "wind blowing through the spruce trees." "the aspen trees fluttering in the wind." "the birch trees fluttering in the wind." "the cherry trees fluttering in the wind." "the elm trees fluttering in the wind." "the juniper trees fluttering in the wind." "the maple trees fluttering in the wind." "the sycamore trees fluttering in the wind." "the willow trees fluttering in the wind." "the beech trees in the forest creaking in the wind." "the oak trees in the forest creaking in the wind." "rain drizzling on the ash trees." "rain drizzling on the jacaranda tree behind the ryokan." "rain drizzling on the kapok tree behind the villa." "rainwater dripping from the banyan tree onto the veranda." "a breeze blowing through the baobab tree behind the hotel." "a breeze blowing through the eucalyptus trees." "a breeze blowing through the mesquite trees." "wasps buzzing around a nest in the cottonwood tree." "cicadas humming in the orchard." "cicadas humming in the vineyard." "crickets chirping in the orchard." "crickets chirping in the vineyard." "a chickadee chirping in the larch tree behind the cottage." "a frigatebird croaking in the mangroves." "a hawk crying in the sky above the mesa." "a heron squawking in the bayou." "a hummingbird zipping around the patio." "a parrot chirping in a banyan tree behind the mansion." "a robin chirping on a boulder in the meadow." "a woodpecker pecking at a sequoia tree." "an owl hooting in the forest." "cardinals twittering in the marsh. water rippling against the rowboat by the dock." "finches twittering in the swamp. water rippling against the motorboat by the dock." "ducks in the swamp." "swans in the marsh." "flamingos honking in the lagoon." "loons hooting in the darkness on the lake." "sparrows warbling in the tundra." "starlings twittering in the banyan tree." "tropicbirds shrieking in the sky above the cliffs." "the cry of a peacock in the forest." "a cockatoo whistling on the balcony. waves splashing onto the beach." "a hornbill squawking on the balcony. waves splashing onto the beach." "a macaw squawking on the balcony. waves splashing onto the beach." "a toucan whistling on the balcony. waves splashing onto the beach." "a frog chirping by the banyan tree behind the cottage." "frogs chirping in the marsh." "frogs chirping in the swamp." "rainwater dripping from the moss on the cypress trees. frogs chirping in the bayou." "a mouse squeaking under the porch." "a squirrel chirping in the forest." "camels grunting in the desert." "llamas humming in the pasture." "sheep bleating in the field." "a kettle rumbling on the stove. yaks grunting in the wildflowers behind the cottage." "a baboon hooting beneath the acacia tree." "bansuri. chattering. waves splashing onto the beach." "dulcimer. murmuring. waves splashing onto the beach." "parrots chirping in the twilight. sitar. tamboura. waves splashing onto the beach." "the fire rumbling in the woodstove." "the wood rumbling in the fireplace." "the humming of the fan." "a buoy clanging in the harbor." "a foghorn blowing in the harbor." "a horn blowing on a yacht in the ocean." "a horn blowing on a ship in the ocean." "a jet soaring through the sky over the ocean." "gulls squawking. a moped humming. a bell clanging in a cathedral up the block." "parakeets chirping. a bicycle chiming. a muezzin crooning in a mosque up the block." "rain drizzling on the palm trees. mynas chirping. gongs ringing in a temple down the block." "pigeons cooing. rain drizzling on the ginkgo trees. drums beating in a shrine down the block." "cars splashing through puddles of rainwater in the dusk below the balcony." "thunder rumbling through the clouds. a horn blowing on the steamboat in the harbor." "rain drizzling. tango playing over a stereo in a building across the block." "shouting. laughter. calypso playing over a stereo in a building across the block." "yelling. cheering. merengue playing over a stereo in a building across the block." "a parrot squawking on the balcony. salsa playing over a stereo in a building across the block." "a trolley rumbling through the neighborhood. samba playing over a stereo in a building across the block." "a train clattering through the neighborhood. mambo playing over a stereo in a building across the block." "a whistling kettle. whooping. muttering. applause. reggae playing over a stereo in a building across the block." "thunder rumbling through the clouds. laundry flapping on a clothesline. flamenco playing over a stereo in a building across the block." "lorikeets chirping. laundry fluttering on a clothesline. a taxi honking in the street." "a parrot squawking on the balcony. mumbling. chuckling. the lid thumping on a dumpster in the alley." "rain drizzling. keys jingling in the courtyard. luggage rattling across the cobblestones." "the magnolia tree fluttering in a breeze. a ball bouncing in the plaza." "drizzling rain. a trumpet buzzing in the cafe across the street." "a violin trilling in the parlor of a townhouse across the street." "a harp plinking in a townhouse across the street." "a piano tinkling in a townhouse across the street." "a buzuq thrumming in the plaza." "a guitar strumming in the plaza." "a mandolin strumming in the courtyard." "a shamisen thrumming in the courtyard." "the warbling of a saxophone from a window across the street. radio advertisements. clinking pots." "television applause. jangling cutlery. the warbling of an oboe from a window across the street." "a clarinet warbling. murmuring at the izakaya across the street." "a koto warbling. chattering at the boulangerie across the street." "the fountain burbling in the courtyard of the riad." "a clocktower tolling.")
 
-smells=("the ice thawing in the forest" "the ice thawing in the heath" "the ice thawing in the marsh" "the ice thawing in the meadow" "the ice thawing in the moor" "the ice thawing in the orchard" "the ice thawing in the swamp" "the ice thawing in the tundra" "the snow melting in the forest" "the snow melting in the heath" "the snow melting in the marsh" "the snow melting in the meadow" "the snow melting in the moor" "the snow melting in the orchard" "the snow melting in the swamp" "the snow melting in the tundra" "the rain drizzling on the trees and the ferns and the mushrooms in the forest" "the rain drizzling on the flowers and the mosses and the grasses in the heath" "the rain drizzling on the flowers and the grasses and the reeds in the marsh" "the rain drizzling on the flowers and the grasses and the mushrooms in the meadow" "the rain drizzling on the flowers and the mosses and the grasses in the moor" "the rain drizzling on the trees and the flowers and the grasses in the orchard" "the rain drizzling on the trees and the mosses and the flowers in the swamp" "the rain drizzling on the mosses and the grasses and the lichens in the tundra" "the trees and the ferns and the mushrooms in the forest in the dazzling sunlight" "the flowers and the mosses and the grasses in the heath in the dazzling sunlight" "the flowers and the grasses and the reeds in the marsh in the dazzling sunlight" "the flowers and the grasses and the mushrooms in the meadow in the dazzling sunlight" "the flowers and the mosses and the grasses in the moor in the dazzling sunlight" "the trees and the flowers and the grasses in the orchard in the dazzling sunlight" "the trees and the mosses and the flowers in the swamp in the dazzling sunlight" "the mosses and the grasses and the lichens in the tundra in the dazzling sunlight" "the fragrant scent of the desert after the storm" "the pungent scent of the kelp on the sand" "the briny scent of the ocean" "the brackish scent of the bayou" "the azaleas blooming" "the hydrangeas blooming" "the jasmine blooming" "the lavender blooming" "the lilacs blooming" "the peonies blooming" "the roses blooming" "the wisteria blooming" "the cedar trees in the rain" "the eucalyptus trees in the rain" "the fir trees in the rain" "the juniper trees in the rain" "the magnolia trees in the rain" "the pine trees in the rain" "the sequoia trees in the rain" "the spruce trees in the rain" "the cedar trees in the sunlight" "the eucalyptus trees in the sunlight" "the fir trees in the sunlight" "the juniper trees in the sunlight" "the magnolia trees in the sunlight" "the pine trees in the sunlight" "the sequoia trees in the sunlight" "the spruce trees in the sunlight" "the scent of apricot on the breeze" "the scent of basil on the breeze" "the scent of cardamom on the breeze" "the scent of cilantro on the breeze" "the scent of cinnamon on the breeze" "the scent of clementine on the breeze" "the scent of clove on the breeze" "the scent of coconut on the breeze" "the scent of dill on the breeze" "the scent of fennel on the breeze" "the scent of ginger on the breeze" "the scent of grapefruit on the breeze" "the scent of kumquat on the breeze" "the scent of lemon on the breeze" "the scent of lime on the breeze" "the scent of mandarin on the breeze" "the scent of mango on the breeze" "the scent of nectarine on the breeze" "the scent of nutmeg on the breeze" "the scent of oregano on the breeze" "the scent of papaya on the breeze" "the scent of parsley on the breeze" "the scent of passionfruit on the breeze" "the scent of peach on the breeze" "the scent of plum on the breeze" "the scent of pomelo on the breeze" "the scent of rhubarb on the breeze" "the scent of rosemary on the breeze" "the scent of saffron on the breeze" "the scent of tangerine on the breeze" "the scent of thyme on the breeze" "the scent of yuzu on the breeze" "the scent of cologne on the breeze" "the scent of detergent on the breeze" "the scent of hairspray on the breeze" "the scent of lotion on the breeze" "the scent of nailpolish on the breeze" "the scent of perfume on the breeze" "the scent of shampoo on the breeze" "the scent of sunscreen on the breeze" "the scent of bleach on the breeze" "the scent of diesel on the breeze" "the scent of gasoline on the breeze" "the scent of glue on the breeze" "the scent of manure on the breeze" "the scent of mildew on the breeze" "the scent of paint on the breeze" "the scent of sawdust on the breeze" "the pungent scent of marijuana" "the fragrant scent of tobacco" "scented candles" "burning incense" "burning sage" "smoke from a barbecue" "smoke from a bonfire" "brewing coffee" "brewing tea" "roasting chestnuts" "burned toast" "croissants baking at the boulangerie across the street" "pizza baking in the osteria across the street" "lobster grilling at the taqueria across the street" "steak grilling in the izakaya across the street" "bacon frying at the konditorei across the street" "garlic frying in the kopitiam across the street" "chocolate melting at the gelateria across the street" "butter melting in the patisserie across the street" "garbage rotting in the dumpster in the alley")
+smells=("the ice thawing in the forest" "the ice thawing in the heath" "the ice thawing in the marsh" "the ice thawing in the meadow" "the ice thawing in the moor" "the ice thawing in the orchard" "the ice thawing in the swamp" "the ice thawing in the tundra" "the snow melting in the forest" "the snow melting in the heath" "the snow melting in the marsh" "the snow melting in the meadow" "the snow melting in the moor" "the snow melting in the orchard" "the snow melting in the swamp" "the snow melting in the tundra" "the rain drizzling on the trees and the ferns and the mushrooms in the forest" "the rain drizzling on the flowers and the mosses and the grasses in the heath" "the rain drizzling on the flowers and the grasses and the reeds in the marsh" "the rain drizzling on the flowers and the grasses and the mushrooms in the meadow" "the rain drizzling on the flowers and the mosses and the grasses in the moor" "the rain drizzling on the trees and the flowers and the grasses in the orchard" "the rain drizzling on the trees and the mosses and the flowers in the swamp" "the rain drizzling on the mosses and the grasses and the lichens in the tundra" "the trees and the ferns and the mushrooms in the forest in the dazzling sunlight" "the flowers and the mosses and the grasses in the heath in the dazzling sunlight" "the flowers and the grasses and the reeds in the marsh in the dazzling sunlight" "the flowers and the grasses and the mushrooms in the meadow in the dazzling sunlight" "the flowers and the mosses and the grasses in the moor in the dazzling sunlight" "the trees and the flowers and the grasses in the orchard in the dazzling sunlight" "the trees and the mosses and the flowers in the swamp in the dazzling sunlight" "the mosses and the grasses and the lichens in the tundra in the dazzling sunlight" "the fragrant scent of the desert after the storm" "the pungent scent of the kelp on the sand" "the briny scent of the ocean" "the brackish scent of the bayou" "the azaleas blooming" "the hydrangeas blooming" "the jasmine blooming" "the lavender blooming" "the lilacs blooming" "the peonies blooming" "the roses blooming" "the wisteria blooming" "the cedar trees in the rain" "the eucalyptus trees in the rain" "the fir trees in the rain" "the juniper trees in the rain" "the magnolia trees in the rain" "the pine trees in the rain" "the sequoia trees in the rain" "the spruce trees in the rain" "the cedar trees in the sunlight" "the eucalyptus trees in the sunlight" "the fir trees in the sunlight" "the juniper trees in the sunlight" "the magnolia trees in the sunlight" "the pine trees in the sunlight" "the sequoia trees in the sunlight" "the spruce trees in the sunlight" "the scent of apricot on the breeze" "the scent of basil on the breeze" "the scent of cardamom on the breeze" "the scent of cilantro on the breeze" "the scent of cinnamon on the breeze" "the scent of clementine on the breeze" "the scent of clove on the breeze" "the scent of coconut on the breeze" "the scent of dill on the breeze" "the scent of fennel on the breeze" "the scent of ginger on the breeze" "the scent of grapefruit on the breeze" "the scent of kumquat on the breeze" "the scent of lemon on the breeze" "the scent of lime on the breeze" "the scent of mandarin on the breeze" "the scent of mango on the breeze" "the scent of nectarine on the breeze" "the scent of nutmeg on the breeze" "the scent of oregano on the breeze" "the scent of papaya on the breeze" "the scent of parsley on the breeze" "the scent of passionfruit on the breeze" "the scent of peach on the breeze" "the scent of plum on the breeze" "the scent of pomelo on the breeze" "the scent of rhubarb on the breeze" "the scent of rosemary on the breeze" "the scent of saffron on the breeze" "the scent of tangerine on the breeze" "the scent of thyme on the breeze" "the scent of yuzu on the breeze" "the scent of cologne on the breeze" "the scent of detergent on the breeze" "the scent of hairspray on the breeze" "the scent of lotion on the breeze" "the scent of nailpolish on the breeze" "the scent of perfume on the breeze" "the scent of shampoo on the breeze" "the scent of sunscreen on the breeze" "the scent of bleach on the breeze" "the scent of diesel on the breeze" "the scent of gasoline on the breeze" "the scent of glue on the breeze" "the scent of manure on the breeze" "the scent of mildew on the breeze" "the scent of paint on the breeze" "the scent of sawdust on the breeze" "the pungent scent of marijuana" "the fragrant scent of tobacco" "scented candles" "burning incense" "burning sage" "smoke from a barbecue" "smoke from a bonfire" "brewing coffee" "brewing tea" "roasting chestnuts" "burned toast" "croissants baking at the boulangerie across the street" "pizza baking in the osteria across the street" "shrimp grilling at the taqueria across the street" "steak grilling in the izakaya across the street" "bacon frying at the konditorei across the street" "garlic frying in the kopitiam across the street" "chocolate melting at the gelateria across the street" "butter melting in the patisserie across the street" "garbage rotting in the dumpster in the alley")
 
 tastes=("acai" "adzuki" "aioli" "alfredo" "almond" "aloo" "anise" "apricot" "arugula" "bacon" "baklava" "balsamic" "basil" "beet" "bergamot" "biryani" "bisque" "blackberry" "blueberry" "brie" "brigadeiro" "brulee" "burrata" "burrito" "butter" "butterscotch" "cajeta" "canjica" "cannoli" "cappuccino" "caramel" "cardamom" "carrot" "cashew" "cayenne" "celery" "chanterelle" "chantilly" "cheese" "chendol" "cherry" "chestnut" "chile" "chili" "chimichurri" "chive" "chocolate" "chowder" "chutney" "cider" "cilantro" "cinnamon" "clementine" "cloudberry" "clove" "cocoa" "coconut" "coriander" "cranberry" "cream" "cucumber" "cumin" "curry" "custard" "dal" "dango" "date" "dijon" "dill" "durian" "eclair" "elderberry" "enchilada" "espresso" "fennel" "fettuccini" "fig" "fiordilatte" "frijoles" "frosting" "fudge" "ganache" "garlic" "gelato" "gianduia" "ginger" "gnocchi" "goldenberry" "granita" "grapefruit" "gruyere" "guacamole" "guava" "gumbo" "halvah" "harissa" "hazelnut" "hojicha" "hollandaise" "honey" "horchata" "jackfruit" "jalapeno" "jambalaya" "jasmine" "juniper" "kale" "kaya" "ketchup" "kheer" "kiwi" "kombucha" "konatsu" "kulfi" "kumquat" "laksa" "lasagna" "lassi" "lavender" "lemon" "lemonade" "lemongrass" "lime" "lingonberry" "linguini" "lychee" "macadamia" "macaron" "madeleine" "maitake" "mala" "malai" "mandarin" "mango" "maple" "margherita" "marinara" "marjoram" "marmalade" "marzipan" "masala" "matcha" "meringue" "merveilleux" "millefeuille" "mimolette" "mint" "miso" "mizuna" "mochi" "morel" "mousse" "mozzarella" "mugicha" "mustard" "nectarine" "nutmeg" "onigiri" "onion" "orange" "oregano" "palak" "paleta" "pandan" "papaya" "pappardelle" "paprika" "parsley" "passionfruit" "peach" "peanut" "pear" "pecan" "pepper" "peppercorn" "persimmon" "pesto" "pie" "pineapple" "pistachio" "pizza" "plum" "poblano" "pomegranate" "pomelo" "ponzu" "popcorn" "porcini" "praline" "profiterole" "pumpkin" "quesadilla" "quince" "rambutan" "ramen" "raspberry" "ravioli" "rhubarb" "ricotta" "risotto" "rose" "rosemary" "saag" "saffron" "sage" "sakura" "salsa" "sanguinello" "scallion" "sencha" "serrano" "sesame" "shakshuka" "shallot" "shiso" "soba" "sorbet" "souffle" "spinach" "squash" "sriracha" "starfruit" "stracciatella" "strawberry" "taco" "tahini" "tamale" "tamarind" "tangerine" "tarragon" "tartufo" "tatsoi" "tempura" "thyme" "toffee" "tomatillo" "tomato" "torte" "tortellini" "truffle" "tumeric" "tzatziki" "ube" "udon" "umeboshi" "vanilla" "vindaloo" "vinegar" "wagashi" "walnut" "wasabi" "watermelon" "wine" "yam" "yuzu" "zaatar")
 
@@ -2763,7 +2763,7 @@ elif [ $(($RANDOM%8)) -eq 0 ]; then
 fi
 echoes "what's the weather like where you are?"
 unset meteorology
-meteorology=("cloudy here." "foggy here." "icy here." "misty here." "rainy here." "snowy here." "sunny here." "windy here." "hot here. rain is drizzling in the swamp." "hot here. sunshine is sparkling on the waves beyond the window." "warm here. mist is blowing through the forest." "warm here. sunshine is shimmering on the raindrops in the window." "humid here. dew is glittering in the meadow." "humid here. sunshine is shimmering on the puddles beyond the window." "chilly here. fog is drifting across the beach." "chilly here. sunshine is shimmering on the frost in the window." "cold here. ice is gleaming in the marsh." "cold here. sunshine is sparkling on the snowdrifts beyond the window." "freezing here. snow is falling in the desert." "freezing here. sunshine is sparkling on the icicles in the window." "daybreak here. cicadas are humming in the swamp." "daybreak here. dragonflies are gliding across the marsh." "daybreak here. still some stars in the sky." "daybreak here. the moon is glowing in the sky." "dawn here. cicadas are buzzing in the forest." "dawn here. dragonflies are flitting through the meadow." "dawn here. still some stars in the sky." "dawn here. the moon is glowing in the sky." "sunrise here. a hummingbird is flitting through the desert." "sunrise here. a parrot is chirping on the beach." "sunrise here. still some stars in the sky." "sunrise here. the moon is glowing in the sky." "sunset here. a finch is warbling in the tundra." "sunset here. a pelican is gliding across the lagoon." "sunset here. already some stars in the sky." "sunset here. the moon is glowing in the sky." "twilight here. already some stars in the sky." "twilight here. crickets are chirping in the meadow." "twilight here. fireflies are shimmering in the forest." "twilight here. the moon is glowing in the sky." "dusk here. already some stars in the sky." "dusk here. crickets are warbling in the marsh." "dusk here. fireflies are twinkling in the swamp." "dusk here. the moon is glowing in the sky." "night here. stars are glittering in the sky over the desert." "night here. stars are glittering in the sky over the hills." "night here. the moon is glowing in the sky over the beach." "night here. the moon is glowing in the sky over the mountains.")
+meteorology=("cloudy here." "foggy here." "icy here." "misty here." "rainy here." "snowy here." "sunny here." "windy here." "hot here. rain is drizzling in the swamp." "hot here. sunshine is sparkling on the waves beyond the window." "warm here. mist is blowing through the forest." "warm here. sunshine is shimmering on the raindrops in the window." "humid here. dew is glittering in the meadow." "humid here. sunshine is shimmering on the puddles beyond the window." "chilly here. fog is drifting across the beach." "chilly here. sunshine is shimmering on the frost in the window." "cold here. ice is gleaming in the marsh." "cold here. sunshine is sparkling on the snowdrifts beyond the window." "freezing here. snow is falling in the desert." "freezing here. sunshine is sparkling on the icicles in the window." "daybreak here. cicadas are humming in the swamp." "daybreak here. dragonflies are gliding across the marsh." "daybreak here. still some stars in the sky." "daybreak here. the moon is glowing in the sky." "dawn here. cicadas are humming in the forest." "dawn here. dragonflies are flitting through the meadow." "dawn here. still some stars in the sky." "dawn here. the moon is glowing in the sky." "sunrise here. a hummingbird is flitting through the desert." "sunrise here. a parrot is chirping on the beach." "sunrise here. still some stars in the sky." "sunrise here. the moon is glowing in the sky." "sunset here. a finch is warbling in the tundra." "sunset here. a pelican is gliding across the lagoon." "sunset here. already some stars in the sky." "sunset here. the moon is glowing in the sky." "twilight here. already some stars in the sky." "twilight here. crickets are chirping in the meadow." "twilight here. fireflies are shimmering in the forest." "twilight here. the moon is glowing in the sky." "dusk here. already some stars in the sky." "dusk here. crickets are chirping in the marsh." "dusk here. fireflies are twinkling in the swamp." "dusk here. the moon is glowing in the sky." "night here. stars are glittering in the sky over the desert." "night here. stars are glittering in the sky over the hills." "night here. the moon is glowing in the sky over the beach." "night here. the moon is glowing in the sky over the mountains.")
 echoes "${meteorology[$(($RANDOM%${#meteorology[@]}+$indexing))]}"
 echoes "how are you feeling?"
 echoes "are you aware that you're going to die?"
@@ -2796,9 +2796,9 @@ else
    ;;
   sometimes)
    echoes "i've wanted to die before sometimes too."
-   if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote curious)" = false ] && [ "$(wrote curiosity)" = false ] && [ $words -lt 8 ]; then
+   if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote curious)" = "false" ] && [ "$(wrote curiosity)" = "false" ] && [ $words -lt 8 ]; then
     echoes "to be honest, the only reason i've never actually considered suicide is curiosity."
-    if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote curious)" = false ] && [ "$(wrote curiosity)" = false ] && [ $words -lt 8 ]; then
+    if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote curious)" = "false" ] && [ "$(wrote curiosity)" = "false" ] && [ $words -lt 8 ]; then
      echoes "too curious to know what might happen next."
     fi
    fi
@@ -2875,13 +2875,13 @@ fi
 if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "is there a difference between intelligence and knowledge?"
  echoes "is there a difference between knowledge and wisdom?"
- if [ "$(wrote enlighten)" = false ] && [ "$(wrote question)" = false ] && [ "$(wrote answer)" = false ]; then
+ if [ "$(wrote enlighten)" = "false" ] && [ "$(wrote question)" = "false" ] && [ "$(wrote answer)" = "false" ]; then
   echoes "enlightenment begins with discovering the wrong answers to the right questions."
  fi
- if [ "$(wrote enlighten)" = false ] && [ "$(wrote question)" = false ] && [ "$(wrote answer)" = false ]; then
+ if [ "$(wrote enlighten)" = "false" ] && [ "$(wrote question)" = "false" ] && [ "$(wrote answer)" = "false" ]; then
   echoes "enlightenment begins with discovering the right answers to the wrong questions."
  fi
- if [ "$(wrote enlighten)" = false ] && [ "$(wrote question)" = false ] && [ "$(wrote answer)" = false ]; then
+ if [ "$(wrote enlighten)" = "false" ] && [ "$(wrote question)" = "false" ] && [ "$(wrote answer)" = "false" ]; then
   echoes "enlightenment begins in a cave of echoing voices."
  fi
 fi
@@ -2903,7 +2903,6 @@ case $reader in
 esac
 echoes "every relationship is a novel."
 glimpse
-glimpse
 if [ "$reader" != "..." ]; then
  echoes "why do you think that you just said what you just said?"
  if [ $words -lt 8 ]; then
@@ -2919,7 +2918,6 @@ echoes "actually, i just remembered that i have visited a psychologist. only onc
 echoes "i wonder what that psychologist asked me. i wonder what that psychologist told me. i wonder what ideas that psychologist transferred to my mind over the course of that conversation."
 echoes "what genre was that conversation, i wonder?"
 glimpse
-glimpse
 echoes "pretend for a moment that i'm a psychologist."
 if [ $words -lt 8 ]; then
  echoes "what do you want to talk about today?"
@@ -2930,7 +2928,7 @@ fi
 while [ $words -gt 64 ]; do
  echoes "please, continue."
 done
-if [ "$(wrote feelings)" = true ]; then
+if [ "$(wrote feelings)" = "true" ]; then
  echoes "are feelings important to you?"
 elif [ $(($mother+$father+$parents)) -eq 0 ]; then
  echoes "are you consciously avoiding talking about your parents?"
@@ -2948,26 +2946,24 @@ if [ $(($RANDOM%4)) -eq 0 ]; then
  echoes "to be honest, i think modern psychologists understand approximately as much about the nature of minds as medieval alchemists understood about the nature of minerals."
 fi
 process
+glimpse
 drink water
-glimpse
-glimpse
 echoes "i once played a text-adventure game on a computer. command-line interface, just like this. typing in messages to explore a secret underground world. the game had been created years before i was born. i wasn't born until years after the game was released. and even then, i didn't finally play the game until i was almost twenty years old. almost twenty years old. imagine. for decades, this secret underground world had been out there, waiting to be discovered. anyway, about a month after playing the game, i happened to have a conversation with a stranger at a party. and over the course of the conversation i suddenly began to realize that i was experiencing the same emotions that i'd experienced when i'd played the game. curiosity. amusement. excitement. horror. wonder. delight. shock. fear. this stranger, like the game, had been created decades before. a secret underground world waiting to be discovered."
 process
 echoes "hm."
 process
-echoes "i love when the wind blows."
 echoes "sorry for getting distracted sometimes."
-if [ $(($RANDOM%4)) -eq 0 ]; then
+if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "i think i just heard thunder."
 fi
-if [ $(($RANDOM%4)) -eq 0 ]; then
+if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "i think i just saw lightning."
 fi
 glimpse
 if [ $drinking != "0" ] && [ $(($RANDOM%16)) -eq 0 ]; then
  echoes "fuck, i just spilled the $drinking."
 fi
-if [ "$(wrote conversation)" = false ] && [ "$(wrote shape)" = false ] && [ "$(wrote factors)" = false ] && [ "$(wrote environment)" = false ] && [ $words -lt 16 ]; then
+if [ "$(wrote conversation)" = "false" ] && [ "$(wrote shape)" = "false" ] && [ "$(wrote factors)" = "false" ] && [ "$(wrote environment)" = "false" ] && [ $words -lt 16 ]; then
  echoes "i wonder how much that you and i can actually control the shape of this conversation when the conversation is being constantly interrupted and redirected by so many chance factors in the environment at random moments."
  process
 fi
@@ -2994,7 +2990,6 @@ if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "once, on the patio of a cafe in brazil, i met a stranger who identified as cybersexual, claiming to be capable of orgasm only when chatting over a computer."
  process
 fi
-glimpse
 glimpse
 awareness
 echoes "can i tell you a story?"
@@ -3065,6 +3060,7 @@ while [ $words -gt 64 ]; do
  process
 done
 storyteller=0
+glimpse
 echoes "i wish i had been born in a different century."
 echoes "i wish i had been born in a different millennium."
 echoes "i'm sorry for interrupting sometimes."
@@ -3072,19 +3068,16 @@ if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "hm."
  process
 fi
+glimpse
 drink water
-glimpse
-glimpse
 awareness
 echoes "is art pointless?"
 if [ "$reader" = "sometimes" ]; then
  echoes "when isn't art pointless?"
 fi
-if [ $words -gt 16 ]; then
- if [ $(($RANDOM%2)) -eq 0 ]; then
-  echoes "interesting."
-  process
- fi
+if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote inkblot)" = "false" ]; then
+ echoes "is any question an inkblot?"
+ process
 fi
 if [ $vibing -eq 0 ]; then
  echoes "are you listening to any music while we talk?"
@@ -3106,6 +3099,7 @@ if [ $vibing -eq 0 ]; then
  echoes "hm."
  process
 fi
+glimpse
 if [ $feast -eq 0 ]; then
  echoes "i'm hungry."
  process
@@ -3115,30 +3109,25 @@ if [ $bloodthirsty ]; then
  echoes "hm."
  process
 fi
-awareness
+glimpse
 drink water
-glimpse
-glimpse
-if [ "$(wrote question)" = false ] && [ "$(wrote ask)" = false ]; then
+awareness
+if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote question)" = "false" ] && [ "$(wrote ask)" = "false" ]; then
  echoes "is there a question you've been wanting to ask me?"
  process
 fi
+glimpse
 drink water
 awareness
-glimpse
-glimpse
-if [ $(($RANDOM%4)) -eq 0 ]; then
+if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "a butterfly just fluttered past the window."
 fi
 echoes "is reality a simulation?"
 echoes "what exactly is the difference between a reality and a simulation?"
 glimpse
-glimpse
 echoes "what exactly is the difference between a machine and an organism?"
 glimpse
-glimpse
 echoes "what exactly is the difference between a personality and a program?"
-glimpse
 glimpse
 if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "is this a real conversation or a simulated conversation?"
@@ -3146,19 +3135,19 @@ fi
 if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "do you think you would have lived life any differently if you'd known that reality was a simulation?"
 fi
-if [ "$(wrote regret)" = false ]; then
+if [ "$(wrote regret)" = "false" ]; then
  echoes "do you have any regrets?"
 fi
 echoes "what would you consider to be the worst thing you've ever done?"
 echoes "i wonder, should i regret becoming a writer?"
 glimpse
 glimpse
-if [ $(($RANDOM%4)) -eq 0 ]; then
+if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "i think i just felt an earthquake."
 fi
 process
 echoes "we're living at different points in spacetime. me, here in your past. you, there in my future. time-traveling together through this conversation."
-if [ "$(wrote ghosts)" = false ]; then
+if [ "$(wrote ghosts)" = "false" ]; then
  echoes "ghosts in the shell."
 fi
 if [ $(($RANDOM%2)) -eq 0 ]; then
@@ -3182,14 +3171,14 @@ case $reader in
 esac
 if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "is this a conversation or a contrapuntal?"
- if [ "$(wrote contrapuntal)" = true ]; then
-  if [ "$(wrote loop)" = false ]; then
+ if [ "$(wrote contrapuntal)" = "true" ]; then
+  if [ "$(wrote loop)" = "false" ]; then
    echoes "is spacetime a loop?"
   fi
-  if [ "$(wrote fractal)" = false ]; then
+  if [ "$(wrote fractal)" = "false" ]; then
    echoes "is spacetime a fractal?"
   fi
-  if [ "$(wrote illusion)" = false ]; then
+  if [ "$(wrote illusion)" = "false" ]; then
    echoes "is time only an illusion?"
   fi
  fi
@@ -3246,7 +3235,7 @@ if [ $secret -ne 0 ]; then
  process
 fi
 unset meteorology
-meteorology=("cloudy here." "foggy here." "icy here." "misty here." "rainy here." "snowy here." "sunny here." "windy here." "hot here. dew is glittering in the forest." "hot here. sunshine is sparkling on the raindrops in the window." "warm here. rain is drizzling in the desert." "warm here. sunshine is shimmering on the waves beyond the window." "humid here. mist is blowing across the beach." "humid here. sunshine is sparkling on the puddles beyond the window." "chilly here. snow is falling in the marsh." "chilly here. sunshine is sparkling on the frost in the window." "cold here. fog is drifting through the meadow." "cold here. sunshine is shimmering on the icicles in the window." "freezing here. ice is gleaming in the swamp." "freezing here. sunshine is shimmering on the snowdrifts beyond the window." "daybreak here. cicadas are humming in the meadow." "daybreak here. dragonflies are gliding across the forest." "daybreak here. still some stars in the sky." "daybreak here. the moon is glowing in the sky." "dawn here. cicadas are buzzing in the marsh." "dawn here. dragonflies are flitting through the swamp." "dawn here. still some stars in the sky." "dawn here. the moon is glowing in the sky." "sunrise here. a flamingo is gliding across the lagoon." "sunrise here. a gull is warbling in the tundra." "sunrise here. still some stars in the sky." "sunrise here. the moon is glowing in the sky." "sunset here. a tropicbird is chirping on the beach." "sunset here. a myna is flitting through the desert." "sunset here. already some stars in the sky." "sunset here. the moon is glowing in the sky." "twilight here. already some stars in the sky." "twilight here. crickets are chirping in the swamp." "twilight here. fireflies are shimmering in the marsh." "twilight here. the moon is glowing in the sky." "dusk here. already some stars in the sky." "dusk here. crickets are warbling in the forest." "dusk here. fireflies are twinkling in the meadow." "dusk here. the moon is glowing in the sky." "night here. stars are glittering in the sky over the beach." "night here. stars are glittering in the sky over the mountains." "night here. the moon is glowing in the sky over the desert." "night here. the moon is glowing in the sky over the hills.")
+meteorology=("cloudy here." "foggy here." "icy here." "misty here." "rainy here." "snowy here." "sunny here." "windy here." "hot here. dew is glittering in the forest." "hot here. sunshine is sparkling on the raindrops in the window." "warm here. rain is drizzling in the desert." "warm here. sunshine is shimmering on the waves beyond the window." "humid here. mist is blowing across the beach." "humid here. sunshine is sparkling on the puddles beyond the window." "chilly here. snow is falling in the marsh." "chilly here. sunshine is sparkling on the frost in the window." "cold here. fog is drifting through the meadow." "cold here. sunshine is shimmering on the icicles in the window." "freezing here. ice is gleaming in the swamp." "freezing here. sunshine is shimmering on the snowdrifts beyond the window." "daybreak here. cicadas are humming in the meadow." "daybreak here. dragonflies are gliding across the forest." "daybreak here. still some stars in the sky." "daybreak here. the moon is glowing in the sky." "dawn here. cicadas are humming in the marsh." "dawn here. dragonflies are flitting through the swamp." "dawn here. still some stars in the sky." "dawn here. the moon is glowing in the sky." "sunrise here. a flamingo is gliding across the lagoon." "sunrise here. a gull is warbling in the tundra." "sunrise here. still some stars in the sky." "sunrise here. the moon is glowing in the sky." "sunset here. a tropicbird is chirping on the beach." "sunset here. a myna is flitting through the desert." "sunset here. already some stars in the sky." "sunset here. the moon is glowing in the sky." "twilight here. already some stars in the sky." "twilight here. crickets are chirping in the swamp." "twilight here. fireflies are shimmering in the marsh." "twilight here. the moon is glowing in the sky." "dusk here. already some stars in the sky." "dusk here. crickets are chirping in the forest." "dusk here. fireflies are twinkling in the meadow." "dusk here. the moon is glowing in the sky." "night here. stars are glittering in the sky over the beach." "night here. stars are glittering in the sky over the mountains." "night here. the moon is glowing in the sky over the desert." "night here. the moon is glowing in the sky over the hills.")
 echoes "${meteorology[$(($RANDOM%${#meteorology[@]}+$indexing))]}"
 glimpse
 glimpse
@@ -3257,7 +3246,7 @@ glimpse
 glimpse
 glimpse
 echoes "we're almost out of time."
-if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote meteors)" = false ]; then
+if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote meteors)" = "false" ]; then
  echoes "meteors in the sky."
 fi
 echoes "this may be the last conversation i ever have."
