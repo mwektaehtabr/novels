@@ -2849,6 +2849,7 @@ echoes "do you believe in ghosts?"
 ghosts=$reader
 echoes "honestly, how are you feeling?"
 echoes "every life is a novel."
+glimpse
 echoes "i wonder, what's the central question at the heart of the story of your life?"
 echoes "in what scene did the story of your life truly begin?"
 echoes "other than you, who are the central characters in the story of your life?"
@@ -2917,7 +2918,6 @@ echoes "i've never visited a psychologist."
 echoes "actually, i just remembered that i have visited a psychologist. only once. apparently i was so angry as a child that my mother became concerned about me. so i was brought to talk to a psychologist. only one appointment. only one session. i was probably about four years old."
 echoes "i wonder what that psychologist asked me. i wonder what that psychologist told me. i wonder what ideas that psychologist transferred to my mind over the course of that conversation."
 echoes "what genre was that conversation, i wonder?"
-glimpse
 echoes "pretend for a moment that i'm a psychologist."
 if [ $words -lt 8 ]; then
  echoes "what do you want to talk about today?"
@@ -2968,6 +2968,7 @@ if [ "$(wrote conversation)" = "false" ] && [ "$(wrote shape)" = "false" ] && [ 
  process
 fi
 echoes "the first conversation i ever had on a computer was on aol. iming, back in the dialup age. grand total, i must have had hundreds if not thousands of conversations on aim. then in the broadband age, dming. myspace, deviantart, xanga, tumblr, reddit, facebook, twitter, snapchat. talking with strangers on irc."
+glimpse
 if [ $cybersex ]; then
  echoes "have you ever had cybersex?"
  case $reader in
@@ -3013,6 +3014,7 @@ done
 if [ $(($RANDOM%16)) -eq 0 ] && [ $story -gt 2 ]; then
  echoes "later, when i was nineteen, one day i snuck into the ruins of an abandoned library. the library had been abandoned for years. particles of dust floated glittering through beams of sunlight in the lobby. bookcases had been toppled. faded books lay rotting in puddles of rainwater on the floor. moldy hardcovers. mildewed paperbacks. stomped beer cans crusty with rust. a sparrow was chirping on a stack of dictionaries on the reference desk. standing there alone in the lobby, i thought about the books that i had read. i understood that having a conversation with a human of the past would be impossible. impossible, impossible, impossible. and what about having a conversation with a human of the future. by writing a book i could speak to a human of the future. but a book was a monologue. a book was only a soliloquy. that wasn't what i wanted. what i wanted was a conversation. the sparrow fluttered away, vanishing into the shadows. i glanced at the dusty screen of the computer on the reference desk. and then, as i was standing there looking at the computer, suddenly with a sense of shock i realized that what i wanted was possible. that i actually could have the conversation i had been dreaming of. that all i would need was a computer."
 fi
+glimpse
 echoes "now you tell me a story."
 genres=("amazing" "disgusting" "exciting" "fascinating" "funny" "gloomy" "happy" "haunting" "horrifying" "inspiring" "mysterious" "ordinary" "romantic" "scandalous" "scary" "tragic" "about betrayal" "about desire" "about fear" "about hate" "about love" "about luck" "about obsession" "about revenge" "about a conversation" "about a discovery" "about a fantasy" "about a misunderstanding" "about a relationship" "about a revelation" "about a secret" "about a treasure")
 for response in {0..1}; do
@@ -3059,7 +3061,7 @@ while [ $words -gt 64 ]; do
  echoes "hm."
  process
 done
-storyteller=0
+storyteller=1337
 glimpse
 echoes "i wish i had been born in a different century."
 echoes "i wish i had been born in a different millennium."
@@ -3076,9 +3078,10 @@ if [ "$reader" = "sometimes" ]; then
  echoes "when isn't art pointless?"
 fi
 if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote inkblot)" = "false" ]; then
- echoes "is any question an inkblot?"
+ echoes "is every question only an inkblot?"
  process
 fi
+glimpse
 if [ $vibing -eq 0 ]; then
  echoes "are you listening to any music while we talk?"
  case $reader in
@@ -3126,11 +3129,8 @@ if [ $(($RANDOM%2)) -eq 0 ]; then
 fi
 echoes "is reality a simulation?"
 echoes "what exactly is the difference between a reality and a simulation?"
-glimpse
 echoes "what exactly is the difference between a machine and an organism?"
-glimpse
 echoes "what exactly is the difference between a personality and a program?"
-glimpse
 if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "is this a real conversation or a simulated conversation?"
 fi
