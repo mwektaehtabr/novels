@@ -320,6 +320,7 @@ process () {
    fi
   done
  fi
+ exchange "what" "whatelse"
  if [ "$(wrote areyouwearing first)" = "true" ]; then
   ending "rightnow"
  fi
