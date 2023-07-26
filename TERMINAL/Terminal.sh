@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.07.25
+# Version 2023.07.26
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -2581,7 +2581,7 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado attraction attractive baklava banquet barista birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder clothing clown coffee coffees color countdown creator criminal curious curry cybersex data day dessert desserts destiny drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fugitive pronouns flirting fluids freckles gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot meteorology mind mochi moment monarch month mother muscat muse music name narrator not number numbers opsec oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions psychics quest reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky smell smelled smells smoking soda songs sorbet sound sounded sounds spaceship spacetime stories story storyteller slist sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing whiskers wine wonderland words xerox year zig
+unset acknowledge afterlife age amontillado atmosphere atmospheres attraction attractive baklava banquet barista bird birds birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder cicada cicadas clothing clown coffee coffees color countdown creator cricket crickets criminal curious curry cybersex data day dessert desserts destiny dragonflies dragonfly drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fireflies firefly flirting fluids fog fogs freckles fugitive gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism ice ices identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot mind mist mists mochi moment monarch month moon moons mother muscat muse music name narrator not number numbers opsec oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions pronouns psychics quest rain rains reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky slist smell smelled smells smoking snow snows soda songs sorbet sound sounded sounds spaceship spacetime star stars stories story storyteller sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing weather whiskers wine wonderland words xerox year zig
 
 declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,sighted,sky,smell,smelled,smoking,soda,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,xerox,zig}=0
 
@@ -2609,7 +2609,145 @@ songs=("the unanswered question." "have you got it yet?" "4'33\"")
 
 numbers=("today, probably zero." "today, probably one." "i." "infinity." "/dev/random.")
 
-glimpses=("beams of sunlight are shining through the clouds onto the ocean." "the moon is glowing in the sky above the ocean." "the stars are glittering in the sky above the ocean." "a windstorm is blowing in from the ocean." "there's a rainstorm out on the ocean." "a cloudburst of rain just dropped from the sky." "puddles of rainwater are shimmering on the cobblestones in the street." "puddles of rainwater are shimmering on the beach." "puddles of rainwater are shimmering in the desert." "puddles of rainwater are shimmering in the tundra." "rain is drizzling in the forest." "rain is drizzling in the marsh." "rain is drizzling in the meadow." "rain is drizzling in the tundra." "snow is flurrying through the forest." "snow is flurrying through the meadow." "snow is flurrying through the swamp." "snow is flurrying through the tundra." "ice is sparkling in the desert." "ice is sparkling in the forest." "ice is sparkling in the meadow." "ice is sparkling in the tundra." "fog is drifting through the desert." "fog is drifting through the forest." "fog is drifting through the marsh." "fog is drifting through the swamp." "mist is rippling across the desert." "mist is rippling across the marsh." "mist is rippling across the meadow." "mist is rippling across the swamp." "hail is falling on the beach." "sleet is twinkling on the beach.")
+atmospheres=("cloudy here." "foggy here." "icy here." "misty here." "rainy here." "snowy here." "sunny here." "windy here." "daybreak here. the moon is glowing in the sky." "daybreak here. still some stars in the sky." "dawn here. the moon is glowing in the sky." "dawn here. still some stars in the sky." "sunrise here. the moon is glowing in the sky." "sunrise here. still some stars in the sky." "sunset here. the moon is glowing in the sky." "sunset here. already some stars in the sky." "twilight here. the moon is glowing in the sky." "twilight here. already some stars in the sky." "dusk here. the moon is glowing in the sky." "dusk here. already some stars in the sky.")
+
+moons=("the moon is glowing in the sky over the beach." "the moon is glowing in the sky over the desert." "the moon is glowing in the sky over the forest." "the moon is glowing in the sky over the marsh." "the moon is glowing in the sky over the meadow." "the moon is glowing in the sky over the mountains." "the moon is glowing in the sky over the swamp." "the moon is glowing in the sky over the tundra.")
+
+stars=("stars are glittering in the sky over the beach." "stars are glittering in the sky over the desert." "stars are glittering in the sky over the forest." "stars are glittering in the sky over the marsh." "stars are glittering in the sky over the meadow." "stars are glittering in the sky over the mountains." "stars are glittering in the sky over the swamp." "stars are glittering in the sky over the tundra.")
+
+rains=("rain is drizzling on the beach." "rain is drizzling in the desert." "rain is drizzling in the forest." "rain is drizzling in the marsh." "rain is drizzling in the meadow." "rain is drizzling in the swamp." "rain is drizzling in the tundra." "sunshine is sparkling on puddles of rainwater." "sunshine is sparkling on the raindrops dripping from the ferns." "sunshine is sparkling on the raindrops dripping from the ivy." "sunshine is sparkling on the raindrops dripping from the vines.")
+
+fogs=("fog is drifting through the desert." "fog is drifting through the forest." "fog is drifting through the marsh." "fog is drifting through the meadow." "fog is drifting through the swamp.")
+
+mists=("mist is blowing through the desert." "mist is blowing through the forest." "mist is blowing through the marsh." "mist is blowing through the meadow." "mist is blowing through the swamp.")
+
+snows=("snow is falling on the beach." "snow is falling in the desert." "snow is falling in the forest." "snow is falling in the meadow." "snow is falling in the tundra." "sunshine is sparkling on the snowdrifts.")
+
+ices=("ice is gleaming on the beach." "ice is gleaming in the desert." "ice is gleaming in the forest." "ice is gleaming in the meadow." "ice is gleaming in the tundra." "sunshine is sparkling on the icicles.")
+
+cicadas=("cicadas are humming in the desert." "cicadas are humming in the forest." "cicadas are humming in the marsh." "cicadas are humming in the meadow." "cicadas are humming in the swamp.")
+
+crickets=("crickets are chirping in the desert." "crickets are chirping in the forest." "crickets are chirping in the marsh." "crickets are chirping in the meadow." "crickets are chirping in the swamp.")
+
+dragonflies=("dragonflies are flitting through the desert." "dragonflies are flitting through the forest." "dragonflies are flitting through the marsh." "dragonflies are flitting through the meadow." "dragonflies are flitting through the swamp.")
+
+fireflies=("fireflies are shimmering in the desert." "fireflies are shimmering in the forest." "fireflies are shimmering in the marsh." "fireflies are shimmering in the meadow." "fireflies are shimmering in the swamp.") 
+
+birds=("a cockatoo is perched on a boulder by the stream." "a finch is flitting through the marsh." "a flamingo is gliding across the lagoon." "a frigatebird is flapping across the bay." "gulls are crying in the sky over the cliffs." "a heron is gliding across the swamp." "a hummingbird is flitting through the meadow." "lorikeets are chirping on the balcony." "a macaw is squawking in the courtyard." "a myna is perched on a boulder on the beach." "parakeets are chirping on the veranda." "a parrot is fluttering through the forest." "a pelican is soaring across the ocean." "a pigeon is cooing in the plaza." "starlings are fluttering through the sky over the tundra." "a tropicbird is flapping across the cove.")
+
+for data in "chilly" "cold" "freezing" "hot" "humid" "warm"; do
+ atmospheres+=("$data here. sunshine is sparkling on the waves.")
+ case $data in
+  chilly|cold|freezing)
+   weather=5
+   ;;
+  *)
+   weather=3
+   ;;
+ esac
+ case $(($RANDOM%$weather)) in
+  0)
+   if [ ${#rains[@]} -gt 0 ]; then
+    rain=$(($RANDOM%${#rains[@]}+$indexing))
+    atmospheres+=("$data here. ${rains[$rain]}")
+    rain=$(($rain-$indexing))
+    rains=( "${rains[@]:0:$rain}" "${rains[@]:$(($rain+1))}" )
+   fi   
+   ;;
+  1)
+   if [ ${#fogs[@]} -gt 0 ]; then
+    fog=$(($RANDOM%${#fogs[@]}+$indexing))
+    atmospheres+=("$data here. ${fogs[$fog]}")
+    fog=$(($fog-$indexing))
+    fogs=( "${fogs[@]:0:$fog}" "${fogs[@]:$(($fog+1))}" )
+   fi  
+   ;;
+  2)
+   if [ ${#mists[@]} -gt 0 ]; then
+    mist=$(($RANDOM%${#mists[@]}+$indexing))
+    atmospheres+=("$data here. ${mists[$mist]}")
+    mist=$(($mist-$indexing))
+    mists=( "${mists[@]:0:$mist}" "${mists[@]:$(($mist+1))}" )
+   fi  
+   ;;
+  3)
+   if [ ${#snows[@]} -gt 0 ]; then
+    snow=$(($RANDOM%${#snows[@]}+$indexing))
+    atmospheres+=("$data here. ${snows[$snow]}")
+    snow=$(($snow-$indexing))
+    snows=( "${snows[@]:0:$snow}" "${snows[@]:$(($snow+1))}" )
+   fi  
+   ;;
+  4)
+   if [ ${#ices[@]} -gt 0 ]; then
+    ice=$(($RANDOM%${#ices[@]}+$indexing))
+    atmospheres+=("$data here. ${ices[$ice]}")
+    ice=$(($ice-$indexing))
+    ices=( "${ices[@]:0:$ice}" "${ices[@]:$(($ice+1))}" )
+   fi  
+   ;;
+  *)
+   ;;
+ esac
+done
+
+for data in "daybreak" "dawn"; do
+ if [ ${#cicadas[@]} -gt 0 ]; then
+  cicada=$(($RANDOM%${#cicadas[@]}+$indexing))
+  atmospheres+=("$data here. ${cicadas[$cicada]}")
+  cicada=$(($cicada-$indexing))
+  cicadas=( "${cicadas[@]:0:$cicada}" "${cicadas[@]:$(($cicada+1))}" )
+ fi
+ if [ ${#dragonflies[@]} -gt 0 ]; then
+  dragonfly=$(($RANDOM%${#dragonflies[@]}+$indexing))
+  atmospheres+=("$data here. ${dragonflies[$dragonfly]}")
+  dragonfly=$(($dragonfly-$indexing))
+  dragonflies=( "${dragonflies[@]:0:$dragonfly}" "${dragonflies[@]:$(($dragonfly+1))}" )
+ fi
+done
+
+for data in "sunrise" "sunset"; do
+ for number in 0 1; do
+  if [ ${#birds[@]} -gt 0 ]; then
+   bird=$(($RANDOM%${#birds[@]}+$indexing))
+   atmospheres+=("$data here. ${birds[$bird]}")
+   bird=$(($bird-$indexing))
+   birds=( "${birds[@]:0:$bird}" "${birds[@]:$(($bird+1))}" )
+  fi
+ done
+done
+
+for data in "twilight" "dusk"; do
+ if [ ${#crickets[@]} -gt 0 ]; then
+  cricket=$(($RANDOM%${#crickets[@]}+$indexing))
+  atmospheres+=("$data here. ${crickets[$cricket]}")
+  cricket=$(($cricket-$indexing))
+  crickets=( "${crickets[@]:0:$cricket}" "${crickets[@]:$(($cricket+1))}" )
+ fi
+ if [ ${#fireflies[@]} -gt 0 ]; then
+  firefly=$(($RANDOM%${#fireflies[@]}+$indexing))
+  atmospheres+=("$data here. ${fireflies[$firefly]}")
+  firefly=$(($firefly-$indexing))
+  fireflies=( "${fireflies[@]:0:$firefly}" "${fireflies[@]:$(($firefly+1))}" )
+ fi
+done
+
+for data in "night" "night"; do
+ if [ ${#moons[@]} -gt 0 ]; then
+  moon=$(($RANDOM%${#moons[@]}+$indexing))
+  atmospheres+=("$data here. ${moons[$moon]}")
+  moon=$(($moon-$indexing))
+  moons=( "${moons[@]:0:$moon}" "${moons[@]:$(($moon+1))}" )
+ fi
+ if [ ${#stars[@]} -gt 0 ]; then
+  star=$(($RANDOM%${#stars[@]}+$indexing))
+  atmospheres+=("$data here. ${stars[$star]}")
+  star=$(($star-$indexing))
+  stars=( "${stars[@]:0:$star}" "${stars[@]:$(($star+1))}" )
+ fi
+done
+
+glimpses=( "beams of sunlight are shining through the clouds onto the ocean." "hail is falling on the beach." "hail is falling in the desert." "hail is falling in the meadow." "sleet is twinkling on the beach." "${fogs[@]}" "${ices[@]}" "${mists[@]}" "${rains[@]}" "${snows[@]}" "${cicadas[@]}" "${crickets[@]}" "${dragonflies[@]}" "${fireflies[@]}" "${birds[@]}" )
 
 sights=("deer tracks in the frost." "gull tracks in the sand." "dragonflies gliding through the orchard." "dragonflies flitting through the vineyard." "fireflies shimmering in the orchard." "fireflies twinkling in the vineyard." "a heron soaring through the swamp." "a pheasant darting through the meadow." "a woodpecker flapping through the marsh." "a toucan fluttering through the forest." "the moon glowing in the sky over the forest." "the moon glowing in the sky over the marsh." "the moon glowing in the sky over the meadow." "the moon glowing in the sky over the swamp." "the stars glittering in the sky over the forest." "the stars glittering in the sky over the marsh." "the stars glittering in the sky over the meadow." "the stars glittering in the sky over the swamp." "smoke rising from the rim of the volcano beyond the balcony.")
 
@@ -2763,9 +2901,12 @@ elif [ $(($RANDOM%8)) -eq 0 ]; then
  echoes "god, what a time to be alive."
 fi
 echoes "what's the weather like where you are?"
-unset meteorology
-meteorology=("cloudy here." "foggy here." "icy here." "misty here." "rainy here." "snowy here." "sunny here." "windy here." "hot here. rain is drizzling in the swamp." "hot here. sunshine is sparkling on the waves beyond the window." "warm here. mist is blowing through the forest." "warm here. sunshine is shimmering on the raindrops in the window." "humid here. dew is glittering in the meadow." "humid here. sunshine is shimmering on the puddles beyond the window." "chilly here. fog is drifting across the beach." "chilly here. sunshine is shimmering on the frost in the window." "cold here. ice is gleaming in the marsh." "cold here. sunshine is sparkling on the snowdrifts beyond the window." "freezing here. snow is falling in the desert." "freezing here. sunshine is sparkling on the icicles in the window." "daybreak here. cicadas are humming in the swamp." "daybreak here. dragonflies are gliding across the marsh." "daybreak here. still some stars in the sky." "daybreak here. the moon is glowing in the sky." "dawn here. cicadas are humming in the forest." "dawn here. dragonflies are flitting through the meadow." "dawn here. still some stars in the sky." "dawn here. the moon is glowing in the sky." "sunrise here. a hummingbird is flitting through the desert." "sunrise here. a parrot is chirping on the beach." "sunrise here. still some stars in the sky." "sunrise here. the moon is glowing in the sky." "sunset here. a finch is warbling in the tundra." "sunset here. a pelican is gliding across the lagoon." "sunset here. already some stars in the sky." "sunset here. the moon is glowing in the sky." "twilight here. already some stars in the sky." "twilight here. crickets are chirping in the meadow." "twilight here. fireflies are shimmering in the forest." "twilight here. the moon is glowing in the sky." "dusk here. already some stars in the sky." "dusk here. crickets are chirping in the marsh." "dusk here. fireflies are twinkling in the swamp." "dusk here. the moon is glowing in the sky." "night here. stars are glittering in the sky over the desert." "night here. stars are glittering in the sky over the hills." "night here. the moon is glowing in the sky over the beach." "night here. the moon is glowing in the sky over the mountains.")
-echoes "${meteorology[$(($RANDOM%${#meteorology[@]}+$indexing))]}"
+if [ ${#atmospheres[@]} -gt 0 ]; then
+ atmosphere=$(($RANDOM%${#atmospheres[@]}+$indexing))
+ echoes "${atmospheres[$atmosphere]}"
+ atmosphere=$(($atmosphere-$indexing))
+ atmospheres=( "${atmospheres[@]:0:$atmosphere}" "${atmospheres[@]:$(($atmosphere+1))}" )
+fi
 echoes "how are you feeling?"
 echoes "are you aware that you're going to die?"
 echoes "what i mean is, not just do you know that you're going to die, not just do you understand that you're going to die, but as you move through the world are you consciously aware of that mortality?"
@@ -3245,9 +3386,8 @@ if [ $secret -ne 0 ]; then
  echoes "hm."
  process
 fi
-unset meteorology
-meteorology=("cloudy now." "foggy now." "icy now." "misty now." "rainy now." "snowy now." "sunny now." "windy now." "hot now. dew is glittering in the forest." "hot now. sunshine is sparkling on the raindrops in the window." "warm now. rain is drizzling in the desert." "warm now. sunshine is shimmering on the waves beyond the window." "humid now. mist is blowing across the beach." "humid now. sunshine is sparkling on the puddles beyond the window." "chilly now. snow is falling in the marsh." "chilly now. sunshine is sparkling on the frost in the window." "cold now. fog is drifting through the meadow." "cold now. sunshine is shimmering on the icicles in the window." "freezing now. ice is gleaming in the swamp." "freezing now. sunshine is shimmering on the snowdrifts beyond the window." "daybreak now. cicadas are humming in the meadow." "daybreak now. dragonflies are gliding across the forest." "daybreak now. still some stars in the sky." "daybreak now. the moon is glowing in the sky." "dawn now. cicadas are humming in the marsh." "dawn now. dragonflies are flitting through the swamp." "dawn now. still some stars in the sky." "dawn now. the moon is glowing in the sky." "sunrise now. a flamingo is gliding across the lagoon." "sunrise now. a gull is warbling in the tundra." "sunrise now. still some stars in the sky." "sunrise now. the moon is glowing in the sky." "sunset now. a tropicbird is chirping on the beach." "sunset now. a myna is flitting through the desert." "sunset now. already some stars in the sky." "sunset now. the moon is glowing in the sky." "twilight now. already some stars in the sky." "twilight now. crickets are chirping in the swamp." "twilight now. fireflies are shimmering in the marsh." "twilight now. the moon is glowing in the sky." "dusk now. already some stars in the sky." "dusk now. crickets are chirping in the forest." "dusk now. fireflies are twinkling in the meadow." "dusk now. the moon is glowing in the sky." "night now. stars are glittering in the sky over the beach." "night now. stars are glittering in the sky over the mountains." "night now. the moon is glowing in the sky over the desert." "night now. the moon is glowing in the sky over the hills.")
-echoes "${meteorology[$(($RANDOM%${#meteorology[@]}+$indexing))]}"
+atmospheres=( "${atmospheres[@]//here/now}" )
+echoes "${atmospheres[$(($RANDOM%${#atmospheres[@]}+$indexing))]}"
 glimpse
 glimpse
 glimpse
@@ -3257,7 +3397,7 @@ glimpse
 glimpse
 glimpse
 echoes "we're almost out of time."
-if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote meteors)" = "false" ]; then
+if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "meteors in the sky."
 fi
 echoes "this may be the last conversation i ever have."
