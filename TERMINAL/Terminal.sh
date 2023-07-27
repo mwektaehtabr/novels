@@ -2613,9 +2613,9 @@ atmospheres=("cloudy here." "foggy here." "icy here." "misty here." "rainy here.
 
 moons=("the moon is glowing in the sky over the beach." "the moon is glowing in the sky over the desert." "the moon is glowing in the sky over the forest." "the moon is glowing in the sky over the marsh." "the moon is glowing in the sky over the meadow." "the moon is glowing in the sky over the mountains." "the moon is glowing in the sky over the swamp." "the moon is glowing in the sky over the tundra.")
 
-stars=("stars are glittering in the sky over the beach." "stars are glittering in the sky over the desert." "stars are glittering in the sky over the forest." "stars are glittering in the sky over the marsh." "stars are glittering in the sky over the meadow." "stars are glittering in the sky over the mountains." "stars are glittering in the sky over the swamp." "stars are glittering in the sky over the tundra.")
+stars=("the stars are glittering in the sky over the beach." "the stars are glittering in the sky over the desert." "the stars are glittering in the sky over the forest." "the stars are glittering in the sky over the marsh." "the stars are glittering in the sky over the meadow." "the stars are glittering in the sky over the mountains." "the stars are glittering in the sky over the swamp." "the stars are glittering in the sky over the tundra.")
 
-rains=("rain is drizzling on the beach." "rain is drizzling in the desert." "rain is drizzling in the forest." "rain is drizzling in the marsh." "rain is drizzling in the meadow." "rain is drizzling in the swamp." "rain is drizzling in the tundra." "sunshine is sparkling on puddles of rainwater." "sunshine is sparkling on the raindrops dripping from the ferns." "sunshine is sparkling on the raindrops dripping from the ivy." "sunshine is sparkling on the raindrops dripping from the vines.")
+rains=("a cloudburst of rain just dropped from the sky." "rain is drizzling on the beach." "rain is drizzling in the desert." "rain is drizzling in the forest." "rain is drizzling in the marsh." "rain is drizzling in the meadow." "rain is drizzling in the swamp." "rain is drizzling in the tundra." "sunshine is sparkling on puddles of rainwater." "sunshine is sparkling on the raindrops dripping from the ferns." "sunshine is sparkling on the raindrops dripping from the ivy." "sunshine is sparkling on the raindrops dripping from the vines.")
 
 fogs=("fog is drifting across the beach." "fog is drifting through the desert." "fog is drifting through the forest." "fog is drifting through the marsh." "fog is drifting through the meadow." "fog is drifting through the swamp.")
 
@@ -2636,11 +2636,25 @@ fireflies=("fireflies are shimmering in the desert." "fireflies are shimmering i
 birds=("a cockatoo is perched on a boulder by the stream." "a finch is flitting through the marsh." "a flamingo is gliding across the lagoon." "a frigatebird is flapping across the bay." "gulls are crying in the sky over the cliffs." "a heron is gliding across the swamp." "a hummingbird is flitting through the meadow." "lorikeets are chirping on the balcony." "a macaw is squawking in the courtyard." "a myna is perched on a boulder on the beach." "parakeets are chirping on the veranda." "a parrot is fluttering through the forest." "a pelican is soaring across the ocean." "a pigeon is cooing in the plaza." "starlings are fluttering through the sky over the tundra." "a tropicbird is flapping across the cove.")
 
 for data in "chilly" "cold" "freezing" "hot" "humid" "warm"; do
- if [ $(($RANDOM%2)) -eq 0 ]; then
-  atmospheres+=("$data here. sunshine is sparkling on the waves.")
- else
-  atmospheres+=("$data here. beams of sunlight are shining through the clouds onto the ocean.")
- fi
+ case $(($RANDOM%5)) in
+  0)
+   atmospheres+=("$data here. beams of sunlight are shining through the clouds onto the ocean.")
+   ;;
+  1)
+   atmospheres+=("$data here. sunlight is sparkling on the waves.")
+   ;;
+  2)
+   atmospheres+=("$data here. sunlight is sparkling on the ocean.")
+   ;;
+  3)
+   atmospheres+=("$data here. moonlight is sparkling on the ocean.")
+   ;;
+  4)
+   atmospheres+=("$data here. starlight is sparkling on the ocean.")
+   ;;
+  *)
+   ;;
+ esac
  case $data in
   chilly|cold|freezing)
    weather=5
@@ -2751,7 +2765,7 @@ for data in "night" "night"; do
  fi
 done
 
-glimpses=( "beams of sunlight are shining through the clouds onto the ocean." "hail is falling on the beach." "hail is falling in the desert." "hail is falling in the meadow." "sleet is twinkling on the beach." "${fogs[@]}" "${ices[@]}" "${mists[@]}" "${rains[@]}" "${snows[@]}" "${cicadas[@]}" "${crickets[@]}" "${dragonflies[@]}" "${fireflies[@]}" "${birds[@]}" )
+glimpses=( "${moons[@]}" "${stars[@]}" "${rains[@]}" "${fogs[@]}" "${mists[@]}" "${snows[@]}" "${ices[@]}" "${cicadas[@]}" "${crickets[@]}" "${dragonflies[@]}" "${fireflies[@]}" "${birds[@]}" )
 
 sights=("deer tracks in the frost." "gull tracks in the sand." "dragonflies gliding through the orchard." "dragonflies flitting through the vineyard." "fireflies shimmering in the orchard." "fireflies twinkling in the vineyard." "a heron soaring through the swamp." "a pheasant darting through the meadow." "a woodpecker flapping through the marsh." "a toucan fluttering through the forest." "the moon glowing in the sky over the forest." "the moon glowing in the sky over the marsh." "the moon glowing in the sky over the meadow." "the moon glowing in the sky over the swamp." "the stars glittering in the sky over the forest." "the stars glittering in the sky over the marsh." "the stars glittering in the sky over the meadow." "the stars glittering in the sky over the swamp." "smoke rising from the rim of the volcano beyond the balcony.")
 
