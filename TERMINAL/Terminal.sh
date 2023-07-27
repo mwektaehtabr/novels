@@ -2587,6 +2587,10 @@ declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clow
 
 shell=#
 
+initialize=(@)
+
+indexing=${#initialize[1]}
+
 magicword="abracadabra"
 
 piratecode=("\064\064X\071\060\070\071\064\071\071\071" "\x2D\x38\x36X\x30\x36\x30\x39\x37\x34\x39\x39" "\061\070X\063\062\060\061\065\060\060\060" "\x2D\x36\x35X\x32\x32\x36\x31\x38\x31\x32\x34" "\064\060X\071\063\064\071\067\070\061\062" "\x31\x32X\x38\x35\x33\x36\x37\x39\x36\x38" "\055\061\066X\067\064\060\066\071\065\063\061" "\x35\x30X\x30\x30\x35\x34\x31\x37\x39\x36" "\070X\060\060\064\067\064\071\060\062" "\x39\x38X\x38\x33\x35\x33\x38\x33\x39\x38" "\055\062\060X\062\065\066\063\063\065\071\070" "\x31\x34\x39X\x30\x32\x34\x38\x35\x31\x30\x30" "\062\062X\061\067\061\070\060\063\060\060" "\x2D\x31\x35\x39X\x36\x35\x39\x36\x33\x33\x30\x30" "\055\066\062X\071\063\064\065\070\063\071\071" "\x2D\x36\x30X\x35\x39\x34\x38\x37\x35\x30\x30")
@@ -2868,10 +2872,6 @@ month=$(date "+%-m")
 day=$(date "+%-d")
 
 hour=$(date "+%H")
-
-initialize=(@)
-
-indexing=${#initialize[1]}
 
 magicword=`abracadabra`
 
