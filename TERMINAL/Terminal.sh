@@ -2640,20 +2640,17 @@ fireflies=("fireflies are shimmering in the desert." "fireflies are shimmering i
 birds=("a cockatoo is perched on a boulder by the stream." "a finch is flitting through the marsh." "a flamingo is gliding across the lagoon." "a frigatebird is flapping across the bay." "gulls are crying in the sky over the cliffs." "a heron is gliding across the swamp." "a hummingbird is flitting through the meadow." "lorikeets are chirping on the balcony." "a macaw is squawking in the courtyard." "a myna is perched on a boulder on the beach." "parakeets are chirping on the veranda." "a parrot is fluttering through the forest." "a pelican is soaring across the ocean." "a pigeon is cooing in the plaza." "starlings are fluttering through the sky over the tundra." "a tropicbird is flapping across the cove.")
 
 for data in "chilly" "cold" "freezing" "hot" "humid" "warm"; do
- case $(($RANDOM%5)) in
+ case $(($RANDOM%4)) in
   0)
    atmospheres+=("$data here. beams of sunlight are shining through the clouds onto the ocean.")
    ;;
   1)
-   atmospheres+=("$data here. sunlight is sparkling on the waves.")
-   ;;
-  2)
    atmospheres+=("$data here. sunlight is sparkling on the ocean.")
    ;;
-  3)
+  2)
    atmospheres+=("$data here. moonlight is sparkling on the ocean.")
    ;;
-  4)
+  3)
    atmospheres+=("$data here. starlight is sparkling on the ocean.")
    ;;
   *)
