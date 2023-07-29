@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.07.27
+# Version 2023.07.28
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -1818,20 +1818,20 @@ process () {
    echoes "$plokta"
    process
    ;;
-  securitythroughobscurity)
+  theenemyknowsthesystem)
    if [ $opsec ]; then
-    echoes "the enemy knows the system."
+    echoes "the system is the enemy."
     unset opsec
     process
    fi
-   ;;
+   ;;   
   dontrepeatyourself)
    if [ $xerox ]; then
     echoes "we enjoy typing."
     unset xerox
     process
    fi
-   ;;
+   ;;   
   areyouq|areyouqanon)
    if [ $unknown ]; then
     echoes "the unknown."
@@ -1841,7 +1841,7 @@ process () {
    ;;
   areyoujester|areyouj3st3r|areyouj35t3r|areyouthejester|areyouth3j3st3r|areyouth3j35t3r)
    if [ $clown ]; then
-    echoes "lmao."
+    echoes "lol."
     unset clown
     process
    fi
