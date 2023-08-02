@@ -7,7 +7,7 @@
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
 echoes () {
- echo "- $1"
+ echo "- $1" | fold -s -w $(tput cols)
  if [ $shell ]; then
   echo
   stty echo
