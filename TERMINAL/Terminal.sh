@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.08.01
+# Version 2023.08.02
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -3388,6 +3388,9 @@ if [ $secret -ne 0 ]; then
     ;;
   esac
  done
+ if [ "$reader" = "setecastronomy" ]; then
+  echoes "sub rosa."
+ fi
  echoes "now you tell me a secret."
  for response in {0..1}; do
   case $reader in
