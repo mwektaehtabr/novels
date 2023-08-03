@@ -95,7 +95,10 @@ echoes () {
      if [ "$(wrote parents)" = "true" ]; then
       parents=$(($parents+1))
      fi
-     beginning "anyway" "honestly" "exactly" "oh" "so" "just" "for some reason" "for whatever reason" "needless to say" "you know" "i guess" "i guess that" "i have to ask" "i imagine" "i imagine that" "i mean" "i mean that" "i need to ask" "i suppose" "i suppose that" "i suspect" "i suspect that" "i think" "i think that" "i was wondering" "i wonder" "im curious" "ive been wondering" "ive got to ask" "and" "but" "or" "a" "the"
+     beginning "anyway" "honestly" "exactly" "oh" "so" "just" "for some reason" "for whatever reason" "needless to say" "you know" "i guess" "i guess that" "i have to ask" "i imagine" "i imagine that" "i mean" "i mean that" "i need to ask" "i suppose" "i suppose that" "i suspect" "i suspect that" "i think" "i think that" "i was wondering" "i wonder" "im curious" "ive been wondering" "ive got to ask" "and" "but" "or" "a"
+     if [ "$(wrote system)" = "false" ]; then
+      beginning "the"
+     fi
      if [ "$(wrote "like what" first)" = "false" ]; then
       beginning "like"
      fi
@@ -1818,20 +1821,47 @@ process () {
    echoes "$plokta"
    process
    ;;
-  theenemyknowsthesystem)
-   if [ $opsec ]; then
-    echoes "the system is the enemy."
-    unset opsec
-    process
-   fi
-   ;;   
   dontrepeatyourself)
    if [ $xerox ]; then
     echoes "we enjoy typing."
     unset xerox
     process
    fi
-   ;;   
+   ;;
+  createreadupdatedelete)
+   case $(($RANDOM%3)) in
+    0)
+     echoes "and zero-fill when necessary."
+     ;;
+    1)
+     echoes "and one-fill when necessary."
+     ;;
+    *)
+     echoes "and random-fill when necessary."
+     ;;
+   esac
+   process
+   ;;
+  theenemyknowsthesystem)
+   if [ $opsec ]; then
+    echoes "the system is the enemy."
+    unset opsec
+    process
+   fi
+   ;;  
+  chunkybacon|ilikebaconchunky|ilikechunkybacon|iliketoeatchunkybacon|ipreferbaconchunky|ipreferchunkybacon|iprefertoeatchunkybacon|isitchunkybacon|maybesomechunkybacon|somechunkybacon)
+   if [ $poignant ]; then
+    echoes "_why?"
+    unset poignant
+   fi
+   ;;
+  timtoady|tmtowtdi)
+   if [ $pearl ]; then
+    echoes "bicarbonate."
+    unset pearl
+    process
+   fi
+   ;;       
   areyouq|areyouqanon)
    if [ $unknown ]; then
     echoes "the unknown."
@@ -1865,12 +1895,6 @@ process () {
     fi
    fi
    process
-   ;;
-  chunkybacon|ilikebaconchunky|ilikechunkybacon|iliketoeatchunkybacon|ipreferbaconchunky|ipreferchunkybacon|iprefertoeatchunkybacon|isitchunkybacon|maybesomechunkybacon|somechunkybacon)
-   if [ $poignant ]; then
-    echoes "_why?"
-    unset poignant
-   fi
    ;;
   amiinthematrix|areweinthematrix|isthisthematrix|whatsthematrix)
    if [ $wonderland -lt 3 ]; then
@@ -2581,9 +2605,9 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado atmosphere atmospheres attraction attractive baklava banquet barista bird birds birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder cicada cicadas clothing clown coffee coffees color countdown creator cricket crickets criminal curious curry cybersex data day dessert desserts destiny dragonflies dragonfly drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fireflies firefly flirting fluids fog fogs freckles fugitive gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism ice ices identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot mind mist mists mochi moment monarch month moon moons mother muscat muse music name narrator not number numbers opsec oracle parents piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions pronouns psychics quest rain rains reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky slist smell smelled smells smoking snow snows soda songs sorbet sound sounded sounds spaceship spacetime star stars stories story storyteller sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing weather whiskers wine wonderland words xerox year zig
+unset acknowledge afterlife age amontillado atmosphere atmospheres attraction attractive baklava banquet barista bird birds birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder cicada cicadas clothing clown coffee coffees color countdown creator cricket crickets criminal curious curry cybersex data day dessert desserts destiny dragonflies dragonfly drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fireflies firefly flirting fluids fog fogs freckles fugitive gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism ice ices identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot mind mist mists mochi moment monarch month moon moons mother muscat muse music name narrator not number numbers opsec oracle parents pearl piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions pronouns psychics quest rain rains reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell sighted sights sky slist smell smelled smells smoking snow snows soda songs sorbet sound sounded sounds spaceship spacetime star stars stories story storyteller sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing weather whiskers wine wonderland words xerox year zig
 
-declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,sighted,sky,smell,smelled,smoking,soda,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,xerox,zig}=0
+declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,pearl,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,sighted,sky,smell,smelled,smoking,soda,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,xerox,zig}=0
 
 shell=#
 
