@@ -1855,7 +1855,7 @@ process () {
     unset poignant
    fi
    ;;
-  timtoady|tmtowtdi)
+  timtoady)
    if [ $pearl ]; then
     echoes "bicarbonate."
     unset pearl
