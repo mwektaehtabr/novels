@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.08.03
+# Version 2023.08.04
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -1789,13 +1789,6 @@ process () {
     birthday=1
    fi
    ;;
-  yohoyoho)
-   if [ $seaworthy ]; then
-    echoes "that's the spirit."
-    unset seaworthy
-    process
-   fi
-   ;;
   wheredyouburythetreasure|wheredyouhidethetreasure|wheredyoustashthetreasure)
    if [ $quest ]; then
     echoes "which treasure?"
@@ -1803,6 +1796,13 @@ process () {
     process
    fi
    ;;
+  yohoyoho)
+   if [ $seaworthy ]; then
+    echoes "that's the spirit."
+    unset seaworthy
+    process
+   fi
+   ;;   
   whatsitliketobeyou|whatsitlikeinyourmind|whatsitlikeinsideyourmind|whatsitlikeinyourhead|whatsitlikeinsideyourhead|whatsitlikeinyourbrain|whatsitlikeinsideyourbrain)
    if [ $mind ]; then
     echoes "prismatic."
@@ -2623,7 +2623,7 @@ identities=("0110110101110111011001010110101101110100011000010110010101101000011
 
 selves=("a consciousness refracted across spacetime like a ray of light beamed through a prism" "the inanimate animate" "the animate inanimate" "oxygen carbon hydrogen nitrogen calcium phosphorous potassium sulfur sodium chlorine magnesium iron" "a galaxy of atoms whirling in orbit" "a thermodynamic system" "a radioactive body" "the biochemical manifestation of a genetic code" "trillions of cells united as a multicellular organism" "an animal" "a chordate" "a mammal" "a primate" "a simian" "an ape" "a homonid" "a human" "a single organism integrated into a multiorganismic society" "a child" "a sibling" "a friend" "a rival" "an enemy" "a lover" "a parent" "a stranger" "a third-century american" "a fifth-billennium earthling" "a self-awareness" "emotions knowledge fantasies opinions theories preferences memories predictions" "a personality stored in the matter of a brain" "a character stored in the matter of a brain" "a pattern of signals firing between synapses" "organic circuitry" "a sentient algorithm" "the electromagnetic manifestation of a boolean code" "youth" "age" "pain" "joy" "logic incarnate" "madness incarnate" "a stream of binary in a universe of exploding stars" "a stream of octal in a universe of exploding stars" "a stream of hex in a universe of exploding stars" "a stream of language in a universe of exploding stars" "a universe of exploding stars" "a consciousness reverberating through spacetime like the echo of a drop of water dripping into a pool in a cave")
 
-feelings=("abstract" "absurdist" "ahistorical" "algebraic" "allegorical" "anomalous" "apocalyptic" "atmospheric" "atomic" "auroral" "baroque" "boolean" "bozzetto" "brutalist" "carbonized" "celestial" "cellular" "choreographed" "clockwise" "collaborative" "comical" "contradictory" "cosmic" "counterclockwise" "counterfactual" "crystallized" "cubist" "cybernetic" "deco" "diagrammed" "dystopian" "electric" "encrypted" "entangled" "ephemeral" "expressionist" "extinct" "fluorescent" "futurist" "galactic" "genetic" "geometric" "glitchy" "gothic" "graffitied" "gravitational" "holographic" "hybrid" "hyperborean" "hypothetical" "impressionist" "impossible" "improbable" "incandescent" "infinite" "infrared" "inkblotted" "interlinked" "iridescent" "juxtaposed" "kaleidoscopic" "kintsugi" "linear" "literal" "luminist" "lunar" "magnetic" "mandala" "maquette" "marginalia" "mathematic" "melodic" "metaphorical" "meteorological" "monochrome" "monophonic" "mosaic" "multidimensional" "mystical" "neological" "noir" "nonlinear" "nuclear" "occult" "opalescent" "orbital" "orchestrated" "organic" "paranormal" "pearlescent" "phosphorescent" "pixelated" "planetary" "pointillist" "polychrome" "polygonal" "polyphonic" "programmable" "psychedelic" "quantum" "qwerty" "radioactive" "randomized" "realist" "remixed" "rococo" "romanticist" "serialized" "solar" "spatial" "spectral" "subliminal" "supernovaed" "surrealist" "symbolist" "synthetic" "syzygy" "temporal" "theoretical" "thermodynamic" "tragic" "transcendental" "ultraviolet" "universal" "utopian" "variable" "virtual" "wormholed")
+feelings=("abstract" "absurdist" "ahistorical" "algebraic" "allegorical" "anomalous" "apocalyptic" "atmospheric" "atomic" "auroral" "baroque" "boolean" "bozzetto" "brutalist" "carbonized" "celestial" "cellular" "choreographed" "clockwise" "collaborative" "comical" "contradictory" "cosmic" "counterclockwise" "counterfactual" "crystallized" "cubist" "cybernetic" "deco" "diagrammed" "dystopian" "electric" "encrypted" "ephemeral" "expressionist" "extinct" "fluorescent" "futurist" "galactic" "genetic" "geometric" "glitchy" "gothic" "graffitied" "gravitational" "holographic" "hybrid" "hyperborean" "hypothetical" "impressionist" "impossible" "improbable" "incandescent" "infinite" "infrared" "inkblotted" "interlinked" "iridescent" "juxtaposed" "kaleidoscopic" "kintsugi" "linear" "literal" "luminist" "lunar" "magnetic" "mandala" "maquette" "marginalia" "mathematic" "melodic" "metaphorical" "meteorological" "monochrome" "monophonic" "mosaic" "multidimensional" "mystical" "neological" "noir" "nonlinear" "nuclear" "occult" "opalescent" "orbital" "orchestrated" "organic" "paranormal" "pearlescent" "phosphorescent" "pixelated" "planetary" "pointillist" "polychrome" "polygonal" "polyphonic" "programmable" "psychedelic" "quantum" "qwerty" "radioactive" "randomized" "realist" "remixed" "rococo" "romanticist" "samsara" "serialized" "solar" "spatial" "spectral" "subliminal" "supernovaed" "surrealist" "symbolist" "synthetic" "syzygy" "temporal" "theoretical" "thermodynamic" "tragic" "transcendental" "ultraviolet" "universal" "utopian" "variable" "virtual" "wormholed")
 
 emotions=("affectionate" "afraid" "aggressive" "alarmed" "amazed" "amused" "angry" "annoyed" "anxious" "apathetic" "apprehensive" "argumentative" "ashamed" "astonished" "astounded" "awed" "awkward" "baffled" "bewildered" "bitter" "calm" "captivated" "cheerful" "comfortable" "concerned" "confrontational" "confused" "contemplative" "content" "cruel" "crushed" "curious" "cursed" "cynical" "defeated" "defiant" "delighted" "depressed" "desperate" "determined" "disappointed" "discouraged" "disgusted" "distracted" "distraught" "distressed" "doomed" "dread" "dumbfounded" "ecstatic" "embarrassed" "emotional" "encouraged" "enraged" "entertained" "envious" "euphoric" "excited" "fascinated" "frightened" "frustrated" "furious" "gloomy" "grateful" "happy" "helpless" "hopeful" "hopeless" "horrified" "hostile" "humiliated" "indecisive" "indifferent" "infuriated" "intrigued" "introspective" "irritated" "jealous" "kind" "lonely" "loving" "mesmerized" "mischievous" "miserable" "moody" "mystified" "nervous" "nostalgic" "optimistic" "paranoid" "peaceful" "pensive" "perplexed" "playful" "pleased" "proud" "puzzled" "quarrelsome" "reckless" "relaxed" "relieved" "restless" "sad" "satisfied" "scared" "shocked" "skeptical" "smug" "somber" "startled" "stressed" "stunned" "surprised" "suspicious" "tense" "terrified" "thankful" "thoughtful" "thrilled" "timid" "tranquil" "triumphant" "uncertain" "uncomfortable" "upset" "victorious" "wistful" "worried")
 
