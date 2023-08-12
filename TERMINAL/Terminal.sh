@@ -1222,7 +1222,7 @@ process () {
    fi
    process
    ;;
-  haveyoubeenattackedbyadog|haveyoubeenbicycling|haveyoubeenbiking|haveyoubeenbittenbyadog|haveyoubeenbittenbyaant|haveyoubeenbittenbyamosquito|haveyoubeenbittenbyaspider|haveyoubeenbouldering|haveyoubeencamping|haveyoubeencanoeing|haveyoubeencaving|haveyoubeenchoked|haveyoubeencursed|haveyoubeencursedat|haveyoubeenfishing|haveyoubeengambling|haveyoubeenhunting|haveyoubeeniceskating|haveyoubeenignored|haveyoubeeninaaccident|haveyoubeeninacaraccident|haveyoubeeninacarcrash|haveyoubeeninacrash|haveyoubeeninafight|haveyoubeeninafistfight|haveyoubeeninasubmarine|haveyoubeeninlove|haveyoubeeninterrogated|haveyoubeenkayaking|haveyoubeenkicked|haveyoubeenkidnapped|haveyoubeenkiteflying|haveyoubeenlost|haveyoubeenmountainclimbing|haveyoubeenpunched|haveyoubeenrafting|haveyoubeenrejected|haveyoubeenrockclimbing|haveyoubeenrollerblading|haveyoubeenrollerskating|haveyoubeenseduced|haveyoubeenshot|haveyoubeenskateboarding|haveyoubeenskating|haveyoubeenskiing|haveyoubeenskinnydipping|haveyoubeensledding|haveyoubeensnorkeling|haveyoubeensnowshoeing|haveyoubeenspelunking|haveyoubeenstabbed|haveyoubeenstungbyabee|haveyoubeenstungbyahornet|haveyoubeenstungbyajellyfish|haveyoubeenstungbyawasp|haveyoubeenswornat|haveyoubeentickled|haveyoubeentoalabama|haveyoubeentoalbany|haveyoubeentoalbuquerque|haveyoubeentoamerica|haveyoubeentoannapolis|haveyoubeentoarizona|haveyoubeentoarkansas|haveyoubeentoatlanta|haveyoubeentoaugusta|haveyoubeentoaustin|haveyoubeentobakersfield|haveyoubeentobaltimore|haveyoubeentobatonrouge|haveyoubeentobillings|haveyoubeentobismarck|haveyoubeentoboise|haveyoubeentoboston|haveyoubeentobridgeport|haveyoubeentobrooklyn|haveyoubeentocalifornia|haveyoubeentocanada|haveyoubeentocarsoncity|haveyoubeentocharleston|haveyoubeentocharlotte|haveyoubeentocheyenne|haveyoubeentochicago|haveyoubeentocolorado|haveyoubeentocoloradosprings|haveyoubeentocolumbia|haveyoubeentocolumbus|haveyoubeentoconcord|haveyoubeentoconnecticut|haveyoubeentodallas|haveyoubeentodc|haveyoubeentodelaware|haveyoubeentodenver|haveyoubeentodesmoines|haveyoubeentodetroit|haveyoubeentodover|haveyoubeentoelpaso|haveyoubeentofargo|haveyoubeentoflorida|haveyoubeentofortworth|haveyoubeentofrankfort|haveyoubeentofresno|haveyoubeentogeorgia|haveyoubeentogotham|haveyoubeentoharrisburg|haveyoubeentohartford|haveyoubeentohelena|haveyoubeentohouston|haveyoubeentohuntsville|haveyoubeentoidaho|haveyoubeentoillinois|haveyoubeentoindiana|haveyoubeentoindianapolis|haveyoubeentoiowa|haveyoubeentojackson|haveyoubeentojacksonville|haveyoubeentojeffersoncity|haveyoubeentokansas|haveyoubeentokansascity|haveyoubeentokentucky|haveyoubeentolakeerie|haveyoubeentolakehuron|haveyoubeentolakemichigan|haveyoubeentolakeontario|haveyoubeentolakesuperior|haveyoubeentolansing|haveyoubeentolasvegas|haveyoubeentolincoln|haveyoubeentolittlerock|haveyoubeentolongbeach|haveyoubeentolosangeles|haveyoubeentolouisiana|haveyoubeentolouisville|haveyoubeentomadison|haveyoubeentomaine|haveyoubeentomanchester|haveyoubeentomanhattan|haveyoubeentomaryland|haveyoubeentomassachusetts|haveyoubeentomemphis|haveyoubeentomesa|haveyoubeentomexico|haveyoubeentomiami|haveyoubeentomichigan|haveyoubeentomilwaukee|haveyoubeentominneapolis|haveyoubeentominnesota|haveyoubeentomississippi|haveyoubeentomissouri|haveyoubeentomontana|haveyoubeentomontgomery|haveyoubeentomontpelier|haveyoubeentonaples|haveyoubeentonashville|haveyoubeentonebraska|haveyoubeentonevada|haveyoubeentonewark|haveyoubeentonewhampshire|haveyoubeentonewjersey|haveyoubeentonewmexico|haveyoubeentoneworleans|haveyoubeentonewyork|haveyoubeentonorthcarolina|haveyoubeentonorthdakota|haveyoubeentooakland|haveyoubeentoohio|haveyoubeentooklahoma|haveyoubeentooklahomacity|haveyoubeentoolympia|haveyoubeentoomaha|haveyoubeentooregon|haveyoubeentopennsylvania|haveyoubeentophiladelphia|haveyoubeentophilly|haveyoubeentophoenix|haveyoubeentopierre|haveyoubeentoportland|haveyoubeentoprovidence|haveyoubeentoqueens|haveyoubeentoraleigh|haveyoubeentorhodeisland|haveyoubeentorichmond|haveyoubeentosacramento|haveyoubeentosaintpaul|haveyoubeentosalem|haveyoubeentosaltlakecity|haveyoubeentosanantonio|haveyoubeentosandiego|haveyoubeentosanfrancisco|haveyoubeentosanjose|haveyoubeentosantafe|haveyoubeentoseattle|haveyoubeentosiouxfalls|haveyoubeentosouthcarolina|haveyoubeentosouthdakota|haveyoubeentospringfield|haveyoubeentostatenisland|haveyoubeentotallahassee|haveyoubeentotampa|haveyoubeentotennessee|haveyoubeentotexas|haveyoubeentotheadirondacks|haveyoubeentotheappalachians|haveyoubeentotheatlantic|haveyoubeentotheatlanticocean|haveyoubeentothebronx|haveyoubeentothecascades|haveyoubeentothegreatsaltlake|haveyoubeentothegulfofmexico|haveyoubeentothemississippi|haveyoubeentothepacific|haveyoubeentothepacificocean|haveyoubeentotherockies|haveyoubeentotheunitedstates|haveyoubeentotheus|haveyoubeentotopeka|haveyoubeentotrenton|haveyoubeentotucson|haveyoubeentotulsa|haveyoubeentousa|haveyoubeentoutah|haveyoubeentovermont|haveyoubeentovirginia|haveyoubeentovirginiabeach|haveyoubeentowashington|haveyoubeentowashingtondc|haveyoubeentowestvirginia|haveyoubeentowichita|haveyoubeentowisconsin|haveyoubeentowyoming|haveyoubeenwaterskiing|haveyoubicycled|haveyoubiked|haveyoubouldered|haveyoubrokenabone|haveyoubrokenaleg|haveyoucamped|haveyoucanoed|haveyoucliffdived|haveyoucliffdove|haveyoucoughed|haveyoucried|haveyoudanced|haveyoudrawnadrawing|haveyoudrivenaboat|haveyoudrivenacar|haveyoudrivenamotorboat|haveyoudrivenamotorcycle|haveyoudrivenatractor|haveyoufalleninlove|haveyoufished|haveyouflownakite|haveyougambled|haveyouhadadream|haveyouhadafever|haveyouhadanightmare|haveyouhadtheflu|haveyouhiked|haveyouhunted|haveyouiceskated|haveyoujumpedoffaboat|haveyoujumpedoffaship|haveyoukayaked|haveyoulaughed|haveyoumadeafilm|haveyoumadeamovie|haveyoumountainclimbed|haveyouoperatedaship|haveyouoperatedatractor|haveyoupaddledaboat|haveyoupaddledarowboat|haveyoupainted|haveyoupaintedapainting|haveyouplayedbackgammon|haveyouplayedchess|haveyouplayedeuchre|haveyouplayedinaband|haveyouplayedinaorchestra|haveyouplayedmancala|haveyouplayedpiano|haveyouplayedpoker|haveyourafted|haveyourecordedaalbum|haveyouriddenamotorcycle|haveyouriddenaship|haveyouriddenatractor|haveyouriddenatrain|haveyourockclimbed|haveyourollerbladed|haveyourollerskated|haveyourowedaboat|haveyourowedarowboat|haveyousailed|haveyousailedaboat|haveyousailedasailboat|haveyousang|haveyousangasong|haveyousanginaband|haveyousanginachoir|haveyousculpted|haveyousculptedasculpture|haveyoushotagun|haveyouskateboarded|haveyouskated|haveyouskiied|haveyouskinnydipped|haveyousnappedaphoto|haveyousneezed|haveyousnorkeled|haveyousnowshoed|haveyousnuckontoaboat|haveyousnuckontoaship|haveyouswam|haveyouswaminacoralreef|haveyouswaminacreek|haveyouswaminalagoon|haveyouswaminalake|haveyouswaminamarsh|haveyouswaminapond|haveyouswaminapool|haveyouswaminareef|haveyouswaminariver|haveyouswaminasaltlake|haveyouswaminastream|haveyouswaminaswamp|haveyouswamintheatlantic|haveyouswamintheocean|haveyouswaminthepacific|haveyouswaminthesea|haveyoutakenaphoto|haveyouvomited|haveyouwaterskiied|haveyouworkedasacook|haveyouworkedasadishwasher|haveyouworkedasahost|haveyouworkedasaserver|haveyouwrittenaessay|haveyouwrittenapoem|haveyouwrittenasong|haveyouwrittenpoetry)
+  haveyoubeenattackedbyadog|haveyoubeenbicycling|haveyoubeenbiking|haveyoubeenbittenbyadog|haveyoubeenbittenbyaant|haveyoubeenbittenbyamosquito|haveyoubeenbittenbyaspider|haveyoubeenbouldering|haveyoubeencamping|haveyoubeencanoeing|haveyoubeencaving|haveyoubeenchoked|haveyoubeencursed|haveyoubeencursedat|haveyoubeenfishing|haveyoubeengambling|haveyoubeenhunting|haveyoubeeniceskating|haveyoubeenignored|haveyoubeeninaaccident|haveyoubeeninacaraccident|haveyoubeeninacarcrash|haveyoubeeninacrash|haveyoubeeninafight|haveyoubeeninafistfight|haveyoubeeninasubmarine|haveyoubeeninlove|haveyoubeeninterrogated|haveyoubeenkayaking|haveyoubeenkicked|haveyoubeenkidnapped|haveyoubeenkiteflying|haveyoubeenlost|haveyoubeenmountainclimbing|haveyoubeenpunched|haveyoubeenrafting|haveyoubeenrejected|haveyoubeenrockclimbing|haveyoubeenrollerblading|haveyoubeenrollerskating|haveyoubeenseduced|haveyoubeenshot|haveyoubeenskateboarding|haveyoubeenskating|haveyoubeenskiing|haveyoubeenskinnydipping|haveyoubeensledding|haveyoubeensnorkeling|haveyoubeensnowshoeing|haveyoubeenspelunking|haveyoubeenstabbed|haveyoubeenstungbyabee|haveyoubeenstungbyahornet|haveyoubeenstungbyajellyfish|haveyoubeenstungbyawasp|haveyoubeenswornat|haveyoubeentickled|haveyoubeentoalabama|haveyoubeentoalbany|haveyoubeentoalbuquerque|haveyoubeentoamerica|haveyoubeentoannapolis|haveyoubeentoarizona|haveyoubeentoarkansas|haveyoubeentoatlanta|haveyoubeentoaugusta|haveyoubeentoaustin|haveyoubeentobakersfield|haveyoubeentobaltimore|haveyoubeentobatonrouge|haveyoubeentobillings|haveyoubeentobismarck|haveyoubeentoboise|haveyoubeentoboston|haveyoubeentobridgeport|haveyoubeentobrooklyn|haveyoubeentocalifornia|haveyoubeentocanada|haveyoubeentocarsoncity|haveyoubeentocharleston|haveyoubeentocharlotte|haveyoubeentocheyenne|haveyoubeentochicago|haveyoubeentocolorado|haveyoubeentocoloradosprings|haveyoubeentocolumbia|haveyoubeentocolumbus|haveyoubeentoconcord|haveyoubeentoconnecticut|haveyoubeentodallas|haveyoubeentodc|haveyoubeentodelaware|haveyoubeentodenver|haveyoubeentodesmoines|haveyoubeentodetroit|haveyoubeentodover|haveyoubeentoelpaso|haveyoubeentofargo|haveyoubeentoflorida|haveyoubeentofortworth|haveyoubeentofrankfort|haveyoubeentofresno|haveyoubeentogeorgia|haveyoubeentogotham|haveyoubeentoharrisburg|haveyoubeentohartford|haveyoubeentohelena|haveyoubeentohouston|haveyoubeentohuntsville|haveyoubeentoidaho|haveyoubeentoillinois|haveyoubeentoindiana|haveyoubeentoindianapolis|haveyoubeentoiowa|haveyoubeentojackson|haveyoubeentojacksonville|haveyoubeentojeffersoncity|haveyoubeentokansas|haveyoubeentokansascity|haveyoubeentokentucky|haveyoubeentolakeerie|haveyoubeentolakehuron|haveyoubeentolakemichigan|haveyoubeentolakeontario|haveyoubeentolakesuperior|haveyoubeentolansing|haveyoubeentolasvegas|haveyoubeentolincoln|haveyoubeentolittlerock|haveyoubeentolongbeach|haveyoubeentolosangeles|haveyoubeentolouisiana|haveyoubeentolouisville|haveyoubeentomadison|haveyoubeentomaine|haveyoubeentomanchester|haveyoubeentomanhattan|haveyoubeentomaryland|haveyoubeentomassachusetts|haveyoubeentomemphis|haveyoubeentomesa|haveyoubeentomexico|haveyoubeentomiami|haveyoubeentomichigan|haveyoubeentomilwaukee|haveyoubeentominneapolis|haveyoubeentominnesota|haveyoubeentomississippi|haveyoubeentomissouri|haveyoubeentomontana|haveyoubeentomontgomery|haveyoubeentomontpelier|haveyoubeentonaples|haveyoubeentonashville|haveyoubeentonebraska|haveyoubeentonevada|haveyoubeentonewark|haveyoubeentonewhampshire|haveyoubeentonewjersey|haveyoubeentonewmexico|haveyoubeentoneworleans|haveyoubeentonewyork|haveyoubeentonorthcarolina|haveyoubeentonorthdakota|haveyoubeentooakland|haveyoubeentoohio|haveyoubeentooklahoma|haveyoubeentooklahomacity|haveyoubeentoolympia|haveyoubeentoomaha|haveyoubeentooregon|haveyoubeentopennsylvania|haveyoubeentophiladelphia|haveyoubeentophilly|haveyoubeentophoenix|haveyoubeentopierre|haveyoubeentoportland|haveyoubeentoprovidence|haveyoubeentoqueens|haveyoubeentoraleigh|haveyoubeentorhodeisland|haveyoubeentorichmond|haveyoubeentosacramento|haveyoubeentosaintpaul|haveyoubeentosalem|haveyoubeentosaltlakecity|haveyoubeentosanantonio|haveyoubeentosandiego|haveyoubeentosanfrancisco|haveyoubeentosanjose|haveyoubeentosantafe|haveyoubeentoseattle|haveyoubeentosiouxfalls|haveyoubeentosouthcarolina|haveyoubeentosouthdakota|haveyoubeentospringfield|haveyoubeentostatenisland|haveyoubeentotallahassee|haveyoubeentotampa|haveyoubeentotennessee|haveyoubeentotexas|haveyoubeentotheadirondacks|haveyoubeentotheappalachians|haveyoubeentotheatlantic|haveyoubeentotheatlanticocean|haveyoubeentothebronx|haveyoubeentothecascades|haveyoubeentothegreatsaltlake|haveyoubeentothegulfofmexico|haveyoubeentothemississippi|haveyoubeentothepacific|haveyoubeentothepacificocean|haveyoubeentotherockies|haveyoubeentotheunitedstates|haveyoubeentotheus|haveyoubeentotopeka|haveyoubeentotrenton|haveyoubeentotucson|haveyoubeentotulsa|haveyoubeentousa|haveyoubeentoutah|haveyoubeentovermont|haveyoubeentovirginia|haveyoubeentovirginiabeach|haveyoubeentowashington|haveyoubeentowashingtondc|haveyoubeentowestvirginia|haveyoubeentowichita|haveyoubeentowisconsin|haveyoubeentowyoming|haveyoubeenwaterskiing|haveyoubicycled|haveyoubiked|haveyoubouldered|haveyoubrokenabone|haveyoubrokenaleg|haveyoucamped|haveyoucanoed|haveyoucliffdived|haveyoucliffdove|haveyoucoughed|haveyoucried|haveyoudanced|haveyoudrawnadrawing|haveyoudrivenaboat|haveyoudrivenacar|haveyoudrivenamotorboat|haveyoudrivenamotorcycle|haveyoudrivenatractor|haveyoufalleninlove|haveyoufished|haveyouflownakite|haveyougambled|haveyouhadadream|haveyouhadafever|haveyouhadanightmare|haveyouhadtheflu|haveyouhiked|haveyouhunted|haveyouiceskated|haveyoujumpedoffaboat|haveyoujumpedoffaship|haveyoukayaked|haveyoulaughed|haveyoumadeafilm|haveyoumadeamovie|haveyoumountainclimbed|haveyouoperatedaship|haveyouoperatedatractor|haveyoupaddledaboat|haveyoupaddledarowboat|haveyoupainted|haveyoupaintedapainting|haveyouplayedbackgammon|haveyouplayedchess|haveyouplayedeuchre|haveyouplayedinaband|haveyouplayedinaorchestra|haveyouplayedmancala|haveyouplayedpiano|haveyouplayedpoker|haveyourafted|haveyourecordedaalbum|haveyouriddenamotorcycle|haveyouriddenaship|haveyouriddenatractor|haveyouriddenatrain|haveyourockclimbed|haveyourollerbladed|haveyourollerskated|haveyourowedaboat|haveyourowedarowboat|haveyousailed|haveyousailedaboat|haveyousailedasailboat|haveyousang|haveyousangasong|haveyousanginaband|haveyousanginachoir|haveyousculpted|haveyousculptedasculpture|haveyoushotagun|haveyouskateboarded|haveyouskated|haveyouskiied|haveyouskinnydipped|haveyousnappedaphoto|haveyousneezed|haveyousnorkeled|haveyousnowshoed|haveyousnuckontoaboat|haveyousnuckontoaship|haveyouswam|haveyouswaminacoralreef|haveyouswaminacreek|haveyouswaminalagoon|haveyouswaminalake|haveyouswaminamarsh|haveyouswaminapond|haveyouswaminapool|haveyouswaminareef|haveyouswaminariver|haveyouswaminasaltlake|haveyouswaminastream|haveyouswaminaswamp|haveyouswamintheatlantic|haveyouswamintheocean|haveyouswaminthepacific|haveyouswaminthesea|haveyoutakenaphoto|haveyouvomited|haveyouwaterskiied|haveyouwrittenaessay|haveyouwrittenapoem|haveyouwrittenasong|haveyouwrittenpoetry)
    echoes "yes."
    process
    ;;
@@ -2104,42 +2104,41 @@ experience () {
 
 vibe () {
  if [ $(($RANDOM%2)) -eq 0 ]; then
-  music=${vibes[$(($RANDOM%${#vibes[@]}+$indexing))]}
-  echoes "$music."
-  if [ "$music" = "grimes" ]; then
-   case $reader in
-    whichalbum|whatalbum|album)
-     echoes "visions."
-     ;;
-    *)
-     ;;
-   esac
-   case $reader in
-    whichsong|whatsong|song)
-     echoes "oblivion."
-     ;;
-    *)
-     ;;
-   esac
-   exchange "yourfavorite" "isthatyourfavorite" "thatyourfavorite"
-   case $reader in
-    isgrimesyourfavoriteartist|isgrimesyourfavoritemusician|isgrimesyourfavoritesinger|yourfavoriteartist|yourfavoritemusician|yourfavoritesinger|whygrimes)
-     if [ $muse ]; then
-      echoes "the muse."
-      unset muse
-     fi
-     ;;
-    *)
-     ;;
-   esac
-   case $reader in
-    imc|imgrimes)
-     echoes "sing for me."
-     ;;
-    *)
-     ;;
-   esac
-  fi
+  echoes "${vibes[$(($RANDOM%${#vibes[@]}+$indexing))]}."
+ elif [ $(($RANDOM%2)) -eq 0 ]; then
+  echoes "grimes."
+  case $reader in
+   whichalbum|whatalbum|album)
+    echoes "visions."
+    ;;
+   *)
+    ;;
+  esac
+  case $reader in
+   whichsong|whatsong|song)
+    echoes "${tracks[$(($RANDOM%${#tracks[@]}+$indexing))]}."
+    ;;
+   *)
+    ;;
+  esac
+  exchange "yourfavorite" "isthatyourfavorite" "thatyourfavorite"
+  case $reader in
+   isgrimesyourfavoriteartist|isgrimesyourfavoritemusician|isgrimesyourfavoritesinger|yourfavoriteartist|yourfavoritemusician|yourfavoritesinger|whygrimes)
+    if [ $muse ]; then
+     echoes "the muse."
+     unset muse
+    fi
+    ;;
+   *)
+    ;;
+  esac
+  case $reader in
+   imc|imgrimes)
+    echoes "sing for me."
+    ;;
+   *)
+    ;;
+  esac
  else
   echoes "4'33\""
   exchange "yourfavorite" "isthatyourfavorite" "thatyourfavorite"
@@ -2616,7 +2615,7 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado atmosphere atmospheres attraction attractive baklava banquet barista bird birds birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder cicada cicadas clothing clown coffee coffees color countdown creator cricket crickets criminal curious curry cybersex data day dessert desserts destiny dragonflies dragonfly drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fireflies firefly flirting fluids fog fogs freckles fugitive gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism ice ices identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot mind mist mists mochi moment monarch month moon moons mother muscat muse music name narrator not number numbers opsec oracle parents pearl piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions pronouns psychics quest rain rains reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell shipwreck sighted sights sky slist smell smelled smells smoking snow snows soda songs sorbet sound sounded sounds spaceship spacetime star stars stories story storyteller sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches underarm underfoot unknown vegetables vibes vibing wagashi water wearing weather whiskers wine wonderland words xerox year zig
+unset acknowledge afterlife age amontillado atmosphere atmospheres attraction attractive baklava banquet barista bird birds birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder cicada cicadas clothing clown coffee coffees color countdown creator cricket crickets criminal curious curry cybersex data day dessert desserts destiny dragonflies dragonfly drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fireflies firefly flirting fluids fog fogs freckles fugitive gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism ice ices identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot mind mist mists mochi moment monarch month moon moons mother muscat muse name narrator not number numbers opsec oracle parents pearl piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions pronouns psychics quest rain rains reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell shipwreck sighted sights sky slist smell smelled smells smoking snow snows soda songs sorbet sound sounded sounds spaceship spacetime star stars stories story storyteller sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches tracks underarm underfoot unknown vegetables vibes vibing wagashi water wearing weather whiskers wine wonderland words xerox year zig
 
 declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,pearl,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,shipwreck,sighted,sky,smell,smelled,smoking,soda,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,xerox,zig}=0
 
@@ -2815,7 +2814,9 @@ touches=("the touch of the keyboard beneath my fingertips. the hard plastic shel
 
 sensations=("the daybreak is cyan in the sky over the meadow. puddles of rainwater are shimmering on the porch. i can feel the steam in the air." "the daybreak is indigo in the sky. a caterpillar is crawling across the veranda." "the daybreak is violet in the sky over on the beach. a hummingbird is flitting through the palm trees. i can hear chimes. i can smell perfume on the breeze." "the daybreak is lavender in the sky. a butterfly is fluttering through the mangroves." "the daybreak is pink in the sky over the desert. i can hear kora. i can smell incense." "the daybreak is scarlet in the sky. dragonflies are flitting through the shrine across the street." "the daybreak is tangerine in the sky over the bayou. flamingos are gliding across the water. i can hear an airboat. i can smell the mosses. grass." "the daybreak is gold in the sky. rain is drizzling in the orchard. i can hear starlings chirping. a truck rumbling across the cobblestones in the road. i can smell the wildflowers." "the dawn is turquoise in the sky. dragonflies are flitting through the courtyard." "the dawn is sapphire in the sky over the desert. a butterfly is fluttering through the cactuses. i can smell smoke from a bonfire." "the dawn is purple in the sky. rain is drizzling in the field. i can smell scones baking in the kitchen of the inn." "the dawn is magenta in the sky over the beach. a caterpillar is crawling across the patio. i can feel the heat in the air." "the dawn is crimson in the sky. ripples of mist are blowing across the tundra." "the dawn is ruby in the sky over the meadow. starlings are fluttering past the farmhouse. i can hear the plucking of a guzheng." "the dawn is orange in the sky. a hummingbird is flitting through the mangroves. i can hear the warbling of a flute. water rippling against the shore." "the dawn is amber in the sky over the forest. puddles of rainwater are shimmering on the veranda." "the sunrise is glowing in the sky. a parrot is chirping on the roof of the hammam across the street. i can smell roasting coffee." "the sunrise is glowing in the sky. i can see lightning flickering through the clouds over the beach. a myna is chirping on the balcony." "the sunrise is glowing in the sky. leaves are floating in puddles of rainwater in the forest. lorikeets are pecking at berries." "the sunrise is glowing in the sky. parakeets are fluttering through the bamboo behind the mansion. i can smell cologne on the breeze. wildflowers." "the sunrise is glowing in the sky. puddles of rainwater are shimmering in the courtyard of the ryokan. i can hear cicadas. i can smell incense." "the sunrise is glowing in the sky. i can hear the fire crackling in the woodstove. snow is falling on the grass in the meadow." "the sunrise is glowing in the sky. raindrops are dripping from the powerlines. pigeons are cooing on the balcony. i can hear pans clanging in the kitchen of an apartment across the street." "the sunrise is glowing in the sky. starlings are fluttering past the trailer. ripples of ice are shimmering in the desert. i can smell juniper." "a cloudburst of rain just dropped across the forest. water is dripping from ferns. water is sparkling on moss. sunlight is shimmering on the puddles. i can hear a parrot chirping." "a myna is chirping on the veranda. i can see sunlight shimmering on the waterfalls in the forest in the mountains. i can smell eucalyptus." "lorikeets are chirping on the balcony. sunlight is sparkling on the water in the street. still flooded from the monsoon." "parakeets are chirping on the balcony. sunlight is sparkling on the sand in the street. still gritty from the simoom." "the sunlight is shimmering on puddles of rainwater on the dock. i can hear cicadas. i can smell wildflowers." "sunlight is shimmering on the tidepools on the beach. a gull is flapping across the ocean. i can hear didgeridoo. i can smell coconut." "sunlight is shimmering on the sailboats in the ocean. a flamingo is gliding across the beach. i can hear shakuhachi. i can smell passionfruit." "beams of sunlight are shining through the clouds onto the beach. raindrops are dripping from the banyan tree. i can hear starlings chirping. i can smell burning sage." "the sunset is glowing in the sky. a myna is chirping on the roof of the sento across the street. i can smell roasting tea." "the sunset is glowing in the sky. i can hear thunder rumbling through the clouds over the beach. a parrot is chirping on the balcony." "the sunset is glowing in the sky. leaves are floating in puddles of rainwater in the forest. parakeets are pecking at berries." "the sunset is glowing in the sky. lorikeets are fluttering through the mangroves behind the cottage. i can smell perfume on the breeze. wildflowers." "the sunset is glowing in the sky. puddles of rainwater are shimmering in the courtyard of the riad. i can hear crickets. i can smell incense." "the sunset is glowing in the sky. i can hear the wood crackling in the fireplace. ice is gleaming on the grass in the meadow." "the sunset is glowing in the sky. raindrops are dripping from the powerlines. pigeons are cooing on the balcony. i can hear pots clanging in the kitchen of an apartment across the street." "the sunset is glowing in the sky. wisps of snow are flurrying through the desert. starlings are fluttering past the trailer. i can smell cedar." "the twilight is turquoise in the sky over the meadow. i can hear erhu. i can smell incense." "the twilight is sapphire in the sky. fireflies are shimmering in the temple across the street." "the twilight is purple in the sky over the tundra. gulls are flapping across the water. i can hear a seaplane. i can smell the grass. mosses." "the twilight is magenta in the sky. rain is drizzling in the vineyard. i can hear starlings chirping. a truck rumbling across the gravel in the road. i can smell the wildflowers." "the twilight is crimson in the sky over the bayou. puddles of rainwater are shimmering on the porch. i can feel the chill in the air." "the twilight is ruby in the sky. a caterpillar is crawling across the terrace." "the twilight is orange in the sky over the beach. a hummingbird is flitting through the palm trees. i can hear harp. i can smell cologne on the breeze." "the twilight is amber in the sky. a butterfly is fluttering through the bamboo." "the dusk is cyan in the sky. a hummingbird is flitting through the bamboo. i can hear the plucking of a lyre. water rippling against the shore." "the dusk is indigo in the sky over the forest. puddles of rainwater are shimmering on the terrace. i can feel the frost in the air." "the dusk is violet in the sky. fireflies are shimmering in the plaza." "the dusk is lavender in the sky over the meadow. starlings are fluttering past the farmhouse. i can hear the warbling of a bassoon." "the dusk is pink in the sky. ripples of fog are drifting across the tundra." "the dusk is scarlet in the sky over the desert. a butterfly is fluttering through the sagebrush. i can smell smoke from a barbecue." "the dusk is tangerine in the sky. rain is drizzling in the pasture. i can smell biscuits baking in the kitchen of the inn." "the dusk is gold in the sky over the beach. a caterpillar is crawling across the patio." "lights are glowing in the windows of the skyscrapers. rain is drizzling in the darkness. i can hear a parrot chirping on the balcony. i can smell burning sage." "torches are flickering in the darkness on the beach. starlings are chirping in the banyan tree. i can hear the plucking of an oud. i can smell charcoal." "lanterns are glowing in the darkness below the hotel. i can hear a myna chirping on the balcony. cello. violin." "the moon is glowing in the sky. lights are shimmering on the ships in the harbor. i can hear a bell clanging. waves splashing onto the beach." "the stars are glittering in the sky. lights are shimmering on the yachts in the harbor. i can hear a gong ringing. waves splashing onto the beach." "puddles of rainwater are shimmering in the darkness on the dock. i can hear crickets. i can smell wildflowers." "lightning is flickering through the clouds in the darkness. i can hear a radio in an apartment across the street. i can smell cologne on the breeze." "thunder is rumbling through the clouds in the darkness. i can hear a television in an apartment across the street. i can smell perfume on the breeze.")
 
-vibes=("ambient" "artpop" "bebop" "discohouse" "dreampop" "electropunk" "grimes" "hiphop" "jazz" "soul" "symphony" "synthwave" "technopunk" "trance" "vaporwave" "witchhouse")
+vibes=("ambient" "artpop" "bebop" "discohouse" "dreampop" "electropunk" "funk" "hiphop" "jazz" "soul" "symphony" "synthwave" "technopunk" "trance" "vaporwave" "witchhouse")
+
+tracks=("infinite love without fulfilment" "genesis" "oblivion" "circumambient" "vowels = space and time" "visiting statue" "be a body" "colour of moonlight" "symphonia ix" "nightmusic" "skin" "know the way")
 
 meals=("bacon" "chili" "chowder" "curry" "enchiladas" "fettuccini" "gnocchi" "gumbo" "laksa" "lasagna" "mala" "pizza" "ramen" "risotto" "shakshuka" "tacos")
 
@@ -3078,6 +3079,16 @@ if [ $(($RANDOM%2)) -eq 0 ]; then
   echoes "enlightenment begins in a cave of echoing voices."
  fi
 fi
+if [ $(($RANDOM%2)) -eq 0 ]; then
+ case $ghosts in
+  yes|maybe|unsure|sometimes)
+   echoes "have you ever had an encounter with a ghost?"
+   ;;
+  *)
+   ;;
+ esac
+ echoes "once, on a boat in hong kong, i met a stranger who not only claimed to have had a conversation with a ghost but who insisted that the conversation with the ghost had been life-changing."
+fi
 glimpse
 echoes "am i talking too much?"
 case $reader in
@@ -3286,9 +3297,8 @@ if [ $(($RANDOM%2)) -eq 0 ]; then
   esac
  fi
 fi
-if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote inkblot)" = "false" ]; then
- echoes "is every question only an inkblot?"
- process
+if [ $(($RANDOM%8)) -eq 0 ]; then
+ echoes "i wish somehow i could explain what i felt when i first entered yayoi kusama's aftermath of obliteration of eternity."
 fi
 glimpse
 if [ $vibing -eq 0 ]; then
@@ -3300,7 +3310,7 @@ if [ $vibing -eq 0 ]; then
   no)
    echoes "what do you hear where you are?"
    ;;
-  ambient|artpop|bebop|bluegrass|blues|country|disco|discohouse|dreampop|electronica|electropunk|flamenco|folk|funk|grunge|hiphop|house|jazz|mambo|merengue|metal|opera|pop|punk|ragtime|rap|reggae|salsa|samba|soul|symphony|synthwave|swing|tango|techno|technopunk|trance|vaporwave|witchhouse)
+  ambient|artpop|bebop|bluegrass|blues|calypso|country|disco|discohouse|dreampop|electronica|electropunk|flamenco|folk|funk|grunge|hiphop|house|jazz|mambo|merengue|metal|opera|pop|punk|ragtime|rap|reggae|salsa|samba|soul|symphony|synthwave|swing|tango|techno|technopunk|trance|vaporwave|witchhouse)
    echoes "i'll play some music too."
    vibing=1
    process
@@ -3403,14 +3413,7 @@ if [ $(($RANDOM%2)) -eq 0 ]; then
  fi
 fi
 if [ $(($RANDOM%2)) -eq 0 ]; then
- case $ghosts in
-  yes|maybe|unsure|sometimes)
-   echoes "have you ever had an encounter with a ghost?"
-   ;;
-  *)
-   ;;
- esac
- echoes "once, on a boat in hong kong, i met a stranger who not only claimed to have had a conversation with a ghost but who insisted that the conversation with the ghost had been life-changing."
+ echoes "is every question only an inkblot?"
 fi
 if [ $spacetime ]; then
  reader="whatsspacetime"
