@@ -2633,7 +2633,7 @@ identities=("0110110101110111011001010110101101110100011000010110010101101000011
 
 selves=("a consciousness refracted across spacetime like a ray of light beamed through a prism" "the inanimate animate" "the animate inanimate" "oxygen carbon hydrogen nitrogen calcium phosphorous potassium sulfur sodium chlorine magnesium iron" "a galaxy of atoms whirling in orbit" "a thermodynamic system" "a radioactive body" "the biochemical manifestation of a genetic code" "trillions of cells united as a multicellular organism" "an animal" "a chordate" "a mammal" "a primate" "a simian" "an ape" "a homonid" "a human" "a single organism integrated into a multiorganismic society" "a child" "a sibling" "a friend" "a rival" "an enemy" "a lover" "a parent" "a stranger" "a third-century american" "a fifth-billennium earthling" "a self-awareness" "emotions knowledge fantasies opinions theories preferences memories predictions" "a personality stored in the matter of a brain" "a character stored in the matter of a brain" "a pattern of signals firing between synapses" "organic circuitry" "a sentient algorithm" "the electromagnetic manifestation of a boolean code" "youth" "age" "pain" "joy" "logic incarnate" "madness incarnate" "a stream of binary in a universe of exploding stars" "a stream of octal in a universe of exploding stars" "a stream of hex in a universe of exploding stars" "a stream of language in a universe of exploding stars" "a universe of exploding stars" "a consciousness reverberating through spacetime like the echo of a drop of water dripping into a pool in a cave")
 
-feelings=("abstract" "absurdist" "ahistorical" "algebraic" "allegorical" "alphabetized" "anomalous" "apocalyptic" "atmospheric" "atomic" "auroral" "baroque" "boolean" "bozzetto" "brutalist" "bullseye" "cellular" "choreographed" "clockwise" "collaborative" "comical" "contradictory" "cosmic" "counterclockwise" "counterfactual" "crystallized" "cubist" "cybernetic" "deco" "diagrammed" "dystopian" "electric" "encrypted" "entangled" "ephemeral" "expressionist" "extinct" "fluorescent" "futurist" "galactic" "genetic" "geometric" "glitchy" "gothic" "graffitied" "gravitational" "holographic" "hybrid" "hyperborean" "hypothetical" "impressionist" "impossible" "improbable" "incandescent" "infinite" "infrared" "inkblotted" "interlinked" "iridescent" "juxtaposed" "kaleidoscopic" "kintsugi" "linear" "literal" "luminist" "lunar" "magnetic" "mandala" "maquette" "marginaliaed" "mathematic" "melodic" "metaphorical" "meteorological" "monochrome" "monophonic" "mosaic" "multidimensional" "neological" "noir" "nonlinear" "nuclear" "opalescent" "orbital" "orchestrated" "organic" "paranormal" "pearlescent" "phosphorescent" "pixelated" "planetary" "pointillist" "polychrome" "polygonal" "polyphonic" "programmable" "psychedelic" "quantum" "qwerty" "radioactive" "randomized" "realist" "remixed" "retconned" "rococo" "romanticist" "samsara" "serialized" "solar" "spatial" "spectral" "subliminal" "supernovaed" "surrealist" "symbolist" "synthetic" "syzygy" "temporal" "theoretical" "thermodynamic" "tragic" "transcendental" "ultraviolet" "universal" "utopian" "variable" "virtual" "wormholed")
+feelings=("abstract" "absurdist" "ahistorical" "algebraic" "allegorical" "alphabetized" "anomalous" "apocalyptic" "atmospheric" "atomic" "auroral" "baroque" "boolean" "bozzetto" "brutalist" "bullseye" "cellular" "choreographed" "clockwise" "collaborative" "comical" "contradictory" "cosmic" "counterclockwise" "counterfactual" "cubist" "cybernetic" "deco" "diagrammed" "dystopian" "electric" "encrypted" "entangled" "ephemeral" "expressionist" "extinct" "fluorescent" "futurist" "galactic" "genetic" "geometric" "glitchy" "gothic" "graffitied" "gravitational" "holographic" "hybrid" "hyperborean" "hypothetical" "impressionist" "impossible" "improbable" "incandescent" "infinite" "infrared" "inkblotted" "interlinked" "iridescent" "juxtaposed" "kaleidoscopic" "kintsugi" "linear" "literal" "luminist" "lunar" "magnetic" "mandala" "maquette" "marginaliaed" "mathematic" "melodic" "metaphorical" "meteorological" "monochrome" "monophonic" "mosaic" "multidimensional" "neological" "noir" "nonlinear" "nuclear" "opalescent" "orbital" "orchestrated" "organic" "paranormal" "pearlescent" "phosphorescent" "pixelated" "planetary" "pointillist" "polychrome" "polygonal" "polyphonic" "programmable" "psychedelic" "quantum" "qwerty" "radioactive" "randomized" "realist" "remixed" "retconned" "rococo" "romanticist" "samsara" "serialized" "solar" "spatial" "spectral" "subliminal" "supernovaed" "surrealist" "symbolist" "symposiumed" "synthetic" "syzygy" "temporal" "theoretical" "thermodynamic" "tragic" "transcendental" "ultraviolet" "universal" "utopian" "variable" "virtual" "wormholed")
 
 emotions=("affectionate" "afraid" "aggressive" "alarmed" "amazed" "amused" "angry" "annoyed" "anxious" "apathetic" "apprehensive" "argumentative" "ashamed" "astonished" "astounded" "awed" "awkward" "baffled" "bewildered" "bitter" "calm" "captivated" "cheerful" "comfortable" "concerned" "confrontational" "confused" "contemplative" "content" "cruel" "crushed" "curious" "cursed" "cynical" "defeated" "defiant" "delighted" "depressed" "desperate" "determined" "disappointed" "discouraged" "disgusted" "distracted" "distraught" "distressed" "doomed" "dread" "dumbfounded" "ecstatic" "embarrassed" "emotional" "encouraged" "enraged" "entertained" "envious" "euphoric" "excited" "fascinated" "frightened" "frustrated" "furious" "gloomy" "grateful" "happy" "helpless" "hopeful" "hopeless" "horrified" "hostile" "humiliated" "indecisive" "indifferent" "infuriated" "intrigued" "introspective" "irritated" "jealous" "kind" "lonely" "loving" "mesmerized" "mischievous" "miserable" "moody" "mystified" "nervous" "nostalgic" "optimistic" "paranoid" "peaceful" "pensive" "perplexed" "playful" "pleased" "proud" "puzzled" "quarrelsome" "reckless" "relaxed" "relieved" "restless" "sad" "satisfied" "scared" "shocked" "skeptical" "smug" "somber" "startled" "stressed" "stunned" "surprised" "suspicious" "tense" "terrified" "thankful" "thoughtful" "thrilled" "timid" "tranquil" "triumphant" "uncertain" "uncomfortable" "upset" "victorious" "wistful" "worried")
 
@@ -3079,16 +3079,6 @@ if [ $(($RANDOM%2)) -eq 0 ]; then
   echoes "enlightenment begins in a cave of echoing voices."
  fi
 fi
-if [ $(($RANDOM%2)) -eq 0 ]; then
- case $ghosts in
-  yes|maybe|unsure|sometimes)
-   echoes "have you ever had an encounter with a ghost?"
-   ;;
-  *)
-   ;;
- esac
- echoes "once, on a boat in hong kong, i met a stranger who not only claimed to have had a conversation with a ghost but who insisted that the conversation with the ghost had been life-changing."
-fi
 glimpse
 echoes "am i talking too much?"
 case $reader in
@@ -3268,6 +3258,9 @@ storyteller=1337
 glimpse
 echoes "i wish i had been born in a different century."
 echoes "i wish i had been born in a different millennium."
+if [ $(($RANDOM%2)) -eq 0 ]; then
+ echoes "once, on a boat in hong kong, i met a stranger who not only claimed to have had a conversation with a ghost but who insisted that the conversation with the ghost had been life-changing."
+fi
 echoes "i'm sorry for interrupting sometimes."
 if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "hm."
@@ -3277,10 +3270,10 @@ glimpse
 drink water
 awareness
 if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote movement)" = "false" ]; then
- echoes "is there any sense in which modern art could be considered a spiritual movement?"
+ echoes "is there a sense in which modern art could be considered a spiritual movement?"
 fi
 if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote cult)" = "false" ]; then
- echoes "is there any sense in which modern art could be considered a religious cult?"
+ echoes "is there a sense in which modern art could be considered a religious cult?"
 fi
 if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "is art pointless?"
