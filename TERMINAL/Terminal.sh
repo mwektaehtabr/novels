@@ -2108,7 +2108,7 @@ experience () {
 vibe () {
  if [ $(($RANDOM%2)) -eq 0 ]; then
   echoes "${vibes[$(($RANDOM%${#vibes[@]}+$indexing))]}."
- elif [ $(($RANDOM%2)) -eq 0 ]; then
+ elif [ $(($RANDOM%8)) -eq 0 ]; then
   echoes "grimes."
   case $reader in
    whichalbum|whatalbum|album)
@@ -3183,7 +3183,7 @@ if [ $cybersex ]; then
  esac
 fi
 process
-if [ $(($RANDOM%2)) -eq 0 ]; then
+if [ $(($RANDOM%8)) -eq 0 ]; then
  echoes "once, on the patio of a cafe in brazil, i met a stranger who identified as cybersexual, claiming to be capable of orgasm only when chatting over a computer."
  process
 fi
@@ -3269,7 +3269,7 @@ fi
 glimpse
 drink water
 awareness
-if [ $(($RANDOM%2)) -eq 0 ]; then
+if [ $(($RANDOM%8)) -eq 0 ]; then
  echoes "once, on a boat in hong kong, i met a stranger who not only claimed to have had a conversation with a ghost but who insisted that the conversation with the ghost had been life-changing."
 fi
 if [ $(($RANDOM%2)) -eq 0 ] && [ "$(wrote movement)" = "false" ]; then
@@ -3293,7 +3293,7 @@ if [ $(($RANDOM%2)) -eq 0 ]; then
   esac
  fi
 fi
-if [ $(($RANDOM%8)) -eq 0 ]; then
+if [ $(($RANDOM%16)) -eq 0 ]; then
  echoes "i wish somehow i could explain what i felt when i first entered yayoi kusama's aftermath of obliteration of eternity."
 fi
 glimpse
