@@ -23,7 +23,7 @@ document.addEventListener("keydown", function(event) {
   }
   if (event.code == "ArrowRight") {
     history.forward();
-    if (window.location.host == "verses.pub") {
+    if (window.location.host == "verses.pub" || window.location.host == "www.verses.pub") {
      randomize();
     }
   }
