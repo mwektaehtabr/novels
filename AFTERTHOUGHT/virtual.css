@@ -1,5 +1,17 @@
 @charset "utf-8";
 
+@font-face {
+  font-family: Virtual;
+  font-weight: normal;
+  src: url(https://mwektaehtabr.com/virtual-light.ttf);
+}
+
+@font-face {
+  font-family: Virtual;
+  font-weight: bold;
+  src: url(https://mwektaehtabr.com/virtual-dark.ttf);
+}
+
 html, body, div, span, p, a, em, i, b, s, u {
   margin: 0;
   padding: 0;
@@ -16,8 +28,7 @@ html, body, div, span, p, a, em, i, b, s, u {
 }
 
 html, body {
-  font-family: "Source Code Pro", monospace;
-  font-weight: 300;
+  font-family: Virtual, monospace;
   color: #000000;
   background: #ffffff;
   cursor: default;
@@ -62,7 +73,7 @@ p {
 a {
   color: #000000;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: bold;
   transition-duration: 0.2s;
   cursor: default;
 }
@@ -72,7 +83,7 @@ em, i {
 }
 
 b {
-  font-weight: 400;
+  font-weight: bold;
 }
 
 s {
