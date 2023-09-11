@@ -3,13 +3,13 @@
 @font-face {
   font-family: Virtual;
   font-weight: normal;
-  src: url(https://afterthought.pub/virtual-light.ttf);
+  src: url(/virtual-light.ttf);
 }
 
 @font-face {
   font-family: Virtual;
   font-weight: bold;
-  src: url(https://afterthought.pub/virtual-dark.ttf);
+  src: url(/virtual-dark.ttf);
 }
 
 html, body, div, span, p, a, em, i, b, s, u {
