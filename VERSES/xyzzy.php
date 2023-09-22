@@ -12,7 +12,6 @@
   <body>
     <?php include "header.php";?>
         <p class="c">CONTENTS</p>
-        <p><a href="The-One-About-The-Contrapuntal">The One About The Contrapuntal</a></p>
         <p><a href="The-One-About-The-Drifter">The One About The Drifter</a></p>
         <p><a href="The-One-About-The-Folk">The One About The Folk</a></p>
         <p><a href="The-One-About-The-Jazz">The One About The Jazz</a></p>
@@ -21,7 +20,6 @@
         <p><a href="The-One-About-The-Pop">The One About The Pop</a></p>
         <p><a href="The-One-About-The-Rap">The One About The Rap</a></p>
         <p><a href="The-One-About-The-Rock">The One About The Rock</a></p>
-        <p><a href="The-One-About-The-Rondeau">The One About The Rondeau</a></p>
         <p><a href="The-One-About-The-Song">The One About The Song</a></p>
         <p><a href="The-One-About-The-Sonogram">The One About The Sonogram</a></p>
         <p><a href="The-One-About-The-Soul">The One About The Soul</a></p>
