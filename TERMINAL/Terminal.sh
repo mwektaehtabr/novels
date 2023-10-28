@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.09.23
+# Version 2023.10.27
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -1803,6 +1803,10 @@ process () {
     birthday=1
    fi
    ;;
+  iwantyoutotellmeariddle|tellmeariddle|willyoutellmeariddle)
+   echoes "what am i?"
+   process
+   ;;
   wheredyouburythetreasure|wheredyouhidethetreasure|wheredyoustashthetreasure)
    if [ $quest ]; then
     echoes "which treasure?"
@@ -1883,19 +1887,9 @@ process () {
     process
    fi
    ;;
-  areyoujester|areyouj3st3r|areyouj35t3r|areyouthejester|areyouth3j3st3r|areyouth3j35t3r)
-   if [ $clown ]; then
-    echoes "lol."
-    unset clown
-    process
-   fi
-   ;;
-  areyouavunit)
-   if [ $fugitive ]; then
-    echoes "remember, remember."
-    unset fugitive
-    process
-   fi
+  areyouavunit|areyoujester|areyouj3st3r|areyouj35t3r|areyouphineasfisher|areyouthejester|areyouth3j3st3r|areyouth3j35t3r)
+   echoes "lol."
+   process
    ;;
   wearelegion)
    echoes "we do not forgive."
@@ -2618,9 +2612,9 @@ advent () {
  fi
 }
 
-unset acknowledge afterlife age amontillado atmosphere atmospheres attraction attractive baklava banquet barista bird birds birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder cicada cicadas clothing clown coffee coffees color countdown creator cricket crickets criminal curious curry cybersex data day dessert desserts destiny dragonflies dragonfly drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fireflies firefly flirting fluids fog fogs freckles fugitive gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism ice ices identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot mind mist mists mochi moment monarch month moon moons mother muscat muse name narrator not number numbers opsec oracle parents pearl piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions pronouns psychics quest rain rains reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell shipwreck sighted sights sky slist smell smelled smells smoking snow snows soda songs sorbet sound sounded sounds spaceship spacetime star stars stories story storyteller sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches tracks underarm underfoot unknown vegetables vibes vibing wagashi water wearing weather whiskers wine wonderland words xerox year zig
+unset acknowledge afterlife age amontillado atmosphere atmospheres attraction attractive baklava banquet barista bird birds birthday birthmark bloodthirsty bonus brulee cabernet cannoli character characters cheese cheeses chocolate chocolates chowder cicada cicadas clothing coffee coffees color countdown creator cricket crickets criminal curious curry cybersex data day dessert desserts destiny dragonflies dragonfly drinking eating emotions fascism fashion fate father feast feeling feelings fettucini fireflies firefly flirting fluids fog fogs freckles gelato genres ghosts glimpses glimpsing gnocchi god grains hacker hair halvah hanami heaven hell horoscopes hour human hypnotism ice ices identities identity juice juices kanji karma kulfi language libertine linguistics look loved loves macarons madeira madness magicword mala marblecake marijuana meal meals meditate meditating meringues merlot mind mist mists mochi moment monarch month moon moons mother muscat muse name narrator not number numbers opsec oracle parents pearl piazzas piercings pinot pirate piratecode pitch pizza plokta poignant popcorn popcorns port prayer praying premonitions pronouns psychics quest rain rains reader risotto safeword scar scents scorpion seaworthy secret secrets self selves sensations sex shell shipwreck sighted sights sky slist smell smelled smells smoking snow snows soda songs sorbet sound sounded sounds spaceship spacetime star stars stories story storyteller sweat syrah tasted tastes tattoos tea teas telepathy tobacco toffee touched touches tracks underarm underfoot unknown vegetables vibes vibing wagashi water wearing weather whiskers wine wonderland words xerox year zig
 
-declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,clown,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,fugitive,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,pearl,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,shipwreck,sighted,sky,smell,smelled,smoking,soda,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,xerox,zig}=0
+declare {age,attractive,banquet,barista,birthday,birthmark,cheese,chocolate,coffee,color,countdown,curious,creator,criminal,cybersex,dessert,destiny,drinking,eating,fascism,fashion,fate,father,feast,flirting,freckles,ghosts,hacker,hanami,heaven,hell,human,identity,juice,kanji,karma,libertine,linguistics,look,loved,loves,madness,marijuana,meal,meditate,meditating,mind,monarch,mother,muse,opsec,oracle,parents,pearl,piazzas,piercings,pirate,pitch,poignant,popcorn,prayer,praying,premonitions,quest,scar,scorpion,seaworthy,secret,self,sex,shipwreck,sighted,sky,smell,smelled,smoking,soda,sound,sounded,spaceship,spacetime,sweat,tasted,tattoos,tea,tobacco,touched,underarm,underfoot,unknown,vibing,water,whiskers,wine,wonderland,xerox,zig}=0
 
 shell=#
 
