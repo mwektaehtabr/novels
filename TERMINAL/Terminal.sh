@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.10.27
+# Version 2023.10.29
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -1804,7 +1804,20 @@ process () {
    fi
    ;;
   iwantyoutotellmeariddle|tellmeariddle|willyoutellmeariddle)
-   echoes "what am i?"
+   case $(($RANDOM%4)) in
+    0)
+     echoes "who am i?"
+     ;;
+    1)
+     echoes "where am i?"
+     ;;
+    2)
+     echoes "when am i?"
+     ;;
+    *)
+     echoes "what am i?"
+     ;;
+   esac
    process
    ;;
   wheredyouburythetreasure|wheredyouhidethetreasure|wheredyoustashthetreasure)
