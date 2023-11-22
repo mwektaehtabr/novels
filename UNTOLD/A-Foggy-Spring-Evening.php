@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php include "comment.php";?>
-<html>
+<html dir="ltr" lang="en">
   <head>
     <title>A Foggy Spring Evening</title>
     <?php include "meta.php";?>

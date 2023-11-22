@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php include "comment.php";?>
-<html>
+<html dir="ltr" lang="en">
   <head>
     <title>Theodore&rsquo;s Disposition</title>
     <?php include "meta.php";?>

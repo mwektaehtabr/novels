@@ -4,7 +4,7 @@
 (^_^)
 
 -->
-<html>
+<html dir="ltr" lang="en">
   <head>
     <title>xyzzy</title>
     <?php include "meta.php";?>

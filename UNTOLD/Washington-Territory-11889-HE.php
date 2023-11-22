@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php include "comment.php";?>
-<html>
+<html dir="ltr" lang="en">
   <head>
     <title>Washington Territory, 11889 H.E.</title>
     <?php include "meta.php";?>

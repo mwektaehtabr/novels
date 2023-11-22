@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php include "comment.php";?>
-<html>
+<html dir="ltr" lang="en">
   <head>
     <title>The Color Of The Red Box</title>
     <?php include "meta.php";?>

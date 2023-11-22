@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php include "comment.php";?>
-<html>
+<html dir="ltr" lang="en">
   <head>
     <title>Binomial Nomenclature (Hawkweed)</title>
     <?php include "meta.php";?>

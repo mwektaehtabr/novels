@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php include "comment.php";?>
-<html>
+<html dir="ltr" lang="en">
   <head>
     <title>The Most Beautiful Genre Of Music In The World</title>
     <?php include "meta.php";?>
