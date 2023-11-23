@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-        <p><a href="Zoes-Shirt">Jay always got freaked out</a> when she shoplifted, but she had never gotten caught.</p>
-      <?php include "footer.php";?>
+      <p><a href="Zoes-Shirt">Jay always got freaked out</a> when she shoplifted, but she had never gotten caught.</p>
+    <?php include "footer.php";?>
   </body>
 </html>

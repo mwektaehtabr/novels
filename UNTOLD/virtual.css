@@ -12,7 +12,7 @@
   src: url(/virtual-dark.ttf);
 }
 
-html, body, div, span, p, a, em, i, b, s, u {
+html, body, main, header, footer, div, span, h1, p, a, em, i, b, s, u {
   margin: 0;
   padding: 0;
   outline: 0;
@@ -36,13 +36,7 @@ html, body {
   user-select: none;
 }
 
-.header {
-  font-size: 40px;
-  text-align: center;
-  margin-top: 8px;
-}
-
-.content {
+main {
   width: 90%;
   max-width: 500px;
   margin-left: auto;
@@ -52,21 +46,26 @@ html, body {
   text-align: left;
 }
 
-.footer {
-  font-size: 16px;
+header, footer {
   text-align: center;
+}
+
+header {
+  margin-top: 8px;
+}
+
+footer {
   margin-top: 24px;
-  margin-bottom: 16px;
+}
+
+h1 {
+  font-size: 40px;
 }
 
 p {
   font-size: 16px;
   margin-bottom: 16px;
   line-height: 24px;
-}
-
-.c {
-  text-align: center;
 }
 
 a {
@@ -114,15 +113,8 @@ space {
   border-left: .1em solid #ffffff;
 }
 
-.container {
-  min-width: 100%;
-  height: calc(100vh - 182px);
-  min-height: 3px;
-  background: #ffffff;
-}
-
-#cover {
-  background: #eeeeee;
+.c {
+  text-align: center;
 }
 
 .x {
@@ -134,16 +126,27 @@ space {
   transform: translate(-50%, -50%);
 }
 
-@media only screen and (min-width: 555px) {
-
-.header {
-  font-size: 64px;
+.container {
+  min-width: 100%;
+  height: calc(100vh - 182px);
+  min-height: 3px;
+  background: #ffffff;
 }
 
-.content {
+#cover {
+  background: #eeeeee;
+}
+
+@media only screen and (min-width: 555px) {
+
+main {
   min-width: 500px;
   max-width: 1200px;
   width: 33.33%;
+}
+
+h1 {
+  font-size: 64px;
 }
 
 hr {

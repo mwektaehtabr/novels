@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-        <p><a href="One-Story-Home">Beatriz knew,</a> based on the time and the day, that her family was watching <a href="The-Show">her favorite show.</a></p>
-      <?php include "footer.php";?>
+      <p><a href="One-Story-Home">Beatriz knew,</a> based on the time and the day, that her family was watching <a href="The-Show">her favorite show.</a></p>
+    <?php include "footer.php";?>
   </body>
 </html>

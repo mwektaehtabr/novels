@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-        <p><a href="A-Flight">A baggy black t-shirt</a> with rolled-up sleeves, purchased from a thrift store.</p>
-      <?php include "footer.php";?>
+      <p><a href="A-Flight">A baggy black t-shirt</a> with rolled-up sleeves, purchased from a thrift store.</p>
+    <?php include "footer.php";?>
   </body>
 </html>

@@ -96,6 +96,10 @@ sm {
   font-variant: small-caps;
 }
 
+.c {
+  text-align: center;
+}
+
 hr {
   border-color: #000000;
   border-width: 1.5px;
@@ -113,19 +117,6 @@ space {
   border-left: .1em solid #ffffff;
 }
 
-.c {
-  text-align: center;
-}
-
-.x {
-  text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-}
-
 .container {
   min-width: 100%;
   height: calc(100vh - 182px);
@@ -135,6 +126,15 @@ space {
 
 #cover {
   background: #eeeeee;
+}
+
+.x {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 @media only screen and (min-width: 555px) {

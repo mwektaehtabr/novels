@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-        <p><a href="The-Cave">(Even the seeds, even the rinds.)</a></p>
-      <?php include "footer.php";?>
+      <p><a href="The-Cave">(Even the seeds, even the rinds.)</a></p>
+    <?php include "footer.php";?>
   </body>
 </html>

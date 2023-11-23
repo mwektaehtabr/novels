@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-        <p><a href="A-Night-In-The-Wilderness">She</a> had <a href="The-Pacemaker">a pacemaker</a> in her chest and <a href="The-Microchip">a microchip</a> in her hand.</p>
-      <?php include "footer.php";?>
+      <p><a href="A-Night-In-The-Wilderness">She</a> had <a href="The-Pacemaker">a pacemaker</a> in her chest and <a href="The-Microchip">a microchip</a> in her hand.</p>
+    <?php include "footer.php";?>
   </body>
 </html>

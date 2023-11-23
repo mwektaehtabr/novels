@@ -1,4 +1,5 @@
-<div class="page">
-      <div class="header"><a href="/" id="header">UNTOLD</a></div>
-      <hr>
-      <div class="content">
+<header>
+      <h1><a href="/">UNTOLD</a></h1>
+    </header>
+    <hr>
+    <main>

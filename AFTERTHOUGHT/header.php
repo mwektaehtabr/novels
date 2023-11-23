@@ -1,4 +1,5 @@
-<div class="page">
-      <div class="header"><a href="/" id="header">AFTERTHOUGHT</a></div>
-      <hr>
-      <div class="content">
+<header>
+      <h1><a href="/">AFTERTHOUGHT</a></h1>
+    </header>
+    <hr>
+    <main>

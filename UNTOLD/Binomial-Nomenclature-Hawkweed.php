@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-        <p><a onclick="history.back()"><i>Hieracium aurantiacum</i></a></p>
-      <?php include "footer.php";?>
+      <p><a onclick="history.back()"><i>Hieracium aurantiacum</i></a></p>
+    <?php include "footer.php";?>
   </body>
 </html>

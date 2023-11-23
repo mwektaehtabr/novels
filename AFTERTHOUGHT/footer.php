@@ -1,5 +1,6 @@
-</div>
-      <hr>
-      <div class="footer"><a href="About">ABOUT</a></div>
-    </div>
+</main>
+    <hr>
+    <footer>
+      <p><a href="About">ABOUT</a></p>
+    </footer>
     <script src="virtual.js"></script>
