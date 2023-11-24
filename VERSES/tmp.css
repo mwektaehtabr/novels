@@ -92,14 +92,6 @@ u {
   text-decoration: underline;
 }
 
-sm {
-  font-variant: small-caps;
-}
-
-.c {
-  text-align: center;
-}
-
 hr {
   border-color: #000000;
   border-width: 1.5px;
@@ -109,12 +101,17 @@ hr {
   max-width: 500px;
 }
 
-bar {
-  border-left: .1em solid #000000;
+.c {
+  text-align: center;
 }
 
-space {
-  border-left: .1em solid #ffffff;
+.m {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
 }
 
 .container {
@@ -124,17 +121,16 @@ space {
   background: #ffffff;
 }
 
-#cover {
+#rainbow {
   background: #eeeeee;
 }
 
-.x {
-  text-align: center;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
+bar {
+  border-left: .1em solid #000000;
+}
+
+space {
+  border-left: .1em solid #ffffff;
 }
 
 @media only screen and (min-width: 555px) {

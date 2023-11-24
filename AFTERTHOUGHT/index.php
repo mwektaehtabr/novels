@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <a href="Afterthought" class="cover" aria-label="COVER"><div class="container" id="cover"></div></a>
+      <?php include "cover.php";?>
     <?php include "footer.php";?>
   </body>
 </html>

@@ -92,10 +92,6 @@ u {
   text-decoration: underline;
 }
 
-sm {
-  font-variant: small-caps;
-}
-
 hr {
   border-color: #000000;
   border-width: 1.5px;
@@ -105,19 +101,11 @@ hr {
   max-width: 500px;
 }
 
-bar {
-  border-left: .1em solid #000000;
-}
-
-space {
-  border-left: .1em solid #ffffff;
-}
-
 .c {
   text-align: center;
 }
 
-.x {
+.m {
   text-align: center;
   position: relative;
   top: 50%;
@@ -133,8 +121,16 @@ space {
   background: #ffffff;
 }
 
-#cover {
+#rainbow {
   background: #eeeeee;
+}
+
+bar {
+  border-left: .1em solid #000000;
+}
+
+space {
+  border-left: .1em solid #ffffff;
 }
 
 @media only screen and (min-width: 555px) {

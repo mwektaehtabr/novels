@@ -4,14 +4,14 @@ var hue = Math.floor(Math.random()*359);
 
 function rainbow() {
   var color = "hsl(" + hue + ", 90%, 90%)";
-  document.getElementById("cover").style.backgroundColor = color;
+  document.getElementById("rainbow").style.backgroundColor = color;
   hue++;
   if (hue == 360) {
     hue = 0;
   }
 }
 
-if (document.getElementById("cover") != null) {
+if (document.getElementById("rainbow") != null) {
   setInterval(rainbow, 16);
 }
 
