@@ -30,11 +30,7 @@ document.addEventListener("keydown", function(event) {
 });
 
 document.addEventListener("keypress", function(event) {
-  if (event.code != "Space") {
-    egg += event.key.toLowerCase();
-  } else {
-    event.preventDefault();
-  }
+  egg += event.key.toLowerCase();
   if (egg.slice(-5) == "xyzzy") {
     if (document.title != "xyzzy") {
       window.location = "xyzzy";
