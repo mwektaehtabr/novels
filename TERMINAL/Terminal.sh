@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2023.11.30
+# Version 2023.12.11
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -16,7 +16,7 @@ echoes () {
   printf "\e[?25l"
   stty -echo
   echo
-  words=$(echo $reader | wc -w)
+  words=$(wc -w <<< $reader)
   if [ $words -eq 0 ]; then
    reader="..."
    printf "\e[2A\e[0K$reader\n\n"
