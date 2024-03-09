@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2024.03.06
+# Version 2024.03.09
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -3355,6 +3355,12 @@ if [ $(($RANDOM%2)) -eq 0 ]; then
 fi
 if [ $(($RANDOM%2)) -eq 0 ]; then
  echoes "a butterfly just fluttered past the window."
+fi
+if [ $(($RANDOM%16)) -eq 0 ]; then
+ echoes "what's the zeitgeist?"
+fi
+if [ $(($RANDOM%16)) -eq 0 ]; then
+ echoes "what's the gestalt?"
 fi
 echoes "is reality a simulation?"
 echoes "what exactly is the difference between a reality and a simulation?"
