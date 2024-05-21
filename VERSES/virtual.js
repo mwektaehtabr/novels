@@ -1,6 +1,6 @@
 console.log("hello world");
 
-var hue = Math.floor(Math.random()*359);
+var hue = ~~(Math.random()*359);
 
 function rainbow() {
   var color = "hsl(" + hue + ", 90%, 90%)";

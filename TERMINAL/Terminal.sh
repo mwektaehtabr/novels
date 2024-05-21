@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2024.03.10
+# Version 2024.05.20
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 

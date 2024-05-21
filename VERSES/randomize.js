@@ -17,7 +17,7 @@ function randomize() {
     "One-About-The-Variations",
     "One-About-The-Wanderer"
   ];
-  var chapter = Math.floor(Math.random()*chapters.length);
+  var chapter = ~~(Math.random()*chapters.length);
   var url = "";
   var n = 0;
   while (n < document.title.length) {
