@@ -17,23 +17,9 @@ function randomize() {
     "One-About-The-Variations",
     "One-About-The-Wanderer"
   ];
-  var chapter = ~~(Math.random()*chapters.length);
-  var url = "";
-  var n = 0;
-  while (n < document.title.length) {
-    if (document.title[n] == " ") {
-      url += "-";
-    } else {
-      url += document.title[n];
-    }
-    n++;
+  var chapter = "/" + chapters[~~(Math.random()*chapters.length)];
+  while (window.location.pathname == chapter) {
+    chapter = "/" + chapters[~~(Math.random()*chapters.length)];
   }
-  if (url == chapters[chapter]) {
-    if (chapter != chapters.length - 1) {
-      chapter++;
-    } else {
-      chapter = 0;
-    }
-  }
-  window.location = chapters[chapter];
+  window.location = chapter;
 }
