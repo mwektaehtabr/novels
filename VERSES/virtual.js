@@ -1,23 +1,16 @@
 console.log("hello world");
 
-var hue = ~~(Math.random()*359);
-
-function rainbow() {
-  var color = "hsl(" + hue + ", 90%, 90%)";
-  document.getElementById("rainbow").style.backgroundColor = color;
-  hue++;
-  if (hue == 360) {
-    hue = 0;
-  }
-}
-
 if (document.getElementById("rainbow") != null) {
-  setInterval(rainbow, 16);
+  var hue = ~~(Math.random() * 359);
+  setInterval(() => {
+    document.getElementById("rainbow").style.backgroundColor = "hsl(" + hue + ", 90%, 90%)";
+    hue < 359 ? hue++ : hue = 0;
+  }, 16);
 }
 
 var egg = "";
 
-document.addEventListener("keydown", function(event) {
+document.addEventListener("keydown", event => {
   if (event.code == "ArrowLeft") {
     history.back();
   }
@@ -29,16 +22,12 @@ document.addEventListener("keydown", function(event) {
   }
 });
 
-document.addEventListener("keypress", function(event) {
+document.addEventListener("keypress", event => {
   egg += event.key.toLowerCase();
   if (egg.slice(-5) == "xyzzy") {
-    if (document.title != "xyzzy") {
-      window.location = "xyzzy";
-    } else {
-      history.back();
-    }
+    document.title != "xyzzy" ? window.location = "xyzzy" : history.back();
   }
-  if (egg.length > 32) {
+  if (egg.length > 16) {
     egg = egg.slice(-8);
   }
 });

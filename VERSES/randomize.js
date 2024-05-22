@@ -17,9 +17,9 @@ function randomize() {
     "One-About-The-Variations",
     "One-About-The-Wanderer"
   ];
-  var chapter = "/" + chapters[~~(Math.random()*chapters.length)];
+  var chapter = "/" + chapters[~~(Math.random() * chapters.length)];
   while (window.location.pathname == chapter) {
-    chapter = "/" + chapters[~~(Math.random()*chapters.length)];
+    chapter = "/" + chapters[~~(Math.random() * chapters.length)];
   }
   window.location = chapter;
 }
