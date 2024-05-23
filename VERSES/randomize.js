@@ -1,4 +1,4 @@
-function randomize() {
+randomize = () => {
   var chapters = [
     "One-About-The-Drifter",
     "One-About-The-Folk",
