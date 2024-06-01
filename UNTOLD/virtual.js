@@ -1,12 +1,10 @@
 console.log("hello world");
 
 if (document.getElementById("rainbow")) {
-  var h = ~~(Math.random() * 359);
   (r = () => {
     document.getElementById("rainbow").style.backgroundColor = "hsl(" + h + ", 100%, 80%)";
     h < 359 ? h++ : h = 0;
-  })();
-  setInterval(r, 16);
+  })(h = ~~(Math.random() * 359), setInterval(r, 16));
 }
 
 if (window.location.host.includes("verses")) {
