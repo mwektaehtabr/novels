@@ -10,26 +10,26 @@ if (document.getElementById("rainbow")) {
 if (window.location.host.includes("verses")) {
   randomize = () => {
     var chapters = [
-      "One-About-The-Drifter",
-      "One-About-The-Folk",
-      "One-About-The-Jazz",
-      "One-About-The-Metal",
-      "One-About-The-Nomad",
-      "One-About-The-Pop",
-      "One-About-The-Rap",
-      "One-About-The-Rock",
-      "One-About-The-Roles",
-      "One-About-The-Sonogram",
-      "One-About-The-Song",
-      "One-About-The-Soul",
-      "One-About-The-Trance",
-      "One-About-The-Traveler",
-      "One-About-The-Variations",
-      "One-About-The-Wanderer"
+      "Drifter",
+      "Folk",
+      "Jazz",
+      "Metal",
+      "Nomad",
+      "Pop",
+      "Rap",
+      "Rock",
+      "Roles",
+      "Sonogram",
+      "Song",
+      "Soul",
+      "Trance",
+      "Traveler",
+      "Variations",
+      "Wanderer"
     ];
-    var chapter = "/" + chapters[~~(Math.random() * chapters.length)];
+    var chapter = "/One-About-The-" + chapters[~~(Math.random() * chapters.length)];
     while (window.location.pathname == chapter) {
-      chapter = "/" + chapters[~~(Math.random() * chapters.length)];
+      chapter = "/One-About-The-" + chapters[~~(Math.random() * chapters.length)];
     }
     window.location = chapter;
   }
@@ -52,7 +52,7 @@ document.addEventListener("keydown", e => {
 document.addEventListener("keypress", e => {
   egg += e.key.toLowerCase();
   if (egg.slice(-5) == "xyzzy") {
-    document.title != "xyzzy" ? window.location = "xyzzy" : history.back();
+    document.title != "xyzzy" ? window.location = "/xyzzy" : history.back();
   }
   if (egg.length > 16) {
     egg = egg.slice(-8);

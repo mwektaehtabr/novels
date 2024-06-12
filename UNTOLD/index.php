@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <a href="Earthlings" class="cover" aria-label="COVER"><div class="container" id="rainbow"></div></a>
+      <a href="/Earthlings" class="cover" aria-label="COVER"><div class="container" id="rainbow"></div></a>
     <?php include "footer.php";?>
   </body>
 </html>
