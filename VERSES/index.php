@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <a onclick="randomize()" class="cover" aria-label="COVER"><div class="container" id="rainbow"></div></a>
+      <a onclick="random()" class="cover" aria-label="COVER"><div class="container" id="virtual"></div></a>
     <?php include "footer.php";?>
   </body>
 </html>

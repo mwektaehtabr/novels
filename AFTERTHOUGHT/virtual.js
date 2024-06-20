@@ -1,15 +1,14 @@
-console.log("hello world");
-
-if (document.getElementById("rainbow")) {
-  (r = () => {
-    document.getElementById("rainbow").style.backgroundColor = "hsl(" + h + ", 100%, 80%)";
-    h < 359 ? h++ : h = 0;
-  })(h = ~~(Math.random() * 359), setInterval(r, 16));
+if (document.getElementById("virtual")) {
+  var $ = ~~(Math.random() * 359);
+  setInterval(() => {
+    document.getElementById("virtual").style.backgroundColor = "hsl(" + $ + ", 100%, 80%)";
+    $ < 359 ? $++ : $ = 0;
+  }, 16);
 }
 
-if (window.location.host.includes("verses")) {
-  randomize = () => {
-    var chapters = [
+if (location.host.includes("v")) {
+  random = () => {
+    var _ = [
       "Drifter",
       "Folk",
       "Jazz",
@@ -27,15 +26,15 @@ if (window.location.host.includes("verses")) {
       "Variations",
       "Wanderer"
     ];
-    var chapter = "/One-About-The-" + chapters[~~(Math.random() * chapters.length)];
-    while (window.location.pathname == chapter) {
-      chapter = "/One-About-The-" + chapters[~~(Math.random() * chapters.length)];
+    var $ = "/One-About-The-" + _[~~(Math.random() * _.length)];
+    while (location.pathname == $) {
+      $ = "/One-About-The-" + _[~~(Math.random() * _.length)];
     }
-    window.location = chapter;
+    location = $;
   }
 }
 
-var egg = "";
+var _ = "";
 
 document.addEventListener("keydown", e => {
   if (e.code == "ArrowLeft") {
@@ -43,18 +42,20 @@ document.addEventListener("keydown", e => {
   }
   if (e.code == "ArrowRight") {
     history.forward();
-    if (window.location.host.includes("verses")) {
-     randomize();
+    if (location.host.includes("v")) {
+     random();
     }
   }
 });
 
 document.addEventListener("keypress", e => {
-  egg += e.key.toLowerCase();
-  if (egg.slice(-5) == "xyzzy") {
-    document.title != "xyzzy" ? window.location = "/xyzzy" : history.back();
+  _ += e.key.toLowerCase();
+  if (_.slice(-5) == "xyzzy") {
+    document.title != "xyzzy" ? location = "/xyzzy" : history.back();
   }
-  if (egg.length > 16) {
-    egg = egg.slice(-8);
+  if (_.length > 16) {
+    _ = _.slice(-8);
   }
 });
+
+console.log("hello world");
