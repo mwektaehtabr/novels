@@ -1,1 +1,1 @@
-<p class="c"><a onclick="randomize()">NEW</a></p>
+<p class="c"><a onclick="random()">NEW</a></p>
