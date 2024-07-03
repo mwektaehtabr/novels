@@ -1,5 +1,5 @@
 if (document.querySelector("#virtual")) {
-  var $ = ~~(Math.random() * 359);
+  var $ = ~~(Math.random() * 360);
   setInterval(() => {
     document.querySelector("#virtual").style.backgroundColor = "hsl(" + $ + ", 100%, 80%)";
     $ < 359 ? $++ : $ = 0;
