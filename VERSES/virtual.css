@@ -114,14 +114,14 @@ hr {
   transform: translate(-50%, -50%);
 }
 
-.container {
+.x {
   min-width: 100%;
   height: calc(100vh - 182px);
   min-height: 3px;
   background: #ffffff;
 }
 
-#virtual {
+#cover .x {
   background: #eeeeee;
 }
 
@@ -151,7 +151,7 @@ hr {
   width: 33.33%;
 }
 
-.container {
+.x {
   height: calc(100vh - 212px);
   min-height: 3px;
 }
@@ -172,7 +172,7 @@ a:hover {
   opacity: 10%;
 }
 
-a.cover:hover {
+a#cover:hover {
   opacity: 100%;
 }
 
