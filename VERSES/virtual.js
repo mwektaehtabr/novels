@@ -43,7 +43,7 @@ document.addEventListener("keydown", e => {
   if (e.code == "ArrowRight") {
     history.forward();
     if (location.host.includes("v")) {
-     random();
+      random();
     }
   }
 });
