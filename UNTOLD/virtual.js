@@ -7,28 +7,31 @@ if (document.querySelector("#cover")) {
 }
 
 if (location.host.includes("v")) {
+  var i = [
+    "Drifter",
+    "Folk",
+    "Jazz",
+    "Metal",
+    "Nomad",
+    "Pop",
+    "Rap",
+    "Rock",
+    "Roles",
+    "Sonogram",
+    "Song",
+    "Soul",
+    "Trance",
+    "Traveler",
+    "Variations",
+    "Wanderer"
+  ];
+  if (document.title == "xyzzy") {
+    i.sort().forEach(e => document.querySelector("main").innerHTML += "<p><a href=\"/One-About-The-" + e + "\">One About The " + e + "</a></p>");
+  }
   random = () => {
-    var _ = [
-      "Drifter",
-      "Folk",
-      "Jazz",
-      "Metal",
-      "Nomad",
-      "Pop",
-      "Rap",
-      "Rock",
-      "Roles",
-      "Sonogram",
-      "Song",
-      "Soul",
-      "Trance",
-      "Traveler",
-      "Variations",
-      "Wanderer"
-    ];
-    var $ = "/One-About-The-" + _[~~(Math.random() * _.length)];
+    var $ = "/One-About-The-" + i[~~(Math.random() * i.length)];
     while (location.pathname == $) {
-      $ = "/One-About-The-" + _[~~(Math.random() * _.length)];
+      $ = "/One-About-The-" + i[~~(Math.random() * i.length)];
     }
     location = $;
   }
