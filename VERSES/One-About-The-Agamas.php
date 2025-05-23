@@ -8,7 +8,7 @@
   <body>
     <?php include "header.php";?>
       <?php include "0.php";?> and later that year the child was born, in a busy urban hospital on the frosty autumn morning of November 6, 1985. If he&rsquo;d been a girl, his parents would have named him Megan, but instead his parents named him William.</p>
-      <p>Seventy-nine years later he sat in the sunlight by a grassy stream. Bald. Wrinkled. Dressed in some plastic glasses and a yellow lungi. Meditating on a verse from the agamas. A parakeet chirped nearby. A magpie soared past. Across the water, a tambourine was jingling in the basadi. After all of these years, still searching for the truth about reality. He died there where he sat.</p>
+      <p>Seventy-nine years later he sat in the sunlight by a grassy stream. Bald. Wrinkled. Dressed in some plastic glasses and a yellow lungi. Meditating on a verse from the agamas. A parakeet chirped nearby. A magpie soared past. Across the water, a tambourine was jingling in the basadi. After all of those years, still searching for the truth about reality. He died there where he sat.</p>
       <?php include "randomize.php";?>
     <?php include "footer.php";?>
   </body>
