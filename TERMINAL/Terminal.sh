@@ -2,7 +2,7 @@
 
 # TERMINAL
 # a novel
-# Version 2024.08.15
+# Version 2025.05.23
 
 # distributed under a Creative Commons CC0 1.0 Universal Public Domain Dedication
 
@@ -36,6 +36,7 @@ echoes () {
      exchange "are" "r"
      exchange "been" "gotten"
      exchange "cant" "cannot" "can not"
+     exchange "center" "centre"
      exchange "color" "colour"
      exchange "couldnt" "could not"
      exchange "didnt" "did not"
@@ -57,6 +58,8 @@ echoes () {
      exchange "off" "off of"
      exchange "okay" "alright" "k" "ok" "sure"
      exchange "out" "out of"
+     exchange "realize" "realise"
+     exchange "realizing" "realising"
      exchange "shouldnt" "should not"
      exchange "somebody" "someone"
      exchange "thats" "that is"
@@ -64,6 +67,8 @@ echoes () {
      exchange "theater" "theatre"
      exchange "though" "tho"
      exchange "too" "as well"
+     exchange "traveled" "travelled"
+     exchange "traveling" "travelling"
      exchange "type of" "kind of" "kinda" "sort of" "sorta"
      exchange "very" "awfully" "breathtakingly" "desperately" "enormously" "exceedingly" "exceptionally" "extremely" "fabulously" "fantastically" "horribly" "hugely" "immensely" "incredibly" "intensely" "massively" "mega" "monstrously" "obscenely" "overwhelmingly" "profoundly" "remarkably" "severely" "staggeringly" "super" "terribly" "terrifically" "tremendously" "ultra" "uncontrollably" "utterly" "wicked" "wickedly" "wildly"
      exchange "want to" "wanna" "lets"
