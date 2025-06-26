@@ -8,21 +8,24 @@ if (document.querySelector("#cover")) {
 
 if (location.host.includes("v")) {
   var i = [
+    "Agamas",
+    "Bible",
+    "Chorus",
+    "Daodejing",
     "Drifter",
-    "Folk",
-    "Jazz",
-    "Metal",
+    "Granth",
+    "Koran",
     "Nomad",
-    "Pop",
-    "Rap",
-    "Rock",
+    "Planet",
+    "Prophecy",
     "Roles",
-    "Sonogram",
     "Song",
-    "Soul",
-    "Trance",
+    "Sonogram",
+    "Sutras",
+    "Torah",
     "Traveler",
     "Variations",
+    "Vedas",
     "Wanderer"
   ];
   if (document.title == "xyzzy") {
