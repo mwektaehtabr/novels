@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <?php include "0.php";?> and later that year the child was born, in a busy urban hospital on the windy autumn evening of November 1, 1985. If he&rsquo;d been a girl, his parents would have named him Megan, but instead his parents named him William.</p>
+      <?php include "0.php";?> and later that year the child was born, in a busy urban hospital on the windy autumn evening of September 23, 1985. If he&rsquo;d been a girl, his parents would have named him Megan, but instead his parents named him William.</p>
       <p>When he was seventeen one night he was wandering a carnival when he was approached by a psychic.</p>
       <p>&ldquo;You&rsquo;re the child of prophecy,&rdquo; the psychic said.</p>
       <p>The psychic was wild-eyed, gazing at him in the yellow-pink glow of the electric lights shimmering across the fairground.</p>
