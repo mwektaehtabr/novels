@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <?php include "0.php";?> and later that year the child was born, in a busy urban hospital on the windy autumn morning of November 6, 1985. If he&rsquo;d been a girl, his parents would have named him Megan, but instead his parents named him William.</p>
+      <?php include "0.php";?> and later that year the child was born, in a busy urban hospital on the chilly autumn morning of November 6, 1985. If he&rsquo;d been a girl, his parents would have named him Megan, but instead his parents named him William.</p>
       <p>When he was one his father drowned at a beach, and when he was five he and his mother ate a cinnamon pretzel together in the sunlight on a granite bench by a fountain in a shopping mall, and when he was seven he and his mother ate some enchiladas together at the table in the kitchen as fog drifted past the window, and when he was nine he and his mother ate some stroganoff together at the table in the kitchen as mist trickled down the window, and when he was fourteen he and his mother ate garlic bread and lasagna and broccoli together at the table in the kitchen as fireflies twinkled in the twilight, and later that night he smoked a joint at a party, lying with a cluster of strangers on a trampoline in the darkness while frogs chirped in the woods.</p>
       <p>A year later he smoked a joint in the shimmering light of a lava lamp, thinking about koans.</p>
       <p>A year later he smoked a joint in the flickering light of a plasma globe, thinking about cubism.</p>
