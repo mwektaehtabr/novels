@@ -1,6 +1,6 @@
 </main>
     <hr>
     <footer>
-      <p><a href="/About">ABOUT</a></p>
+      <p id="nav"><a href="/">$larr;</a></p>
     </footer>
-    <script src="/virtual.js"></script>
+    <script src="/untold.js"></script>

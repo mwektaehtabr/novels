@@ -3,4 +3,4 @@
     <footer>
       <p id="nav"><a onclick="random()">&rarr;</a></p>
     </footer>
-    <script src="/virtual.js"></script>
+    <script src="/verses.js"></script>

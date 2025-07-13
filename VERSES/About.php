@@ -12,6 +12,6 @@
       <p>VERSES is published by <a href="https://virtualpress.net">Virtual Press</a>.</p>
     </main>
     <hr>
-    <script src="/virtual.js"></script>
+    <script src="/verses.js"></script>
   </body>
 </html>
