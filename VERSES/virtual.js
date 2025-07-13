@@ -6,56 +6,48 @@ if (document.querySelector("#cover")) {
   }, 16);
 }
 
-if (location.host.includes("verses")) {
-  var i = [
-    "Agamas",
-    "Bible",
-    "Chorus",
-    "Daodejing",
-    "Drifter",
-    "Granth",
-    "Koran",
-    "Nomad",
-    "Planet",
-    "Prophecy",
-    "Roles",
-    "Song",
-    "Sonogram",
-    "Sutras",
-    "Torah",
-    "Traveler",
-    "Variations",
-    "Vedas",
-    "Wanderer"
-  ];
-  if (document.title == "xyzzy") {
-    i.sort().forEach(e => document.querySelector("main").innerHTML += "<p><a href=\"/One-About-The-" + e + "\">One About The " + e + "</a></p>");
-  }
+var i = [
+  "Agamas",
+  "Bible",
+  "Chorus",
+  "Daodejing",
+  "Drifter",
+  "Granth",
+  "Koran",
+  "Nomad",
+  "Planet",
+  "Prophecy",
+  "Roles",
+  "Song",
+  "Sonogram",
+  "Sutras",
+  "Torah",
+  "Traveler",
+  "Variations",
+  "Vedas",
+  "Wanderer"
+];
+
+if (location.pathname.includes("xyzzy")) {
+  i.sort().forEach(e => document.querySelector("main").innerHTML += "<p><a href=\"/One-About-The-" + e + "\">One About The " + e + "</a></p>");
+}
+
+if (location.pathname.includes("-")) {
   i.splice(i.indexOf(location.pathname.replace("/One-About-The-", "")), 1);
 }
 
-back = () => {
-  history.back();
-  if (document.querySelector("[data-link]")) {
-    location = document.querySelector("p").dataset.link;
-  }
-}
-
-forward = () => {
-  if (location.host.includes("verses")) {
-    location = "/One-About-The-" + i[~~(Math.random() * i.length)];
-  }
-  history.forward();
+random = () => {
+  location = "/One-About-The-" + i[~~(Math.random() * i.length)];
 }
 
 var _ = "";
 
 document.addEventListener("keydown", e => {
   if (e.code == "ArrowLeft") {
-    back();
+    history.back();
   }
   if (e.code == "ArrowRight") {
-    forward();
+    random();
   }
 });
 
