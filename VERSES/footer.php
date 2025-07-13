@@ -1,6 +1,6 @@
 </main>
     <hr>
     <footer>
-      <p><a href="/About">ABOUT</a></p>
+      <p id="nav"><a onclick="back()">&larr;</a> <a onclick="forward()">&rarr;</a></p>
     </footer>
     <script src="/virtual.js"></script>

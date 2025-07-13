@@ -48,6 +48,10 @@ main {
 
 header, footer {
   text-align: center;
+  width: 90%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 header {
@@ -123,6 +127,10 @@ hr {
 
 #cover .x {
   background: #eeeeee;
+}
+
+#nav {
+  font-size: 24px;
 }
 
 bar {

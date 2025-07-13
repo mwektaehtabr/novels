@@ -32,7 +32,6 @@
       <p>Bright flashes of sunshine.</p>
       <p>Twisting swirls of blood.</p>
       <p>As he sank in the pool, feebly stretching an hand toward the surface, frantically kicking a foot in the depths, with a sense of astonishment he suddenly realized that he&rsquo;d been acting for so many years that to him even death felt like a performance. But he was delighted, for once, to be performing a scene from this universe. Here.</p>
-      <?php include "randomize.php";?>
     <?php include "footer.php";?>
   </body>
 </html>

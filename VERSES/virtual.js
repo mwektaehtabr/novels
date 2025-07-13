@@ -6,7 +6,7 @@ if (document.querySelector("#cover")) {
   }, 16);
 }
 
-if (location.host.includes("v")) {
+if (location.host.includes("verses")) {
   var i = [
     "Agamas",
     "Bible",
@@ -31,26 +31,31 @@ if (location.host.includes("v")) {
   if (document.title == "xyzzy") {
     i.sort().forEach(e => document.querySelector("main").innerHTML += "<p><a href=\"/One-About-The-" + e + "\">One About The " + e + "</a></p>");
   }
-  random = () => {
-    var $ = "/One-About-The-" + i[~~(Math.random() * i.length)];
-    while (location.pathname == $) {
-      $ = "/One-About-The-" + i[~~(Math.random() * i.length)];
-    }
-    location = $;
+  i.splice(i.indexOf(location.pathname.replace("/One-About-The-", "")), 1);
+}
+
+back = () => {
+  history.back();
+  if (document.querySelector("[data-link]")) {
+    location = document.querySelector("p").dataset.link;
   }
+}
+
+forward = () => {
+  if (location.host.includes("verses")) {
+    location = "/One-About-The-" + i[~~(Math.random() * i.length)];
+  }
+  history.forward();
 }
 
 var _ = "";
 
 document.addEventListener("keydown", e => {
   if (e.code == "ArrowLeft") {
-    history.back();
+    back();
   }
   if (e.code == "ArrowRight") {
-    history.forward();
-    if (location.host.includes("v")) {
-      random();
-    }
+    forward();
   }
 });
 
