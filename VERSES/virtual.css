@@ -41,7 +41,6 @@ main {
   max-width: 500px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 24px;
   margin-bottom: 24px;
   text-align: left;
 }
@@ -56,10 +55,6 @@ header, footer {
 
 header {
   margin-top: 8px;
-}
-
-footer {
-  margin-top: 24px;
 }
 
 h1 {
@@ -103,6 +98,7 @@ hr {
   background: #000000;
   width: 90%;
   max-width: 500px;
+  margin-bottom: 24px;
 }
 
 .c {
