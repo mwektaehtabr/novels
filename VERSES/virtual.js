@@ -54,7 +54,7 @@ document.addEventListener("keydown", e => {
 document.addEventListener("keypress", e => {
   _ += e.key.toLowerCase();
   if (_.slice(-5) == "xyzzy") {
-    document.title != "xyzzy" ? location = "/xyzzy" : history.back();
+    !location.pathname.includes("xyzzy") ? location = "/xyzzy" : history.back();
   }
   if (_.length > 16) {
     _ = _.slice(-8);
