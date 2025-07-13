@@ -12,6 +12,10 @@
   <body>
     <?php include "header.php";?>
       <p class="c">CONTENTS</p>
-    <?php include "footer.php";?>
+    </main>
+    <hr>
+    <footer>
+    </footer>
+    <script src="/virtual.js"></script>
   </body>
 </html>
