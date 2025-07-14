@@ -10,11 +10,7 @@ var _ = "";
 
 document.addEventListener("keydown", e => {
   if (e.code == "ArrowLeft") {
-    if (document.querySelector("#nav")) {
-      location = document.querySelector("#nav a").href;
-    } else {
-      history.back();
-    }
+    document.querySelector("#nav") ? location = document.querySelector("#nav a").href : history.back();
   }
   if (e.code == "ArrowRight") {
     history.forward();
