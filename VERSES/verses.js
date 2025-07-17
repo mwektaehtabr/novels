@@ -36,6 +36,10 @@ if (location.pathname.includes("-")) {
   i.splice(i.indexOf(location.pathname.replace("/One-About-The-", "")), 1);
 }
 
+back = () => {
+  !document.referrer.includes(location.hostname) ? location = "/" : history.back();
+}
+
 random = () => {
   location = "/One-About-The-" + i[~~(Math.random() * i.length)];
 }

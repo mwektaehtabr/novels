@@ -129,6 +129,11 @@ hr {
   font-size: 24px;
 }
 
+#nav a {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
 bar {
   border-left: .1em solid #000000;
 }
