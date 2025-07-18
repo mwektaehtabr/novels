@@ -8,11 +8,6 @@
   <body>
     <?php include "header.php";?>
       <a href="/Earthlings" id="cover" aria-label="COVER"><div class="x"></div></a>
-    </main>
-    <hr>
-    <footer>
-      <p><a href="/About">ABOUT</a></p>
-    </footer>
-    <script src="/untold.js"></script>
+    <?php include "footer.php";?>
   </body>
 </html>

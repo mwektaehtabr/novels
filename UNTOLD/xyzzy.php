@@ -146,11 +146,6 @@
       <p><a href="/Yellow-Orange">Yellow-Orange</a></p>
       <p><a href="/Zoe">Zoe</a></p>
       <p><a href="/Zoes-Shirt">Zoe&rsquo;s Shirt</a></p>
-    </main>
-    <hr>
-    <footer>
-      <p><a href="/About">ABOUT</a></p>
-    </footer>
-    <script src="/untold.js"></script>
+    <?php include "footer.php";?>
   </body>
 </html>

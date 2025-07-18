@@ -10,21 +10,29 @@ var i = [
   "Agamas",
   "Bible",
   "Chorus",
+  "Contrapuntal",
   "Daodejing",
+  "Doha",
   "Drifter",
+  "Ghazal",
   "Granth",
   "Koran",
   "Nomad",
+  "Pantoum",
   "Planet",
   "Prophecy",
   "Roles",
+  "Rondeau",
+  "Sestina",
   "Song",
   "Sonogram",
   "Sutras",
+  "Tanka",
   "Torah",
   "Traveler",
   "Variations",
   "Vedas",
+  "Villanelle",
   "Wanderer"
 ];
 
@@ -37,7 +45,7 @@ if (location.pathname.includes("-")) {
 }
 
 back = () => {
-  !document.referrer.includes(location.hostname) ? location = "/" : history.back();
+  (!document.referrer.includes(location.hostname) || history.length == 1) ? location = "/" : history.back();
 }
 
 random = () => {

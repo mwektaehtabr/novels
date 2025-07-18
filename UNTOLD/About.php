@@ -12,8 +12,6 @@
       <p>UNTOLD is published by <a href="https://virtualpress.net">Virtual Press</a>.</p>
     </main>
     <hr>
-    </main>
-    <hr>
     <script src="/untold.js"></script>
   </body>
 </html>
