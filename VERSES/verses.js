@@ -1,7 +1,7 @@
 if (document.querySelector("#cover")) {
   var $ = ~~(Math.random() * 360);
   setInterval(() => {
-    document.querySelector("div").style.backgroundColor = "hsl(" + $ + ", 100%, 80%)";
+    document.querySelector(".x").style.backgroundColor = "hsl(" + $ + ", 100%, 80%)";
     $ < 359 ? $++ : $ = 0;
   }, 16);
 }
