@@ -1,1 +1,1 @@
-<p>Conception occurred that January, a sudden coupling on the table in the kitchen as a blizzard flurried past the window over the sink,
+<p>Conception occurred that January, a sudden coupling in the kitchen as a blizzard flurried past the window over the sink,
