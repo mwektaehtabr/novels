@@ -74,4 +74,4 @@ document.addEventListener("keypress", e => {
   }
 });
 
-console.log("[CONTROLS]"); console.log("LEFT ARROW KEY: BACK"); console.log("RIGHT ARROW KEY: FORWARD");
+console.log("CONTROLS"); console.log("LEFT ARROW KEY: BACK"); console.log("RIGHT ARROW KEY: FORWARD");
