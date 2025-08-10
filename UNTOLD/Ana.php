@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="One-Story-Home">She was forty-four,</a> stout and graceful, with faint wrinkles at the corners of her mouth when she smiled.</p>
-    <?php include "footer.php";?>
+      <p>She was forty-four, stout and graceful, with faint wrinkles at the corners of her mouth when she smiled.</p>
+    <?php include "footer-begin.php";?>One-Story-Home<?php include "footer-end.php";?>
   </body>
 </html>

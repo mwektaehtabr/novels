@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="The-Phreak">(As opposed to the devices that could be bought on the black market.)</a></p>
-    <?php include "footer.php";?>
+      <p>(As opposed to the devices that could be bought on the black market.)</p>
+    <?php include "footer-begin.php";?>The-Phreak<?php include "footer-end.php";?>
   </body>
 </html>

@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Pharmacy">At the grocery</a> as rain drizzled beyond the windows she steered a shopping cart down an aisle of pastas, <a href="Ice-Cream-Parlor">alone.</a></p>
-    <?php include "footer.php";?>
+      <p>At the grocery as rain drizzled beyond the windows she steered a shopping cart down an aisle of pastas, <a href="Ice-Cream-Parlor">alone</a>.</p>
+    <?php include "footer-begin.php";?>Pharmacy<?php include "footer-end.php";?>
   </body>
 </html>

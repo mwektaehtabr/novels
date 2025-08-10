@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="The-Cyborg">(Implanted at the age of nine,</a> to regulate a defect in her heart.)</p>
-    <?php include "footer.php";?>
+      <p>(Implanted at the age of nine, to regulate a defect in her heart.)</p>
+    <?php include "footer-begin.php";?>The-Cyborg<?php include "footer-end.php";?>
   </body>
 </html>

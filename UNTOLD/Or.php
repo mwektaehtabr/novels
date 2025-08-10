@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="The-House">(Sometimes both eggs and toast.)</a></p>
-    <?php include "footer.php";?>
+      <p>(Sometimes both eggs and toast.)</p>
+    <?php include "footer-begin.php";?>The-House<?php include "footer-end.php";?>
   </body>
 </html>

@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Washington-12021-HE">Peering from the rabbit hole earlier that week,</a> the rabbit had nearly been bitten by <a href="The-Fox">a fox.</a></p>
-    <?php include "footer.php";?>
+      <p>Peering from the rabbit hole earlier that week, the rabbit had nearly been bitten by <a href="The-Fox">a fox</a>.</p>
+    <?php include "footer-begin.php";?>Washington-12021-HE<?php include "footer-end.php";?>
   </body>
 </html>

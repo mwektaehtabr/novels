@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Washington-Territory-11889-HE">He was eighty-one,</a>  bald and stoop-shouldered and portly, with bushy eyebrows and a silver beard, and walked with a faint limp.</p>
-    <?php include "footer.php";?>
+      <p>He was eighty-one, bald and stoop-shouldered and portly, with bushy eyebrows and a silver beard, and walked with a faint limp.</p>
+    <?php include "footer-begin.php";?>Washington-Territory-11889-HE<?php include "footer-end.php";?>
   </body>
 </html>

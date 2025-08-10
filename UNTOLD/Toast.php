@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="The-House">(Buttered and sprinkled with cinnamon and sugar,</a> her mother&rsquo;s creation.</p>
-    <?php include "footer.php";?>
+      <p>(Buttered and sprinkled with cinnamon and sugar, her mother&rsquo;s creation.)</p>
+    <?php include "footer-begin.php";?>The-House<?php include "footer-end.php";?>
   </body>
 </html>

@@ -18,6 +18,7 @@ var i = [
   "Ghazal",
   "Granth",
   "Koran",
+  "Mundane",
   "Nomad",
   "Pantoum",
   "Planet",
@@ -43,10 +44,6 @@ if (location.pathname.includes("xyzzy")) {
 
 if (location.pathname.includes("-")) {
   i.splice(i.indexOf(location.pathname.replace("/One-About-The-", "")), 1);
-}
-
-back = () => {
-  (!document.referrer.includes(location.hostname) || history.length == 1) ? location = "/" : history.back();
 }
 
 random = () => {

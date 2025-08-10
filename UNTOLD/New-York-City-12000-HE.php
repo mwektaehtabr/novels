@@ -7,8 +7,8 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="The-Last-Page">Across the street from the payphone</a> there stood a house that appeared abandoned, a derelict mansion with a mossy slate roof and crumbling brick siding and multicolored curses spray-painted across the door. Dandelions were sprouting from cracks on the stoop. Planks were nailed over the windows on the lower floor. The windows on the upper floor were gritty with pollen.</p>
-      <p>As the caller hung up the payphone, <a href="The-Squat">a squad of police armed with a steel battering ram were marching toward the mansion.</a></p>
-    <?php include "footer.php";?>
+      <p>Across the street from the payphone there stood a house that appeared abandoned, a derelict mansion with a mossy slate roof and crumbling brick siding and multicolored curses spray-painted across the door. Dandelions were sprouting from cracks on the stoop. Planks were nailed over the windows on the lower floor. The windows on the upper floor were gritty with pollen.</p>
+      <p>As the caller hung up the payphone, <a href="The-Squat">a squad of police armed with a steel battering ram were marching toward the mansion</a>.</p>
+    <?php include "footer-begin.php";?>The-Last-Page<?php include "footer-end.php";?>
   </body>
 </html>

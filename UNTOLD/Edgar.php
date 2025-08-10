@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Claras-Style">He was twenty-eight,</a> tall and slender and attractive, with glossy russet hair, sparkling azure eyes, plump carmine lips, a mole on his neck, and a tendency to hunch while standing.</p>
-    <?php include "footer.php";?>
+      <p>He was twenty-eight, tall and slender and attractive, with glossy russet hair, sparkling azure eyes, plump carmine lips, a mole on his neck, and a tendency to hunch while standing.</p>
+    <?php include "footer-begin.php";?>Claras-Style<?php include "footer-end.php";?>
   </body>
 </html>

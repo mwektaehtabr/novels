@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Earthlings">A process of creation</a> that was perhaps the work of a creator?</p>
-    <?php include "footer.php";?>
+      <p>A process of creation that was perhaps the work of a creator?</p>
+    <?php include "footer-begin.php";?>Earthlings<?php include "footer-end.php";?>
   </body>
 </html>

@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="The-Television">(A sci-fi space opera about a starship,</a> <a href="An-Alien-World">chronicling the adventures of the crew.)</a></p>
-    <?php include "footer.php";?>
+      <p>(A sci-fi space opera about a starship, <a href="An-Alien-World">chronicling the adventures of the crew</a>.)</p>
+    <?php include "footer-begin.php";?>The-Television<?php include "footer-end.php";?>
   </body>
 </html>

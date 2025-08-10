@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Gaming">(Beatriz was twelve, Ana was thirty-seven.)</a></p>
-    <?php include "footer.php";?>
+      <p>(Beatriz was twelve, Ana was thirty-seven.)</p>
+    <?php include "footer-begin.php";?>Gaming<?php include "footer-end.php";?>
   </body>
 </html>

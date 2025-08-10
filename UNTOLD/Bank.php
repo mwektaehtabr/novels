@@ -7,9 +7,9 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Paycheck">At the bank</a> the teller cashed her paycheck without speaking a word to her.</p>
+      <p>At the bank the teller cashed her paycheck without speaking a word to her.</p>
       <p>Rain was pattering against the windows.</p>
-      <p>Beatriz <a href="Laundromat">shuffled out the door with her money.</a></p>
-    <?php include "footer.php";?>
+      <p>Beatriz <a href="Laundromat">shuffled out the door with her money</a>.</p>
+    <?php include "footer-begin.php";?>Paycheck<?php include "footer-end.php";?>
   </body>
 </html>

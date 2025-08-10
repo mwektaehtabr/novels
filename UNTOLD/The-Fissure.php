@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Washington-Territory-11889-HE">She squeezed sideways through the fissure.</a> Her body was blocking the glow of the lantern, but by the faint gleam streaming past her body she could see the rocks ahead. Light flickering on crags. Theodore was grunting behind her.</p>
+      <p>She squeezed sideways through the fissure. Her body was blocking the glow of the lantern, but by the faint gleam streaming past her body she could see the rocks ahead. Light flickering on crags. Theodore was grunting behind her.</p>
       <p>&ldquo;Clara,&rdquo; Theodore called.</p>
       <p>She sucked in her belly, squeezing through some crags.</p>
       <p>&ldquo;I don&rsquo;t fit,&rdquo; Theodore called.</p>
@@ -23,7 +23,7 @@
       <p>&ldquo;Almost there,&rdquo; Clara called.</p>
       <p>Her boots slipped on a crag. She became aware that her heart was pounding. She was so close that when she stretched out her hand she could almost touch the rocks at the rim of the fissure, and she pressed her body ahead toward the darkness, but then suddenly she was stuck, jammed between the walls of a jagged tapering gap with her face pinned against a crag and her boots dangling in the air, helplessly kicking above the ground.</p>
       <p>&ldquo;I might be stuck,&rdquo; Clara called, feeling a rising panic, struggling to move, grappling for purchase, gripping a crag ahead of her, grasping a crag just behind her, pulling from ahead and pushing from behind and trying to thrust her body forward, desperately straining her legs in an attempt to touch her toes to the ground, breathing with her nostrils flared, whimpering with fear, and she wriggled her body again, thrusting, and then with a sense of relief she felt her body slide through the gap, and she lurched from the fissure into the darkness beyond.</p>
-      <p>Instead of stepping down onto rock, she dropped <a href="The-Pit">into a pit.</a></p>
-    <?php include "footer.php";?>
+      <p>Instead of stepping down onto rock, she dropped <a href="The-Pit">into a pit</a>.</p>
+    <?php include "footer-begin.php";?>Washington-Territory-11889-HE<?php include "footer-end.php";?>
   </body>
 </html>

@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Chain-Restaurant">After clocking out from her shift</a> she collected her paycheck from the employee break room in the basement. Her manager was reading a magazine about sports at the table. On the wall over the table hung a poster of the corporate mascot, <a href="Beatrizs-Nightmare">an almost ominously cheerful clown.</a></p>
+      <p>After clocking out from her shift she collected her paycheck from the employee break room in the basement. Her manager was reading a magazine about sports at the table. On the wall over the table hung a poster of the corporate mascot, <a href="Beatrizs-Nightmare">an almost ominously cheerful clown</a>.</p>
       <p>She stood by the table.</p>
       <p>&ldquo;Um,&rdquo; Beatriz said.</p>
       <p>Her manager flipped a page, staring at the magazine without responding.</p>
@@ -33,7 +33,7 @@
       <p>&ldquo;I need this job,&rdquo; Beatriz said.</p>
       <p>&ldquo;Have a wonderful night,&rdquo; Chad said.</p>
       <p>She climbed back up the stairs with her head bent toward the steps. She was so humiliated that she felt nauseous. But the most horrible feeling of all was when she realized that she also felt grateful. She felt grateful to him, because for once he&rsquo;d actually spoken to her. She was that desperate. She was so pathetic.</p>
-      <p>She ate a couple of cheeseburgers out by the dumpsters, sitting alone on the pavement, crying as she chewed, sticking pickles into her mouth, licking ketchup from her fingers, feeling like trash, and then finally wiping the tears from her eyes she stood from the pavement, tossing the wrappers into the garbage and <a href="Bank">shuffling off down the street with her paycheck.</a></p>
-    <?php include "footer.php";?>
+      <p>She ate a couple of cheeseburgers out by the dumpsters, sitting alone on the pavement, crying as she chewed, sticking pickles into her mouth, licking ketchup from her fingers, feeling like trash, and then finally wiping the tears from her eyes she stood from the pavement, tossing the wrappers into the garbage and <a href="Bank">shuffling off down the street with her paycheck</a>.</p>
+    <?php include "footer-begin.php";?>Chain-Restaurant<?php include "footer-end.php";?>
   </body>
 </html>

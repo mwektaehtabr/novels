@@ -8,7 +8,7 @@
   <body>
     <?php include "header.php";?>
       <p><br><br><br><br></p>
-      <p class="c"><a href="The-Ruins-Of-A-Tent">SUPER LOTTO</a></p>
+      <p class="c">SUPER LOTTO</p>
       <p class="c">01/01/00</p>
       <p><br><br></p>
       <p class="c">YOUR NUMBERS ARE:</p>
@@ -16,6 +16,6 @@
       <p><br><br></p>
       <p class="c"><bar></bar><space></space><space></space><bar></bar><bar></bar><space></space><space></space><space></space><space></space><bar></bar><space></space><bar></bar><space></space><bar></bar><bar></bar><space></space><space></space><bar></bar><space></space><space></space><space></space><space></space><bar></bar><bar></bar><space></space><space></space><bar></bar><space></space><bar></bar><space></space><space></space><space></space><space></space><bar></bar><bar></bar><space></space><space></space><bar></bar><space></space><bar></bar><space></space><space></space><space></space><space></space><bar></bar><space></space><space></space><space></space><bar></bar><bar></bar><bar></bar><bar></bar><space></space><bar></bar><space></space><bar></bar><bar></bar><space></space><bar></bar><bar></bar><space></space><space></space><bar></bar><bar></bar><space></space><space></space><bar></bar><bar></bar><bar></bar><bar></bar><space></space><space></space><bar></bar><space></space><bar></bar><space></space><space></space><bar></bar><space></space><space></space><space></space><bar></bar><bar></bar><bar></bar><bar></bar><space></space><bar></bar><space></space><bar></bar><space></space><space></space><bar></bar><space></space><space></space><bar></bar><bar></bar><bar></bar><bar></bar><space></space><bar></bar><bar></bar><space></space><space></space><bar></bar><space></space><bar></bar><space></space><space></space><space></space><space></space><bar></bar><space></space><space></space><space></space><space></space><bar></bar><space></space><space></space><bar></bar><bar></bar><space></space></p>
       <p><br><br><br><br></p>
-    <?php include "footer.php";?>
+    <?php include "footer-begin.php";?>The-Ruins-Of-A-Tent<?php include "footer-end.php";?>
   </body>
 </html>

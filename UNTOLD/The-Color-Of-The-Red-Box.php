@@ -7,7 +7,7 @@
   </head>
   <body>
     <?php include "header.php";?>
-      <p><a href="Blue-Box">(Not actually red, predictably.)</a></p>
-    <?php include "footer.php";?>
+      <p>(Not actually red, predictably.)</p>
+    <?php include "footer-begin.php";?>Blue-Box<?php include "footer-end.php";?>
   </body>
 </html>
